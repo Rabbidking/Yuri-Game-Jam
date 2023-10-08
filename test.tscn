@@ -1063,7 +1063,6 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(115.335, 20)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_yow8x")
 
 [node name="ColorRect" type="ColorRect" parent="StaticBody2D"]

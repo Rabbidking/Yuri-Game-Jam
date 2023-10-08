@@ -1,0 +1,9 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1696732105
+Fade_Transition.gd::GDScript::-1::1696732074::0::1::::<>Node2D<>::
+fade_transition.tscn::PackedScene::5253161964037636460::1696732074::0::1::::<><>::res://Fade_Transition.gd
+icon.svg::CompressedTexture2D::7321585534446100323::1696732074::1696732105::1::::<><>::
+Player.gd::GDScript::-1::1696732074::0::1::::<>CharacterBody2D<>::
+Player.tscn::PackedScene::1560553356649051403::1696732074::0::1::::<><>::res://Player.gd<>uid://dckvpdlfcsh60::::res://icon.svg
+test.tscn::PackedScene::5314750345154119997::1696732074::0::1::::<><>::uid://wh7c6fwwssj8::::res://Player.tscn<>uid://fjg5ad7trtqx::::res://tilemap.png
+tilemap.png::CompressedTexture2D::369941499864873467::1696732074::1696732105::1::::<><>::

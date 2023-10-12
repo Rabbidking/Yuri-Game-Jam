@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cafmsu4vdnnfq"]
+
+[ext_resource type="Script" path="res://Script/door.gd" id="1_nvmuf"]
+[ext_resource type="Texture2D" uid="uid://c665plx0j6b0w" path="res://sample/Sky.png" id="1_snwlr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_54nkq"]
+size = Vector2(64, 64)
+
+[node name="Door" type="Area2D" groups=["Door"]]
+collision_layer = 4
+script = ExtResource("1_nvmuf")
+
+[node name="Door Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_snwlr")
+
+[node name="Door Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_54nkq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

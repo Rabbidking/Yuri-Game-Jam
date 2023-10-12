@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://be0wmp3b3b4qv"]
+
+[ext_resource type="Script" path="res://Script/player.gd" id="1_1scjf"]
+[ext_resource type="Texture2D" uid="uid://cesubyhcfgfps" path="res://sample/Blue.png" id="1_8e4yr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pn16f"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqqmg"]
+size = Vector2(64, 64)
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+collision_mask = 6
+script = ExtResource("1_1scjf")
+
+[node name="Texture" type="Sprite2D" parent="."]
+texture = ExtResource("1_8e4yr")
+
+[node name="2D Player Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pn16f")
+
+[node name="Interact Collision" type="Area2D" parent="." groups=["Interact"]]
+position = Vector2(64, 0)
+collision_mask = 2
+
+[node name="2D Interact Collision" type="CollisionShape2D" parent="Interact Collision"]
+shape = SubResource("RectangleShape2D_hqqmg")
+
+[connection signal="area_entered" from="Interact Collision" to="." method="_on_interact_collision_area_entered"]
+[connection signal="area_exited" from="Interact Collision" to="." method="_on_interact_collision_area_exited"]

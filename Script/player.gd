@@ -17,8 +17,12 @@ func _ready():
 	
 func _process(delta):
 	if Input.is_action_just_pressed("Interact") and interactable == true:
+		State.is_dialog_active = true
+		print(State.is_dialog_active)
 		if interactable_item == "key":
 			print("pick up key")
+			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/main.dialogue"), "key")
+			State.is_dialog_active = false
 			State.key_taken = true
 			emit_signal("picked_up_key")
 	if Input.is_action_pressed("ui_up") and key_buffer2 == false and key_buffer3 == false and key_buffer4 == false:

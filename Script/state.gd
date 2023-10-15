@@ -6,3 +6,4 @@ var cur_room = 0
 var player_pos = 0
 var used_door = false
 var door_used = 0
+var is_dialog_active = false

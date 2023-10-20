@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://xejcukxa4s3w"]
+
+[ext_resource type="Script" path="res://Script/Rooms/kitchen.gd" id="1_lkrb5"]
+[ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_vd0cc"]
+[ext_resource type="PackedScene" uid="uid://be0wmp3b3b4qv" path="res://Scene/player.tscn" id="3_x1r0e"]
+[ext_resource type="PackedScene" uid="uid://b0k3gal2wpctt" path="res://fade_transition.tscn" id="4_rw3ta"]
+[ext_resource type="PackedScene" uid="uid://cafmsu4vdnnfq" path="res://Scene/door.tscn" id="5_ag6y0"]
+
+[node name="kitchen" type="Node2D"]
+script = ExtResource("1_lkrb5")
+
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(18, 10.2)
+texture = ExtResource("2_vd0cc")
+centered = false
+
+[node name="Player" parent="." instance=ExtResource("3_x1r0e")]
+position = Vector2(443, 377)
+
+[node name="Entrance Door" parent="." instance=ExtResource("5_ag6y0")]
+position = Vector2(1120, 314)
+door_name = &"entrance_1"
+
+[node name="Fade_Transition" parent="." instance=ExtResource("4_rw3ta")]
+
+[connection signal="kitchen_pos" from="." to="Player" method="_on_kitchen_kitchen_pos"]

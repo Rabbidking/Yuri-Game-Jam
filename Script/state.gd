@@ -5,5 +5,5 @@ var key_taken = false
 var cur_room = 0
 var player_pos = 0
 var used_door = false
-var door_used = 0
+var door_used
 var is_dialog_active = false

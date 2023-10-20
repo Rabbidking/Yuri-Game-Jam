@@ -69,12 +69,53 @@ func _on_object_pick_up_object(item):
 	print(interactable_item)
 	interactable = true
 
-func _on_scene_room_0_pos():
-	position = Vector2(534, 100)
-func _on_scene_1_room_1_pos():
-	position = Vector2(614, 549)
-func _on_scene_1_room_1_pos_1():
-	position = Vector2(100, 286)
-func _on_scene_2_room_2_pos():
-	position = Vector2(1000, 290)
 
+func _on_entrance_entrance_pos_1():
+	position = Vector2(534, 100)
+func _on_entrance_entrance_pos_2():
+	position = Vector2(100, 314)
+func _on_entrance_entrance_pos_3():
+	position = Vector2(1000, 314)
+func _on_hallway_a_hallway_a_pos_1():
+	position = Vector2(614, 549)
+func _on_hallway_a_hallway_a_pos_2():
+	position = Vector2(1000, 290)
+func _on_hallway_a_hallway_a_pos_3():
+	position = Vector2(614, 100)
+func _on_garage_garage_pos():
+	position = Vector2(100, 290)
+func _on_living_room_living_pos():
+	position = Vector2(100, 314)
+func _on_kitchen_kitchen_pos():
+	position = Vector2(1000, 314)
+
+
+
+
+
+func _on_hallway_b_hallway_b_pos_1():
+	position = Vector2(614, 500)
+
+
+func _on_hallway_b_hallway_b_pos_2():
+	position = Vector2(45, 500)
+
+
+func _on_hallway_b_hallway_b_pos_3():
+	position = Vector2(45, 100)
+
+
+func _on_hallway_b_hallway_b_pos_4():
+	position = Vector2(315, 100)
+
+
+func _on_bedroom_bedroom_pos():
+	position = Vector2(1085, 150)
+
+
+func _on_study_study_pos():
+	position = Vector2(70, 500)
+
+
+func _on_bathroom_bathroom_pos():
+	position = Vector2(285, 500)

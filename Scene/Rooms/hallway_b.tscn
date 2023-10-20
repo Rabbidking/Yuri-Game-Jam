@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2c7bs8g3nh5b"]
+
+[ext_resource type="Texture2D" uid="uid://bkg2agt6rhy0y" path="res://sample/Green.png" id="1_cc0pq"]
+[ext_resource type="Script" path="res://Script/Rooms/hallway_b.gd" id="1_lly7g"]
+[ext_resource type="PackedScene" uid="uid://be0wmp3b3b4qv" path="res://Scene/player.tscn" id="2_d86dv"]
+[ext_resource type="PackedScene" uid="uid://cafmsu4vdnnfq" path="res://Scene/door.tscn" id="3_lisno"]
+[ext_resource type="PackedScene" uid="uid://b0k3gal2wpctt" path="res://fade_transition.tscn" id="4_orgmt"]
+
+[node name="hallwayB" type="Node2D"]
+script = ExtResource("1_lly7g")
+
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(18, 10.2)
+texture = ExtResource("1_cc0pq")
+centered = false
+
+[node name="Player" parent="." instance=ExtResource("2_d86dv")]
+position = Vector2(328, 285)
+
+[node name="HallwayA Door" parent="." instance=ExtResource("3_lisno")]
+position = Vector2(614, 616)
+door_name = &"hallwayA_3"
+
+[node name="Bedroom Door" parent="." instance=ExtResource("3_lisno")]
+position = Vector2(45, 614)
+door_name = &"bedroom"
+
+[node name="Study Door" parent="." instance=ExtResource("3_lisno")]
+position = Vector2(45, 33)
+door_name = &"study"
+
+[node name="Bathroom Door" parent="." instance=ExtResource("3_lisno")]
+position = Vector2(315, 33)
+door_name = &"bathroom"
+
+[node name="Fade_Transition" parent="." instance=ExtResource("4_orgmt")]
+
+[connection signal="hallwayB_pos_1" from="." to="Player" method="_on_hallway_b_hallway_b_pos_1"]
+[connection signal="hallwayB_pos_2" from="." to="Player" method="_on_hallway_b_hallway_b_pos_2"]
+[connection signal="hallwayB_pos_3" from="." to="Player" method="_on_hallway_b_hallway_b_pos_3"]
+[connection signal="hallwayB_pos_4" from="." to="Player" method="_on_hallway_b_hallway_b_pos_4"]

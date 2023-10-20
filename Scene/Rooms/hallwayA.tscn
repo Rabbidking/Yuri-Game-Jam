@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://b0pfj3nycfflx"]
+
+[ext_resource type="Script" path="res://Script/Rooms/hallwayA.gd" id="1_h463u"]
+[ext_resource type="Texture2D" uid="uid://bkg2agt6rhy0y" path="res://sample/Green.png" id="2_s6t76"]
+[ext_resource type="PackedScene" uid="uid://be0wmp3b3b4qv" path="res://Scene/player.tscn" id="3_gii68"]
+[ext_resource type="PackedScene" uid="uid://cafmsu4vdnnfq" path="res://Scene/door.tscn" id="4_txjha"]
+[ext_resource type="PackedScene" uid="uid://b0k3gal2wpctt" path="res://fade_transition.tscn" id="5_ah00y"]
+
+[node name="hallwayA" type="Node2D"]
+script = ExtResource("1_h463u")
+
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(18, 10.2)
+texture = ExtResource("2_s6t76")
+centered = false
+
+[node name="Player" parent="." instance=ExtResource("3_gii68")]
+position = Vector2(328, 285)
+
+[node name="Entrance Door" parent="." instance=ExtResource("4_txjha")]
+position = Vector2(614, 616)
+door_name = &"entrance"
+
+[node name="Garage Door" parent="." instance=ExtResource("4_txjha")]
+position = Vector2(1120, 290)
+door_name = &"garage"
+is_locked = true
+
+[node name="HallwayB Door" parent="." instance=ExtResource("4_txjha")]
+position = Vector2(614, 33)
+door_name = &"hallwayB_1"
+
+[node name="Fade_Transition" parent="." instance=ExtResource("5_ah00y")]
+
+[connection signal="hallwayA_pos_1" from="." to="Player" method="_on_hallway_a_hallway_a_pos_1"]
+[connection signal="hallwayA_pos_2" from="." to="Player" method="_on_hallway_a_hallway_a_pos_2"]
+[connection signal="hallwayA_pos_3" from="." to="Player" method="_on_hallway_a_hallway_a_pos_3"]

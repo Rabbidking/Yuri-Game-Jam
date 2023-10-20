@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://bgh547qu4toco"]
+
+[ext_resource type="Texture2D" uid="uid://0jxtllnl6rfr" path="res://sample/Yellow.png" id="1_5p24c"]
+[ext_resource type="Script" path="res://Script/Rooms/bedroom.gd" id="1_v28qo"]
+[ext_resource type="PackedScene" uid="uid://be0wmp3b3b4qv" path="res://Scene/player.tscn" id="2_5gxhm"]
+[ext_resource type="PackedScene" uid="uid://b0k3gal2wpctt" path="res://fade_transition.tscn" id="3_p58s7"]
+[ext_resource type="PackedScene" uid="uid://cafmsu4vdnnfq" path="res://Scene/door.tscn" id="4_hlej4"]
+
+[node name="bedroom" type="Node2D"]
+script = ExtResource("1_v28qo")
+
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(18, 10.2)
+texture = ExtResource("1_5p24c")
+centered = false
+
+[node name="Player" parent="." instance=ExtResource("2_5gxhm")]
+position = Vector2(328, 285)
+
+[node name="HallwayB Door" parent="." instance=ExtResource("4_hlej4")]
+position = Vector2(1085, 32)
+door_name = &"hallwayB_2"
+
+[node name="Fade_Transition" parent="." instance=ExtResource("3_p58s7")]
+
+[connection signal="bedroom_pos" from="." to="Player" method="_on_bedroom_bedroom_pos"]

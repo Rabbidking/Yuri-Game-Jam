@@ -4,6 +4,12 @@ signal pick_up_object
 
 var item = "key"
 
+func _ready():
+	if State.collected_items.has(global_position):
+		queue_free()
+	else:
+		State.items.append(global_position)
+
 func pick_up():
 	emit_signal("pick_up_object", item)
 	#queue_free()

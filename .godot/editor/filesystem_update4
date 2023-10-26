@@ -1,7 +1,11 @@
-res://Scene/player.tscn
-res://test.tscn
 res://Scene/scene.tscn
-res://fade_transition.tscn
+res://Scene/player.tscn
+res://Scene/Rooms/study.tscn
+res://Scene/Rooms/living_room.tscn
+res://Scene/Rooms/kitchen.tscn
+res://Scene/Rooms/hallway_b.tscn
 res://Scene/door.tscn
 res://Script/player.gd
 res://Script/state.gd
+res://Scene/object.tscn
+res://Script/Area2D.gd

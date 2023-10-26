@@ -7,3 +7,6 @@ var player_pos = 0
 var used_door = false
 var door_used
 var is_dialog_active = false
+
+var items = []
+var collected_items = []

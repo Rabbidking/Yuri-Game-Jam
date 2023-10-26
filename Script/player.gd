@@ -15,44 +15,47 @@ var current_object
 func _ready():
 	print(get_tree().current_scene)
 	
+func _unhandled_input(event: InputEvent) -> void:
+	if State.is_dialog_active == false:
+		if Input.is_action_pressed("ui_up") and key_buffer2 == false and key_buffer3 == false and key_buffer4 == false:
+			velocity.y = -SPEED
+			velocity.x = 0
+			key_buffer1 = true
+		elif Input.is_action_pressed("ui_down") and key_buffer1 == false and key_buffer3 == false and key_buffer4 == false:
+			velocity.y = SPEED
+			velocity.x = 0
+			key_buffer2 = true
+		elif Input.is_action_pressed("ui_left")and key_buffer1 == false and key_buffer2 == false and key_buffer4 == false:
+			velocity.x = -SPEED
+			velocity.y = 0
+			key_buffer3 = true
+		elif Input.is_action_pressed("ui_right")and key_buffer1 == false and key_buffer2 == false and key_buffer3 == false:
+			velocity.x = SPEED
+			velocity.y = 0
+			key_buffer4 = true
+		elif Input.is_action_just_released("ui_up"):
+			key_buffer1 = false
+		elif Input.is_action_just_released("ui_down"):
+			key_buffer2 = false
+		elif Input.is_action_just_released("ui_left"):
+			key_buffer3 = false
+		elif Input.is_action_just_released("ui_right"):
+			key_buffer4 = false
+		else:
+			velocity.x = 0
+			velocity.y = 0
+	
+	
 func _process(delta):
 	if Input.is_action_just_pressed("Interact") and interactable == true:
 		State.is_dialog_active = true
-		print(State.is_dialog_active)
 		if interactable_item == "key":
 			print("pick up key")
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/main.dialogue"), "key")
-			State.is_dialog_active = false
 			State.key_taken = true
 			emit_signal("picked_up_key")
-	if Input.is_action_pressed("ui_up") and key_buffer2 == false and key_buffer3 == false and key_buffer4 == false:
-		velocity.y = -SPEED
-		velocity.x = 0
-		key_buffer1 = true
-	elif Input.is_action_pressed("ui_down") and key_buffer1 == false and key_buffer3 == false and key_buffer4 == false:
-		velocity.y = SPEED
-		velocity.x = 0
-		key_buffer2 = true
-	elif Input.is_action_pressed("ui_left")and key_buffer1 == false and key_buffer2 == false and key_buffer4 == false:
-		velocity.x = -SPEED
-		velocity.y = 0
-		key_buffer3 = true
-	elif Input.is_action_pressed("ui_right")and key_buffer1 == false and key_buffer2 == false and key_buffer3 == false:
-		velocity.x = SPEED
-		velocity.y = 0
-		key_buffer4 = true
-	elif Input.is_action_just_released("ui_up"):
-		key_buffer1 = false
-	elif Input.is_action_just_released("ui_down"):
-		key_buffer2 = false
-	elif Input.is_action_just_released("ui_left"):
-		key_buffer3 = false
-	elif Input.is_action_just_released("ui_right"):
-		key_buffer4 = false
-	else:
-		velocity.x = 0
-		velocity.y = 0
-
+		State.is_dialog_active = false
+		print(State.is_dialog_active)
 	move_and_slide()
 
 

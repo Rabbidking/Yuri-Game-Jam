@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_10"
+type="Resource"
+uid="uid://vt21hqdbnmig"
+path="res://.godot/imported/Day_4.dialogue-e020718c9a7c6eda3e601b6c576cb51d.tres"
+
+[deps]
+
+source_file="res://Dialog/Day_4.dialogue"
+dest_files=["res://.godot/imported/Day_4.dialogue-e020718c9a7c6eda3e601b6c576cb51d.tres"]
+
+[params]
+
+defaults=true

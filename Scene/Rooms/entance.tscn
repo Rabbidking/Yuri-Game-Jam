@@ -38,4 +38,5 @@ door_name = &"living room"
 [connection signal="entrance_pos_1" from="." to="Player" method="_on_entrance_entrance_pos_1"]
 [connection signal="entrance_pos_2" from="." to="Player" method="_on_entrance_entrance_pos_2"]
 [connection signal="entrance_pos_3" from="." to="Player" method="_on_entrance_entrance_pos_3"]
+[connection signal="picked_up_key" from="Player" to="Object" method="_on_player_picked_up_key"]
 [connection signal="pick_up_object" from="Object" to="Player" method="_on_object_pick_up_object"]

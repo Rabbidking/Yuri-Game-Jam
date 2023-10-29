@@ -7,6 +7,7 @@ extends Area2D
 func _on_body_entered(body):
 	State.used_door = true
 	if body.is_in_group("Player"):
+		print("human")
 		if door_name == "bathroom":
 			State.door_used = "bathroom"
 			get_tree().change_scene_to_file("res://Scene/Rooms/bathroom.tscn")
@@ -26,6 +27,7 @@ func _on_body_entered(body):
 			State.door_used = "garage"
 			get_tree().change_scene_to_file("res://Scene/Rooms/garage.tscn")
 		if door_name == "hallwayA_1":
+			print("Hall")
 			State.door_used = "hallwayA_1"
 			get_tree().change_scene_to_file("res://Scene/Rooms/hallwayA.tscn")
 		if door_name == "hallwayA_2":

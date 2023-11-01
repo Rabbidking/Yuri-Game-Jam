@@ -8,6 +8,5 @@ func _ready():
 		emit_signal("room_0_pos")
 	print(State.key_taken)
 	if State.key_taken == true:
-		print("take")
 		$Object.queue_free()
 

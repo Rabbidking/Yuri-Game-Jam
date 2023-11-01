@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dn3o4ik2vi8l8"]
+[gd_scene load_steps=8 format=3 uid="uid://dn3o4ik2vi8l8"]
 
 [ext_resource type="Script" path="res://Script/Rooms/entrance.gd" id="1_xuywx"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_b1pgh"]
+[ext_resource type="Texture2D" uid="uid://cesubyhcfgfps" path="res://sample/Blue.png" id="3_fjus5"]
 [ext_resource type="PackedScene" uid="uid://be0wmp3b3b4qv" path="res://Scene/player.tscn" id="3_vobsi"]
 [ext_resource type="PackedScene" uid="uid://52x1mvksb50c" path="res://Scene/object.tscn" id="4_gea2f"]
 [ext_resource type="PackedScene" uid="uid://cafmsu4vdnnfq" path="res://Scene/door.tscn" id="5_icox0"]
@@ -9,29 +10,44 @@
 
 [node name="entrance" type="Node2D"]
 script = ExtResource("1_xuywx")
+metadata/_edit_horizontal_guides_ = [-260.0]
+metadata/_edit_vertical_guides_ = [1154.0, 1152.0, 576.0]
 
 [node name="Background" type="Sprite2D" parent="."]
 scale = Vector2(18, 10.2)
 texture = ExtResource("2_b1pgh")
 centered = false
 
+[node name="Floor 1" type="Sprite2D" parent="."]
+position = Vector2(575.75, 364.5)
+scale = Vector2(5.46094, 4.29687)
+texture = ExtResource("3_fjus5")
+
+[node name="Floor 2" type="Sprite2D" parent="."]
+position = Vector2(576, 153)
+scale = Vector2(1.5, 2.351)
+texture = ExtResource("3_fjus5")
+
 [node name="Player" parent="." instance=ExtResource("3_vobsi")]
-position = Vector2(443, 377)
+position = Vector2(553, 364)
 
 [node name="Object" parent="." instance=ExtResource("4_gea2f")]
-position = Vector2(788, 309)
+position = Vector2(674, 276)
 
 [node name="HallwayA Door" parent="." instance=ExtResource("5_icox0")]
-position = Vector2(534, 32)
+position = Vector2(582, 37)
 door_name = &"hallwayA_1"
+door_type = &"front"
 
 [node name="Kitchen Door" parent="." instance=ExtResource("5_icox0")]
-position = Vector2(32, 314)
+position = Vector2(434, 350)
 door_name = &"kitchen"
+door_type = &"side_left"
 
 [node name="Living Room Door" parent="." instance=ExtResource("5_icox0")]
-position = Vector2(1120, 312)
+position = Vector2(733, 350)
 door_name = &"living room"
+door_type = &"side_right"
 
 [node name="Fade_Transition" parent="." instance=ExtResource("6_r0qy7")]
 

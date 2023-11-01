@@ -1,26 +1,70 @@
-[gd_scene load_steps=6 format=3 uid="uid://bgh547qu4toco"]
+[gd_scene load_steps=13 format=3 uid="uid://bgh547qu4toco"]
 
-[ext_resource type="Texture2D" uid="uid://0jxtllnl6rfr" path="res://sample/Yellow.png" id="1_5p24c"]
 [ext_resource type="Script" path="res://Script/Rooms/bedroom.gd" id="1_v28qo"]
 [ext_resource type="PackedScene" uid="uid://be0wmp3b3b4qv" path="res://Scene/player.tscn" id="2_5gxhm"]
+[ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_p31sh"]
 [ext_resource type="PackedScene" uid="uid://b0k3gal2wpctt" path="res://fade_transition.tscn" id="3_p58s7"]
+[ext_resource type="Texture2D" uid="uid://cesubyhcfgfps" path="res://sample/Blue.png" id="3_xw2fl"]
 [ext_resource type="PackedScene" uid="uid://cafmsu4vdnnfq" path="res://Scene/door.tscn" id="4_hlej4"]
+[ext_resource type="Texture2D" uid="uid://boi5i483osykw" path="res://Sprites/Furniture/OBJ_Bed/OBJ_BedA.png" id="7_fo6ks"]
+[ext_resource type="Texture2D" uid="uid://ceq8hwa8mly2a" path="res://Sprites/Furniture/OBJ_Lightstand/OBJ_LightstandA.png" id="8_iw3a8"]
+[ext_resource type="Texture2D" uid="uid://dimlbd7204yb1" path="res://Sprites/Furniture/OBJ_Safe/OBJ_Safe_01.png" id="9_6nixw"]
+[ext_resource type="Texture2D" uid="uid://bdylafpj3r3sg" path="res://Sprites/Furniture/OBJ_Drawer/OBJ_DrawerA.png" id="10_qmnhe"]
+[ext_resource type="Texture2D" uid="uid://dcm43ir7u5chb" path="res://Sprites/Furniture/OBJ_Closet/OBJ_ClosetA_01.png" id="11_ehdcq"]
+[ext_resource type="Texture2D" uid="uid://dtniw5y5ipp3e" path="res://Sprites/Furniture/OBJ_Plant/OBJ_PlantB.png" id="12_lf32k"]
 
 [node name="bedroom" type="Node2D"]
 script = ExtResource("1_v28qo")
 
 [node name="Background" type="Sprite2D" parent="."]
 scale = Vector2(18, 10.2)
-texture = ExtResource("1_5p24c")
+texture = ExtResource("2_p31sh")
+centered = false
+
+[node name="Floor 1" type="Sprite2D" parent="."]
+position = Vector2(320, 152)
+scale = Vector2(8, 5.25)
+texture = ExtResource("3_xw2fl")
 centered = false
 
 [node name="Player" parent="." instance=ExtResource("2_5gxhm")]
-position = Vector2(328, 285)
+position = Vector2(760, 192)
 
 [node name="HallwayB Door" parent="." instance=ExtResource("4_hlej4")]
-position = Vector2(1085, 32)
+position = Vector2(768, 112)
 door_name = &"hallwayB_2"
+door_type = &"front"
 
 [node name="Fade_Transition" parent="." instance=ExtResource("3_p58s7")]
+
+[node name="Prop" type="Node2D" parent="."]
+
+[node name="Bed" type="Sprite2D" parent="Prop"]
+position = Vector2(360, 288)
+texture = ExtResource("7_fo6ks")
+
+[node name="Bed 2" type="Sprite2D" parent="Prop"]
+position = Vector2(360, 304)
+texture = ExtResource("7_fo6ks")
+
+[node name="Light" type="Sprite2D" parent="Prop"]
+position = Vector2(336, 224)
+texture = ExtResource("8_iw3a8")
+
+[node name="Safe" type="Sprite2D" parent="Prop"]
+position = Vector2(344, 152)
+texture = ExtResource("9_6nixw")
+
+[node name="Drawer" type="Sprite2D" parent="Prop"]
+position = Vector2(400, 152)
+texture = ExtResource("10_qmnhe")
+
+[node name="Closet" type="Sprite2D" parent="Prop"]
+position = Vector2(456, 120)
+texture = ExtResource("11_ehdcq")
+
+[node name="Plant" type="Sprite2D" parent="Prop"]
+position = Vector2(504, 144)
+texture = ExtResource("12_lf32k")
 
 [connection signal="bedroom_pos" from="." to="Player" method="_on_bedroom_bedroom_pos"]

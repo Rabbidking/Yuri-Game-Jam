@@ -3,11 +3,29 @@ extends Area2D
 
 @export var door_name : StringName
 @export var is_locked : bool
+@export var door_type : StringName
+
+func _ready():
+	if door_type == "front":
+		$"Door Sprite".texture = load("res://Sprites/Furniture/OBJ_Door/OBJ_DoorB.png")
+		$"Door Sprite".position = Vector2(-9, -8)
+	elif door_type == "side_right":
+		$"Door Sprite".texture = load("res://Sprites/Furniture/OBJ_Door/OBJ_DoorD.png")
+		$"Door Sprite".position = Vector2(-7, -8)
+		$"Door Sprite".flip_h = false
+	elif door_type == "side_left":
+		$"Door Sprite".texture = load("res://Sprites/Furniture/OBJ_Door/OBJ_DoorD.png")
+		$"Door Sprite".position = Vector2(-7, -8)
+		$"Door Sprite".flip_h = true
+	elif door_type == "back":
+		$"Door Sprite".texture = load("res://Sprites/Furniture/OBJ_Door/OBJ_DoorC.png")
+		$"Door Sprite".position = Vector2(-9, -8)
+	else:
+		$"Door Sprite".texture = load("res://Sprites/Furniture/OBJ_Door/OBJ_DoorA.png")
 
 func _on_body_entered(body):
 	State.used_door = true
 	if body.is_in_group("Player"):
-		print("human")
 		if door_name == "bathroom":
 			State.door_used = "bathroom"
 			get_tree().change_scene_to_file("res://Scene/Rooms/bathroom.tscn")
@@ -27,7 +45,6 @@ func _on_body_entered(body):
 			State.door_used = "garage"
 			get_tree().change_scene_to_file("res://Scene/Rooms/garage.tscn")
 		if door_name == "hallwayA_1":
-			print("Hall")
 			State.door_used = "hallwayA_1"
 			get_tree().change_scene_to_file("res://Scene/Rooms/hallwayA.tscn")
 		if door_name == "hallwayA_2":

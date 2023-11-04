@@ -10,3 +10,9 @@ var is_dialog_active = false
 
 var items = []
 var collected_items = []
+
+var day_1_active = true
+var day_2_active = false
+var day_3_active = false
+var day_4_active = false
+var day_5_active = false

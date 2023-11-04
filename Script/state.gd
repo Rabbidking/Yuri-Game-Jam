@@ -1,6 +1,6 @@
 extends Node
 
-var Day = 0
+var Day = 1	#day adjustments
 var key_taken = false
 var cur_room = 0
 var player_pos = 0
@@ -10,14 +10,6 @@ var is_dialog_active = false
 
 var items = []
 var collected_items = []
-#==================================================================================================
-
-# day flags for level adjustments
-var day_1_active = true
-var day_2_active = false
-var day_3_active = false
-var day_4_active = false
-var day_5_active = false
 #==================================================================================================
 # night 1 specific flags
 var day_1_intro = true

@@ -13,3 +13,6 @@ res://Scene/Rooms/hallwayA.tscn
 res://Scene/Rooms/garage.tscn
 res://Scene/Rooms/bedroom.tscn
 res://Scene/Rooms/entance.tscn
+res://Script/Rooms/garage.gd
+res://Script/Rooms/bedroom.gd
+res://Script/Rooms/entrance.gd

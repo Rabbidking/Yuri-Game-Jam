@@ -7,6 +7,7 @@ const SPEED = 300.0
 var front_side = false
 var back_side = false
 var interactable = false
+var dont_move = true
 var interactable_item = null
 var current_object
 
@@ -14,44 +15,45 @@ func _ready():
 	print(get_tree().current_scene)
 	
 func _unhandled_input(event: InputEvent) -> void:
-	if Input.is_action_pressed("ui_up"):
-		$"Interact Collision/2D Interact Collision".position = Vector2(-64, -64)
-		velocity = Vector2(0, -SPEED)
-		$AnimatedSprite2D.play("Walk Back")
-		front_side = false
-		back_side = true
-		
-	elif Input.is_action_pressed("ui_down"):
-		$"Interact Collision/2D Interact Collision".position = Vector2(-64, 64)
-		velocity = Vector2(0, SPEED)
-		$AnimatedSprite2D.play("Walk Front")
-		front_side = true
-		back_side = false
-		
-	elif Input.is_action_pressed("ui_left"):
-		$"Interact Collision/2D Interact Collision".position = Vector2(-128,0)
-		velocity = Vector2(-SPEED, 0)
-		$AnimatedSprite2D.play("Walk Side")
-		$AnimatedSprite2D.flip_h = true
-		front_side = false
-		back_side = false
-		
-	elif Input.is_action_pressed("ui_right"):
-		$"Interact Collision/2D Interact Collision".position = Vector2(0, 0)
-		velocity = Vector2(SPEED, 0)
-		$AnimatedSprite2D.play("Walk Side")
-		$AnimatedSprite2D.flip_h = false
-		front_side = false
-		back_side = false
-		
-	else: 
-		velocity = Vector2(0, 0)
-		if front_side == true:
-			$AnimatedSprite2D.play("Idle Front")
-		elif back_side == true:
-			$AnimatedSprite2D.play("Idle Back")
-		else:
-			$AnimatedSprite2D.play("Idle Side")
+	if dont_move == false:
+		if Input.is_action_pressed("ui_up"):
+			$"Interact Collision/2D Interact Collision".position = Vector2(-64, -64)
+			velocity = Vector2(0, -SPEED)
+			$AnimatedSprite2D.play("Walk Back")
+			front_side = false
+			back_side = true
+			
+		elif Input.is_action_pressed("ui_down"):
+			$"Interact Collision/2D Interact Collision".position = Vector2(-64, 64)
+			velocity = Vector2(0, SPEED)
+			$AnimatedSprite2D.play("Walk Front")
+			front_side = true
+			back_side = false
+			
+		elif Input.is_action_pressed("ui_left"):
+			$"Interact Collision/2D Interact Collision".position = Vector2(-128,0)
+			velocity = Vector2(-SPEED, 0)
+			$AnimatedSprite2D.play("Walk Side")
+			$AnimatedSprite2D.flip_h = true
+			front_side = false
+			back_side = false
+			
+		elif Input.is_action_pressed("ui_right"):
+			$"Interact Collision/2D Interact Collision".position = Vector2(0, 0)
+			velocity = Vector2(SPEED, 0)
+			$AnimatedSprite2D.play("Walk Side")
+			$AnimatedSprite2D.flip_h = false
+			front_side = false
+			back_side = false
+			
+		else: 
+			velocity = Vector2(0, 0)
+			if front_side == true:
+				$AnimatedSprite2D.play("Idle Front")
+			elif back_side == true:
+				$AnimatedSprite2D.play("Idle Back")
+			else:
+				$AnimatedSprite2D.play("Idle Side")
 			
 
 func _process(delta):
@@ -120,3 +122,7 @@ func _on_study_study_pos():
 #Bathroom
 func _on_bathroom_bathroom_pos():
 	position = Vector2(552, 397)
+
+
+func _on_fade_transition_player_can_move():
+	dont_move = false

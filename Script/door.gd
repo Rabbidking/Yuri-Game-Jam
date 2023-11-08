@@ -9,17 +9,21 @@ func _ready():
 	if door_type == "front":
 		$"Door Sprite".texture = load("res://Sprites/Furniture/OBJ_Door/OBJ_DoorB.png")
 		$"Door Sprite".position = Vector2(-9, -8)
+		$"Door Collision".position = Vector2(-9, -30)
 	elif door_type == "side_right":
 		$"Door Sprite".texture = load("res://Sprites/Furniture/OBJ_Door/OBJ_DoorD.png")
 		$"Door Sprite".position = Vector2(-7, -8)
+		$"Door Collision".position = Vector2(30, 2)
 		$"Door Sprite".flip_h = false
 	elif door_type == "side_left":
 		$"Door Sprite".texture = load("res://Sprites/Furniture/OBJ_Door/OBJ_DoorD.png")
 		$"Door Sprite".position = Vector2(-7, -8)
+		$"Door Collision".position = Vector2(-45, 2)
 		$"Door Sprite".flip_h = true
 	elif door_type == "back":
 		$"Door Sprite".texture = load("res://Sprites/Furniture/OBJ_Door/OBJ_DoorC.png")
 		$"Door Sprite".position = Vector2(-9, -8)
+		$"Door Collision".position = Vector2(-9, 40)
 	else:
 		$"Door Sprite".texture = load("res://Sprites/Furniture/OBJ_Door/OBJ_DoorA.png")
 

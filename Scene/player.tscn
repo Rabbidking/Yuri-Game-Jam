@@ -172,8 +172,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pn16f"]
-size = Vector2(64, 64)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jscp4"]
+radius = 18.0
+height = 54.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqqmg"]
 size = Vector2(64, 64)
@@ -192,7 +193,7 @@ visible = false
 texture = ExtResource("1_8e4yr")
 
 [node name="2D Player Collision" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_pn16f")
+shape = SubResource("CapsuleShape2D_jscp4")
 
 [node name="Interact Collision" type="Area2D" parent="." groups=["Interact"]]
 position = Vector2(64, 0)

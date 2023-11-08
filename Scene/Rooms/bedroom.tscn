@@ -68,3 +68,4 @@ position = Vector2(504, 144)
 texture = ExtResource("12_lf32k")
 
 [connection signal="bedroom_pos" from="." to="Player" method="_on_bedroom_bedroom_pos"]
+[connection signal="player_can_move" from="Fade_Transition" to="Player" method="_on_fade_transition_player_can_move"]

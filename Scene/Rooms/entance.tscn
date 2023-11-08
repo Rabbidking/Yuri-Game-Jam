@@ -56,3 +56,4 @@ door_type = &"side_right"
 [connection signal="entrance_pos_3" from="." to="Player" method="_on_entrance_entrance_pos_3"]
 [connection signal="picked_up_key" from="Player" to="Object" method="_on_player_picked_up_key"]
 [connection signal="pick_up_object" from="Object" to="Player" method="_on_object_pick_up_object"]
+[connection signal="player_can_move" from="Fade_Transition" to="Player" method="_on_fade_transition_player_can_move"]

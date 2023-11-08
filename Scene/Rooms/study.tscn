@@ -59,7 +59,9 @@ texture = ExtResource("10_sqxft")
 [node name="HallwayB Door" parent="." instance=ExtResource("3_qbrfg")]
 position = Vector2(485, 427)
 door_name = &"hallwayB_3"
+door_type = &"back"
 
 [node name="Fade_Transition" parent="." instance=ExtResource("3_ffihc")]
 
 [connection signal="study_pos" from="." to="Player" method="_on_study_study_pos"]
+[connection signal="player_can_move" from="Fade_Transition" to="Player" method="_on_fade_transition_player_can_move"]

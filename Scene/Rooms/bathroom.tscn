@@ -84,3 +84,4 @@ position = Vector2(672, 240)
 texture = ExtResource("16_5lqf6")
 
 [connection signal="bathroom_pos" from="." to="Player" method="_on_bathroom_bathroom_pos"]
+[connection signal="player_can_move" from="Fade_Transition" to="Player" method="_on_fade_transition_player_can_move"]

@@ -52,3 +52,4 @@ door_type = &"front"
 [connection signal="hallwayA_pos_1" from="." to="Player" method="_on_hallway_a_hallway_a_pos_1"]
 [connection signal="hallwayA_pos_2" from="." to="Player" method="_on_hallway_a_hallway_a_pos_2"]
 [connection signal="hallwayA_pos_3" from="." to="Player" method="_on_hallway_a_hallway_a_pos_3"]
+[connection signal="player_can_move" from="Fade_Transition" to="Player" method="_on_fade_transition_player_can_move"]

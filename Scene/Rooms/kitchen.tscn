@@ -37,7 +37,7 @@ position = Vector2(777, 332)
 [node name="Entrance Door" parent="." instance=ExtResource("5_ag6y0")]
 position = Vector2(847, 323)
 door_name = &"entrance_1"
-door_type = &"eide_right"
+door_type = &"side_right"
 
 [node name="Fade_Transition" parent="." instance=ExtResource("4_rw3ta")]
 
@@ -97,3 +97,4 @@ position = Vector2(544, 312)
 texture = ExtResource("16_5t0sf")
 
 [connection signal="kitchen_pos" from="." to="Player" method="_on_kitchen_kitchen_pos"]
+[connection signal="player_can_move" from="Fade_Transition" to="Player" method="_on_fade_transition_player_can_move"]

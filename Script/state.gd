@@ -2,7 +2,7 @@ extends Node
 
 var Day = 1	#day adjustments
 var key_taken = false
-var cur_room = 0
+var have_gigi = false
 var player_pos = 0
 var used_door = false
 var door_used

@@ -8,7 +8,8 @@ func _ready():
 	if State.used_door == true:
 		emit_signal("living_pos")
 	if State.Day == 1:
-		inst(Vector2(600, 300))
+		#inst(Vector2(600, 300))
+		pass
 	if State.Day == 3:
 		#change the sticky note dialog to Day 3's version.
 		

@@ -45,7 +45,7 @@ func _on_body_entered(body):
 		if door_name == "entrance_2":
 			State.door_used = "entrance_2"
 			get_tree().change_scene_to_file("res://Scene/Rooms/entance.tscn")
-		if door_name == "garage" and State.key_taken == true:
+		if door_name == "garage":
 			State.door_used = "garage"
 			get_tree().change_scene_to_file("res://Scene/Rooms/garage.tscn")
 		if door_name == "hallwayA_1":

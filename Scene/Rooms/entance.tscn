@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dn3o4ik2vi8l8"]
+[gd_scene load_steps=7 format=3 uid="uid://dn3o4ik2vi8l8"]
 
 [ext_resource type="Script" path="res://Script/Rooms/entrance.gd" id="1_xuywx"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_b1pgh"]
 [ext_resource type="Texture2D" uid="uid://cesubyhcfgfps" path="res://sample/Blue.png" id="3_fjus5"]
 [ext_resource type="PackedScene" uid="uid://be0wmp3b3b4qv" path="res://Scene/player.tscn" id="3_vobsi"]
-[ext_resource type="PackedScene" uid="uid://52x1mvksb50c" path="res://Scene/object.tscn" id="4_gea2f"]
 [ext_resource type="PackedScene" uid="uid://cafmsu4vdnnfq" path="res://Scene/door.tscn" id="5_icox0"]
 [ext_resource type="PackedScene" uid="uid://b0k3gal2wpctt" path="res://fade_transition.tscn" id="6_r0qy7"]
 
@@ -31,9 +30,6 @@ texture = ExtResource("3_fjus5")
 [node name="Player" parent="." instance=ExtResource("3_vobsi")]
 position = Vector2(553, 364)
 
-[node name="Object" parent="." instance=ExtResource("4_gea2f")]
-position = Vector2(674, 276)
-
 [node name="HallwayA Door" parent="." instance=ExtResource("5_icox0")]
 position = Vector2(582, 37)
 door_name = &"hallwayA_1"
@@ -54,6 +50,4 @@ door_type = &"side_right"
 [connection signal="entrance_pos_1" from="." to="Player" method="_on_entrance_entrance_pos_1"]
 [connection signal="entrance_pos_2" from="." to="Player" method="_on_entrance_entrance_pos_2"]
 [connection signal="entrance_pos_3" from="." to="Player" method="_on_entrance_entrance_pos_3"]
-[connection signal="picked_up_key" from="Player" to="Object" method="_on_player_picked_up_key"]
-[connection signal="pick_up_object" from="Object" to="Player" method="_on_object_pick_up_object"]
 [connection signal="player_can_move" from="Fade_Transition" to="Player" method="_on_fade_transition_player_can_move"]

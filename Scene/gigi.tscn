@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://c8d5hla3410jd"]
 
-[ext_resource type="Script" path="res://Script/Area2D.gd" id="1_bi1ve"]
+[ext_resource type="Script" path="res://Script/gigi.gd" id="1_74n34"]
 [ext_resource type="Texture2D" uid="uid://bkg2agt6rhy0y" path="res://sample/Green.png" id="2_aj3l5"]
 [ext_resource type="Texture2D" uid="uid://bq5ce2e0rwuro" path="res://Sprites/Characters/Gigi/Sleeping/Gigi-Sleeping-1.png" id="3_n2rx7"]
 [ext_resource type="Texture2D" uid="uid://b8ljvwfltkgfn" path="res://Sprites/Characters/Gigi/Sleeping/Gigi-Sleeping-2.png" id="4_h810l"]
@@ -44,7 +44,7 @@ size = Vector2(64, 64)
 
 [node name="Gigi" type="Area2D" groups=["Object"]]
 collision_layer = 2
-script = ExtResource("1_bi1ve")
+script = ExtResource("1_74n34")
 
 [node name="Texture" type="Sprite2D" parent="."]
 visible = false

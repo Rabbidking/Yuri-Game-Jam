@@ -39,7 +39,6 @@ door_type = &"back"
 [node name="Garage Door" parent="." instance=ExtResource("4_txjha")]
 position = Vector2(646, 284)
 door_name = &"garage"
-is_locked = true
 door_type = &"side_right"
 
 [node name="HallwayB Door" parent="." instance=ExtResource("4_txjha")]

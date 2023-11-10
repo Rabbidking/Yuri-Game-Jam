@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_1m1rj"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_sed0x"]
 
 [resource]
-script = ExtResource("1_1m1rj")
+script = ExtResource("1_sed0x")
 titles = {
 "end_night": "35",
 "find_key": "25",
@@ -296,4 +296,4 @@ lines = {
 "type": "dialogue"
 }
 }
-metadata/dialogue_manager_version = "2.25.4"
+metadata/dialogue_manager_version = "2.27.2"

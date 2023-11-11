@@ -95,3 +95,4 @@ door_type = &"side_left"
 [node name="Fade_Transition" parent="." instance=ExtResource("5_w0qm8")]
 
 [connection signal="garage_pos" from="." to="Player" method="_on_garage_garage_pos"]
+[connection signal="player_can_move" from="Fade_Transition" to="Player" method="_on_fade_transition_player_can_move"]

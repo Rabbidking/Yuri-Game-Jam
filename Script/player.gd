@@ -8,7 +8,7 @@ const SPEED = 300.0
 var front_side = false
 var back_side = false
 var interactable = false
-var dont_move = false
+var dont_move = true
 var interactable_item = null
 var current_object
 

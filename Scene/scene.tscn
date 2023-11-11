@@ -27,4 +27,5 @@ position = Vector2(534, 32)
 [node name="Fade_Transition" parent="." instance=ExtResource("6_rtr3k")]
 
 [connection signal="room_0_pos" from="." to="Player" method="_on_scene_room_0_pos"]
+[connection signal="picked_up_key" from="Player" to="Object" method="_on_player_picked_up_key"]
 [connection signal="pick_up_object" from="Object" to="Player" method="_on_object_pick_up_object"]

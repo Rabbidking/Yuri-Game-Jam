@@ -55,4 +55,5 @@ item = &"gigi"
 
 [connection signal="living_pos" from="." to="Player" method="_on_living_room_living_pos"]
 [connection signal="picked_up_gigi" from="Player" to="Gigi" method="_on_player_picked_up_gigi"]
+[connection signal="player_can_move" from="Fade_Transition" to="Player" method="_on_fade_transition_player_can_move"]
 [connection signal="pick_up_object" from="Gigi" to="Player" method="_on_gigi_pick_up_object"]

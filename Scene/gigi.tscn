@@ -45,6 +45,7 @@ size = Vector2(64, 64)
 [node name="Gigi" type="Area2D" groups=["Object"]]
 collision_layer = 2
 script = ExtResource("1_74n34")
+item = &"gigi"
 
 [node name="Texture" type="Sprite2D" parent="."]
 visible = false

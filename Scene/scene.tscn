@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="1_t0gqo"]
 [ext_resource type="Script" path="res://Script/scene.gd" id="1_vrp84"]
 [ext_resource type="PackedScene" uid="uid://be0wmp3b3b4qv" path="res://Scene/player.tscn" id="2_hpwq1"]
-[ext_resource type="PackedScene" uid="uid://52x1mvksb50c" path="res://Scene/object.tscn" id="3_h1y3p"]
+[ext_resource type="PackedScene" uid="uid://52x1mvksb50c" path="res://Scene/interactable.tscn" id="3_h1y3p"]
 [ext_resource type="PackedScene" uid="uid://cafmsu4vdnnfq" path="res://Scene/door.tscn" id="4_cnfbi"]
 [ext_resource type="PackedScene" uid="uid://b0k3gal2wpctt" path="res://fade_transition.tscn" id="6_rtr3k"]
 
@@ -27,5 +27,4 @@ position = Vector2(534, 32)
 [node name="Fade_Transition" parent="." instance=ExtResource("6_rtr3k")]
 
 [connection signal="room_0_pos" from="." to="Player" method="_on_scene_room_0_pos"]
-[connection signal="picked_up_key" from="Player" to="Object" method="_on_player_picked_up_key"]
 [connection signal="pick_up_object" from="Object" to="Player" method="_on_object_pick_up_object"]

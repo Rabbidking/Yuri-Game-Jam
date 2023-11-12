@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bgh547qu4toco"]
+[gd_scene load_steps=18 format=3 uid="uid://bgh547qu4toco"]
 
 [ext_resource type="Script" path="res://Script/Rooms/bedroom.gd" id="1_v28qo"]
 [ext_resource type="PackedScene" uid="uid://be0wmp3b3b4qv" path="res://Scene/player.tscn" id="2_5gxhm"]
@@ -12,7 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://bdylafpj3r3sg" path="res://Sprites/Furniture/OBJ_Drawer/OBJ_DrawerA.png" id="10_qmnhe"]
 [ext_resource type="Texture2D" uid="uid://dcm43ir7u5chb" path="res://Sprites/Furniture/OBJ_Closet/OBJ_ClosetA_01.png" id="11_ehdcq"]
 [ext_resource type="Texture2D" uid="uid://dtniw5y5ipp3e" path="res://Sprites/Furniture/OBJ_Plant/OBJ_PlantB.png" id="12_lf32k"]
-[ext_resource type="PackedScene" uid="uid://52x1mvksb50c" path="res://Scene/bed.tscn" id="13_de0lp"]
+[ext_resource type="PackedScene" uid="uid://52x1mvksb50c" path="res://Scene/object.tscn" id="13_1yh13"]
+[ext_resource type="Texture2D" uid="uid://bj4q74gq65ql8" path="res://Sprites/Furniture/OBJ_Table/OBJ_TableA.png" id="13_mucln"]
+[ext_resource type="Texture2D" uid="uid://dndifb3evvqj7" path="res://Sprites/Furniture/OBJ_Chair/OBJ_ChairC.png" id="14_fh7f2"]
+[ext_resource type="Script" path="res://Script/gigi.gd" id="14_vxy88"]
+[ext_resource type="PackedScene" uid="uid://52x1mvksb50c" path="res://Scene/interactable.tscn" id="16_dd23a"]
 
 [node name="bedroom" type="Node2D"]
 script = ExtResource("1_v28qo")
@@ -44,10 +48,6 @@ door_type = &"front"
 position = Vector2(360, 288)
 texture = ExtResource("7_fo6ks")
 
-[node name="Bed 2" type="Sprite2D" parent="Prop"]
-position = Vector2(360, 304)
-texture = ExtResource("7_fo6ks")
-
 [node name="Light" type="Sprite2D" parent="Prop"]
 position = Vector2(336, 224)
 texture = ExtResource("8_iw3a8")
@@ -68,10 +68,26 @@ texture = ExtResource("11_ehdcq")
 position = Vector2(504, 144)
 texture = ExtResource("12_lf32k")
 
-[node name="Bed" parent="." instance=ExtResource("13_de0lp")]
-position = Vector2(361, 304)
+[node name="Table" type="Sprite2D" parent="Prop"]
+position = Vector2(510, 365)
+texture = ExtResource("13_mucln")
+
+[node name="Chair1" type="Sprite2D" parent="Prop"]
+position = Vector2(511, 383)
+texture = ExtResource("14_fh7f2")
+
+[node name="Bed" parent="." instance=ExtResource("13_1yh13")]
+position = Vector2(360, 305)
+script = ExtResource("14_vxy88")
+item = &"bed"
+
+[node name="Laptop" parent="." instance=ExtResource("16_dd23a")]
+position = Vector2(508, 332)
+item = &"laptop"
 
 [connection signal="bedroom_pos" from="." to="Player" method="_on_bedroom_bedroom_pos"]
 [connection signal="get_in_bed" from="Player" to="Bed" method="_on_player_get_in_bed"]
+[connection signal="picked_up" from="Player" to="Laptop" method="_on_player_picked_up"]
 [connection signal="player_can_move" from="Fade_Transition" to="Player" method="_on_fade_transition_player_can_move"]
-[connection signal="pick_up_object" from="Bed" to="Player" method="_on_bed_pick_up_object"]
+[connection signal="pick_up_object" from="Bed" to="Player" method="_on_interactable_pick_up_object"]
+[connection signal="pick_up_object" from="Laptop" to="Player" method="_on_interactable_pick_up_object"]

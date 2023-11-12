@@ -7,7 +7,6 @@ signal entrance_pos_3
 #var receipt = preload("res://Scene/object.tscn")
 
 func _ready():
-	
 #	if State.Day == 3:
 		#if State.gigi_at_entrance == false:
 	#		# instantiate the receipt here

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dc6fk5kkjoeet"]
+[gd_scene load_steps=15 format=3 uid="uid://dc6fk5kkjoeet"]
 
 [ext_resource type="Script" path="res://Script/Rooms/study.gd" id="1_3gauq"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_ecvp5"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://dht7f4kn88quf" path="res://Sprites/Furniture/OBJ_Chest/OBJ_ChestA_01.png" id="8_wmmla"]
 [ext_resource type="Texture2D" uid="uid://bdylafpj3r3sg" path="res://Sprites/Furniture/OBJ_Drawer/OBJ_DrawerA.png" id="9_nrwco"]
 [ext_resource type="Texture2D" uid="uid://bcxxg6s2c3f1w" path="res://Sprites/Furniture/OBJ_Lightstand/OBJ_LightstandB.png" id="10_sqxft"]
+[ext_resource type="PackedScene" uid="uid://52x1mvksb50c" path="res://Scene/object.tscn" id="13_t5pwm"]
+[ext_resource type="Script" path="res://Script/gigi.gd" id="14_1vlbg"]
 
 [node name="Study" type="Node2D"]
 script = ExtResource("1_3gauq")
@@ -63,5 +65,12 @@ door_type = &"back"
 
 [node name="Fade_Transition" parent="." instance=ExtResource("3_ffihc")]
 
+[node name="Interactable" parent="." instance=ExtResource("13_t5pwm")]
+position = Vector2(534, 253)
+script = ExtResource("14_1vlbg")
+item = &"key"
+
 [connection signal="study_pos" from="." to="Player" method="_on_study_study_pos"]
+[connection signal="picked_up" from="Player" to="Interactable" method="_on_player_picked_up"]
 [connection signal="player_can_move" from="Fade_Transition" to="Player" method="_on_fade_transition_player_can_move"]
+[connection signal="pick_up_object" from="Interactable" to="Player" method="_on_interactable_pick_up_object"]

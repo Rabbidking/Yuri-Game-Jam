@@ -3,6 +3,8 @@ extends Node
 var Day = 1	#day adjustments
 var key_taken = false
 var have_gigi = false
+var password_known = false
+var ordered_return = false
 var player_pos = 0
 var used_door = false
 var door_used

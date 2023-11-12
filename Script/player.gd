@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-signal picked_up_gigi
+signal picked_up
+signal pick_up_gigi
 signal get_in_bed
 
 const SPEED = 300.0
@@ -59,14 +60,27 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _process(delta):
 	if Input.is_action_just_pressed("Interact") and interactable == true:
+		print(interactable_item)
 		State.is_dialog_active = true
 		if interactable_item == "gigi":
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/main.dialogue"), "key")
-			State.key_taken = true
-			emit_signal("picked_up_gigi")
+			State.have_gigi = true
+			emit_signal("pick_up_gigi")
 			velocity = Vector2(0, 0)
-		elif interactable_item == "bed":
+		elif interactable_item == "bed" and State.have_gigi == true:
 			emit_signal("get_in_bed")
+		elif interactable_item == "key":
+			emit_signal("picked_up")
+		elif interactable_item == "car" and State.key_taken == true:
+			emit_signal("picked_up")
+		elif interactable_item == "laptop" and State.password_known == true:
+			print("hacker")
+			emit_signal("picked_up")
+		elif interactable_item == "note":
+			emit_signal("picked_up")
+			print("read")
+		elif interactable_item == "box":
+			emit_signal("picked_up")
 		State.is_dialog_active = false
 		print(State.is_dialog_active)
 	move_and_slide()
@@ -80,18 +94,13 @@ func _on_interact_collision_area_exited(area):
 	interactable = false
 	interactable_item = null
 
-func _on_object_pick_up_object(item):
-	interactable_item = item
-	interactable = true
-	
 func _on_gigi_pick_up_object(item):
 	interactable_item = item
 	interactable = true
-
-func _on_bed_pick_up_object(item):
+	
+func _on_interactable_pick_up_object(item):
 	interactable_item = item
 	interactable = true
-
 
 #Entrance
 func _on_entrance_entrance_pos_1():
@@ -138,6 +147,4 @@ func _on_bathroom_bathroom_pos():
 
 func _on_fade_transition_player_can_move():
 	dont_move = false
-
-
 

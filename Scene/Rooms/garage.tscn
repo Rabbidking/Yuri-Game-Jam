@@ -1,11 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://c52j41y7ex3nl"]
+[gd_scene load_steps=19 format=3 uid="uid://c52j41y7ex3nl"]
 
 [ext_resource type="Script" path="res://Script/Rooms/garage.gd" id="1_6bnx0"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_wm4sm"]
 [ext_resource type="PackedScene" uid="uid://be0wmp3b3b4qv" path="res://Scene/player.tscn" id="3_8hijy"]
 [ext_resource type="Texture2D" uid="uid://cesubyhcfgfps" path="res://sample/Blue.png" id="3_ge3ih"]
 [ext_resource type="PackedScene" uid="uid://cafmsu4vdnnfq" path="res://Scene/door.tscn" id="4_5bamk"]
-[ext_resource type="Texture2D" uid="uid://0tmwxkignhb3" path="res://Sprites/Furniture/OBJ_Car/OBJ_Car_02.png" id="4_ndclx"]
 [ext_resource type="Texture2D" uid="uid://cdornolli81rm" path="res://Sprites/Furniture/OBJ_StorageShelves/OBJ_StorageShelves.png" id="5_ix1g6"]
 [ext_resource type="PackedScene" uid="uid://b0k3gal2wpctt" path="res://fade_transition.tscn" id="5_w0qm8"]
 [ext_resource type="Texture2D" uid="uid://b1o4ctnpeklyy" path="res://Sprites/Furniture/OBJ_ToolCabinet/OBJ_ToolCabinet.png" id="6_xnjnp"]
@@ -17,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://ddfje32ykoqeb" path="res://Sprites/Furniture/OBJ_CardboardBox/OBJ_CardboardBoxD.png" id="12_tsvtf"]
 [ext_resource type="Texture2D" uid="uid://cupxl7713lvmo" path="res://Sprites/Furniture/OBJ_CardboardBox/OBJ_CardboardBoxE.png" id="13_eie68"]
 [ext_resource type="Texture2D" uid="uid://wemykn4uvwmf" path="res://Sprites/Furniture/OBJ_CardboardBox/OBJ_CardboardBoxF.png" id="14_vfen8"]
+[ext_resource type="PackedScene" uid="uid://52x1mvksb50c" path="res://Scene/object.tscn" id="17_sexfq"]
+[ext_resource type="Script" path="res://Script/gigi.gd" id="18_db4t5"]
 
 [node name="garage" type="Node2D"]
 script = ExtResource("1_6bnx0")
@@ -39,10 +40,6 @@ texture = ExtResource("3_ge3ih")
 centered = false
 
 [node name="Props" type="Node2D" parent="."]
-
-[node name="Car" type="Sprite2D" parent="Props"]
-position = Vector2(720, 384)
-texture = ExtResource("4_ndclx")
 
 [node name="Shelf" type="Sprite2D" parent="Props"]
 position = Vector2(816, 88)
@@ -85,7 +82,7 @@ position = Vector2(656, 128)
 texture = ExtResource("14_vfen8")
 
 [node name="Player" parent="." instance=ExtResource("3_8hijy")]
-position = Vector2(206, 280)
+position = Vector2(213, 280)
 
 [node name="HallwayA Door" parent="." instance=ExtResource("4_5bamk")]
 position = Vector2(152, 271)
@@ -94,5 +91,12 @@ door_type = &"side_left"
 
 [node name="Fade_Transition" parent="." instance=ExtResource("5_w0qm8")]
 
+[node name="Interactable" parent="." instance=ExtResource("17_sexfq")]
+position = Vector2(737, 299)
+script = ExtResource("18_db4t5")
+item = &"car"
+
 [connection signal="garage_pos" from="." to="Player" method="_on_garage_garage_pos"]
+[connection signal="picked_up" from="Player" to="Interactable" method="_on_player_picked_up"]
 [connection signal="player_can_move" from="Fade_Transition" to="Player" method="_on_fade_transition_player_can_move"]
+[connection signal="pick_up_object" from="Interactable" to="Player" method="_on_interactable_pick_up_object"]

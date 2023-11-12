@@ -1,5 +1,1 @@
-res://Scene/Rooms/entance.tscn
-res://Script/player.gd
-res://Scene/scene.tscn
-res://Scene/Rooms/living_room.tscn
-res://Scene/Rooms/garage.tscn
+res://dialog_balloon/balloon.tscn

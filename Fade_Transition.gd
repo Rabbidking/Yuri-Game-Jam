@@ -10,7 +10,7 @@ func _ready():
 	$Transition.animation_finished
 	$Timer.start()
 	$Transition.play("fade_in")
-	$Timer.start()
+
 
 
 func _on_timer_timeout():

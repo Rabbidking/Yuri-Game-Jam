@@ -3,6 +3,7 @@ extends CanvasLayer
 
 @onready var balloon: Panel = %Balloon
 @onready var character_label: RichTextLabel = %CharacterLabel
+@onready var portrait: TextureRect = %Portrait
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
 
@@ -32,6 +33,11 @@ var dialogue_line: DialogueLine:
 
 		character_label.visible = not dialogue_line.character.is_empty()
 		character_label.text = tr(dialogue_line.character, "dialogue")
+		var portrait_path: String = "res://Sprites/Portraits/%s.png" % dialogue_line.character.to_lower()
+		if FileAccess.file_exists(portrait_path):
+			portrait.texture = load(portrait_path)
+		else:
+			portrait.texture = null
 
 		dialogue_label.hide()
 		dialogue_label.dialogue_line = dialogue_line

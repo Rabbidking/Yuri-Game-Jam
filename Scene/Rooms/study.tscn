@@ -1,0 +1,76 @@
+[gd_scene load_steps=14 format=3 uid="uid://dc6fk5kkjoeet"]
+
+[ext_resource type="Script" path="res://Script/Rooms/study.gd" id="1_3gauq"]
+[ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_ecvp5"]
+[ext_resource type="PackedScene" uid="uid://be0wmp3b3b4qv" path="res://Scene/player.tscn" id="2_q2sx0"]
+[ext_resource type="PackedScene" uid="uid://b0k3gal2wpctt" path="res://fade_transition.tscn" id="3_ffihc"]
+[ext_resource type="Texture2D" uid="uid://cesubyhcfgfps" path="res://sample/Blue.png" id="3_q4gkh"]
+[ext_resource type="PackedScene" uid="uid://cafmsu4vdnnfq" path="res://Scene/door.tscn" id="3_qbrfg"]
+[ext_resource type="Texture2D" uid="uid://idsnu2lpouan" path="res://Sprites/Furniture/OBJ_PCSetup/OBJ_PCSetup.png" id="5_ad688"]
+[ext_resource type="Texture2D" uid="uid://cgxktfbo50w6q" path="res://Sprites/Furniture/OBJ_GamingChair/OBJ_GamingChair.png" id="6_xwy4f"]
+[ext_resource type="Texture2D" uid="uid://dsc00hxxk1qmn" path="res://Sprites/Furniture/OBJ_Bookshelf/OBJ_BookshelfA.png" id="7_taguj"]
+[ext_resource type="Texture2D" uid="uid://dht7f4kn88quf" path="res://Sprites/Furniture/OBJ_Chest/OBJ_ChestA_01.png" id="8_wmmla"]
+[ext_resource type="Texture2D" uid="uid://bdylafpj3r3sg" path="res://Sprites/Furniture/OBJ_Drawer/OBJ_DrawerA.png" id="9_nrwco"]
+[ext_resource type="Texture2D" uid="uid://bcxxg6s2c3f1w" path="res://Sprites/Furniture/OBJ_Lightstand/OBJ_LightstandB.png" id="10_sqxft"]
+[ext_resource type="PackedScene" uid="uid://co1a7h15avswg" path="res://Scene/interactable.tscn" id="13_edtby"]
+
+[node name="Study" type="Node2D"]
+script = ExtResource("1_3gauq")
+
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(18, 10.2)
+texture = ExtResource("2_ecvp5")
+centered = false
+
+[node name="Floor1" type="Sprite2D" parent="."]
+position = Vector2(440, 168)
+scale = Vector2(4.54688, 4.68437)
+texture = ExtResource("3_q4gkh")
+centered = false
+
+[node name="Player" parent="." instance=ExtResource("2_q2sx0")]
+position = Vector2(481, 355)
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="PC Setup" type="Sprite2D" parent="Props"]
+position = Vector2(664, 192)
+texture = ExtResource("5_ad688")
+
+[node name="Gamer Chair" type="Sprite2D" parent="Props"]
+position = Vector2(664, 224)
+texture = ExtResource("6_xwy4f")
+
+[node name="Book Shelf" type="Sprite2D" parent="Props"]
+position = Vector2(480, 152)
+texture = ExtResource("7_taguj")
+
+[node name="Chest" type="Sprite2D" parent="Props"]
+position = Vector2(696, 432)
+texture = ExtResource("8_wmmla")
+
+[node name="Drawer" type="Sprite2D" parent="Props"]
+position = Vector2(545, 184)
+texture = ExtResource("9_nrwco")
+
+[node name="Light" type="Sprite2D" parent="Props"]
+position = Vector2(552, 152)
+texture = ExtResource("10_sqxft")
+
+[node name="HallwayB Door" parent="." instance=ExtResource("3_qbrfg")]
+position = Vector2(485, 427)
+door_name = &"hallwayB_3"
+door_type = &"back"
+
+[node name="Fade_Transition" parent="." instance=ExtResource("3_ffihc")]
+
+[node name="Key" parent="." instance=ExtResource("13_edtby")]
+position = Vector2(546, 256)
+item = &"key"
+
+[connection signal="study_pos" from="." to="Player" method="_on_study_study_pos"]
+[connection signal="picked_up" from="Player" to="Key" method="_on_player_picked_up"]
+[connection signal="player_can_move" from="Fade_Transition" to="Player" method="_on_fade_transition_player_can_move"]
+[connection signal="area_entered" from="Key" to="Key" method="_on_area_entered"]
+[connection signal="area_exited" from="Key" to="Key" method="_on_area_exited"]
+[connection signal="pick_up_object" from="Key" to="Player" method="_on_key_pick_up_object"]

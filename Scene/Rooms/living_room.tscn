@@ -1,0 +1,73 @@
+[gd_scene load_steps=13 format=3 uid="uid://cxsg6w4sslowi"]
+
+[ext_resource type="Script" path="res://Script/Rooms/living_room.gd" id="1_2g2a4"]
+[ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="1_a7n2q"]
+[ext_resource type="PackedScene" uid="uid://be0wmp3b3b4qv" path="res://Scene/player.tscn" id="2_r5daw"]
+[ext_resource type="Texture2D" uid="uid://cesubyhcfgfps" path="res://sample/Blue.png" id="3_i8kkj"]
+[ext_resource type="PackedScene" uid="uid://b0k3gal2wpctt" path="res://fade_transition.tscn" id="3_ype08"]
+[ext_resource type="PackedScene" uid="uid://cafmsu4vdnnfq" path="res://Scene/door.tscn" id="4_nhv12"]
+[ext_resource type="Texture2D" uid="uid://owk7lxnxuri1" path="res://Sprites/Furniture/OBJ_Sofa/OBJ_SofaA.png" id="7_mgk53"]
+[ext_resource type="Texture2D" uid="uid://b2u4rllapjx20" path="res://Sprites/Furniture/OBJ_Plant/OBJ_PlantA.png" id="8_fsx5j"]
+[ext_resource type="Texture2D" uid="uid://b2x07mn778xgp" path="res://Sprites/Furniture/OBJ_Table/OBJ_TableE.png" id="9_0ytrm"]
+[ext_resource type="Texture2D" uid="uid://cj7x5d4wk4ivw" path="res://Sprites/Furniture/OBJ_Television/OBJ_TelevisionA.png" id="10_4k5n3"]
+[ext_resource type="PackedScene" uid="uid://co1a7h15avswg" path="res://Scene/interactable.tscn" id="11_vw6on"]
+[ext_resource type="PackedScene" uid="uid://c8d5hla3410jd" path="res://Scene/gigi.tscn" id="12_kifwc"]
+
+[node name="living room" type="Node2D"]
+script = ExtResource("1_2g2a4")
+
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(18, 10.2)
+texture = ExtResource("1_a7n2q")
+centered = false
+
+[node name="Floor 1" type="Sprite2D" parent="."]
+position = Vector2(208, 128)
+scale = Vector2(11.522, 6.078)
+texture = ExtResource("3_i8kkj")
+centered = false
+
+[node name="Player" parent="." instance=ExtResource("2_r5daw")]
+position = Vector2(296, 324)
+
+[node name="Entrance Door" parent="." instance=ExtResource("4_nhv12")]
+position = Vector2(240, 320)
+door_name = &"entrance_2"
+door_type = &"side_left"
+
+[node name="Fade_Transition" parent="." instance=ExtResource("3_ype08")]
+
+[node name="Prop" type="Node2D" parent="."]
+
+[node name="Sofa" type="Sprite2D" parent="Prop"]
+position = Vector2(560, 152)
+texture = ExtResource("7_mgk53")
+
+[node name="Plant A" type="Sprite2D" parent="Prop"]
+position = Vector2(448, 152)
+texture = ExtResource("8_fsx5j")
+
+[node name="Table" type="Sprite2D" parent="Prop"]
+position = Vector2(560, 184)
+texture = ExtResource("9_0ytrm")
+
+[node name="TV" type="Sprite2D" parent="Prop"]
+position = Vector2(557, 245)
+texture = ExtResource("10_4k5n3")
+
+[node name="Note" parent="." instance=ExtResource("11_vw6on")]
+position = Vector2(559, 187)
+item = &"note"
+
+[node name="Gigi" parent="." instance=ExtResource("12_kifwc")]
+position = Vector2(566, 342)
+item = &"gigi"
+
+[connection signal="living_pos" from="." to="Player" method="_on_living_room_living_pos"]
+[connection signal="pick_up_gigi" from="Player" to="Gigi" method="_on_player_pick_up_gigi"]
+[connection signal="picked_up" from="Player" to="Note" method="_on_player_picked_up"]
+[connection signal="player_can_move" from="Fade_Transition" to="Player" method="_on_fade_transition_player_can_move"]
+[connection signal="area_entered" from="Note" to="Note" method="_on_area_entered"]
+[connection signal="area_exited" from="Note" to="Note" method="_on_area_exited"]
+[connection signal="pick_up_object" from="Note" to="Player" method="_on_note_pick_up_object"]
+[connection signal="pick_up_object" from="Gigi" to="Player" method="_on_gigi_pick_up_object"]

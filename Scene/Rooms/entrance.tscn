@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://dn3o4ik2vi8l8"]
+
+[ext_resource type="Script" path="res://Script/Rooms/entrance.gd" id="1_4k0mf"]
+[ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_e8lwr"]
+[ext_resource type="Texture2D" uid="uid://cesubyhcfgfps" path="res://sample/Blue.png" id="3_qoeej"]
+[ext_resource type="PackedScene" uid="uid://be0wmp3b3b4qv" path="res://Scene/player.tscn" id="4_q2jp4"]
+[ext_resource type="PackedScene" uid="uid://cafmsu4vdnnfq" path="res://Scene/door.tscn" id="5_331hk"]
+[ext_resource type="PackedScene" uid="uid://b0k3gal2wpctt" path="res://fade_transition.tscn" id="6_2lyao"]
+[ext_resource type="PackedScene" uid="uid://co1a7h15avswg" path="res://Scene/interactable.tscn" id="7_c5q0q"]
+
+[node name="entrance" type="Node2D"]
+script = ExtResource("1_4k0mf")
+metadata/_edit_horizontal_guides_ = [-260.0]
+metadata/_edit_vertical_guides_ = [1154.0, 1152.0, 576.0]
+
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(18, 10.2)
+texture = ExtResource("2_e8lwr")
+centered = false
+
+[node name="Floor 1" type="Sprite2D" parent="."]
+position = Vector2(575.75, 364.5)
+scale = Vector2(5.46094, 4.29687)
+texture = ExtResource("3_qoeej")
+
+[node name="Floor 2" type="Sprite2D" parent="."]
+position = Vector2(576, 153)
+scale = Vector2(1.5, 2.351)
+texture = ExtResource("3_qoeej")
+
+[node name="Player" parent="." instance=ExtResource("4_q2jp4")]
+position = Vector2(553, 364)
+
+[node name="HallwayA Door" parent="." instance=ExtResource("5_331hk")]
+position = Vector2(582, 37)
+door_name = &"hallwayA_1"
+door_type = &"front"
+
+[node name="Kitchen Door" parent="." instance=ExtResource("5_331hk")]
+position = Vector2(434, 350)
+door_name = &"kitchen"
+door_type = &"side_left"
+
+[node name="Living Room Door" parent="." instance=ExtResource("5_331hk")]
+position = Vector2(733, 350)
+door_name = &"living room"
+door_type = &"side_right"
+
+[node name="Fade_Transition" parent="." instance=ExtResource("6_2lyao")]
+
+[node name="Receipt" parent="." instance=ExtResource("7_c5q0q")]
+position = Vector2(574, 460)
+item = &"receipt"
+
+[connection signal="entrance_pos_1" from="." to="Player" method="_on_entrance_entrance_pos_1"]
+[connection signal="entrance_pos_2" from="." to="Player" method="_on_entrance_entrance_pos_2"]
+[connection signal="entrance_pos_3" from="." to="Player" method="_on_entrance_entrance_pos_3"]
+[connection signal="picked_up" from="Player" to="Receipt" method="_on_player_picked_up"]
+[connection signal="player_can_move" from="Fade_Transition" to="Player" method="_on_fade_transition_player_can_move"]
+[connection signal="area_entered" from="Receipt" to="Receipt" method="_on_area_entered"]
+[connection signal="area_exited" from="Receipt" to="Receipt" method="_on_area_exited"]
+[connection signal="pick_up_object" from="Receipt" to="Player" method="_on_receipt_pick_up_object"]

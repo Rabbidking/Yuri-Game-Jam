@@ -1,2 +1,5 @@
+res://Scene/Rooms/living_room.tscn
+res://Scene/scene.tscn
+res://Scene/Rooms/garage.tscn
+res://Scene/Rooms/entance.tscn
 res://dialog_balloon/balloon.tscn
-res://dialog_balloon/balloon.gd

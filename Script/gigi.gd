@@ -24,15 +24,15 @@ func _ready():
 		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Car/OBJ_Car_01.png"))
 		$CollisionShape2D.scale = Vector2(3.2, 1.5)
 		$CollisionShape2D.position = Vector2(0, 20)
-	elif item == "box":
-		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_CardboardBox/OBJ_CardboardBoxB.png"))
-		$CollisionShape2D.scale = Vector2(1.75, -1.05)
-		$CollisionShape2D.position = Vector2(0, 8)
-		$CollisionShape2D.disabled = true
-		$Texture.visible = false
-		if State.ordered_return == true:
-			$CollisionShape2D.disabled = false
-			$Texture.visible = true
+#	elif item == "box":
+#		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_CardboardBox/OBJ_CardboardBoxB.png"))
+#		$CollisionShape2D.scale = Vector2(1.75, -1.05)
+#		$CollisionShape2D.position = Vector2(0, 8)
+#		$CollisionShape2D.disabled = true
+#		$Texture.visible = false
+#		if State.ordered_return == true:
+#			$CollisionShape2D.disabled = false
+#			$Texture.visible = true
 	elif item == "laptop":
 		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Laptop/OBJ_Laptop_01.png"))
 		$CollisionShape2D.scale = Vector2(1.5, 1.45)
@@ -41,6 +41,21 @@ func _ready():
 		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_StckyNote/OBJ_StckyNote_01.png"))
 		$CollisionShape2D.scale = Vector2(1.5, 1.45)
 		$CollisionShape2D.position = Vector2(0.62, 0.41)
+	elif item == "receipt":
+		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Receipt/OBJ_Receipt_01.png"))
+		$CollisionShape2D.scale = Vector2(0.62, -0.79)
+		$CollisionShape2D.position = Vector2(0, 1)
+		if State.read_receipt == true and State.ordered_return == false:
+			$Texture.visible = false
+			$CollisionShape2D.disabled = true
+		elif State.ordered_return == true and State.read_receipt == true:
+			item = "box"
+			$Texture.set_texture(load("res://Sprites/Furniture/OBJ_CardboardBox/OBJ_CardboardBoxB.png"))
+			$CollisionShape2D.scale = Vector2(1.75, -1.05)
+			$CollisionShape2D.position = Vector2(0, 8)
+			$CollisionShape2D.disabled = false
+			$Texture.visible = true
+				
 		
 func pick_up():
 	emit_signal("pick_up_object", item)
@@ -57,6 +72,8 @@ func _on_area_entered(area):
 			$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Laptop/OBJ_Laptop_02.png"))
 		elif item == "note" and State.password_known == false:
 			$Texture.set_texture(load("res://Sprites/Furniture/OBJ_StckyNote/OBJ_StckyNote_02.png"))
+		elif item == "receipt":
+			$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Receipt/OBJ_Receipt_02.png"))
 
 func _on_area_exited(area):
 	if item == "bed" and State.have_gigi == true:
@@ -69,6 +86,8 @@ func _on_area_exited(area):
 		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Laptop/OBJ_Laptop_01.png"))
 	elif item == "note":
 		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_StckyNote/OBJ_StckyNote_01.png"))
+	elif item == "receipt":
+		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Receipt/OBJ_Receipt_01.png"))
 
 
 func _on_player_get_in_bed():
@@ -77,7 +96,6 @@ func _on_player_get_in_bed():
 	State.Day += 1
 
 func _on_player_picked_up():
-	print("print")
 	if item == "key":
 		State.key_taken = true
 		queue_free()
@@ -93,7 +111,6 @@ func _on_player_picked_up():
 		$CollisionShape2D.disabled = true
 		State.password_known = true
 	elif item == "laptop":
-		print("hacked")
 		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Laptop/OBJ_Laptop_01.png"))
 		$CollisionShape2D.disabled = true
 		State.ordered_return = true
@@ -101,6 +118,10 @@ func _on_player_picked_up():
 		State.have_gigi = true
 		State.ordered_return = false
 		queue_free()	
+	elif item == "receipt":
+		$Texture.visible = false
+		$CollisionShape2D.disabled = true
+		State.read_receipt = true
 
 
 func _on_player_pick_up_gigi():

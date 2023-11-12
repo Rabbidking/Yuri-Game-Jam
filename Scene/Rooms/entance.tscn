@@ -50,7 +50,7 @@ door_type = &"side_right"
 
 [node name="Interactable" parent="." instance=ExtResource("7_m36bm")]
 position = Vector2(574, 458)
-item = &"box"
+item = &"receipt"
 
 [connection signal="entrance_pos_1" from="." to="Player" method="_on_entrance_entrance_pos_1"]
 [connection signal="entrance_pos_2" from="." to="Player" method="_on_entrance_entrance_pos_2"]

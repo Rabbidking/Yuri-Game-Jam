@@ -81,6 +81,9 @@ func _process(delta):
 			print("read")
 		elif interactable_item == "box":
 			emit_signal("picked_up")
+		elif interactable_item == "receipt":
+			emit_signal("picked_up")
+
 		State.is_dialog_active = false
 		print(State.is_dialog_active)
 	move_and_slide()

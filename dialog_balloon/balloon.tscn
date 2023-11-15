@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene load_steps=10 format=3 uid="uid://73jm5qjy52vq"]
 
 [ext_resource type="Script" path="res://dialog_balloon/balloon.gd" id="1_4u26j"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
+[ext_resource type="Texture2D" uid="uid://rf17eue30xxp" path="res://Sprites/UI/Dialogue Box.png" id="2_bq6v5"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_72ixx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
@@ -57,17 +58,17 @@ Button/styles/disabled = SubResource("StyleBoxFlat_spyqn")
 Button/styles/focus = SubResource("StyleBoxFlat_ri4m3")
 Button/styles/hover = SubResource("StyleBoxFlat_e0njw")
 Button/styles/normal = SubResource("StyleBoxFlat_e0njw")
-MarginContainer/constants/margin_bottom = 15
+MarginContainer/constants/margin_bottom = 30
 MarginContainer/constants/margin_left = 30
 MarginContainer/constants/margin_right = 30
-MarginContainer/constants/margin_top = 15
+MarginContainer/constants/margin_top = 30
 Panel/styles/panel = SubResource("StyleBoxFlat_uy0d5")
 
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
 script = ExtResource("1_4u26j")
 
-[node name="Balloon" type="Panel" parent="."]
+[node name="Balloon" type="TextureRect" parent="."]
 unique_name_in_owner = true
 anchors_preset = 12
 anchor_top = 1.0
@@ -80,12 +81,15 @@ offset_bottom = -19.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = SubResource("Theme_qq3yp")
+texture = ExtResource("2_bq6v5")
 
 [node name="Dialogue" type="MarginContainer" parent="Balloon"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -7.0
+offset_bottom = 39.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -95,7 +99,7 @@ theme_override_constants/separation = 30
 
 [node name="Portrait" type="TextureRect" parent="Balloon/Dialogue/HBoxContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(256, 0)
+custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Balloon/Dialogue/HBoxContainer"]

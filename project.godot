@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 State="*res://Script/state.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
+[dialogue_manager]
+
+general/custom_test_scene_path="res://Scene/test_dialogue.tscn"
+
 [display]
 
 window/stretch/mode="canvas_items"

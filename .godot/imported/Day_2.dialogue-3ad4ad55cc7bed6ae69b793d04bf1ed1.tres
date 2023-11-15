@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_ri4ly"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_r8por"]
 
 [resource]
-script = ExtResource("1_ri4ly")
+script = ExtResource("1_r8por")
 titles = {
 "end_night": "35",
 "find_key": "25",

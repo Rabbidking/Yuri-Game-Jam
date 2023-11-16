@@ -1,9 +1,10 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_4hno3"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_gd0nl"]
 
 [resource]
-script = ExtResource("1_4hno3")
+script = ExtResource("1_gd0nl")
+using_states = PackedStringArray()
 titles = {
 "bedroom_computer": "35",
 "bedroom_laptop_2": "46",
@@ -420,4 +421,4 @@ lines = {
 "type": "dialogue"
 }
 }
-metadata/dialogue_manager_version = "2.27.2"
+metadata/dialogue_manager_version = "2.29.0"

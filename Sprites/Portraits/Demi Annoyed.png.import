@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgdmdynuojx6c"
-path="res://.godot/imported/Demi Annoyed.png-af24bbbdd3f9c8b1d70b313c70f0f610.ctex"
+path="res://.godot/imported/Demi Annoyed.png-38e15a10eec4e9c35093987c6c694a8d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Portraits/Demi Portraits/Demi Annoyed.png"
-dest_files=["res://.godot/imported/Demi Annoyed.png-af24bbbdd3f9c8b1d70b313c70f0f610.ctex"]
+source_file="res://Sprites/Portraits/Demi Annoyed.png"
+dest_files=["res://.godot/imported/Demi Annoyed.png-38e15a10eec4e9c35093987c6c694a8d.ctex"]
 
 [params]
 

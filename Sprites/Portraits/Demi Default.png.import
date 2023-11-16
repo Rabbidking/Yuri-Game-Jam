@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d23jc2kqccwfx"
-path="res://.godot/imported/Demi Default.png-b297402d14df2f4a645ff88f33f7d096.ctex"
+path="res://.godot/imported/Demi Default.png-d62f9a921818b03ab760f18c9ef136ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Portraits/Demi Portraits/Demi Default.png"
-dest_files=["res://.godot/imported/Demi Default.png-b297402d14df2f4a645ff88f33f7d096.ctex"]
+source_file="res://Sprites/Portraits/Demi Default.png"
+dest_files=["res://.godot/imported/Demi Default.png-d62f9a921818b03ab760f18c9ef136ec.ctex"]
 
 [params]
 

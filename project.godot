@@ -22,7 +22,9 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [dialogue_manager]
 
-general/custom_test_scene_path="res://Scene/test_dialogue.tscn"
+general/custom_test_scene_path="res://dialog_balloon/balloon.tscn"
+general/states=["State"]
+general/balloon_path="res://dialog_balloon/balloon.tscn"
 
 [display]
 

@@ -63,7 +63,9 @@ func _process(delta):
 		print(interactable_item)
 		State.is_dialog_active = true
 		if interactable_item == "gigi":
-			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/main.dialogue"), "key")
+			#DialogueManager.show_example_dialogue_balloon(load("res://Dialog/main.dialogue"), "key")
+			if State.Day == 1:
+				DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_1.dialogue"), "living_room")
 			State.have_gigi = true
 			emit_signal("pick_up_gigi")
 			velocity = Vector2(0, 0)

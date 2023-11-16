@@ -2,8 +2,14 @@ extends CanvasLayer
 
 
 @onready var balloon: TextureRect = %Balloon
-@onready var character_label: RichTextLabel = %CharacterLabel
-@onready var portrait: TextureRect = %Portrait
+
+@onready var left_portrait: TextureRect = %LeftPortrait
+@onready var right_portrait: TextureRect = %RightPortrait
+@onready var left_nameplate: TextureRect = %LeftNameplate
+@onready var right_nameplate: TextureRect = %RightNameplate
+@onready var left_character_label: Label = %LeftCharacterLabel
+@onready var right_character_label: Label = %RightCharacterLabel
+
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
 
@@ -30,14 +36,25 @@ var dialogue_line: DialogueLine:
 			return
 
 		dialogue_line = next_dialogue_line
+		
+		#Check if only one character is active in the dialogue. If so, hide RightPortrait and its children.
 
-		character_label.visible = not dialogue_line.character.is_empty()
-		character_label.text = tr(dialogue_line.character, "dialogue")
-		var portrait_path: String = "res://Sprites/Portraits/%s Default.png" % dialogue_line.character
-		if FileAccess.file_exists(portrait_path):
-			portrait.texture = load(portrait_path)
+		left_character_label.visible = not dialogue_line.character.is_empty()
+		left_character_label.text = tr(dialogue_line.character, "dialogue")
+		right_character_label.visible = not dialogue_line.character.is_empty()
+		right_character_label.text = tr(dialogue_line.character, "dialogue")
+		
+		var left_portrait_path: String = "res://Sprites/Portraits/Demi %s.png" % dialogue_line.tags
+		if FileAccess.file_exists(left_portrait_path):
+			left_portrait.texture = load(left_portrait_path)
 		else:
-			portrait.texture = null
+			left_portrait.texture = null
+			
+		var right_portrait_path: String = "res://Sprites/Portraits/Gigi %s.png" % dialogue_line.tags
+		if FileAccess.file_exists(right_portrait_path):
+			right_portrait.texture = load(right_portrait_path)
+		else:
+			right_portrait.texture = null
 
 		dialogue_label.hide()
 		dialogue_label.dialogue_line = dialogue_line

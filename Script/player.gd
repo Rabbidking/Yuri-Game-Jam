@@ -69,7 +69,10 @@ func _process(delta):
 			State.have_gigi = true
 			emit_signal("pick_up_gigi")
 			velocity = Vector2(0, 0)
+			
 		elif interactable_item == "bed" and State.have_gigi == true:
+			if State.Day == 1:
+				DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_1.dialogue"), "bedroom")
 			emit_signal("get_in_bed")
 		elif interactable_item == "key":
 			emit_signal("picked_up")

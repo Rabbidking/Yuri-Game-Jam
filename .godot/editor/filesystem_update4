@@ -1,8 +1,9 @@
 res://Scene/Rooms/living_room.tscn
-res://Script/player.gd
+res://dialog_balloon/balloon.gd
 res://Scene/Rooms/garage.tscn
 res://dialog_balloon/balloon.tscn
 res://Scene/Rooms/bathroom.tscn
 res://Scene/Rooms/bedroom.tscn
 res://Scene/Rooms/entrance.tscn
 res://Scene/test_dialogue.tscn
+res://Script/player.gd

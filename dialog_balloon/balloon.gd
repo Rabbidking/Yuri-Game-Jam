@@ -37,11 +37,16 @@ var dialogue_line: DialogueLine:
 
 		dialogue_line = next_dialogue_line
 		
-		#Check if only one character is active in the dialogue. If so, hide RightPortrait and its children.
+		# Check if only one character is active in the dialogue. If so, hide RightPortrait and its children.
+		# Demi should usually be the only person on the left frame. If she has to jump to the other frame,
+		# flip the portrait. Same with Gigi and Mimi.
 
-		left_character_label.visible = not dialogue_line.character.is_empty()
+		left_character_label.visible = dialogue_line.character.begins_with("Demi")
 		left_character_label.text = tr(dialogue_line.character, "dialogue")
-		right_character_label.visible = not dialogue_line.character.is_empty()
+		left_nameplate.visible = not dialogue_line.character.is_empty()
+		
+		right_character_label.visible = dialogue_line.character.is_empty()
+		right_nameplate.visible = not dialogue_line.character.is_empty()
 		right_character_label.text = tr(dialogue_line.character, "dialogue")
 		
 		var left_portrait_path: String = "res://Sprites/Portraits/Demi %s.png" % dialogue_line.tags
@@ -55,6 +60,8 @@ var dialogue_line: DialogueLine:
 			right_portrait.texture = load(right_portrait_path)
 		else:
 			right_portrait.texture = null
+			
+		#===========================================================================================
 
 		dialogue_label.hide()
 		dialogue_label.dialogue_line = dialogue_line

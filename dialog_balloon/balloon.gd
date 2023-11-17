@@ -45,7 +45,11 @@ var dialogue_line: DialogueLine:
 		left_character_label.text = tr(dialogue_line.character, "dialogue")
 		left_nameplate.visible = not dialogue_line.character.is_empty()
 		
-		right_character_label.visible = dialogue_line.character.is_empty()
+		if State.mimi_replace_gigi == false:
+			right_character_label.visible = dialogue_line.character.begins_with("Gigi")
+		else:
+			right_character_label.visible = dialogue_line.character.begins_with("Mimi")
+			
 		right_nameplate.visible = not dialogue_line.character.is_empty()
 		right_character_label.text = tr(dialogue_line.character, "dialogue")
 		

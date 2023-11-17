@@ -59,3 +59,9 @@ var gigi_found_in_basement = false
 var night_4_end = false
 #==================================================================================================
 # night 5 specific flags
+var day_5_intro = false
+var night_5_intro = false
+
+# This flag is meant to change Gigi's label and portrait into Mimi's for the night 5 scenes.
+# Set to true once night_5_intro is true, set back to false once we load the ending cutscene
+var mimi_replace_gigi = false

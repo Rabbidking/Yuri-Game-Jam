@@ -7,3 +7,4 @@ res://Scene/Rooms/bedroom.tscn
 res://Scene/Rooms/entrance.tscn
 res://Scene/test_dialogue.tscn
 res://Script/player.gd
+res://Script/state.gd

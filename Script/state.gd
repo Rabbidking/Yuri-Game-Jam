@@ -6,7 +6,8 @@ var have_gigi = false
 var password_known = false
 var ordered_return = false
 var read_receipt = false
-var player_pos = 0
+var have_crowbar = false
+var trapdoor_locked = true
 var used_door = false
 var door_used
 var is_dialog_active = false

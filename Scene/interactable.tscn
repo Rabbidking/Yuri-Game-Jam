@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://Script/interactable.gd" id="1_7gari"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ywmvi"]
+size = Vector2(38, 41)
 
 [node name="interactable" type="Area2D" groups=["Object"]]
 collision_layer = 2

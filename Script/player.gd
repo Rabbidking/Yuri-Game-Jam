@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 signal picked_up
+signal picked_up2
 signal pick_up_gigi
 signal get_in_bed
 
@@ -88,6 +89,10 @@ func _process(delta):
 			emit_signal("picked_up")
 		elif interactable_item == "receipt":
 			emit_signal("picked_up")
+		elif interactable_item == "trapdoor":
+			emit_signal("picked_up2")
+		elif interactable_item == "crowbar":
+			emit_signal("picked_up2")
 
 		State.is_dialog_active = false
 		print(State.is_dialog_active)
@@ -124,8 +129,14 @@ func _on_laptop_pick_up_object(item):
 func _on_bed_pick_up_object(item):
 	interactable_item = item
 	interactable = true
+func _on_trapdoor_pick_up_object(item):
+	interactable_item = item
+	interactable = true
+func _on_crowbar_pick_up_object(item):
+	interactable_item = item
+	interactable = true
 
-
+	
 #Entrance
 func _on_entrance_entrance_pos_1():
 	position = Vector2(576, 115)
@@ -146,6 +157,8 @@ func _on_garage_garage_pos():
 #Living Room
 func _on_living_room_living_pos():
 	position = Vector2(296, 324)
+func _on_living_room_living_pos_1():
+	position = Vector2(854, 237)
 #Kitchen
 func _on_kitchen_kitchen_pos():
 	position = Vector2(777, 332)
@@ -167,7 +180,21 @@ func _on_study_study_pos():
 #Bathroom
 func _on_bathroom_bathroom_pos():
 	position = Vector2(552, 397)
-
+#Basement
+func _on_basement_basement_pos():
+	position = Vector2(541, 376)
 
 func _on_fade_transition_player_can_move():
 	dont_move = false
+
+
+
+
+
+
+
+
+
+
+
+

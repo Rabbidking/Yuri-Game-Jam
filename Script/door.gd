@@ -24,6 +24,10 @@ func _ready():
 		$"Door Sprite".texture = load("res://Sprites/Furniture/OBJ_Door/OBJ_DoorC.png")
 		$"Door Sprite".position = Vector2(-9, -8)
 		$"Door Collision".position = Vector2(-9, 40)
+	elif door_type == "basement":
+		$"Door Sprite".texture = load("res://Sprites/Furniture/OBJ_Ladder/OBJ_Ladder.png")
+		$"Door Sprite".position = Vector2(-9, -8)
+		$"Door Collision".position = Vector2(-9, 40)
 	else:
 		$"Door Sprite".texture = load("res://Sprites/Furniture/OBJ_Door/OBJ_DoorA.png")
 
@@ -81,4 +85,7 @@ func _on_body_entered(body):
 		if door_name == "study":
 			State.door_used = "study"
 			get_tree().change_scene_to_file("res://Scene/Rooms/study.tscn")
+		if door_name == "living_roomA":
+			State.door_used = "living_roomA"
+			get_tree().change_scene_to_file("res://Scene/Rooms/living_room.tscn")
 

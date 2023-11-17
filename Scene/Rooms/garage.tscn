@@ -94,9 +94,17 @@ door_type = &"side_left"
 position = Vector2(736, 366)
 item = &"car"
 
+[node name="Crowbar" parent="." instance=ExtResource("17_4lf0m")]
+position = Vector2(753, 175)
+item = &"crowbar"
+
 [connection signal="garage_pos" from="." to="Player" method="_on_garage_garage_pos"]
 [connection signal="picked_up" from="Player" to="Car" method="_on_player_picked_up"]
+[connection signal="picked_up2" from="Player" to="Crowbar" method="_on_player_picked_up_2"]
 [connection signal="player_can_move" from="Fade_Transition" to="Player" method="_on_fade_transition_player_can_move"]
 [connection signal="area_entered" from="Car" to="Car" method="_on_area_entered"]
 [connection signal="area_exited" from="Car" to="Car" method="_on_area_exited"]
 [connection signal="pick_up_object" from="Car" to="Player" method="_on_car_pick_up_object"]
+[connection signal="area_entered" from="Crowbar" to="Crowbar" method="_on_area_entered"]
+[connection signal="area_exited" from="Crowbar" to="Crowbar" method="_on_area_exited"]
+[connection signal="pick_up_object" from="Crowbar" to="Player" method="_on_crowbar_pick_up_object"]

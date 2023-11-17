@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://2sgrr1gkcehs"]
+
+[ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="1_6gcqm"]
+[ext_resource type="Script" path="res://Script/Rooms/basement.gd" id="1_kto8c"]
+[ext_resource type="Texture2D" uid="uid://cesubyhcfgfps" path="res://sample/Blue.png" id="2_7vqe2"]
+[ext_resource type="PackedScene" uid="uid://be0wmp3b3b4qv" path="res://Scene/player.tscn" id="4_aae4e"]
+[ext_resource type="PackedScene" uid="uid://cafmsu4vdnnfq" path="res://Scene/door.tscn" id="4_beefj"]
+[ext_resource type="PackedScene" uid="uid://c8d5hla3410jd" path="res://Scene/gigi.tscn" id="5_d8335"]
+[ext_resource type="PackedScene" uid="uid://b0k3gal2wpctt" path="res://fade_transition.tscn" id="7_uibtd"]
+
+[node name="basement" type="Node2D"]
+script = ExtResource("1_kto8c")
+
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(18, 10.2)
+texture = ExtResource("1_6gcqm")
+centered = false
+
+[node name="Floor 1" type="Sprite2D" parent="."]
+position = Vector2(354, 134)
+scale = Vector2(5.97977, 5.69513)
+texture = ExtResource("2_7vqe2")
+centered = false
+
+[node name="Player" parent="." instance=ExtResource("4_aae4e")]
+position = Vector2(541, 376)
+
+[node name="Living Room Ladder" parent="." instance=ExtResource("4_beefj")]
+position = Vector2(550, 456)
+door_name = &"living_roomA"
+door_type = &"basement"
+
+[node name="Gigi" parent="." instance=ExtResource("5_d8335")]
+position = Vector2(536, 232)
+item = &"gigi"
+
+[node name="Fade_Transition" parent="." instance=ExtResource("7_uibtd")]
+
+[connection signal="basement_pos" from="." to="Player" method="_on_basement_basement_pos"]
+[connection signal="pick_up_gigi" from="Player" to="Gigi" method="_on_player_pick_up_gigi"]
+[connection signal="pick_up_object" from="Gigi" to="Player" method="_on_gigi_pick_up_object"]
+[connection signal="player_can_move" from="Fade_Transition" to="Player" method="_on_fade_transition_player_can_move"]

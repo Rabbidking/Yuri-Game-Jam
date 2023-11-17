@@ -27,8 +27,12 @@ scale = Vector2(11.522, 6.078)
 texture = ExtResource("3_i8kkj")
 centered = false
 
+[node name="Trapdoor" parent="." instance=ExtResource("11_vw6on")]
+position = Vector2(852, 179)
+item = &"trapdoor"
+
 [node name="Player" parent="." instance=ExtResource("2_r5daw")]
-position = Vector2(296, 324)
+position = Vector2(854, 237)
 
 [node name="Entrance Door" parent="." instance=ExtResource("4_nhv12")]
 position = Vector2(240, 320)
@@ -64,8 +68,14 @@ position = Vector2(566, 342)
 item = &"gigi"
 
 [connection signal="living_pos" from="." to="Player" method="_on_living_room_living_pos"]
+[connection signal="living_pos_1" from="." to="Player" method="_on_living_room_living_pos_1"]
+[connection signal="area_entered" from="Trapdoor" to="Trapdoor" method="_on_area_entered"]
+[connection signal="area_exited" from="Trapdoor" to="Trapdoor" method="_on_area_exited"]
+[connection signal="pick_up_object" from="Trapdoor" to="Player" method="_on_trapdoor_pick_up_object"]
 [connection signal="pick_up_gigi" from="Player" to="Gigi" method="_on_player_pick_up_gigi"]
 [connection signal="picked_up" from="Player" to="Note" method="_on_player_picked_up"]
+[connection signal="picked_up" from="Player" to="Trapdoor" method="_on_player_picked_up"]
+[connection signal="picked_up2" from="Player" to="Trapdoor" method="_on_player_picked_up_2"]
 [connection signal="player_can_move" from="Fade_Transition" to="Player" method="_on_fade_transition_player_can_move"]
 [connection signal="area_entered" from="Note" to="Note" method="_on_area_entered"]
 [connection signal="area_exited" from="Note" to="Note" method="_on_area_exited"]

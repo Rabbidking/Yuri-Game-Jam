@@ -3,10 +3,14 @@ extends Node2D
 var gigi = preload("res://Scene/gigi.tscn")
 
 signal living_pos
+signal living_pos_1
 
 func _ready():
 	if State.used_door == true:
-		emit_signal("living_pos")
+		if State.door_used == "living room":
+			emit_signal("living_pos")
+		if State.door_used == "living_roomA":
+			emit_signal("living_pos_1")
 	if State.Day == 1:
 		#inst(Vector2(600, 300))
 		pass

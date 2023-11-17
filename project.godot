@@ -22,7 +22,7 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [dialogue_manager]
 
-general/custom_test_scene_path="res://dialog_balloon/balloon.tscn"
+general/custom_test_scene_path="res://Scene/test_dialogue.tscn"
 general/states=["State"]
 general/balloon_path="res://dialog_balloon/balloon.tscn"
 
@@ -52,7 +52,7 @@ Interact={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialog/main.dialogue", "res://Dialog/Day_1.dialogue", "res://Dialog/Day_2.dialogue", "res://Dialog/Day_3.dialogue", "res://Dialog/Day_4.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialog/main.dialogue", "res://Dialog/Day_1.dialogue", "res://Dialog/Day_2.dialogue", "res://Dialog/Day_3.dialogue", "res://Dialog/Day_4.dialogue", "res://Dialog/Day_5.dialogue", "res://Dialog/ending.dialogue")
 
 [rendering]
 

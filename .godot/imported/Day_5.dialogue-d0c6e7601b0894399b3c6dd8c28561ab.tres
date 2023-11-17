@@ -1,0 +1,703 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_ckkp8"]
+
+[resource]
+script = ExtResource("1_ckkp8")
+using_states = PackedStringArray()
+titles = {
+"basement_battery": "51",
+"bathroom_battery": "46",
+"garage_enter_first_time": "28",
+"kitchen_battery": "41",
+"morning": "3",
+"night": "20",
+"night_end": "73",
+"teleporter_interact_not_enough_batteries": "34",
+"teleporter_place_batteries": "56"
+}
+character_names = PackedStringArray("Gigi", "Demi", "Mimi")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "morning",
+"type": "title"
+},
+"10": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"tags": PackedStringArray(),
+"text": "(But the inspector just now said the basement was expertly built. This is getting out of hand.)",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "(But the inspector just now said the basement was expertly built. This is getting out of hand.)",
+"type": "dialogue"
+},
+"11": {
+"character": "Gigi",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "12",
+"tags": PackedStringArray(),
+"text": "Ah, my body is too sore! I need a massage, please!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ah, my body is too sore! I need a massage, please!",
+"type": "dialogue"
+},
+"12": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "13",
+"tags": PackedStringArray(),
+"text": "Uh sure, let’s go then.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Uh sure, let’s go then.",
+"type": "dialogue"
+},
+"13": {
+"character": "Gigi",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "14",
+"tags": PackedStringArray(),
+"text": "I haven’t been this sore ever since Valentine's Day.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I haven’t been this sore ever since Valentine's Day.",
+"type": "dialogue"
+},
+"14": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "16",
+"tags": PackedStringArray(),
+"text": "(blush) (I hope she takes off the onesie for once.)",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "(blush) (I hope she takes off the onesie for once.)",
+"type": "dialogue"
+},
+"16": {
+"id": "16",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"18": {
+"id": "18",
+"next_id": "20",
+"text": "night",
+"type": "title"
+},
+"20": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "20",
+"next_id": "21",
+"tags": PackedStringArray(),
+"text": "Demi awakens to loud electrical zapping sounds.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Demi awakens to loud electrical zapping sounds.",
+"type": "dialogue"
+},
+"21": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "21",
+"next_id": "22",
+"tags": PackedStringArray(),
+"text": "I see tying Gigi to the bed didn’t work.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I see tying Gigi to the bed didn’t work.",
+"type": "dialogue"
+},
+"22": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "22",
+"next_id": "24",
+"tags": PackedStringArray(),
+"text": "Oh well, it was worth a shot. Better find her.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Oh well, it was worth a shot. Better find her.",
+"type": "dialogue"
+},
+"24": {
+"id": "24",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"26": {
+"id": "26",
+"next_id": "28",
+"text": "garage_enter_first_time",
+"type": "title"
+},
+"28": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "28",
+"next_id": "30",
+"tags": PackedStringArray(),
+"text": "…What is this? Some kind of teleporter?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "…What is this? Some kind of teleporter?",
+"type": "dialogue"
+},
+"3": {
+"character": "Gigi",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"tags": PackedStringArray(),
+"text": "Oh wow...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Oh wow...",
+"type": "dialogue"
+},
+"30": {
+"id": "30",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"32": {
+"id": "32",
+"next_id": "34",
+"text": "teleporter_interact_not_enough_batteries",
+"type": "title"
+},
+"34": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "34",
+"next_id": "35",
+"tags": PackedStringArray(),
+"text": "It won’t turn on.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It won’t turn on.",
+"type": "dialogue"
+},
+"35": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "35",
+"next_id": "36",
+"tags": PackedStringArray(),
+"text": "Hmm, there are 3 empty slots.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Hmm, there are 3 empty slots.",
+"type": "dialogue"
+},
+"36": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "36",
+"next_id": "38",
+"tags": PackedStringArray(),
+"text": "Maybe that’s where the batteries go?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Maybe that’s where the batteries go?",
+"type": "dialogue"
+},
+"38": {
+"id": "38",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"4": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"tags": PackedStringArray(),
+"text": "Yeah, that happened.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yeah, that happened.",
+"type": "dialogue"
+},
+"40": {
+"id": "40",
+"next_id": "41",
+"text": "kitchen_battery",
+"type": "title"
+},
+"41": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "41",
+"next_id": "42",
+"tags": PackedStringArray(),
+"text": "Picked up a Battery",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Picked up a Battery",
+"type": "dialogue"
+},
+"42": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "42",
+"next_id": "43",
+"tags": PackedStringArray(),
+"text": "Is this even safe to hold?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Is this even safe to hold?",
+"type": "dialogue"
+},
+"43": {
+"id": "43",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"45": {
+"id": "45",
+"next_id": "46",
+"text": "bathroom_battery",
+"type": "title"
+},
+"46": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "46",
+"next_id": "47",
+"tags": PackedStringArray(),
+"text": "Picked up a Battery",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Picked up a Battery",
+"type": "dialogue"
+},
+"47": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "47",
+"next_id": "48",
+"tags": PackedStringArray(),
+"text": "I hope it’s supposed to glow.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I hope it’s supposed to glow.",
+"type": "dialogue"
+},
+"48": {
+"id": "48",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"5": {
+"character": "Gigi",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"tags": PackedStringArray(),
+"text": "Well, we did want a basement for a snazzy bar.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Well, we did want a basement for a snazzy bar.",
+"type": "dialogue"
+},
+"50": {
+"id": "50",
+"next_id": "51",
+"text": "basement_battery",
+"type": "title"
+},
+"51": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "51",
+"next_id": "52",
+"tags": PackedStringArray(),
+"text": "Picked up a Battery",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Picked up a Battery",
+"type": "dialogue"
+},
+"52": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "52",
+"next_id": "53",
+"tags": PackedStringArray(),
+"text": "Ugh, this is heavy!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ugh, this is heavy!",
+"type": "dialogue"
+},
+"53": {
+"id": "53",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"55": {
+"id": "55",
+"next_id": "56",
+"text": "teleporter_place_batteries",
+"type": "title"
+},
+"56": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "56",
+"next_id": "57",
+"tags": PackedStringArray(),
+"text": "Demi inserts the Batteries and turns the Teleporter on.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Demi inserts the Batteries and turns the Teleporter on.",
+"type": "dialogue"
+},
+"57": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "57",
+"next_id": "59",
+"tags": PackedStringArray(),
+"text": "I have no idea how this works, but I have to get Gigi back!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I have no idea how this works, but I have to get Gigi back!",
+"type": "dialogue"
+},
+"59": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "59",
+"next_id": "61",
+"tags": PackedStringArray(),
+"text": "Ack! Too bright!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ack! Too bright!",
+"type": "dialogue"
+},
+"6": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"tags": PackedStringArray(),
+"text": "So umm... you didn't tell me you're great at construction.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "So umm... you didn't tell me you're great at construction.",
+"type": "dialogue"
+},
+"61": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "61",
+"next_id": "63",
+"tags": PackedStringArray(),
+"text": "It’s..it’s you!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It’s..it’s you!",
+"type": "dialogue"
+},
+"63": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "63",
+"next_id": "64",
+"tags": PackedStringArray(),
+"text": "(Holy crap, Mimi is here!? She teleported to her mom’s house.)",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "(Holy crap, Mimi is here!? She teleported to her mom’s house.)",
+"type": "dialogue"
+},
+"64": {
+"character": "Mimi",
+"character_replacements": Array[Dictionary]([]),
+"id": "64",
+"next_id": "65",
+"tags": PackedStringArray(),
+"text": "So, we finally get to meet in person.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "So, we finally get to meet in person.",
+"type": "dialogue"
+},
+"65": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "65",
+"next_id": "66",
+"tags": PackedStringArray(),
+"text": "I- uh- um... good to see you?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I- uh- um... good to see you?",
+"type": "dialogue"
+},
+"66": {
+"character": "Mimi",
+"character_replacements": Array[Dictionary]([]),
+"id": "66",
+"next_id": "67",
+"tags": PackedStringArray(),
+"text": "No need to be shy, this isn’t the first time we've seen each other.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No need to be shy, this isn’t the first time we've seen each other.",
+"type": "dialogue"
+},
+"67": {
+"character": "Mimi",
+"character_replacements": Array[Dictionary]([]),
+"id": "67",
+"next_id": "68",
+"tags": PackedStringArray(),
+"text": "How about we put Gigi to bed and we can chat, hmm?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "How about we put Gigi to bed and we can chat, hmm?",
+"type": "dialogue"
+},
+"68": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "68",
+"next_id": "69",
+"tags": PackedStringArray(),
+"text": "Yeah, let’s do that.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yeah, let’s do that.",
+"type": "dialogue"
+},
+"69": {
+"id": "69",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"7": {
+"character": "Gigi",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"tags": PackedStringArray(),
+"text": "Oh Demi! I'm not.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Oh Demi! I'm not.",
+"type": "dialogue"
+},
+"71": {
+"id": "71",
+"next_id": "73",
+"text": "night_end",
+"type": "title"
+},
+"73": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "73",
+"next_id": "74",
+"tags": PackedStringArray(),
+"text": "Demi and Mimi are sitting together on the couch, Demi explains everything.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Demi and Mimi are sitting together on the couch, Demi explains everything.",
+"type": "dialogue"
+},
+"74": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "74",
+"next_id": "75",
+"tags": PackedStringArray(),
+"text": ". . .So that’s how it happened.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": ". . .So that’s how it happened.",
+"type": "dialogue"
+},
+"75": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "75",
+"next_id": "76",
+"tags": PackedStringArray(),
+"text": "Please don’t be upset, I swear I’ve tried to help Gigi.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Please don’t be upset, I swear I’ve tried to help Gigi.",
+"type": "dialogue"
+},
+"76": {
+"character": "Mimi",
+"character_replacements": Array[Dictionary]([]),
+"id": "76",
+"next_id": "77",
+"tags": PackedStringArray(),
+"text": "My, Demi please, I am not upset.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "My, Demi please, I am not upset.",
+"type": "dialogue"
+},
+"77": {
+"character": "Mimi",
+"character_replacements": Array[Dictionary]([]),
+"id": "77",
+"next_id": "78",
+"tags": PackedStringArray(),
+"text": "In fact, it gladdens my heart that you’ve done so well at taking care of her.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "In fact, it gladdens my heart that you’ve done so well at taking care of her.",
+"type": "dialogue"
+},
+"78": {
+"character": "Mimi",
+"character_replacements": Array[Dictionary]([]),
+"id": "78",
+"next_id": "79",
+"tags": PackedStringArray(),
+"text": "Please don’t be hard on yourself. My girl is lucky to have you at her side.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Please don’t be hard on yourself. My girl is lucky to have you at her side.",
+"type": "dialogue"
+},
+"79": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "79",
+"next_id": "80",
+"tags": PackedStringArray(),
+"text": "Does this mean you approve of our relationship?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Does this mean you approve of our relationship?",
+"type": "dialogue"
+},
+"8": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"tags": PackedStringArray(),
+"text": "(surprised) Huh!?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "(surprised) Huh!?",
+"type": "dialogue"
+},
+"80": {
+"character": "Mimi",
+"character_replacements": Array[Dictionary]([]),
+"id": "80",
+"next_id": "81",
+"tags": PackedStringArray(),
+"text": "Whatever do you mean? Gigi’s approval is my approval. We can sense a good heart in people just by being around them.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Whatever do you mean? Gigi’s approval is my approval. We can sense a good heart in people just by being around them.",
+"type": "dialogue"
+},
+"81": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "81",
+"next_id": "82",
+"tags": PackedStringArray(),
+"text": "Wait, so you can read minds!?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wait, so you can read minds!?",
+"type": "dialogue"
+},
+"82": {
+"character": "Mimi",
+"character_replacements": Array[Dictionary]([]),
+"id": "82",
+"next_id": "83",
+"tags": PackedStringArray(),
+"text": "Oh I wish, but not exactly.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Oh I wish, but not exactly.",
+"type": "dialogue"
+},
+"83": {
+"character": "Mimi",
+"character_replacements": Array[Dictionary]([]),
+"id": "83",
+"next_id": "84",
+"tags": PackedStringArray(),
+"text": "We have a sixth sense that can tell if a person has positive vibes and intentions. So from the moment Gigi met you, she wanted to be around you.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "We have a sixth sense that can tell if a person has positive vibes and intentions. So from the moment Gigi met you, she wanted to be around you.",
+"type": "dialogue"
+},
+"84": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "84",
+"next_id": "85",
+"tags": PackedStringArray(),
+"text": "Really? I uh don’t know what to say about that.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Really? I uh don’t know what to say about that.",
+"type": "dialogue"
+},
+"85": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "85",
+"next_id": "86",
+"tags": PackedStringArray(),
+"text": "I really appreciate knowing that you support me. I promise to keep looking after Gigi.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I really appreciate knowing that you support me. I promise to keep looking after Gigi.",
+"type": "dialogue"
+},
+"86": {
+"character": "Mimi",
+"character_replacements": Array[Dictionary]([]),
+"id": "86",
+"next_id": "87",
+"tags": PackedStringArray(),
+"text": "No need to promise, I know you will do that.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No need to promise, I know you will do that.",
+"type": "dialogue"
+},
+"87": {
+"character": "Mimi",
+"character_replacements": Array[Dictionary]([]),
+"id": "87",
+"next_id": "88",
+"tags": PackedStringArray(),
+"text": "Anyway, you should get some rest. Maybe I will visit you both soon.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Anyway, you should get some rest. Maybe I will visit you both soon.",
+"type": "dialogue"
+},
+"88": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "88",
+"next_id": "89",
+"tags": PackedStringArray(),
+"text": "Of course, we would love to have you over for dinner.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Of course, we would love to have you over for dinner.",
+"type": "dialogue"
+},
+"89": {
+"character": "Mimi",
+"character_replacements": Array[Dictionary]([]),
+"id": "89",
+"next_id": "90",
+"tags": PackedStringArray(),
+"text": "I certainly look forward to it, sleep well.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I certainly look forward to it, sleep well.",
+"type": "dialogue"
+},
+"9": {
+"character": "Gigi",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "10",
+"tags": PackedStringArray(),
+"text": "I'm not knowledgeable about Earth construction.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I'm not knowledgeable about Earth construction.",
+"type": "dialogue"
+},
+"90": {
+"id": "90",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+}
+}
+metadata/dialogue_manager_version = "2.29.0"

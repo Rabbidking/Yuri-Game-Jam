@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c52j41y7ex3nl"]
+[gd_scene load_steps=19 format=3 uid="uid://c52j41y7ex3nl"]
 
 [ext_resource type="Script" path="res://Script/Rooms/garage.gd" id="1_6bnx0"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_wm4sm"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://pfrtvl4f3mhw" path="res://Sprites/Furniture/OBJ_CardboardBox/OBJ_CardboardBoxC.png" id="11_qsr57"]
 [ext_resource type="Texture2D" uid="uid://ddfje32ykoqeb" path="res://Sprites/Furniture/OBJ_CardboardBox/OBJ_CardboardBoxD.png" id="12_tsvtf"]
 [ext_resource type="Texture2D" uid="uid://cupxl7713lvmo" path="res://Sprites/Furniture/OBJ_CardboardBox/OBJ_CardboardBoxE.png" id="13_eie68"]
+[ext_resource type="Texture2D" uid="uid://lkxxtndy6qt7" path="res://Sprites/Furniture/OBJ_TeleporterBase/OBJ_TeleporterBase.png" id="14_568lq"]
 [ext_resource type="Texture2D" uid="uid://wemykn4uvwmf" path="res://Sprites/Furniture/OBJ_CardboardBox/OBJ_CardboardBoxF.png" id="14_vfen8"]
 [ext_resource type="PackedScene" uid="uid://co1a7h15avswg" path="res://Scene/interactable.tscn" id="17_4lf0m"]
 
@@ -80,6 +81,10 @@ texture = ExtResource("13_eie68")
 position = Vector2(656, 128)
 texture = ExtResource("14_vfen8")
 
+[node name="Teleporter" type="Sprite2D" parent="Props"]
+position = Vector2(419, 169)
+texture = ExtResource("14_568lq")
+
 [node name="Player" parent="." instance=ExtResource("3_8hijy")]
 position = Vector2(213, 280)
 
@@ -98,9 +103,24 @@ item = &"car"
 position = Vector2(753, 175)
 item = &"crowbar"
 
+[node name="Teleporter Slot1" parent="." instance=ExtResource("17_4lf0m")]
+position = Vector2(308, 459)
+item = &"teleporter_slot1"
+
+[node name="Teleporter Slot2" parent="." instance=ExtResource("17_4lf0m")]
+position = Vector2(412, 459)
+item = &"teleporter_slot2"
+
+[node name="Teleporter Slot3" parent="." instance=ExtResource("17_4lf0m")]
+position = Vector2(498, 459)
+item = &"teleporter_slot3"
+
 [connection signal="garage_pos" from="." to="Player" method="_on_garage_garage_pos"]
 [connection signal="picked_up" from="Player" to="Car" method="_on_player_picked_up"]
 [connection signal="picked_up2" from="Player" to="Crowbar" method="_on_player_picked_up_2"]
+[connection signal="picked_up3" from="Player" to="Teleporter Slot1" method="_on_player_picked_up_3"]
+[connection signal="picked_up4" from="Player" to="Teleporter Slot2" method="_on_player_picked_up_4"]
+[connection signal="picked_up5" from="Player" to="Teleporter Slot3" method="_on_player_picked_up_5"]
 [connection signal="player_can_move" from="Fade_Transition" to="Player" method="_on_fade_transition_player_can_move"]
 [connection signal="area_entered" from="Car" to="Car" method="_on_area_entered"]
 [connection signal="area_exited" from="Car" to="Car" method="_on_area_exited"]
@@ -108,3 +128,12 @@ item = &"crowbar"
 [connection signal="area_entered" from="Crowbar" to="Crowbar" method="_on_area_entered"]
 [connection signal="area_exited" from="Crowbar" to="Crowbar" method="_on_area_exited"]
 [connection signal="pick_up_object" from="Crowbar" to="Player" method="_on_crowbar_pick_up_object"]
+[connection signal="area_entered" from="Teleporter Slot1" to="Teleporter Slot1" method="_on_area_entered"]
+[connection signal="area_exited" from="Teleporter Slot1" to="Teleporter Slot1" method="_on_area_exited"]
+[connection signal="pick_up_object" from="Teleporter Slot1" to="Player" method="_on_teleporter_slot_1_pick_up_object"]
+[connection signal="area_entered" from="Teleporter Slot2" to="Teleporter Slot2" method="_on_area_entered"]
+[connection signal="area_exited" from="Teleporter Slot2" to="Teleporter Slot2" method="_on_area_exited"]
+[connection signal="pick_up_object" from="Teleporter Slot2" to="Player" method="_on_teleporter_slot_2_pick_up_object"]
+[connection signal="area_entered" from="Teleporter Slot3" to="Teleporter Slot3" method="_on_area_entered"]
+[connection signal="area_exited" from="Teleporter Slot3" to="Teleporter Slot3" method="_on_area_exited"]
+[connection signal="pick_up_object" from="Teleporter Slot3" to="Player" method="_on_teleporter_slot_3_pick_up_object"]

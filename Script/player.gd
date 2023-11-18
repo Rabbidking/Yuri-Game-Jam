@@ -2,6 +2,9 @@ extends CharacterBody2D
 
 signal picked_up
 signal picked_up2
+signal picked_up3
+signal picked_up4
+signal picked_up5
 signal pick_up_gigi
 signal get_in_bed
 
@@ -80,19 +83,25 @@ func _process(delta):
 		elif interactable_item == "car" and State.key_taken == true:
 			emit_signal("picked_up")
 		elif interactable_item == "laptop" and State.password_known == true:
-			print("hacker")
 			emit_signal("picked_up")
 		elif interactable_item == "note":
 			emit_signal("picked_up")
-			print("read")
 		elif interactable_item == "box":
 			emit_signal("picked_up")
 		elif interactable_item == "receipt":
+			emit_signal("picked_up")
+		elif interactable_item == "fuelcell":
 			emit_signal("picked_up")
 		elif interactable_item == "trapdoor":
 			emit_signal("picked_up2")
 		elif interactable_item == "crowbar":
 			emit_signal("picked_up2")
+		elif interactable_item == "teleporter_slot1":
+			emit_signal("picked_up3")
+		elif interactable_item == "teleporter_slot2":
+			emit_signal("picked_up4")
+		elif interactable_item == "teleporter_slot3":
+			emit_signal("picked_up5")
 
 		State.is_dialog_active = false
 		print(State.is_dialog_active)
@@ -102,7 +111,6 @@ func _process(delta):
 func _on_interact_collision_area_entered(area):
 	if area.is_in_group("Object"):
 		area.pick_up()
-		print("hey")
 
 func _on_interact_collision_area_exited(area):
 	interactable = false
@@ -135,8 +143,19 @@ func _on_trapdoor_pick_up_object(item):
 func _on_crowbar_pick_up_object(item):
 	interactable_item = item
 	interactable = true
+func _on_teleporter_slot_1_pick_up_object(item):
+	interactable_item = item
+	interactable = true
+func _on_teleporter_slot_2_pick_up_object(item):
+	interactable_item = item
+	interactable = true
+func _on_teleporter_slot_3_pick_up_object(item):
+	interactable_item = item
+	interactable = true
+func _on_fuel_cell_pick_up_object(item):
+	interactable_item = item
+	interactable = true
 
-	
 #Entrance
 func _on_entrance_entrance_pos_1():
 	position = Vector2(576, 115)
@@ -186,15 +205,5 @@ func _on_basement_basement_pos():
 
 func _on_fade_transition_player_can_move():
 	dont_move = false
-
-
-
-
-
-
-
-
-
-
 
 

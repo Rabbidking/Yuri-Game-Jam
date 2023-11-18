@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dc2utvich756a"]
+[gd_scene load_steps=18 format=3 uid="uid://dc2utvich756a"]
 
 [ext_resource type="Script" path="res://Script/Rooms/bathroom.gd" id="1_vfmt4"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_i51h5"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://wnodpa72ic5f" path="res://Sprites/Furniture/OBJ_Bathroom/OBJ_ToothBrushPaste.png" id="14_v0q67"]
 [ext_resource type="Texture2D" uid="uid://d0ucx2w0888ig" path="res://Sprites/Furniture/OBJ_Bathroom/OBJ_TowelHolder.png" id="15_pg0bf"]
 [ext_resource type="Texture2D" uid="uid://dhy334dlklpeb" path="res://Sprites/Furniture/OBJ_Bathroom/OBJ_TPHolder.png" id="16_5lqf6"]
+[ext_resource type="PackedScene" uid="uid://co1a7h15avswg" path="res://Scene/interactable.tscn" id="17_jyyl4"]
 
 [node name="bathroom" type="Node2D"]
 script = ExtResource("1_vfmt4")
@@ -83,5 +84,13 @@ texture = ExtResource("15_pg0bf")
 position = Vector2(672, 240)
 texture = ExtResource("16_5lqf6")
 
+[node name="Fuel Cell" parent="." instance=ExtResource("17_jyyl4")]
+position = Vector2(782, 348)
+item = &"fuelcell"
+
 [connection signal="bathroom_pos" from="." to="Player" method="_on_bathroom_bathroom_pos"]
+[connection signal="picked_up" from="Player" to="Fuel Cell" method="_on_player_picked_up"]
 [connection signal="player_can_move" from="Fade_Transition" to="Player" method="_on_fade_transition_player_can_move"]
+[connection signal="area_entered" from="Fuel Cell" to="Fuel Cell" method="_on_area_entered"]
+[connection signal="area_exited" from="Fuel Cell" to="Fuel Cell" method="_on_area_exited"]
+[connection signal="pick_up_object" from="Fuel Cell" to="Player" method="_on_fuel_cell_pick_up_object"]

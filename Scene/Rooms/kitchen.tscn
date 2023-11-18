@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://xejcukxa4s3w"]
+[gd_scene load_steps=18 format=3 uid="uid://xejcukxa4s3w"]
 
 [ext_resource type="Script" path="res://Script/Rooms/kitchen.gd" id="1_lkrb5"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_vd0cc"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://bkf1irj0t0al2" path="res://Sprites/Furniture/OBJ_Fridge/OBJ_Fridge.png" id="14_3qq4j"]
 [ext_resource type="Texture2D" uid="uid://djkgh4utebje8" path="res://Sprites/Furniture/OBJ_Broom/OBJ_Broom.png" id="15_y55pj"]
 [ext_resource type="Texture2D" uid="uid://cgtdksx1yem7g" path="res://Sprites/Furniture/OBJ_Plant/OBJ_PlantC.png" id="16_5t0sf"]
+[ext_resource type="PackedScene" uid="uid://co1a7h15avswg" path="res://Scene/interactable.tscn" id="17_2q5hf"]
 
 [node name="kitchen" type="Node2D"]
 script = ExtResource("1_lkrb5")
@@ -96,5 +97,13 @@ texture = ExtResource("15_y55pj")
 position = Vector2(544, 312)
 texture = ExtResource("16_5t0sf")
 
+[node name="Fuel Cell" parent="." instance=ExtResource("17_2q5hf")]
+position = Vector2(340, 174)
+item = &"fuelcell"
+
 [connection signal="kitchen_pos" from="." to="Player" method="_on_kitchen_kitchen_pos"]
+[connection signal="picked_up" from="Player" to="Fuel Cell" method="_on_player_picked_up"]
 [connection signal="player_can_move" from="Fade_Transition" to="Player" method="_on_fade_transition_player_can_move"]
+[connection signal="area_entered" from="Fuel Cell" to="Fuel Cell" method="_on_area_entered"]
+[connection signal="area_exited" from="Fuel Cell" to="Fuel Cell" method="_on_area_exited"]
+[connection signal="pick_up_object" from="Fuel Cell" to="Player" method="_on_fuel_cell_pick_up_object"]

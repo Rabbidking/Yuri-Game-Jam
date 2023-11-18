@@ -8,6 +8,10 @@ var ordered_return = false
 var read_receipt = false
 var have_crowbar = false
 var trapdoor_locked = true
+var slot1_empty = true
+var slot2_empty = true
+var slot3_empty = true
+var fuel_cell = 0
 var used_door = false
 var door_used
 var is_dialog_active = false

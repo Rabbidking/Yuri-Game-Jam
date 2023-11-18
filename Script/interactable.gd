@@ -6,7 +6,6 @@ signal pick_up_object
 @export var item : StringName
 var opened = false
 
-
 func _ready():
 	if State.collected_items.has(global_position):
 		queue_free()
@@ -62,6 +61,31 @@ func _ready():
 		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Crowbar/OBJ_Crowbar_01.png"))
 		$CollisionShape2D.scale = Vector2(1, 1)
 		$CollisionShape2D.position = Vector2(0, 0)
+	elif item == "teleporter_slot1":
+		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_TeleporterSlot/OBJ_TeleporterSlot_01.png"))
+		$CollisionShape2D.scale = Vector2(1, 1)
+		$CollisionShape2D.position = Vector2(0, 0)
+		if State.slot1_empty == false:
+			$Texture.set_texture(load("res://Sprites/Furniture/OBJ_TeleporterSlot/OBJ_TeleporterSlot_03.png"))
+			$CollisionShape2D.disabled == true
+	elif item == "teleporter_slot2":
+		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_TeleporterSlot/OBJ_TeleporterSlot_01.png"))
+		$CollisionShape2D.scale = Vector2(1, 1)
+		$CollisionShape2D.position = Vector2(0, 0)
+		if State.slot2_empty == false:
+			$Texture.set_texture(load("res://Sprites/Furniture/OBJ_TeleporterSlot/OBJ_TeleporterSlot_03.png"))
+			$CollisionShape2D.disabled == true
+	elif item == "teleporter_slot3":
+		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_TeleporterSlot/OBJ_TeleporterSlot_01.png"))
+		$CollisionShape2D.scale = Vector2(1, 1)
+		$CollisionShape2D.position = Vector2(0, 0)
+		if State.slot3_empty == false:
+			$Texture.set_texture(load("res://Sprites/Furniture/OBJ_TeleporterSlot/OBJ_TeleporterSlot_03.png"))
+			$CollisionShape2D.disabled == true
+	elif item == "fuelcell":
+		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Fuelcell/OBJ_Fuelcell_01.png"))
+		$CollisionShape2D.scale = Vector2(1, 1)
+		$CollisionShape2D.position = Vector2(0, 0)
 				
 		
 func pick_up():
@@ -87,6 +111,14 @@ func _on_area_entered(area):
 				$Texture.set_texture(load("res://Sprites/Furniture/OBJ_TrapFloor/OBJ_TrapFloor_02.png"))
 		elif item == "crowbar":
 			$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Crowbar/OBJ_Crowbar_02.png"))
+		elif item == "teleporter_slot1" and State.slot1_empty == true:
+			$Texture.set_texture(load("res://Sprites/Furniture/OBJ_TeleporterSlot/OBJ_TeleporterSlot_02.png"))
+		elif item == "teleporter_slot2" and State.slot2_empty == true:
+			$Texture.set_texture(load("res://Sprites/Furniture/OBJ_TeleporterSlot/OBJ_TeleporterSlot_02.png"))
+		elif item == "teleporter_slot3" and State.slot3_empty == true:
+			$Texture.set_texture(load("res://Sprites/Furniture/OBJ_TeleporterSlot/OBJ_TeleporterSlot_02.png"))
+		elif item == "fuelcell":
+			$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Fuelcell/OBJ_Fuelcell_02.png"))
 
 func _on_area_exited(area):
 	if item == "bed" and State.have_gigi == true:
@@ -107,6 +139,14 @@ func _on_area_exited(area):
 			$Texture.set_texture(load("res://Sprites/Furniture/OBJ_TrapFloor/OBJ_TrapFloor_01.png"))
 	elif item == "crowbar":
 		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Crowbar/OBJ_Crowbar_01.png"))
+	elif item == "teleporter_slot1" and State.slot1_empty == true:
+			$Texture.set_texture(load("res://Sprites/Furniture/OBJ_TeleporterSlot/OBJ_TeleporterSlot_01.png"))
+	elif item == "teleporter_slot2" and State.slot2_empty == true:
+			$Texture.set_texture(load("res://Sprites/Furniture/OBJ_TeleporterSlot/OBJ_TeleporterSlot_01.png"))
+	elif item == "teleporter_slot3" and State.slot3_empty == true:
+			$Texture.set_texture(load("res://Sprites/Furniture/OBJ_TeleporterSlot/OBJ_TeleporterSlot_01.png"))
+	elif item == "fuelcell":
+		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Fuelcell/OBJ_Fuelcell_01.png"))
 
 
 func _on_player_get_in_bed():
@@ -141,8 +181,10 @@ func _on_player_picked_up():
 		$Texture.visible = false
 		$CollisionShape2D.disabled = true
 		State.read_receipt = true
-
-
+	elif item == "fuelcell":
+		State.fuel_cell += 1
+		queue_free()
+		
 
 func _on_player_pick_up_gigi():
 		if item == "gigi":
@@ -159,3 +201,33 @@ func _on_player_picked_up_2():
 		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_TrapFloor/OBJ_TrapFloor_02.png"))
 	elif item == "trapdoor" and State.trapdoor_locked == false:
 		get_tree().change_scene_to_file("res://Scene/Rooms/basement.tscn")
+
+
+func _on_player_picked_up_3():
+	if item == "teleporter_slot1" and State.fuel_cell > 0 and State.slot1_empty == true:
+		State.fuel_cell -= 1
+		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_TeleporterSlot/OBJ_TeleporterSlot_03.png"))
+		$CollisionShape2D.disabled == true
+		State.slot1_empty = false
+		if State.slot1_empty == false and State.slot2_empty == false and State.slot3_empty == false:
+			print("Functioning")
+
+
+func _on_player_picked_up_4():
+	if item == "teleporter_slot2" and State.fuel_cell > 0 and State.slot2_empty == true:
+		State.fuel_cell -= 1
+		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_TeleporterSlot/OBJ_TeleporterSlot_03.png"))
+		$CollisionShape2D.disabled == true
+		State.slot2_empty = false
+		if State.slot1_empty == false and State.slot2_empty == false and State.slot3_empty == false:
+			print("Functioning")
+
+func _on_player_picked_up_5():
+	if item == "teleporter_slot3" and State.fuel_cell > 0 and State.slot3_empty == true:
+		State.fuel_cell -= 1
+		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_TeleporterSlot/OBJ_TeleporterSlot_03.png"))
+		$CollisionShape2D.disabled == true
+		State.slot3_empty = false
+		if State.slot1_empty == false and State.slot2_empty == false and State.slot3_empty == false:
+			print("Functioning")
+		

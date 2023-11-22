@@ -34,12 +34,15 @@ door_type = &"basement"
 [node name="Gigi" parent="." instance=ExtResource("5_d8335")]
 position = Vector2(536, 232)
 item = &"gigi"
+location = &"basement"
 
 [node name="Fade_Transition" parent="." instance=ExtResource("7_uibtd")]
 
 [node name="Fuel Cell" parent="." instance=ExtResource("8_x84fp")]
 position = Vector2(402, 186)
 item = &"fuelcell"
+location = &"basement"
+type = &"fuelcell1"
 
 [connection signal="basement_pos" from="." to="Player" method="_on_basement_basement_pos"]
 [connection signal="pick_up_gigi" from="Player" to="Gigi" method="_on_player_pick_up_gigi"]

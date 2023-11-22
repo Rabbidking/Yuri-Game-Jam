@@ -51,6 +51,7 @@ visible = false
 texture = ExtResource("2_aj3l5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 sprite_frames = SubResource("SpriteFrames_iiqsq")
 animation = &"Sleep"
 autoplay = "Sleep"

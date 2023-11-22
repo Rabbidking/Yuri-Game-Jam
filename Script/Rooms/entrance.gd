@@ -14,7 +14,6 @@ func _ready():
 		#else if State.gigi_at_entrance == true:
 			#instantiate Gigi here instead
 		
-	
 	if State.used_door == true:
 		if State.door_used == "entrance":
 			emit_signal("entrance_pos_1")

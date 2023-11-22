@@ -100,6 +100,8 @@ texture = ExtResource("16_5t0sf")
 [node name="Fuel Cell" parent="." instance=ExtResource("17_2q5hf")]
 position = Vector2(340, 174)
 item = &"fuelcell"
+location = &"kitchen"
+type = &"fuelcell2"
 
 [connection signal="kitchen_pos" from="." to="Player" method="_on_kitchen_kitchen_pos"]
 [connection signal="picked_up" from="Player" to="Fuel Cell" method="_on_player_picked_up"]

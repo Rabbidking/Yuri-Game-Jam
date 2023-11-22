@@ -1,6 +1,6 @@
 extends Node
 
-var Day = 1	#day adjustments
+var Day = 2	#day adjustments
 var key_taken = false
 var have_gigi = false
 var password_known = false
@@ -11,6 +11,9 @@ var trapdoor_locked = true
 var slot1_empty = true
 var slot2_empty = true
 var slot3_empty = true
+var fuel_cell1 = false
+var fuel_cell2 = false
+var fuel_cell3 = false
 var fuel_cell = 0
 var used_door = false
 var door_used

@@ -66,6 +66,7 @@ item = &"note"
 [node name="Gigi" parent="." instance=ExtResource("12_kifwc")]
 position = Vector2(566, 342)
 item = &"gigi"
+location = &"livingroom"
 
 [connection signal="living_pos" from="." to="Player" method="_on_living_room_living_pos"]
 [connection signal="living_pos_1" from="." to="Player" method="_on_living_room_living_pos_1"]

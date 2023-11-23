@@ -1,7 +1,7 @@
+Label
 TextureButton
 TextureRect
 Sprite2D
-Label
 RichTextLabel
 Panel
 HBoxContainer

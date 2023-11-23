@@ -16,3 +16,5 @@ res://Scene/Rooms/hallwayA.tscn
 res://Scene/Rooms/hallway_b.tscn
 res://Scene/Rooms/kitchen.tscn
 res://Scene/Rooms/study.tscn
+res://Scene/pause_menu.tscn
+res://dialog_balloon/balloon.gd

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cxsg6w4sslowi"]
+[gd_scene load_steps=14 format=3 uid="uid://cxsg6w4sslowi"]
 
 [ext_resource type="Script" path="res://Script/Rooms/living_room.gd" id="1_2g2a4"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="1_a7n2q"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cj7x5d4wk4ivw" path="res://Sprites/Furniture/OBJ_Television/OBJ_TelevisionA.png" id="10_4k5n3"]
 [ext_resource type="PackedScene" uid="uid://co1a7h15avswg" path="res://Scene/interactable.tscn" id="11_vw6on"]
 [ext_resource type="PackedScene" uid="uid://c8d5hla3410jd" path="res://Scene/gigi.tscn" id="12_kifwc"]
+[ext_resource type="PackedScene" uid="uid://bqg7gl6eklem6" path="res://Scene/hud.tscn" id="13_fug4x"]
 
 [node name="living room" type="Node2D"]
 script = ExtResource("1_2g2a4")
@@ -67,6 +68,8 @@ item = &"note"
 position = Vector2(566, 342)
 item = &"gigi"
 location = &"livingroom"
+
+[node name="HUD" parent="." instance=ExtResource("13_fug4x")]
 
 [connection signal="living_pos" from="." to="Player" method="_on_living_room_living_pos"]
 [connection signal="living_pos_1" from="." to="Player" method="_on_living_room_living_pos_1"]

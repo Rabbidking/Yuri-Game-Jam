@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_e6gfm"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_bwlma"]
 
 [resource]
-script = ExtResource("1_e6gfm")
+script = ExtResource("1_bwlma")
 using_states = PackedStringArray()
 titles = {
 "cabinet": "3",

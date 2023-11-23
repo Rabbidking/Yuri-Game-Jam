@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dc2utvich756a"]
+[gd_scene load_steps=19 format=3 uid="uid://dc2utvich756a"]
 
 [ext_resource type="Script" path="res://Script/Rooms/bathroom.gd" id="1_vfmt4"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_i51h5"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://d0ucx2w0888ig" path="res://Sprites/Furniture/OBJ_Bathroom/OBJ_TowelHolder.png" id="15_pg0bf"]
 [ext_resource type="Texture2D" uid="uid://dhy334dlklpeb" path="res://Sprites/Furniture/OBJ_Bathroom/OBJ_TPHolder.png" id="16_5lqf6"]
 [ext_resource type="PackedScene" uid="uid://co1a7h15avswg" path="res://Scene/interactable.tscn" id="17_jyyl4"]
+[ext_resource type="PackedScene" uid="uid://bqg7gl6eklem6" path="res://Scene/hud.tscn" id="18_ognfk"]
 
 [node name="bathroom" type="Node2D"]
 script = ExtResource("1_vfmt4")
@@ -89,6 +90,8 @@ position = Vector2(782, 348)
 item = &"fuelcell"
 location = &"bathroom"
 type = &"fuelcell3"
+
+[node name="HUD" parent="." instance=ExtResource("18_ognfk")]
 
 [connection signal="bathroom_pos" from="." to="Player" method="_on_bathroom_bathroom_pos"]
 [connection signal="picked_up" from="Player" to="Fuel Cell" method="_on_player_picked_up"]

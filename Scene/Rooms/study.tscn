@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dc6fk5kkjoeet"]
+[gd_scene load_steps=15 format=3 uid="uid://dc6fk5kkjoeet"]
 
 [ext_resource type="Script" path="res://Script/Rooms/study.gd" id="1_3gauq"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_ecvp5"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bdylafpj3r3sg" path="res://Sprites/Furniture/OBJ_Drawer/OBJ_DrawerA.png" id="9_nrwco"]
 [ext_resource type="Texture2D" uid="uid://bcxxg6s2c3f1w" path="res://Sprites/Furniture/OBJ_Lightstand/OBJ_LightstandB.png" id="10_sqxft"]
 [ext_resource type="PackedScene" uid="uid://co1a7h15avswg" path="res://Scene/interactable.tscn" id="13_edtby"]
+[ext_resource type="PackedScene" uid="uid://bqg7gl6eklem6" path="res://Scene/hud.tscn" id="14_mrol3"]
 
 [node name="Study" type="Node2D"]
 script = ExtResource("1_3gauq")
@@ -67,6 +68,8 @@ door_type = &"back"
 [node name="Key" parent="." instance=ExtResource("13_edtby")]
 position = Vector2(546, 256)
 item = &"key"
+
+[node name="HUD" parent="." instance=ExtResource("14_mrol3")]
 
 [connection signal="study_pos" from="." to="Player" method="_on_study_study_pos"]
 [connection signal="picked_up" from="Player" to="Key" method="_on_player_picked_up"]

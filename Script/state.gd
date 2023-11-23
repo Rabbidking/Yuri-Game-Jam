@@ -21,6 +21,8 @@ var is_dialog_active = false
 
 var items = []
 var collected_items = []
+
+var is_day = false	#changes the sprite in the HUD to Day HUD or Night HUD
 #==================================================================================================
 # night 1 specific flags
 var day_1_intro = true

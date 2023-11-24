@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_vudtv"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_w8ccj"]
 
 [resource]
-script = ExtResource("1_vudtv")
+script = ExtResource("1_w8ccj")
 using_states = PackedStringArray()
 titles = {
 "end_night": "35",

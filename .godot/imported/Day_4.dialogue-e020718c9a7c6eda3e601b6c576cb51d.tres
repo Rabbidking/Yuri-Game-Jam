@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_75okf"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_mmoki"]
 
 [resource]
-script = ExtResource("1_75okf")
+script = ExtResource("1_mmoki")
 using_states = PackedStringArray()
 titles = {
 "basement_gigi": "32",

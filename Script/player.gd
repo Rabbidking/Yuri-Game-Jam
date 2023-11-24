@@ -22,6 +22,7 @@ func _ready():
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if dont_move == false:
+		#Movement
 		if Input.is_action_pressed("ui_up"):
 			$"Interact Collision/2D Interact Collision".position = Vector2(-64, -64)
 			velocity = Vector2(0, -SPEED)
@@ -60,51 +61,92 @@ func _unhandled_input(event: InputEvent) -> void:
 				$AnimatedSprite2D.play("Idle Back")
 			else:
 				$AnimatedSprite2D.play("Idle Side")
+				
+		#Interact
+		if Input.is_action_just_pressed("Interact") and interactable == true:
+			print(interactable_item)
+			State.is_dialog_active = true
+			if interactable_item == "gigi":
+			#DialogueManager.show_example_dialogue_balloon(load("res://Dialog/main.dialogue"), "key")
+				if State.Day == 1:
+					DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_1.dialogue"), "pick_up_gigi")
+				State.have_gigi = true
+				emit_signal("pick_up_gigi")
+				velocity = Vector2(0, 0)
 			
+			elif interactable_item == "bed" and State.have_gigi == true:
+				if State.Day == 1:
+					DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_1.dialogue"), "bedroom")
+				#emit_signal("get_in_bed")
+			elif interactable_item == "key":
+				emit_signal("picked_up")
+			elif interactable_item == "car" and State.key_taken == true:
+				emit_signal("picked_up")
+			elif interactable_item == "laptop" and State.password_known == true:
+				emit_signal("picked_up")
+			elif interactable_item == "note":
+				emit_signal("picked_up")
+			elif interactable_item == "box":
+				emit_signal("picked_up")
+			elif interactable_item == "receipt":
+				emit_signal("picked_up")
+			elif interactable_item == "fuelcell":
+				emit_signal("picked_up")
+			elif interactable_item == "trapdoor":
+				emit_signal("picked_up2")
+			elif interactable_item == "crowbar":
+				emit_signal("picked_up2")
+			elif interactable_item == "teleporter_slot1":
+				emit_signal("picked_up3")
+			elif interactable_item == "teleporter_slot2":
+				emit_signal("picked_up4")
+			elif interactable_item == "teleporter_slot3":
+				emit_signal("picked_up5")
+
+			State.is_dialog_active = false
 
 func _process(delta):
-	if Input.is_action_just_pressed("Interact") and interactable == true:
-		print(interactable_item)
-		State.is_dialog_active = true
-		if interactable_item == "gigi":
-			#DialogueManager.show_example_dialogue_balloon(load("res://Dialog/main.dialogue"), "key")
-			if State.Day == 1:
-				DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_1.dialogue"), "living_room")
-			State.have_gigi = true
-			emit_signal("pick_up_gigi")
-			velocity = Vector2(0, 0)
-			
-		elif interactable_item == "bed" and State.have_gigi == true:
-			if State.Day == 1:
-				DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_1.dialogue"), "bedroom")
-			emit_signal("get_in_bed")
-		elif interactable_item == "key":
-			emit_signal("picked_up")
-		elif interactable_item == "car" and State.key_taken == true:
-			emit_signal("picked_up")
-		elif interactable_item == "laptop" and State.password_known == true:
-			emit_signal("picked_up")
-		elif interactable_item == "note":
-			emit_signal("picked_up")
-		elif interactable_item == "box":
-			emit_signal("picked_up")
-		elif interactable_item == "receipt":
-			emit_signal("picked_up")
-		elif interactable_item == "fuelcell":
-			emit_signal("picked_up")
-		elif interactable_item == "trapdoor":
-			emit_signal("picked_up2")
-		elif interactable_item == "crowbar":
-			emit_signal("picked_up2")
-		elif interactable_item == "teleporter_slot1":
-			emit_signal("picked_up3")
-		elif interactable_item == "teleporter_slot2":
-			emit_signal("picked_up4")
-		elif interactable_item == "teleporter_slot3":
-			emit_signal("picked_up5")
-
-		State.is_dialog_active = false
-		print(State.is_dialog_active)
+#	if Input.is_action_just_pressed("Interact") and interactable == true:
+#		print(interactable_item)
+#		State.is_dialog_active = true
+#		if interactable_item == "gigi":
+#			#DialogueManager.show_example_dialogue_balloon(load("res://Dialog/main.dialogue"), "key")
+#			if State.Day == 1:
+#				DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_1.dialogue"), "pick_up_gigi")
+#			State.have_gigi = true
+#			emit_signal("pick_up_gigi")
+#			velocity = Vector2(0, 0)
+#
+#		elif interactable_item == "bed" and State.have_gigi == true:
+#			if State.Day == 1:
+#				DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_1.dialogue"), "bedroom")
+#			#emit_signal("get_in_bed")
+#		elif interactable_item == "key":
+#			emit_signal("picked_up")
+#		elif interactable_item == "car" and State.key_taken == true:
+#			emit_signal("picked_up")
+#		elif interactable_item == "laptop" and State.password_known == true:
+#			emit_signal("picked_up")
+#		elif interactable_item == "note":
+#			emit_signal("picked_up")
+#		elif interactable_item == "box":
+#			emit_signal("picked_up")
+#		elif interactable_item == "receipt":
+#			emit_signal("picked_up")
+#		elif interactable_item == "fuelcell":
+#			emit_signal("picked_up")
+#		elif interactable_item == "trapdoor":
+#			emit_signal("picked_up2")
+#		elif interactable_item == "crowbar":
+#			emit_signal("picked_up2")
+#		elif interactable_item == "teleporter_slot1":
+#			emit_signal("picked_up3")
+#		elif interactable_item == "teleporter_slot2":
+#			emit_signal("picked_up4")
+#		elif interactable_item == "teleporter_slot3":
+#			emit_signal("picked_up5")
+#
+#		State.is_dialog_active = false
 	move_and_slide()
 
 
@@ -206,4 +248,5 @@ func _on_basement_basement_pos():
 func _on_fade_transition_player_can_move():
 	dont_move = false
 
-
+func next_day():
+	emit_signal("get_in_bed")

@@ -2,6 +2,7 @@ extends Node2D
 
 var gigi = preload("res://Scene/gigi.tscn")
 
+
 signal living_pos
 signal living_pos_1
 
@@ -11,9 +12,9 @@ func _ready():
 			emit_signal("living_pos")
 		if State.door_used == "living_roomA":
 			emit_signal("living_pos_1")
-	if State.Day == 1:
-		#inst(Vector2(600, 300))
-		pass
+	if State.Day == 1 and State.first_time_found_gigi == false:
+		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_1.dialogue"), "living_room")
+		State.first_time_found_gigi = true
 	if State.Day == 3:
 		#change the sticky note dialog to Day 3's version.
 		

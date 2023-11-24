@@ -18,18 +18,24 @@ Demi waits 5 minutes before getting up to look for Gigi.
 
 => END
 
-~ living_room
+~ living_roo
 Demi: Holy-!
 Demi: Damn girl you scared me, what are you doing standing like a creepo in the dark? 
 Demi: Um, Gigi?
+
+=> END
+
+~ pick_up_gigi
 Demi: (Is she still sleeping? Ok, that’s freaking weird…)
 Demi: (Well, better get her back in bed I guess.)
 
 => END
 
 ~ bedroom
-Demi places Gigi back in bed and lies down next to her.
+Narration: Demi places Gigi back in bed and lies down next to her.
 Demi: (Should I tell her about this? I had never seen Gigi do that before.) 
 Demi: (Maybe it’s just a one-time thing? I’ll think about it later.)
 Demi: Goodnight Gigi.
+
 => END
+

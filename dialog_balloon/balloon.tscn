@@ -1,22 +1,13 @@
-[gd_scene load_steps=15 format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene load_steps=14 format=3 uid="uid://bc5adj2511tnu"]
 
 [ext_resource type="Script" path="res://dialog_balloon/balloon.gd" id="1_4u26j"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="Texture2D" uid="uid://rf17eue30xxp" path="res://Sprites/UI/Dialogue Box.png" id="2_bq6v5"]
 [ext_resource type="Texture2D" uid="uid://c0j821yxo4a6n" path="res://Sprites/UI/Portrait Container Left.png" id="2_j3x8f"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_72ixx"]
 [ext_resource type="Texture2D" uid="uid://dp5570w5kx0ve" path="res://Sprites/UI/Name Container.png" id="3_fp166"]
 [ext_resource type="Texture2D" uid="uid://btmap46njjcr" path="res://Sprites/UI/Portrait Container Right.png" id="4_514dc"]
-[ext_resource type="FontFile" uid="uid://v4qs8ufergem" path="res://Kenney Mini Square.ttf" id="4_d5qyu"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_t68bx"]
-font = ExtResource("4_d5qyu")
-font_size = 20
-font_color = Color(0, 0.847059, 0.847059, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_uhjhb"]
-font = ExtResource("4_d5qyu")
-font_size = 20
-font_color = Color(0, 0.847059, 0.847059, 1)
+[ext_resource type="FontFile" uid="uid://v4qs8ufergem" path="res://Kenney Mini Square.ttf" id="4_nkv70"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -103,8 +94,9 @@ offset_left = 15.0
 offset_top = 5.0
 offset_right = 211.0
 offset_bottom = 34.0
+theme_override_colors/font_color = Color(0.188235, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_nkv70")
 text = "Character"
-label_settings = SubResource("LabelSettings_t68bx")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -131,8 +123,9 @@ offset_left = 15.0
 offset_top = 5.0
 offset_right = 211.0
 offset_bottom = 34.0
+theme_override_colors/font_color = Color(0.188235, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_nkv70")
 text = "Character"
-label_settings = SubResource("LabelSettings_uhjhb")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -157,8 +150,8 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 38.0
-offset_right = -56.0
-offset_bottom = -16.0
+offset_right = 38.0
+offset_bottom = 46.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -170,13 +163,51 @@ theme_override_constants/separation = 30
 layout_mode = 2
 size_flags_horizontal = 3
 
+[node name="CharacterLabel" type="RichTextLabel" parent="Balloon/Dialogue/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0.501961)
+layout_mode = 2
+mouse_filter = 1
+bbcode_enabled = true
+text = "Character"
+fit_content = true
+scroll_active = false
+
 [node name="DialogueLabel" parent="Balloon/Dialogue/HBoxContainer/VBoxContainer" instance=ExtResource("2_a8ve6")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/default_color = Color(0, 0.847059, 0.847059, 1)
-theme_override_fonts/normal_font = ExtResource("4_d5qyu")
-theme_override_font_sizes/normal_font_size = 28
+theme_override_colors/default_color = Color(0.188235, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("4_nkv70")
 text = "Dialogue..."
 
+[node name="Responses" type="MarginContainer" parent="Balloon"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.226
+anchor_top = 0.166
+anchor_right = 0.961
+anchor_bottom = 0.168
+offset_left = -3.31201
+offset_top = -404.224
+offset_right = -0.63208
+offset_bottom = -0.552
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResponsesMenu" type="VBoxContainer" parent="Balloon/Responses" node_paths=PackedStringArray("response_template")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 2
+script = ExtResource("3_72ixx")
+response_template = NodePath("ResponseExample")
+
+[node name="ResponseExample" type="Button" parent="Balloon/Responses/ResponsesMenu"]
+layout_mode = 2
+text = "Response example"
+
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
+[connection signal="response_selected" from="Balloon/Responses/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

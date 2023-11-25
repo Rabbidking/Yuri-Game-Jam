@@ -1,15 +1,16 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_p6kqd"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_2u1qk"]
 
 [resource]
-script = ExtResource("1_p6kqd")
+script = ExtResource("1_2u1qk")
 using_states = PackedStringArray()
 titles = {
 "bedroom_computer": "35",
 "bedroom_laptop_2": "46",
 "entrance_night_end": "50",
 "front_entrance_receipt": "27",
+"goodnight": "55",
 "living_room_sticky": "41",
 "morning": "3",
 "night": "23"
@@ -372,6 +373,41 @@ lines = {
 },
 "52": {
 "id": "52",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"54": {
+"id": "54",
+"next_id": "55",
+"text": "goodnight",
+"type": "title"
+},
+"55": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "55",
+"next_id": "56",
+"tags": PackedStringArray(),
+"text": "Goodnight Gigi",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Goodnight Gigi",
+"type": "dialogue"
+},
+"56": {
+"id": "56",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "_on_player_get_in_bed",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "57",
+"type": "mutation"
+},
+"57": {
+"id": "57",
 "is_snippet": false,
 "next_id": "end",
 "type": "goto"

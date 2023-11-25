@@ -1,4 +1,78 @@
-[gd_scene format=3 uid="uid://d3dvia55cxbnw"]
+[gd_scene load_steps=8 format=3 uid="uid://dry4nsiv75bef"]
 
-[node name="PauseMenu" type="Node2D"]
-process_mode = 2
+[ext_resource type="Script" path="res://Script/pause_menu.gd" id="1_cis1t"]
+[ext_resource type="Texture2D" uid="uid://cn0feka8cno05" path="res://Sprites/UI/Paused Button.png" id="1_eo7of"]
+[ext_resource type="Texture2D" uid="uid://c8eopfikboiwx" path="res://Sprites/UI/Continue Button.png" id="1_s5cmd"]
+[ext_resource type="Texture2D" uid="uid://btm0n4l7wyhkt" path="res://Sprites/UI/Save Button.png" id="2_0jmbv"]
+[ext_resource type="Texture2D" uid="uid://pd2q1btg5llx" path="res://Sprites/UI/Paused Load Button.png" id="3_ehs4y"]
+[ext_resource type="Texture2D" uid="uid://5mtbqfbscq4r" path="res://Sprites/UI/Paused Options Button.png" id="4_vbokc"]
+[ext_resource type="Texture2D" uid="uid://pmm611o6ox41" path="res://Sprites/UI/Paused Quit Button.png" id="5_cu1kp"]
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cis1t")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.25098, 0.25098, 0.25098, 0.705882)
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -169.0
+offset_bottom = 53.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+
+[node name="Continue" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_s5cmd")
+
+[node name="Save" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_0jmbv")
+stretch_mode = 0
+
+[node name="Load" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_ehs4y")
+stretch_mode = 0
+
+[node name="Options" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_vbokc")
+stretch_mode = 0
+
+[node name="Quit" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_cu1kp")
+stretch_mode = 0
+
+[node name="PausedButton" type="Sprite2D" parent="."]
+position = Vector2(572, 39)
+scale = Vector2(2, 2)
+texture = ExtResource("1_eo7of")
+
+[connection signal="pressed" from="GridContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="GridContainer/Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="GridContainer/Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="GridContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="GridContainer/Quit" to="." method="_on_quit_pressed"]

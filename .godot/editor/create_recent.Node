@@ -1,5 +1,9 @@
-Label
+CanvasLayer
 TextureButton
+Label
+GridContainer
+ColorRect
+Control
 TextureRect
 Sprite2D
 RichTextLabel

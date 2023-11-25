@@ -1,4 +1,4 @@
-res://Scene/hud.tscn
+res://Scene/pause_menu.tscn
 res://Scene/Rooms/bedroom.tscn
 res://Scene/Rooms/entrance.tscn
 res://Scene/Rooms/basement.tscn
@@ -6,4 +6,7 @@ res://Scene/Rooms/hallwayA.tscn
 res://Scene/Rooms/hallway_b.tscn
 res://Scene/Rooms/kitchen.tscn
 res://Scene/Rooms/study.tscn
-res://Scene/pause_menu.tscn
+res://Scene/hud.tscn
+res://Script/pause_menu.gd
+res://Scene/player.tscn
+res://Script/HUD.gd

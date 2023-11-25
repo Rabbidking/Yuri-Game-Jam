@@ -18,7 +18,7 @@ position = Vector2(130, 45)
 scale = Vector2(2, 2)
 texture = ExtResource("2_dipbn")
 
-[node name="PauseButton" type="TextureButton" parent="."]
+[node name="Pause" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 1072.0
 offset_right = 1112.0
@@ -27,4 +27,4 @@ scale = Vector2(2, 2)
 texture_normal = ExtResource("3_wpphl")
 stretch_mode = 0
 
-[connection signal="button_down" from="PauseButton" to="." method="_on_pause_button_button_down"]
+[connection signal="pressed" from="Pause" to="." method="_on_pause_pressed"]

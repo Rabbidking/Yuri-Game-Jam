@@ -9,11 +9,7 @@ func _ready() -> void:
 		$DayNightIndicator.texture = load("res://Sprites/UI/Night HUD.png")
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 
-func _on_pause_button_button_down() -> void:
-	#open pause menu
+func _on_pause_pressed() -> void:
 	pass # Replace with function body.

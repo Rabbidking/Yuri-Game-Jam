@@ -1,41 +1,41 @@
 ~ afternoon
 
-Demi: Finally home, waiting in lines sucks.
-Gigi: Lines aren’t that bad if we’re together!
-Demi: Hah, I was lucky you didn’t fall asleep on me.
-Gigi: The chairs weren’t cushy enough, speaking of which, 
-	  don’t you have a long stream tonight? Want some coffee?
-Demi: Oh, that would be great! Um, just don’t add any weird stuff to my cup ok?
-Gigi: I promise! Once I take care of a few chores I’m going to bed early.
-Demi: Don’t work too hard, call if you need anything.
+Demi: [#demi=Default]Finally home, waiting in lines sucks.
+Gigi: [#gigi=Grin]Lines aren’t that bad if we’re together!
+Demi: [#demi=Smirk]Hah, I was lucky you didn’t fall asleep on me.
+Gigi: [#gigi=Default]The chairs weren’t cushy enough, speaking of which, don’t you have a long stream tonight? Want some coffee?
+Demi: [#demi=Happy]Oh, that would be great! Um, just don’t add any weird stuff to my cup ok?
+Gigi: [#gigi=Grin]I promise! Once I take care of a few chores I’m going to bed early.
+Demi: [#demi=Default]Don’t work too hard, call if you need anything.
 
 => END
 
 ~ night_start
 Demi wakes up alone in bed.
-Demi: Babe, are you here? Did she get up for a glass of water?
-Demi waits 5 minutes before getting up to look for Gigi.
+Demi: [#demi=Default]Babe, are you here? Did she get up for a glass of water?
+Demi waits five minutes before getting up to look for Gigi.
 
 => END
 
 ~ living_room
-Demi: Holy-!
-Demi: Damn girl you scared me, what are you doing standing like a creepo in the dark? 
-Demi: Um, Gigi?
+Demi: [#demi=Shocked]Holy-!
+Demi: [#demi=Default]Damn girl you scared me, what are you doing standing like a creepo in the dark? 
+Demi: [#demi=Default]Um, Gigi?
+Gigi: [#gigi=Sleeping]. . .
 
 => END
 
 ~ pick_up_gigi
-Demi: (Is she still sleeping? Ok, that’s freaking weird…)
-Demi: (Well, better get her back in bed I guess.)
+Demi: [#demi=Annoyed](Is she still sleeping? Ok, that’s freaking weird…)
+Demi: [#demi=Default](Well, better get her back in bed I guess.)
 
 => END
 
 ~ bedroom
-Narration: Demi places Gigi back in bed and lies down next to her.
-Demi: (Should I tell her about this? I had never seen Gigi do that before.) 
-Demi: (Maybe it’s just a one-time thing? I’ll think about it later.)
-Demi: Goodnight Gigi.
+Demi places Gigi back in bed and lies down next to her.
+Demi: [#demi=Annoyed](Should I tell her about this? I had never seen Gigi do that before.) 
+Demi: [#demi=Annoyed](Maybe it’s just a one-time thing? I’ll think about it later.)
+Demi: [#demi=Default]Goodnight, Gigi.
 do _on_player_get_in_bed()
 => END
 

@@ -9,6 +9,7 @@ extends CanvasLayer
 @onready var right_nameplate: TextureRect = %RightNameplate
 @onready var left_character_label: Label = %LeftCharacterLabel
 @onready var right_character_label: Label = %RightCharacterLabel
+@onready var indicator: TextureRect = $Balloon/Indicator
 
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
@@ -20,10 +21,17 @@ var resource: DialogueResource
 var temporary_game_states: Array = []
 
 ## See if we are waiting for the player
-var is_waiting_for_input: bool = false
+var is_waiting_for_input: bool = false:
+	set(value):
+		is_waiting_for_input = value
+		indicator.visible = value
+	get:
+		return is_waiting_for_input
 
 ## See if we are running a long mutation and should hide the balloon
 var will_hide_balloon: bool = false
+
+var right_portrait_path: String = ""
 
 ## The current line
 var dialogue_line: DialogueLine:
@@ -53,14 +61,17 @@ var dialogue_line: DialogueLine:
 		right_nameplate.visible = not dialogue_line.character.is_empty()
 		right_character_label.text = tr(dialogue_line.character, "dialogue")
 		
-		var left_portrait_path: String = "res://Sprites/Portraits/Demi %s.png" % dialogue_line.tags
-		if FileAccess.file_exists(left_portrait_path):
+		var left_portrait_path: String = "res://Sprites/Portraits/Demi %s.png" % dialogue_line.get_tag_value("demi")
+		if ResourceLoader.exists(left_portrait_path):
 			left_portrait.texture = load(left_portrait_path)
 		else:
 			left_portrait.texture = null
-			
-		var right_portrait_path: String = "res://Sprites/Portraits/Gigi %s.png" % dialogue_line.tags
-		if FileAccess.file_exists(right_portrait_path):
+		
+		if State.mimi_replace_gigi == false:
+			right_portrait_path = "res://Sprites/Portraits/Gigi %s.png" % dialogue_line.get_tag_value("gigi")
+		else:
+			right_portrait_path = "res://Sprites/Portraits/Mimi %s.png" % dialogue_line.get_tag_value("mimi")
+		if ResourceLoader.exists(right_portrait_path):
 			right_portrait.texture = load(right_portrait_path)
 		else:
 			right_portrait.texture = null
@@ -86,7 +97,7 @@ var dialogue_line: DialogueLine:
 		if dialogue_line.responses.size() > 0:
 			balloon.focus_mode = Control.FOCUS_NONE
 			responses_menu.show()
-		elif dialogue_line.time != null:
+		elif dialogue_line.time != "":
 			var time = dialogue_line.text.length() * 0.02 if dialogue_line.time == "auto" else dialogue_line.time.to_float()
 			await get_tree().create_timer(time).timeout
 			next(dialogue_line.next_id)
@@ -100,8 +111,9 @@ var dialogue_line: DialogueLine:
 
 func _ready() -> void:
 	balloon.hide()
+	indicator.hide()
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
-
+	
 
 func _unhandled_input(_event: InputEvent) -> void:
 	# Only the balloon is allowed to handle input while it's showing

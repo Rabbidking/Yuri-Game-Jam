@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0pfj3nycfflx"]
+[gd_scene load_steps=16 format=3 uid="uid://b0pfj3nycfflx"]
 
 [ext_resource type="Script" path="res://Script/Rooms/hallwayA.gd" id="1_h463u"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_yv8w3"]
@@ -6,6 +6,15 @@
 [ext_resource type="Texture2D" uid="uid://cesubyhcfgfps" path="res://sample/Blue.png" id="3_mkf8k"]
 [ext_resource type="PackedScene" uid="uid://cafmsu4vdnnfq" path="res://Scene/door.tscn" id="4_txjha"]
 [ext_resource type="PackedScene" uid="uid://b0k3gal2wpctt" path="res://fade_transition.tscn" id="5_ah00y"]
+[ext_resource type="Texture2D" uid="uid://dksaxg2omfisw" path="res://Sprites/Furniture/OBJ_Bench/OBJ_BenchB.png" id="8_efl3i"]
+[ext_resource type="Texture2D" uid="uid://dxi2ois57cbrs" path="res://Sprites/Furniture/OBJ_Bookshelf/OBJ_BookshelfB.png" id="9_7kv18"]
+[ext_resource type="Texture2D" uid="uid://b2u4rllapjx20" path="res://Sprites/Furniture/OBJ_Plant/OBJ_PlantA.png" id="10_vxepl"]
+[ext_resource type="Texture2D" uid="uid://bcxxg6s2c3f1w" path="res://Sprites/Furniture/OBJ_Lightstand/OBJ_LightstandB.png" id="11_ku6nm"]
+[ext_resource type="Texture2D" uid="uid://cha5a6wgxf7ig" path="res://Sprites/Furniture/OBJ_SmallItems/OBJ_BookPileA.png" id="11_xj4mr"]
+[ext_resource type="Texture2D" uid="uid://bm0jj5x5qx0o8" path="res://Sprites/Furniture/OBJ_SmallItems/OBJ_StorageContainerA.png" id="12_gsqsw"]
+[ext_resource type="Texture2D" uid="uid://b8eex8pmbui1c" path="res://Sprites/Furniture/OBJ_Picture/OBJ_PictureF.png" id="13_nahm5"]
+[ext_resource type="Texture2D" uid="uid://g2mqcqh0rlxg" path="res://Sprites/Furniture/OBJ_Carpet/OBJ_CarpetG.png" id="14_p5jqu"]
+[ext_resource type="Texture2D" uid="uid://0ns00vrf56ae" path="res://Sprites/Furniture/OBJ_Carpet/OBJ_CarpetB.png" id="15_wldsc"]
 
 [node name="hallwayA" type="Node2D"]
 script = ExtResource("1_h463u")
@@ -28,6 +37,14 @@ scale = Vector2(2.60938, 3.45312)
 texture = ExtResource("3_mkf8k")
 centered = false
 
+[node name="ObjCarpetG" type="Sprite2D" parent="."]
+position = Vector2(559, 268)
+texture = ExtResource("14_p5jqu")
+
+[node name="ObjCarpetB" type="Sprite2D" parent="."]
+position = Vector2(545, 474)
+texture = ExtResource("15_wldsc")
+
 [node name="Player" parent="." instance=ExtResource("3_gii68")]
 position = Vector2(568, 288)
 
@@ -47,6 +64,36 @@ door_name = &"hallwayB_1"
 door_type = &"front"
 
 [node name="Fade_Transition" parent="." instance=ExtResource("5_ah00y")]
+
+[node name="Props" type="Node" parent="."]
+
+[node name="ObjBenchB" type="Sprite2D" parent="Props"]
+position = Vector2(646, 207)
+texture = ExtResource("8_efl3i")
+
+[node name="ObjBookshelfB" type="Sprite2D" parent="Props"]
+position = Vector2(632, 146)
+texture = ExtResource("9_7kv18")
+
+[node name="ObjPictureF" type="Sprite2D" parent="Props"]
+position = Vector2(620, 91)
+texture = ExtResource("13_nahm5")
+
+[node name="ObjPlantA2" type="Sprite2D" parent="Props"]
+position = Vector2(646, 348)
+texture = ExtResource("10_vxepl")
+
+[node name="ObjLightstandB" type="Sprite2D" parent="Props"]
+position = Vector2(646, 122)
+texture = ExtResource("11_ku6nm")
+
+[node name="ObjBookPileA" type="Sprite2D" parent="Props"]
+position = Vector2(616, 140)
+texture = ExtResource("11_xj4mr")
+
+[node name="ObjStorageContainerA" type="Sprite2D" parent="Props"]
+position = Vector2(606, 350)
+texture = ExtResource("12_gsqsw")
 
 [connection signal="hallwayA_pos_1" from="." to="Player" method="_on_hallway_a_hallway_a_pos_1"]
 [connection signal="hallwayA_pos_2" from="." to="Player" method="_on_hallway_a_hallway_a_pos_2"]

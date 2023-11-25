@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dc6fk5kkjoeet"]
+[gd_scene load_steps=26 format=3 uid="uid://dc6fk5kkjoeet"]
 
 [ext_resource type="Script" path="res://Script/Rooms/study.gd" id="1_3gauq"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_ecvp5"]
@@ -7,12 +7,24 @@
 [ext_resource type="Texture2D" uid="uid://cesubyhcfgfps" path="res://sample/Blue.png" id="3_q4gkh"]
 [ext_resource type="PackedScene" uid="uid://cafmsu4vdnnfq" path="res://Scene/door.tscn" id="3_qbrfg"]
 [ext_resource type="Texture2D" uid="uid://idsnu2lpouan" path="res://Sprites/Furniture/OBJ_PCSetup/OBJ_PCSetup.png" id="5_ad688"]
+[ext_resource type="Texture2D" uid="uid://idi1jm63g8kr" path="res://Sprites/Furniture/OBJ_Window/OBJ_WindowD.png" id="5_epx8n"]
 [ext_resource type="Texture2D" uid="uid://cgxktfbo50w6q" path="res://Sprites/Furniture/OBJ_GamingChair/OBJ_GamingChair.png" id="6_xwy4f"]
 [ext_resource type="Texture2D" uid="uid://dsc00hxxk1qmn" path="res://Sprites/Furniture/OBJ_Bookshelf/OBJ_BookshelfA.png" id="7_taguj"]
 [ext_resource type="Texture2D" uid="uid://dht7f4kn88quf" path="res://Sprites/Furniture/OBJ_Chest/OBJ_ChestA_01.png" id="8_wmmla"]
 [ext_resource type="Texture2D" uid="uid://bdylafpj3r3sg" path="res://Sprites/Furniture/OBJ_Drawer/OBJ_DrawerA.png" id="9_nrwco"]
 [ext_resource type="Texture2D" uid="uid://bcxxg6s2c3f1w" path="res://Sprites/Furniture/OBJ_Lightstand/OBJ_LightstandB.png" id="10_sqxft"]
+[ext_resource type="Texture2D" uid="uid://bru2r1g37owex" path="res://Sprites/Furniture/OBJ_SmallItems/OBJ_FoosballTable.png" id="12_rsyro"]
 [ext_resource type="PackedScene" uid="uid://co1a7h15avswg" path="res://Scene/interactable.tscn" id="13_edtby"]
+[ext_resource type="Texture2D" uid="uid://n1tl0ia7djla" path="res://Sprites/Furniture/OBJ_ArcadeMachine/OBJ_ArcadeMachineA.png" id="13_kjjjv"]
+[ext_resource type="Texture2D" uid="uid://ceq8hwa8mly2a" path="res://Sprites/Furniture/OBJ_Lightstand/OBJ_LightstandA.png" id="14_g1xfb"]
+[ext_resource type="Texture2D" uid="uid://d0mtjtfw8mfa" path="res://Sprites/Furniture/OBJ_Sofa/OBJ_SofaJ.png" id="15_bt3vi"]
+[ext_resource type="Texture2D" uid="uid://cvincvbkaoj11" path="res://Sprites/Furniture/OBJ_Table/OBJ_TableC.png" id="16_cxi58"]
+[ext_resource type="Texture2D" uid="uid://bobd68u3op4h6" path="res://Sprites/Furniture/OBJ_SmallItems/OBJ_SodaCanB.png" id="16_th33y"]
+[ext_resource type="Texture2D" uid="uid://bx2gxvkb0r3kp" path="res://Sprites/Furniture/OBJ_Plant/OBJ_PlantF.png" id="17_00o17"]
+[ext_resource type="Texture2D" uid="uid://bxcwpjeh4uf37" path="res://Sprites/Furniture/OBJ_SmallItems/OBJ_RecordPlayer.png" id="18_d6ots"]
+[ext_resource type="Texture2D" uid="uid://ct5bpnxxnalfd" path="res://Sprites/Furniture/OBJ_SmallItems/OBJ_RecordPile.png" id="19_2oiap"]
+[ext_resource type="Texture2D" uid="uid://bbaej48gxweem" path="res://Sprites/Furniture/OBJ_Bathroom/OBJ_BathTrashCan.png" id="21_ukbc1"]
+[ext_resource type="Texture2D" uid="uid://dq4a36psmwhvw" path="res://Sprites/Furniture/OBJ_Carpet/OBJ_CarpetC.png" id="25_nt4a2"]
 
 [node name="Study" type="Node2D"]
 script = ExtResource("1_3gauq")
@@ -28,21 +40,30 @@ scale = Vector2(4.54688, 4.68437)
 texture = ExtResource("3_q4gkh")
 centered = false
 
-[node name="Player" parent="." instance=ExtResource("2_q2sx0")]
-position = Vector2(481, 355)
+[node name="ObjCarpetC" type="Sprite2D" parent="."]
+position = Vector2(560, 252)
+texture = ExtResource("25_nt4a2")
 
 [node name="Props" type="Node2D" parent="."]
 
+[node name="ObjWindowD" type="Sprite2D" parent="Props"]
+position = Vector2(667, 112)
+texture = ExtResource("5_epx8n")
+
+[node name="ObjWindowD2" type="Sprite2D" parent="Props"]
+position = Vector2(505, 112)
+texture = ExtResource("5_epx8n")
+
 [node name="PC Setup" type="Sprite2D" parent="Props"]
-position = Vector2(664, 192)
+position = Vector2(664, 173)
 texture = ExtResource("5_ad688")
 
 [node name="Gamer Chair" type="Sprite2D" parent="Props"]
-position = Vector2(664, 224)
+position = Vector2(669, 210)
 texture = ExtResource("6_xwy4f")
 
 [node name="Book Shelf" type="Sprite2D" parent="Props"]
-position = Vector2(480, 152)
+position = Vector2(480, 133)
 texture = ExtResource("7_taguj")
 
 [node name="Chest" type="Sprite2D" parent="Props"]
@@ -50,12 +71,55 @@ position = Vector2(696, 432)
 texture = ExtResource("8_wmmla")
 
 [node name="Drawer" type="Sprite2D" parent="Props"]
-position = Vector2(545, 184)
+position = Vector2(545, 162)
 texture = ExtResource("9_nrwco")
 
 [node name="Light" type="Sprite2D" parent="Props"]
-position = Vector2(552, 152)
+position = Vector2(552, 132)
 texture = ExtResource("10_sqxft")
+
+[node name="ObjFoosballTable" type="Sprite2D" parent="Props"]
+position = Vector2(661, 350)
+texture = ExtResource("12_rsyro")
+
+[node name="ObjArcadeMachineA" type="Sprite2D" parent="Props"]
+position = Vector2(464, 231)
+texture = ExtResource("13_kjjjv")
+
+[node name="ObjLightstandA" type="Sprite2D" parent="Props"]
+position = Vector2(710, 396)
+texture = ExtResource("14_g1xfb")
+
+[node name="ObjTableC" type="Sprite2D" parent="Props"]
+position = Vector2(557, 310)
+texture = ExtResource("16_cxi58")
+
+[node name="ObjSodaCanB" type="Sprite2D" parent="Props"]
+position = Vector2(533, 150)
+texture = ExtResource("16_th33y")
+
+[node name="ObjSofaJ" type="Sprite2D" parent="Props"]
+position = Vector2(555, 341)
+texture = ExtResource("15_bt3vi")
+
+[node name="ObjRecordPlayer" type="Sprite2D" parent="Props"]
+position = Vector2(555, 399)
+texture = ExtResource("18_d6ots")
+
+[node name="ObjRecordPile" type="Sprite2D" parent="Props"]
+position = Vector2(586, 436)
+texture = ExtResource("19_2oiap")
+
+[node name="ObjBathTrashCan" type="Sprite2D" parent="Props"]
+position = Vector2(582, 178)
+texture = ExtResource("21_ukbc1")
+
+[node name="ObjPlantF" type="Sprite2D" parent="Props"]
+position = Vector2(557, 305)
+texture = ExtResource("17_00o17")
+
+[node name="Player" parent="." instance=ExtResource("2_q2sx0")]
+position = Vector2(481, 355)
 
 [node name="HallwayB Door" parent="." instance=ExtResource("3_qbrfg")]
 position = Vector2(485, 427)

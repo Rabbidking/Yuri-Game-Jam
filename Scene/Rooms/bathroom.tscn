@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dc2utvich756a"]
+[gd_scene load_steps=27 format=3 uid="uid://dc2utvich756a"]
 
 [ext_resource type="Script" path="res://Script/Rooms/bathroom.gd" id="1_vfmt4"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_i51h5"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b0k3gal2wpctt" path="res://fade_transition.tscn" id="3_3i7g3"]
 [ext_resource type="Texture2D" uid="uid://cesubyhcfgfps" path="res://sample/Blue.png" id="3_gfhfd"]
 [ext_resource type="PackedScene" uid="uid://cafmsu4vdnnfq" path="res://Scene/door.tscn" id="4_bb88q"]
+[ext_resource type="Texture2D" uid="uid://b8g0gy73sgmle" path="res://Sprites/Furniture/OBJ_Carpet/OBJ_CarpetF.png" id="4_wrbmt"]
 [ext_resource type="Texture2D" uid="uid://dkaaxddduio0w" path="res://Sprites/Furniture/OBJ_Bathroom/OBJ_Shower.png" id="7_qx85g"]
 [ext_resource type="Texture2D" uid="uid://lfpk3hhsisjj" path="res://Sprites/Furniture/OBJ_Bathroom/OBJ_BathDrawer.png" id="8_3761q"]
 [ext_resource type="Texture2D" uid="uid://7cecm5rfytlv" path="res://Sprites/Furniture/OBJ_Bathroom/OBJ_BathMirror.png" id="9_3751r"]
@@ -17,7 +18,14 @@
 [ext_resource type="Texture2D" uid="uid://d0ucx2w0888ig" path="res://Sprites/Furniture/OBJ_Bathroom/OBJ_TowelHolder.png" id="15_pg0bf"]
 [ext_resource type="Texture2D" uid="uid://dhy334dlklpeb" path="res://Sprites/Furniture/OBJ_Bathroom/OBJ_TPHolder.png" id="16_5lqf6"]
 [ext_resource type="PackedScene" uid="uid://co1a7h15avswg" path="res://Scene/interactable.tscn" id="17_jyyl4"]
-[ext_resource type="PackedScene" uid="uid://bqg7gl6eklem6" path="res://Scene/hud.tscn" id="18_ognfk"]
+[ext_resource type="Texture2D" uid="uid://cbfgytggd056x" path="res://Sprites/Furniture/OBJ_Bathroom/OBJ_LaundryHamper.png" id="19_jkkmd"]
+[ext_resource type="Texture2D" uid="uid://dtlvpit0a02gi" path="res://Sprites/Furniture/OBJ_Bathroom/OBJ_LaundryBasket.png" id="20_6q12b"]
+[ext_resource type="Texture2D" uid="uid://5524yo0eydps" path="res://Sprites/Furniture/OBJ_Bench/OBJ_BenchC.png" id="21_w3bw2"]
+[ext_resource type="Texture2D" uid="uid://bbj0dnyyoe426" path="res://Sprites/Furniture/OBJ_Closet/OBJ_ClosetB.png" id="23_8of7e"]
+[ext_resource type="Texture2D" uid="uid://brie57g4d2d78" path="res://Sprites/Furniture/OBJ_Table/OBJ_TableH.png" id="24_xoxn5"]
+[ext_resource type="Texture2D" uid="uid://d1q0g85d2uvqd" path="res://Sprites/Furniture/OBJ_Plant/OBJ_PlantE.png" id="25_61u0c"]
+[ext_resource type="Texture2D" uid="uid://cgtdksx1yem7g" path="res://Sprites/Furniture/OBJ_Plant/OBJ_PlantC.png" id="26_bayrr"]
+[ext_resource type="Texture2D" uid="uid://cneci0dnik2mf" path="res://Sprites/Furniture/OBJ_Window/OBJ_WindowB.png" id="27_ddsev"]
 
 [node name="bathroom" type="Node2D"]
 script = ExtResource("1_vfmt4")
@@ -33,6 +41,10 @@ scale = Vector2(6, 3.91875)
 texture = ExtResource("3_gfhfd")
 centered = false
 
+[node name="ObjCarpetF" type="Sprite2D" parent="."]
+position = Vector2(546, 422)
+texture = ExtResource("4_wrbmt")
+
 [node name="Player" parent="." instance=ExtResource("2_opgbd")]
 position = Vector2(552, 397)
 
@@ -43,55 +55,93 @@ door_type = &"back"
 
 [node name="Fade_Transition" parent="." instance=ExtResource("3_3i7g3")]
 
-[node name="Props" type="Node2D" parent="."]
-
-[node name="Shower" type="Sprite2D" parent="Props"]
-position = Vector2(784, 232)
-texture = ExtResource("7_qx85g")
-
-[node name="Drawer" type="Sprite2D" parent="Props"]
-position = Vector2(536, 248)
-texture = ExtResource("8_3761q")
-
-[node name="Mirror" type="Sprite2D" parent="Props"]
-position = Vector2(480, 224)
-texture = ExtResource("9_3751r")
-
-[node name="Sink" type="Sprite2D" parent="Props"]
-position = Vector2(480, 248)
-texture = ExtResource("10_dbf8o")
-
-[node name="Towel" type="Sprite2D" parent="Props"]
-position = Vector2(560, 240)
-texture = ExtResource("11_ajxer")
-
-[node name="Trash Can" type="Sprite2D" parent="Props"]
-position = Vector2(720, 256)
-texture = ExtResource("12_itmj5")
-
-[node name="Toilet" type="Sprite2D" parent="Props"]
-position = Vector2(696, 240)
-texture = ExtResource("13_yl81e")
-
-[node name="Tooth Paste" type="Sprite2D" parent="Props"]
-position = Vector2(528, 240)
-texture = ExtResource("14_v0q67")
-
-[node name="Towel Holder" type="Sprite2D" parent="Props"]
-position = Vector2(600, 216)
-texture = ExtResource("15_pg0bf")
-
-[node name="Toilet Paper" type="Sprite2D" parent="Props"]
-position = Vector2(672, 240)
-texture = ExtResource("16_5lqf6")
-
 [node name="Fuel Cell" parent="." instance=ExtResource("17_jyyl4")]
-position = Vector2(782, 348)
+position = Vector2(783, 371)
 item = &"fuelcell"
 location = &"bathroom"
 type = &"fuelcell3"
 
-[node name="HUD" parent="." instance=ExtResource("18_ognfk")]
+[node name="Props" type="Node2D" parent="."]
+
+[node name="Shower" type="Sprite2D" parent="Props"]
+position = Vector2(784, 210)
+texture = ExtResource("7_qx85g")
+
+[node name="Drawer" type="Sprite2D" parent="Props"]
+position = Vector2(473, 239)
+texture = ExtResource("8_3761q")
+
+[node name="Mirror" type="Sprite2D" parent="Props"]
+position = Vector2(523, 200)
+texture = ExtResource("9_3751r")
+
+[node name="Sink" type="Sprite2D" parent="Props"]
+position = Vector2(523, 233)
+texture = ExtResource("10_dbf8o")
+
+[node name="Towel" type="Sprite2D" parent="Props"]
+position = Vector2(458, 227)
+texture = ExtResource("11_ajxer")
+
+[node name="Trash Can" type="Sprite2D" parent="Props"]
+position = Vector2(608, 248)
+texture = ExtResource("12_itmj5")
+
+[node name="Toilet" type="Sprite2D" parent="Props"]
+position = Vector2(580, 234)
+texture = ExtResource("13_yl81e")
+
+[node name="Tooth Paste" type="Sprite2D" parent="Props"]
+position = Vector2(483, 224)
+texture = ExtResource("14_v0q67")
+
+[node name="Towel Holder" type="Sprite2D" parent="Props"]
+position = Vector2(715, 216)
+texture = ExtResource("15_pg0bf")
+
+[node name="ObjBathDrawer" type="Sprite2D" parent="Props"]
+position = Vector2(648, 473)
+texture = ExtResource("8_3761q")
+
+[node name="ObjBathTowel" type="Sprite2D" parent="Props"]
+position = Vector2(636, 461)
+texture = ExtResource("11_ajxer")
+
+[node name="ObjLaundryHamper" type="Sprite2D" parent="Props"]
+position = Vector2(603, 473)
+texture = ExtResource("19_jkkmd")
+
+[node name="ObjLaundryBasket" type="Sprite2D" parent="Props"]
+position = Vector2(693, 485)
+texture = ExtResource("20_6q12b")
+
+[node name="ObjBenchC" type="Sprite2D" parent="Props"]
+position = Vector2(470, 472)
+texture = ExtResource("21_w3bw2")
+
+[node name="Toilet Paper" type="Sprite2D" parent="Props"]
+position = Vector2(554, 237)
+texture = ExtResource("16_5lqf6")
+
+[node name="ObjClosetB" type="Sprite2D" parent="Props"]
+position = Vector2(790, 441)
+texture = ExtResource("23_8of7e")
+
+[node name="ObjTableH" type="Sprite2D" parent="Props"]
+position = Vector2(454, 417)
+texture = ExtResource("24_xoxn5")
+
+[node name="ObjPlantE" type="Sprite2D" parent="Props"]
+position = Vector2(741, 442)
+texture = ExtResource("25_61u0c")
+
+[node name="ObjPlantC" type="Sprite2D" parent="Props"]
+position = Vector2(454, 384)
+texture = ExtResource("26_bayrr")
+
+[node name="ObjWindowB" type="Sprite2D" parent="."]
+position = Vector2(655, 201)
+texture = ExtResource("27_ddsev")
 
 [connection signal="bathroom_pos" from="." to="Player" method="_on_bathroom_bathroom_pos"]
 [connection signal="picked_up" from="Player" to="Fuel Cell" method="_on_player_picked_up"]

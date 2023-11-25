@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cxsg6w4sslowi"]
+[gd_scene load_steps=49 format=3 uid="uid://cxsg6w4sslowi"]
 
 [ext_resource type="Script" path="res://Script/Rooms/living_room.gd" id="1_2g2a4"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="1_a7n2q"]
@@ -6,13 +6,48 @@
 [ext_resource type="Texture2D" uid="uid://cesubyhcfgfps" path="res://sample/Blue.png" id="3_i8kkj"]
 [ext_resource type="PackedScene" uid="uid://b0k3gal2wpctt" path="res://fade_transition.tscn" id="3_ype08"]
 [ext_resource type="PackedScene" uid="uid://cafmsu4vdnnfq" path="res://Scene/door.tscn" id="4_nhv12"]
-[ext_resource type="Texture2D" uid="uid://owk7lxnxuri1" path="res://Sprites/Furniture/OBJ_Sofa/OBJ_SofaA.png" id="7_mgk53"]
+[ext_resource type="Texture2D" uid="uid://g2mqcqh0rlxg" path="res://Sprites/Furniture/OBJ_Carpet/OBJ_CarpetG.png" id="5_23x51"]
 [ext_resource type="Texture2D" uid="uid://b2u4rllapjx20" path="res://Sprites/Furniture/OBJ_Plant/OBJ_PlantA.png" id="8_fsx5j"]
 [ext_resource type="Texture2D" uid="uid://b2x07mn778xgp" path="res://Sprites/Furniture/OBJ_Table/OBJ_TableE.png" id="9_0ytrm"]
 [ext_resource type="Texture2D" uid="uid://cj7x5d4wk4ivw" path="res://Sprites/Furniture/OBJ_Television/OBJ_TelevisionA.png" id="10_4k5n3"]
 [ext_resource type="PackedScene" uid="uid://co1a7h15avswg" path="res://Scene/interactable.tscn" id="11_vw6on"]
 [ext_resource type="PackedScene" uid="uid://c8d5hla3410jd" path="res://Scene/gigi.tscn" id="12_kifwc"]
-[ext_resource type="PackedScene" uid="uid://bqg7gl6eklem6" path="res://Scene/hud.tscn" id="13_fug4x"]
+[ext_resource type="Texture2D" uid="uid://dgwsujl7vj8ev" path="res://Sprites/Furniture/OBJ_Window/OBJ_WindowF.png" id="14_e3kxy"]
+[ext_resource type="Texture2D" uid="uid://d3i70lb2ub8u5" path="res://Sprites/Furniture/OBJ_Bookshelf/OBJ_BookshelfC.png" id="16_nssg7"]
+[ext_resource type="Texture2D" uid="uid://d4aucq78w14dm" path="res://Sprites/Furniture/OBJ_Sofa/OBJ_SofaF.png" id="16_stao7"]
+[ext_resource type="Texture2D" uid="uid://dsc00hxxk1qmn" path="res://Sprites/Furniture/OBJ_Bookshelf/OBJ_BookshelfA.png" id="17_c2kaw"]
+[ext_resource type="Texture2D" uid="uid://dtniw5y5ipp3e" path="res://Sprites/Furniture/OBJ_Plant/OBJ_PlantB.png" id="18_anwoy"]
+[ext_resource type="Texture2D" uid="uid://dht7f4kn88quf" path="res://Sprites/Furniture/OBJ_Chest/OBJ_ChestA_01.png" id="20_cpenu"]
+[ext_resource type="Texture2D" uid="uid://0ns00vrf56ae" path="res://Sprites/Furniture/OBJ_Carpet/OBJ_CarpetB.png" id="21_27i7y"]
+[ext_resource type="Texture2D" uid="uid://dxi2ois57cbrs" path="res://Sprites/Furniture/OBJ_Bookshelf/OBJ_BookshelfB.png" id="22_4ndvm"]
+[ext_resource type="Texture2D" uid="uid://0bdp5nbrcg0k" path="res://Sprites/Furniture/OBJ_Picture/OBJ_PictureB.png" id="23_jruxc"]
+[ext_resource type="Texture2D" uid="uid://doiypbt18sh37" path="res://Sprites/Furniture/OBJ_Picture/OBJ_PictureD.png" id="24_fuk2s"]
+[ext_resource type="Texture2D" uid="uid://c5ntl4qc7m00u" path="res://Sprites/Furniture/OBJ_Speakers/OBJ_SpeakersA.png" id="26_dqwwh"]
+[ext_resource type="Texture2D" uid="uid://oad3u5svay6h" path="res://Sprites/Furniture/OBJ_Table/OBJ_TableJ.png" id="28_euqrb"]
+[ext_resource type="Texture2D" uid="uid://ddkmnivd7hmr3" path="res://Sprites/Furniture/OBJ_Clock/OBJ_ClockA.png" id="28_rr78m"]
+[ext_resource type="Texture2D" uid="uid://c63oo3wdhvsmc" path="res://Sprites/Furniture/OBJ_Table/OBJ_TableK.png" id="29_c11t3"]
+[ext_resource type="Texture2D" uid="uid://hh6eug76smyw" path="res://Sprites/Furniture/OBJ_SmallItems/OBJ_SodaCanA.png" id="30_ohty6"]
+[ext_resource type="Texture2D" uid="uid://83cmiv20s8ty" path="res://Sprites/Furniture/OBJ_SmallItems/OBJ_PillowB.png" id="31_f04nh"]
+[ext_resource type="Texture2D" uid="uid://dms01htj2vgra" path="res://Sprites/Furniture/OBJ_Bookshelf/OBJ_BookshelfD.png" id="32_xtcbb"]
+[ext_resource type="Texture2D" uid="uid://ch3yockplpnug" path="res://Sprites/Furniture/OBJ_Bookshelf/OBJ_BookshelfE.png" id="33_2quov"]
+[ext_resource type="Texture2D" uid="uid://bbaej48gxweem" path="res://Sprites/Furniture/OBJ_Bathroom/OBJ_BathTrashCan.png" id="34_au4g6"]
+[ext_resource type="Texture2D" uid="uid://dl5lnq35143fa" path="res://Sprites/Furniture/OBJ_Bookshelf/OBJ_BookshelfG.png" id="35_ffrfr"]
+[ext_resource type="Texture2D" uid="uid://cha5a6wgxf7ig" path="res://Sprites/Furniture/OBJ_SmallItems/OBJ_BookPileA.png" id="36_n0sue"]
+[ext_resource type="Texture2D" uid="uid://dpx54v2ia4fbv" path="res://Sprites/Furniture/OBJ_Plant/OBJ_PlantG.png" id="37_m822f"]
+[ext_resource type="Texture2D" uid="uid://oggkxcqmlpbf" path="res://Sprites/Furniture/OBJ_Plant/OBJ_PlantD.png" id="38_mrgm2"]
+[ext_resource type="Texture2D" uid="uid://celukt6s5p06a" path="res://Sprites/Furniture/OBJ_Chair/OBJ_ChairE.png" id="39_q6w3y"]
+[ext_resource type="Texture2D" uid="uid://cgtdksx1yem7g" path="res://Sprites/Furniture/OBJ_Plant/OBJ_PlantC.png" id="40_8jvsw"]
+[ext_resource type="Texture2D" uid="uid://duyh01u0vu6rd" path="res://Sprites/Furniture/OBJ_CardboardBox/OBJ_CardboardBoxA.png" id="41_k36xn"]
+[ext_resource type="Texture2D" uid="uid://wemykn4uvwmf" path="res://Sprites/Furniture/OBJ_CardboardBox/OBJ_CardboardBoxF.png" id="42_eb3k8"]
+[ext_resource type="Texture2D" uid="uid://cupxl7713lvmo" path="res://Sprites/Furniture/OBJ_CardboardBox/OBJ_CardboardBoxE.png" id="43_v2jw8"]
+[ext_resource type="Texture2D" uid="uid://bobd68u3op4h6" path="res://Sprites/Furniture/OBJ_SmallItems/OBJ_SodaCanB.png" id="44_86med"]
+[ext_resource type="Texture2D" uid="uid://cpnkj6j71tlwq" path="res://Sprites/Furniture/OBJ_SmallItems/OBJ_StorageContainerB.png" id="45_5xqbw"]
+[ext_resource type="Texture2D" uid="uid://dksaxg2omfisw" path="res://Sprites/Furniture/OBJ_Bench/OBJ_BenchB.png" id="46_dwmy8"]
+[ext_resource type="Texture2D" uid="uid://b81f3sorw2ik5" path="res://Sprites/Furniture/OBJ_Sofa/OBJ_SofaG.png" id="46_jtqpd"]
+[ext_resource type="Texture2D" uid="uid://d0mtjtfw8mfa" path="res://Sprites/Furniture/OBJ_Sofa/OBJ_SofaJ.png" id="47_de7e3"]
+[ext_resource type="Texture2D" uid="uid://oqevhg4m1n32" path="res://Sprites/Furniture/OBJ_Bench/OBJ_BenchA.png" id="47_hlnxy"]
+[ext_resource type="Texture2D" uid="uid://did0pjr0t84m4" path="res://Sprites/Furniture/OBJ_SmallItems/OBJ_PillowC.png" id="48_25rcu"]
+[ext_resource type="Texture2D" uid="uid://cwc3d2gk5prcq" path="res://Sprites/Furniture/OBJ_SmallItems/OBJ_PillowD.png" id="49_uwv4s"]
 
 [node name="living room" type="Node2D"]
 script = ExtResource("1_2g2a4")
@@ -32,6 +67,14 @@ centered = false
 position = Vector2(852, 179)
 item = &"trapdoor"
 
+[node name="ObjCarpetG" type="Sprite2D" parent="."]
+position = Vector2(560, 228)
+texture = ExtResource("5_23x51")
+
+[node name="ObjCarpetB2" type="Sprite2D" parent="."]
+position = Vector2(840, 395)
+texture = ExtResource("21_27i7y")
+
 [node name="Player" parent="." instance=ExtResource("2_r5daw")]
 position = Vector2(854, 237)
 
@@ -44,12 +87,8 @@ door_type = &"side_left"
 
 [node name="Prop" type="Node2D" parent="."]
 
-[node name="Sofa" type="Sprite2D" parent="Prop"]
-position = Vector2(560, 152)
-texture = ExtResource("7_mgk53")
-
 [node name="Plant A" type="Sprite2D" parent="Prop"]
-position = Vector2(448, 152)
+position = Vector2(228, 114)
 texture = ExtResource("8_fsx5j")
 
 [node name="Table" type="Sprite2D" parent="Prop"]
@@ -57,7 +96,7 @@ position = Vector2(560, 184)
 texture = ExtResource("9_0ytrm")
 
 [node name="TV" type="Sprite2D" parent="Prop"]
-position = Vector2(557, 245)
+position = Vector2(565, 324)
 texture = ExtResource("10_4k5n3")
 
 [node name="Note" parent="." instance=ExtResource("11_vw6on")]
@@ -65,11 +104,182 @@ position = Vector2(559, 187)
 item = &"note"
 
 [node name="Gigi" parent="." instance=ExtResource("12_kifwc")]
-position = Vector2(566, 342)
+position = Vector2(666, 233)
 item = &"gigi"
 location = &"livingroom"
 
-[node name="HUD" parent="." instance=ExtResource("13_fug4x")]
+[node name="ObjWindowF" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.196078)
+position = Vector2(329, 456)
+texture = ExtResource("14_e3kxy")
+
+[node name="ObjWindowF2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.196078)
+position = Vector2(834, 456)
+texture = ExtResource("14_e3kxy")
+flip_h = true
+
+[node name="ObjWindowF3" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.196078)
+position = Vector2(578, 456)
+texture = ExtResource("14_e3kxy")
+
+[node name="ObjSofaF" type="Sprite2D" parent="."]
+position = Vector2(560, 152)
+texture = ExtResource("16_stao7")
+
+[node name="ObjBookshelfC" type="Sprite2D" parent="."]
+position = Vector2(287, 82)
+texture = ExtResource("16_nssg7")
+
+[node name="ObjBookshelfA" type="Sprite2D" parent="."]
+position = Vector2(857, 83)
+texture = ExtResource("17_c2kaw")
+
+[node name="ObjPlantB" type="Sprite2D" parent="."]
+position = Vector2(928, 110)
+texture = ExtResource("18_anwoy")
+
+[node name="ObjChestA01" type="Sprite2D" parent="."]
+position = Vector2(794, 112)
+texture = ExtResource("20_cpenu")
+
+[node name="ObjCarpetB" type="Sprite2D" parent="."]
+position = Vector2(294, 217)
+texture = ExtResource("21_27i7y")
+
+[node name="ObjBookshelfB" type="Sprite2D" parent="."]
+position = Vector2(359, 114)
+texture = ExtResource("22_4ndvm")
+
+[node name="ObjPictureB" type="Sprite2D" parent="."]
+position = Vector2(371, 104)
+texture = ExtResource("23_jruxc")
+
+[node name="ObjPictureD" type="Sprite2D" parent="."]
+position = Vector2(557, 80)
+texture = ExtResource("24_fuk2s")
+
+[node name="ObjSpeakersA" type="Sprite2D" parent="."]
+position = Vector2(494, 325)
+texture = ExtResource("26_dqwwh")
+
+[node name="ObjSpeakersA2" type="Sprite2D" parent="."]
+position = Vector2(635, 325)
+texture = ExtResource("26_dqwwh")
+
+[node name="ObjClockA" type="Sprite2D" parent="."]
+position = Vector2(418, 83)
+texture = ExtResource("28_rr78m")
+
+[node name="ObjTableJ" type="Sprite2D" parent="."]
+position = Vector2(462, 145)
+texture = ExtResource("28_euqrb")
+
+[node name="ObjTableK" type="Sprite2D" parent="."]
+position = Vector2(755, 110)
+texture = ExtResource("29_c11t3")
+
+[node name="ObjSodaCanA" type="Sprite2D" parent="."]
+position = Vector2(482, 159)
+texture = ExtResource("30_ohty6")
+
+[node name="ObjPillowB" type="Sprite2D" parent="."]
+position = Vector2(658, 148)
+texture = ExtResource("31_f04nh")
+
+[node name="ObjBookshelfD" type="Sprite2D" parent="."]
+position = Vector2(497, 448)
+texture = ExtResource("32_xtcbb")
+
+[node name="ObjBookshelfE" type="Sprite2D" parent="."]
+position = Vector2(426, 482)
+texture = ExtResource("33_2quov")
+
+[node name="ObjBathTrashCan" type="Sprite2D" parent="."]
+position = Vector2(382, 498)
+texture = ExtResource("34_au4g6")
+
+[node name="ObjBathTrashCan2" type="Sprite2D" parent="."]
+position = Vector2(928, 307)
+texture = ExtResource("34_au4g6")
+
+[node name="ObjBookshelfG" type="Sprite2D" parent="."]
+position = Vector2(927, 421)
+texture = ExtResource("35_ffrfr")
+
+[node name="ObjTableK2" type="Sprite2D" parent="."]
+position = Vector2(928, 320)
+texture = ExtResource("29_c11t3")
+
+[node name="ObjBookPileA" type="Sprite2D" parent="."]
+position = Vector2(440, 477)
+texture = ExtResource("36_n0sue")
+
+[node name="ObjPlantG" type="Sprite2D" parent="."]
+position = Vector2(924, 482)
+texture = ExtResource("37_m822f")
+
+[node name="ObjPlantD" type="Sprite2D" parent="."]
+position = Vector2(641, 451)
+texture = ExtResource("38_mrgm2")
+
+[node name="ObjChairE" type="Sprite2D" parent="."]
+position = Vector2(729, 129)
+texture = ExtResource("39_q6w3y")
+
+[node name="ObjPlantC" type="Sprite2D" parent="."]
+position = Vector2(755, 106)
+texture = ExtResource("40_8jvsw")
+
+[node name="ObjCardboardBoxA" type="Sprite2D" parent="."]
+position = Vector2(924, 150)
+texture = ExtResource("41_k36xn")
+
+[node name="ObjCardboardBoxF" type="Sprite2D" parent="."]
+position = Vector2(931, 139)
+texture = ExtResource("42_eb3k8")
+
+[node name="ObjCardboardBoxE" type="Sprite2D" parent="."]
+position = Vector2(930, 171)
+texture = ExtResource("43_v2jw8")
+
+[node name="ObjSodaCanB" type="Sprite2D" parent="."]
+position = Vector2(927, 316)
+texture = ExtResource("44_86med")
+
+[node name="ObjStorageContainerB" type="Sprite2D" parent="."]
+position = Vector2(228, 480)
+texture = ExtResource("45_5xqbw")
+
+[node name="ObjBenchB" type="Sprite2D" parent="."]
+position = Vector2(222, 183)
+texture = ExtResource("46_dwmy8")
+
+[node name="ObjBenchA" type="Sprite2D" parent="."]
+position = Vector2(752, 480)
+texture = ExtResource("47_hlnxy")
+
+[node name="ObjSofaG" type="Sprite2D" parent="."]
+position = Vector2(657, 152)
+texture = ExtResource("46_jtqpd")
+
+[node name="ObjSofaJ" type="Sprite2D" parent="."]
+position = Vector2(446, 226)
+texture = ExtResource("47_de7e3")
+
+[node name="ObjPillowC" type="Sprite2D" parent="."]
+position = Vector2(532, 148)
+texture = ExtResource("48_25rcu")
+
+[node name="ObjPillowC2" type="Sprite2D" parent="."]
+position = Vector2(589, 148)
+texture = ExtResource("48_25rcu")
+flip_h = true
+
+[node name="ObjPillowD" type="Sprite2D" parent="."]
+position = Vector2(658, 148)
+texture = ExtResource("49_uwv4s")
 
 [connection signal="living_pos" from="." to="Player" method="_on_living_room_living_pos"]
 [connection signal="living_pos_1" from="." to="Player" method="_on_living_room_living_pos_1"]

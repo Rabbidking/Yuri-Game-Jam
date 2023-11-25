@@ -1,42 +1,42 @@
 ~ morning
 
-Gigi: Hey, hun are you OK, you don’t look like you slept well.
-Demi: Huh? No, I’m fi-
-Gigi: *Gasp* Did I accidentally infect you with insomnia?
-Demi: What? No! You can’t give people insomnia.
-Gigi: Whew, then why do you look more tired than usual?
-Demi: Oh umm, I lost track of time while streaming last night.
-Gigi: That makes sense, do you still want to go for a walk at the park?
-Demi: Yeah, I should be ready in a minute.
+Gigi: [#gigi=Default]Hey, hun are you OK, you don’t look like you slept well.
+Demi: [#demi=Default]Huh? No, I’m fi-
+Gigi: [#gigi=Surprised]*Gasp* Did I accidentally infect you with insomnia?
+Demi: [#demi=Annoyed]What? No! You can’t give people insomnia.
+Gigi: [#gigi=Default]Whew, then why do you look more tired than usual?
+Demi: [#demi=Default]Oh umm, I lost track of time while streaming last night.
+Gigi: [#gigi=Default]That makes sense, do you still want to go for a walk at the park?
+Demi: [#demi=Default]Yeah, I should be ready in a minute.
 
 => END
 
 ~ night
 Demi wakes up again alone in bed.
-Demi: (Shoot, is she sleepwalking again?)
+Demi: [#demi=Default](Shoot, is she sleepwalking again?)
 => END
 
 ~ gigi_in_car
-Demi: Hey Hun! Gigi, wake up! Can you hear me!? 
-Demi: Darn, it’s locked. Where did I leave my keys again? 
-Demi: Gigi usually takes my jacket to the bedroom...
+Demi: [#demi=Shocked]Hey Hun! Gigi, wake up! Can you hear me!? 
+Demi: [#demi=Default]Darn, it’s locked. Where did I leave my keys again? 
+Demi: [#demi=Default]Gigi usually takes my jacket to the bedroom...
 
 => END
 
 ~ find_key
-Demi: Please be here... 
-Demi: Oh, thank goodness!
+Demi: [#demi=Default]Please be here... 
+Demi: [#demi=Happy]Oh, thank goodness!
 Got Car Key.
 => END
 
 ~ unlock_car
-Demi: How did she lock herself in the car?
+Demi: [#demi=Annoyed]How did she lock herself in the car?
 => END
 
 ~ end_night
 Demi places Gigi in bed and ponders to herself.
-Demi: This is bad, if Gigi keeps sleepwalking she might hurt herself. 
-Demi: I should tell her but I don’t want to worry her. What should I do?
+Demi: [#demi=Annoyed]This is bad, if Gigi keeps sleepwalking she might hurt herself. 
+Demi: [#demi=Annoyed]I should tell her but I don’t want to worry her. What should I do?
 do _on_player_get_in_bed()
 
 => END

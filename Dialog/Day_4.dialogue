@@ -1,41 +1,41 @@
 ~ morning
-Gigi: Did you call him?
-Demi: Yeah…he said he would look into the prescription, but also suggested that you should keep taking the pills in the meantime.
-Gigi: Well, I could just stop taking the pills…
-Demi: But then your insomnia will get worse, and besides, we still don’t know for sure if the pills are the cause of it.
-Gigi: I know, I just don’t like causing trouble for you.
-Demi: It’s fine babe, I will always look after you.
+Gigi: [#gigi=Default]Did you call him?
+Demi: [#demi=Default]Yeah…he said he would look into the prescription, but also suggested that you should keep taking the pills in the meantime.
+Gigi: [#gigi=Default]Well, I could just stop taking the pills…
+Demi: [#demi=Default]But then your insomnia will get worse, and besides, we still don’t know for sure if the pills are the cause of it.
+Gigi: [#gigi=Default]I know, I just don’t like causing trouble for you.
+Demi: [#demi=Default]It’s fine babe, I will always look after you.
 => END
 
 ~ night
 Demi wakes up with a startle from the sound of a door slamming shut.
-Demi: (What was that?)
-Demi: (Oh shoot, she's gone again!)
+Demi: [#demi=Shocked](What was that?)
+Demi: [#demi=Shocked](Oh shoot, she's gone again!)
 => END
 
 ~ living_room_basement_discovered
-Demi: What the heck? Who built this and when? 
-Demi: Darn, it’s boarded up. Better get a crowbar.
+Demi: [#demi=Default]What the heck? Who built this and when? 
+Demi: [#demi=Default]Darn, it’s boarded up. Better get a crowbar.
 => END
 
 ~ garage_crowbar_get
 (Got a Crowbar)
-Demi: Nice, this should work.
+Demi: [#demi=Smirk]Nice, this should work.
 => END
 
 ~ basement_open
-Demi: I probably should call the cops…nah they’re jerks. 
-Demi: What the heck, it’s a basement? And there are even lights in there too.
+Demi: [#demi=Default]I probably should call the cops…nah they’re jerks. 
+Demi: [#demi=Shocked] What the heck, it’s a basement? And there are even lights in there too.
 => END
 
 ~ basement_gigi
-Demi: Did…did she build all this while sleepwalking? 
-Demi: But how did she board up the trapdoor from down here?
+Demi: [#demi=Shocked]Did…did she build all this while sleepwalking? 
+Demi: [#demi=Default]But how did she board up the trapdoor from down here?
 => END
 
 ~ bedroom
-Demi: Ugh, I must be exhausted if the noise didn’t wake me up. 
-Demi: I hope the Doctor knows what's happening...
+Demi: [#demi=Annoyed]Ugh, I must be exhausted if the noise didn’t wake me up. 
+Demi: [#demi=Default]I hope the Doctor knows what's happening...
 do _on_player_get_in_bed()
 => END
 

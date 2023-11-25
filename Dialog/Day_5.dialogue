@@ -1,92 +1,92 @@
 ~ morning
 
-Gigi: Oh wow...
-Demi: Yeah, that happened.
-Gigi: Well, we did want a basement for a snazzy bar.
-Demi: So umm... you didn't tell me you're great at construction.
-Gigi: Oh Demi! I'm not.
-Demi: (surprised) Huh!?
-Gigi: I'm not knowledgeable about Earth construction.
-Demi: (But the inspector just now said the basement was expertly built. This is getting out of hand.)
-Gigi: Ah, my body is too sore! I need a massage, please!
-Demi: Uh sure, let’s go then.
-Gigi: I haven’t been this sore ever since Valentine's Day.
-Demi: (blush) (I hope she takes off the onesie for once.)
+Gigi: [#gigi=Surprised]Oh wow...
+Demi: [#demi=Annoyed]Yeah, that happened.
+Gigi: [#gigi=Default]Well, we did want a basement for a snazzy bar.
+Demi: [#demi=Default]So umm... you didn't tell me you're great at construction.
+Gigi: [#gigi=Grin]Oh Demi! I'm not.
+Demi: [#demi=Shocked]Huh!?
+Gigi: [#gigi=Default]I'm not knowledgeable about Earth construction.
+Demi: [#demi=Annoyed](But the inspector just now said the basement was expertly built. This is getting out of hand.)
+Gigi: [#gigi=Default]Ah, my body is too sore! I need a massage, please!
+Demi: [#demi=Default]Uh sure, let’s go then.
+Gigi: [#gigi=Default]I haven’t been this sore ever since Valentine's Day.
+Demi: [#demi=Blush](I hope she takes off the onesie for once.)
 
 => END
 
 ~ night
 
 Demi awakens to loud electrical zapping sounds.
-Demi: I see tying Gigi to the bed didn’t work. 
-Demi: Oh well, it was worth a shot. Better find her.
+Demi: [#demi=Annoyed]I see tying Gigi to the bed didn’t work. 
+Demi: [#demi=Default]Oh well, it was worth a shot. Better find her.
 
 => END
 
 ~ garage_enter_first_time
 
-Demi: …What is this? Some kind of teleporter?
+Demi: [#demi=Shocked]…What is this? Some kind of teleporter?
 
 => END
 
 ~ teleporter_interact_not_enough_batteries
 
-Demi: It won’t turn on. 
-Demi: Hmm, there are 3 empty slots.
-Demi: Maybe that’s where the batteries go?
+Demi: [#demi=Annoyed]It won’t turn on. 
+Demi: [#demi=Default]Hmm, there are 3 empty slots.
+Demi: [#demi=Default]Maybe that’s where the batteries go?
 
 => END
 
 ~ kitchen_battery
 Picked up a Battery
-Demi: Is this even safe to hold?
+Demi: [#demi=Annoyed]Is this even safe to hold?
 => END
 
 ~ bathroom_battery
 Picked up a Battery
-Demi: I hope this didn't get wet.
+Demi: [#demi=Annoyed]I hope this didn't get wet.
 => END
 
 ~ basement_battery
 Picked up a Battery
-Demi: Ugh, this is heavy!
+Demi: [#demi=Annoyed]Ugh, this is heavy!
 => END
 
 ~ teleporter_place_batteries
 Demi inserts the Batteries and turns the Teleporter on.
-Demi: I have no idea how this works, but I have to get Gigi back!
+Demi: [#demi=Default] I have no idea how this works, but I have to get Gigi back!
 #Teleporter emits a bright flash here. Do the flash before moving on to the next line, or move stuff to new dialogues.
-Demi: Ack! Too bright!
+Demi: [#demi=Shocked]Ack! Too bright!
 #A figure carrying Gigi steps out of the light as it dissipates.
-Demi: It’s..it’s you!
+Demi: [#demi=Shocked]It’s..it’s you!
 #Mimi's portrait appears on the right
-Demi: (Holy crap, Mimi is here!? She teleported to her mom’s house.)
-Mimi: So, we finally get to meet in person.
-Demi: I- uh- um... good to see you?
-Mimi: No need to be shy, this isn’t the first time we've seen each other. 
-Mimi: How about we put Gigi to bed and we can chat, hmm?
-Demi: Yeah, let’s do that.
+Demi: [#demi=Shocked](Holy crap, Mimi is here!? She teleported to her mom’s house.)
+Mimi: [#mimi=Default]So, we finally get to meet in person.
+Demi: [#demi=Shocked]I- uh- um... good to see you?
+Mimi: [#mimi=Happy]No need to be shy, this isn’t the first time we've seen each other. 
+Mimi: [#mimi=Default]How about we put Gigi to bed and we can chat, hmm?
+Demi: [#demi=Default]Yeah, let’s do that.
 => END
 
 ~ night_end
 # Play this after putting Gigi to bed. Probably auto-move to living room and have a cutscene
 Demi and Mimi are sitting together on the couch, Demi explains everything.
-Demi: . . .So that’s how it happened.
-Demi: Please don’t be upset, I swear I’ve tried to help Gigi.
-Mimi: My, Demi please, I am not upset. 
-Mimi: In fact, it gladdens my heart that you’ve done so well at taking care of her. 
-Mimi: Please don’t be hard on yourself. My girl is lucky to have you at her side.
-Demi: Does this mean you approve of our relationship?
-Mimi: Whatever do you mean? Gigi’s approval is my approval. We can sense a good heart in people just by being around them.
-Demi: Wait, so you can read minds!?
-Mimi: Oh I wish, but not exactly. 
-Mimi: We have a sixth sense that can tell if a person has positive vibes and intentions. So from the moment Gigi met you, she wanted to be around you.
-Demi: Really? I uh don’t know what to say about that. 
-Demi: I really appreciate knowing that you support me. I promise to keep looking after Gigi.
-Mimi: No need to promise, I know you will do that. 
-Mimi: Anyway, you should get some rest. Maybe I will visit you both soon.
-Demi: Of course, we would love to have you over for dinner.
-Mimi: I certainly look forward to it, sleep well.
+Demi: [#demi=Default] . . .So that’s how it happened.
+Demi: [#demi=Default]Please don’t be upset, I swear I’ve tried to help Gigi.
+Mimi: [#mimi=Default]My, Demi please, I am not upset. 
+Mimi: [#mimi=Happy]In fact, it gladdens my heart that you’ve done so well at taking care of her. 
+Mimi: [#mimi=Default]Please don’t be hard on yourself. My girl is lucky to have you at her side.
+Demi: [#demi=Default]Does this mean you approve of our relationship?
+Mimi: [#mimi=Default]Whatever do you mean? Gigi’s approval is my approval. We can sense a good heart in people just by being around them.
+Demi: [#demi=Shocked]Wait, so you can read minds!?
+Mimi: [#mimi=Smirk]Oh I wish, but not exactly. 
+Mimi: [#mimi=Default]We have a sixth sense that can tell if a person has positive vibes and intentions. So from the moment Gigi met you, she wanted to be around you.
+Demi: [#demi=Shocked]Really? I uh don’t know what to say about that. 
+Demi: [#demi=Default]I really appreciate knowing that you support me. I promise to keep looking after Gigi.
+Mimi: [#mimi=Happy]No need to promise, I know you will do that. 
+Mimi: [#mimi=Default]Anyway, you should get some rest. Maybe I will visit you both soon.
+Demi: [#demi=Happy]Of course, we would love to have you over for dinner.
+Mimi: [#mimi=Happy]I certainly look forward to it, sleep well.
 => END
 
 

@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_yflgh"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_vg6tb"]
 
 [resource]
-script = ExtResource("1_yflgh")
+script = ExtResource("1_vg6tb")
 using_states = PackedStringArray()
 titles = {
 "basement_gigi": "32",
@@ -45,7 +45,7 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "12",
 "next_id": "13",
-"tags": PackedStringArray(),
+"tags": PackedStringArray("demi=Shocked"),
 "text": "(What was that?)",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "(What was that?)",
@@ -56,7 +56,7 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "13",
 "next_id": "14",
-"tags": PackedStringArray(),
+"tags": PackedStringArray("demi=Shocked"),
 "text": "(Oh shoot, she's gone again!)",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "(Oh shoot, she's gone again!)",
@@ -79,7 +79,7 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "17",
 "next_id": "18",
-"tags": PackedStringArray(),
+"tags": PackedStringArray("demi=Default"),
 "text": "What the heck? Who built this and when?",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "What the heck? Who built this and when?",
@@ -90,7 +90,7 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "18",
 "next_id": "19",
-"tags": PackedStringArray(),
+"tags": PackedStringArray("demi=Default"),
 "text": "Darn, it’s boarded up. Better get a crowbar.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Darn, it’s boarded up. Better get a crowbar.",
@@ -107,7 +107,7 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "2",
 "next_id": "3",
-"tags": PackedStringArray(),
+"tags": PackedStringArray("gigi=Default"),
 "text": "Did you call him?",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Did you call him?",
@@ -135,7 +135,7 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "23",
 "next_id": "24",
-"tags": PackedStringArray(),
+"tags": PackedStringArray("demi=Smirk"),
 "text": "Nice, this should work.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Nice, this should work.",
@@ -158,7 +158,7 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "27",
 "next_id": "28",
-"tags": PackedStringArray(),
+"tags": PackedStringArray("demi=Default"),
 "text": "I probably should call the cops…nah they’re jerks.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "I probably should call the cops…nah they’re jerks.",
@@ -169,7 +169,7 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "28",
 "next_id": "29",
-"tags": PackedStringArray(),
+"tags": PackedStringArray("demi=Shocked"),
 "text": "What the heck, it’s a basement? And there are even lights in there too.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "What the heck, it’s a basement? And there are even lights in there too.",
@@ -186,7 +186,7 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "3",
 "next_id": "4",
-"tags": PackedStringArray(),
+"tags": PackedStringArray("demi=Default"),
 "text": "Yeah…he said he would look into the prescription, but also suggested that you should keep taking the pills in the meantime.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Yeah…he said he would look into the prescription, but also suggested that you should keep taking the pills in the meantime.",
@@ -203,7 +203,7 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "32",
 "next_id": "33",
-"tags": PackedStringArray(),
+"tags": PackedStringArray("demi=Shocked"),
 "text": "Did…did she build all this while sleepwalking?",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Did…did she build all this while sleepwalking?",
@@ -214,7 +214,7 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "33",
 "next_id": "34",
-"tags": PackedStringArray(),
+"tags": PackedStringArray("demi=Default"),
 "text": "But how did she board up the trapdoor from down here?",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "But how did she board up the trapdoor from down here?",
@@ -237,7 +237,7 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "37",
 "next_id": "38",
-"tags": PackedStringArray(),
+"tags": PackedStringArray("demi=Annoyed"),
 "text": "Ugh, I must be exhausted if the noise didn’t wake me up.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Ugh, I must be exhausted if the noise didn’t wake me up.",
@@ -248,7 +248,7 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "38",
 "next_id": "39",
-"tags": PackedStringArray(),
+"tags": PackedStringArray("demi=Default"),
 "text": "I hope the Doctor knows what's happening...",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "I hope the Doctor knows what's happening...",
@@ -271,7 +271,7 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "4",
 "next_id": "5",
-"tags": PackedStringArray(),
+"tags": PackedStringArray("gigi=Default"),
 "text": "Well, I could just stop taking the pills…",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Well, I could just stop taking the pills…",
@@ -288,7 +288,7 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "5",
 "next_id": "6",
-"tags": PackedStringArray(),
+"tags": PackedStringArray("demi=Default"),
 "text": "But then your insomnia will get worse, and besides, we still don’t know for sure if the pills are the cause of it.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "But then your insomnia will get worse, and besides, we still don’t know for sure if the pills are the cause of it.",
@@ -299,7 +299,7 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "6",
 "next_id": "7",
-"tags": PackedStringArray(),
+"tags": PackedStringArray("gigi=Default"),
 "text": "I know, I just don’t like causing trouble for you.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "I know, I just don’t like causing trouble for you.",
@@ -310,7 +310,7 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "7",
 "next_id": "8",
-"tags": PackedStringArray(),
+"tags": PackedStringArray("demi=Default"),
 "text": "It’s fine babe, I will always look after you.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "It’s fine babe, I will always look after you.",
@@ -323,4 +323,4 @@ lines = {
 "type": "goto"
 }
 }
-metadata/dialogue_manager_version = "2.29.0"
+metadata/dialogue_manager_version = "2.29.2"

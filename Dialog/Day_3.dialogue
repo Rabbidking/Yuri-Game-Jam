@@ -1,57 +1,57 @@
 ~ morning
 
-Demi: ...
-Gigi: What's wrong?
-Demi: Huh?
-Gigi: You didn’t say anything and stared at me for 1 hour 23 minutes and 21 seconds.
-Demi: Ah, I was just thinking about something. Don’t mind me.
-Gigi: If you don’t tell me what you’re thinking I will read your mind.
-Demi: YOU CAN DO THAT!?
-Gigi: *giggles* No, I wish, you look so cute when you’re deep in thought. 
-Gigi: But seriously, spill the beans.
+Demi: [#demi=Annoyed]...
+Gigi: [#gigi=Default]What's wrong?
+Demi: [#demi=Shocked]Huh?
+Gigi: [#gigi=Default]You didn’t say anything and stared at me for 1 hour 23 minutes and 21 seconds.
+Demi: [#demi=Default]Ah, I was just thinking about something. Don’t mind me.
+Gigi: [#gigi=Default]If you don’t tell me what you’re thinking, I will read your mind.
+Demi: [#demi=Shocked]YOU CAN DO THAT!?
+Gigi: [#gigi=Grin]*giggles* No, I wish, you look so cute when you’re deep in thought. 
+Gigi: [#gigi=Default]But seriously, spill the beans.
 . . .
-Gigi: So that’s why you’re so tired.
-Demi: ...
-Gigi: Do you think it’s because of the pills?
-Demi: Maybe? Give me a second, I’ll call the doctor.
+Gigi: [#gigi=Default]So that’s why you’re so tired.
+Demi: [#demi=Annoyed]...
+Gigi: [#gigi=Default]Do you think it’s because of the pills?
+Demi: [#demi=Default]Maybe? Give me a second, I’ll call the doctor.
 Demi calls the doctor, but the call goes to voice mail.
-Demi: Damn, he’s not picking up. Guess we should try tomorrow. 
+Demi: [#demi=Annoyed]Damn, he’s not picking up. Guess we should try tomorrow. 
 
 => END
 
 ~ night
-Demi: (It happened again, where did she go this time?)
+Demi: [#demi=Default](It happened again, where did she go this time?)
 => END
 
 ~ front_entrance_receipt
-Demi: (This is bad, I can’t find Gigi anywhere.)
-Demi: (Huh? A delivery receipt? I didn’t mail anything out today.)
-Demi: (Wait, the content says, “Gigi”!? She mailed herself?)
-Demi: (This is bad, I gotta cancel the delivery!)
+Demi: [#demi=Default](This is bad, I can’t find Gigi anywhere.)
+Demi: [#demi=Default](Huh? A delivery receipt? I didn’t mail anything out today.)
+Demi: [#demi=Shocked](Wait, the content says, “Gigi”!? She mailed herself?)
+Demi: [#demi=Shocked](This is bad, I gotta cancel the delivery!)
 
 => END
 
 ~ bedroom_computer
-Demi: (Shoot, what’s her password again? C’mon think!) 
-Demi: (Wait, Gigi doesn’t remember passwords, she writes them down on a piece of paper.) 
-Demi: (Gigi always checks her social media on the couch.)
+Demi: [#demi=Default](Shoot, what’s her password again? C’mon think!) 
+Demi: [#demi=Default](Wait, Gigi doesn’t remember passwords, she writes them down on a piece of paper.) 
+Demi: [#demi=Default](Gigi always checks her social media on the couch.)
 => END
 
 ~ living_room_sticky
-(Got Gigi's Password.)
-Demi: (Great, now I can get Gigi back!)
+Got Gigi's Password.
+Demi: [#demi=Default](Great, now I can get Gigi back!)
 => END
 
 ~ bedroom_laptop_2
-Demi: (Ok, she should be here any minute according to the site’s cancellation policy.)
+Demi: [#demi=Default](Ok, she should be here any minute according to the site’s cancellation policy.)
 => END
 
 ~ entrance_night_end
-Demi: Thank goodness you’re safe. 
-Demi: Well, off to bed then.
+Demi: [#demi=Happy]Thank goodness you’re safe. 
+Demi: [#demi=Default]Well, off to bed then.
 => END
 
 ~ goodnight
-Demi: Goodnight Gigi
+Demi: [#demi=Default]Goodnight, Gigi.
 do _on_player_get_in_bed()
 => END

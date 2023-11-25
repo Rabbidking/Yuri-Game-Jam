@@ -36,6 +36,7 @@ Demi: But how did she board up the trapdoor from down here?
 ~ bedroom
 Demi: Ugh, I must be exhausted if the noise didn’t wake me up. 
 Demi: I hope the Doctor knows what's happening...
+do _on_player_get_in_bed()
 => END
 
 

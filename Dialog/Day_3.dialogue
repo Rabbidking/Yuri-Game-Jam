@@ -50,3 +50,8 @@ Demi: (Ok, she should be here any minute according to the site’s cancellation 
 Demi: Thank goodness you’re safe. 
 Demi: Well, off to bed then.
 => END
+
+~ goodnight
+Demi: Goodnight Gigi
+do _on_player_get_in_bed()
+=> END

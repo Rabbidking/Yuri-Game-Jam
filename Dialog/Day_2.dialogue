@@ -21,6 +21,8 @@ Demi: Hey Hun! Gigi, wake up! Can you hear me!?
 Demi: Darn, it’s locked. Where did I leave my keys again? 
 Demi: Gigi usually takes my jacket to the bedroom...
 
+=> END
+
 ~ find_key
 Demi: Please be here... 
 Demi: Oh, thank goodness!
@@ -28,10 +30,13 @@ Got Car Key.
 => END
 
 ~ unlock_car
-Demi unlocks the trunk and carries Gigi to bed
+Demi: How did she lock herself in the car?
 => END
 
 ~ end_night
 Demi places Gigi in bed and ponders to herself.
 Demi: This is bad, if Gigi keeps sleepwalking she might hurt herself. 
 Demi: I should tell her but I don’t want to worry her. What should I do?
+do _on_player_get_in_bed()
+
+=> END

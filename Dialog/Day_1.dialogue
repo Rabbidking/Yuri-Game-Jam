@@ -36,6 +36,6 @@ Narration: Demi places Gigi back in bed and lies down next to her.
 Demi: (Should I tell her about this? I had never seen Gigi do that before.) 
 Demi: (Maybe it’s just a one-time thing? I’ll think about it later.)
 Demi: Goodnight Gigi.
-
+do _on_player_get_in_bed()
 => END
 

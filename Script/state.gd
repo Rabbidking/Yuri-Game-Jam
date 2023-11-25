@@ -1,6 +1,6 @@
 extends Node
 
-var Day = 1	#day adjustments
+var Day = 5	#day adjustments
 var key_taken = false
 var have_gigi = false
 var password_known = false
@@ -25,7 +25,7 @@ var collected_items = []
 var is_day = false	#changes the sprite in the HUD to Day HUD or Night HUD
 #==================================================================================================
 # night 1 specific flags
-var day_1_intro = true
+var day_1_intro = false
 var night_1_intro = false
 var first_time_found_gigi = false
 var night_1_end = false
@@ -72,6 +72,7 @@ var night_4_end = false
 var day_5_intro = false
 var night_5_intro = false
 
+var garage_trigger = false
 # This flag is meant to change Gigi's label and portrait into Mimi's for the night 5 scenes.
 # Set to true once night_5_intro is true, set back to false once we load the ending cutscene
 var mimi_replace_gigi = false

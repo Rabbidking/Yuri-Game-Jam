@@ -70,6 +70,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			#DialogueManager.show_example_dialogue_balloon(load("res://Dialog/main.dialogue"), "key")
 				if State.Day == 1:
 					DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_1.dialogue"), "pick_up_gigi")
+				if State.Day == 4:
+					DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_4.dialogue"), "basement_gigi")
 				State.have_gigi = true
 				emit_signal("pick_up_gigi")
 				velocity = Vector2(0, 0)
@@ -77,12 +79,17 @@ func _unhandled_input(event: InputEvent) -> void:
 			elif interactable_item == "bed" and State.have_gigi == true:
 				if State.Day == 1:
 					DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_1.dialogue"), "bedroom")
-				#emit_signal("get_in_bed")
+				elif State.Day == 2:
+					DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_2.dialogue"), "end_night")
+				elif State.Day == 3:
+					DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_3.dialogue"), "goodnight")
+				elif State.Day == 4:
+					DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_4.dialogue"), "bedroom")
 			elif interactable_item == "key":
 				emit_signal("picked_up")
-			elif interactable_item == "car" and State.key_taken == true:
+			elif interactable_item == "car":
 				emit_signal("picked_up")
-			elif interactable_item == "laptop" and State.password_known == true:
+			elif interactable_item == "laptop":
 				emit_signal("picked_up")
 			elif interactable_item == "note":
 				emit_signal("picked_up")
@@ -248,5 +255,3 @@ func _on_basement_basement_pos():
 func _on_fade_transition_player_can_move():
 	dont_move = false
 
-func next_day():
-	emit_signal("get_in_bed")

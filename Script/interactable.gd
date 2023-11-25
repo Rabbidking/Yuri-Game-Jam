@@ -32,7 +32,7 @@ func _ready():
 		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Key/OBJ_Key_01.png"))
 		$CollisionShape2D.scale = Vector2(1, 1)
 		$CollisionShape2D.position = Vector2(0, 0)
-		if State.Day != 2:
+		if State.Day != 2 or State.key_taken == true:
 			$CollisionShape2D.disabled = true
 			$Texture.visible = false
 	elif item == "car":
@@ -96,7 +96,7 @@ func _ready():
 		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Crowbar/OBJ_Crowbar_01.png"))
 		$CollisionShape2D.scale = Vector2(1, 1)
 		$CollisionShape2D.position = Vector2(0, 0)
-		if State.Day == 4 and State.have_crowbar != false:
+		if State.Day == 4 and State.have_crowbar == false:
 			$CollisionShape2D.disabled = false
 			$Texture.visible = true
 		else:
@@ -110,8 +110,8 @@ func _ready():
 			$Texture.set_texture(load("res://Sprites/Furniture/OBJ_TeleporterSlot/OBJ_TeleporterSlot_03.png"))
 			$CollisionShape2D.disabled == true
 		if State.Day == 5:
-			$CollisionShape2D.disabled = true
-			$Texture.visible = false
+			$CollisionShape2D.disabled = false
+			$Texture.visible = true
 		else:
 			$CollisionShape2D.disabled = true
 			$Texture.visible = false
@@ -123,8 +123,8 @@ func _ready():
 			$Texture.set_texture(load("res://Sprites/Furniture/OBJ_TeleporterSlot/OBJ_TeleporterSlot_03.png"))
 			$CollisionShape2D.disabled == true
 		if State.Day == 5:
-			$CollisionShape2D.disabled = true
-			$Texture.visible = false
+			$CollisionShape2D.disabled = false
+			$Texture.visible = true
 		else:
 			$CollisionShape2D.disabled = true
 			$Texture.visible = false
@@ -136,8 +136,8 @@ func _ready():
 			$Texture.set_texture(load("res://Sprites/Furniture/OBJ_TeleporterSlot/OBJ_TeleporterSlot_03.png"))
 			$CollisionShape2D.disabled == true
 		if State.Day == 5:
-			$CollisionShape2D.disabled = true
-			$Texture.visible = false
+			$CollisionShape2D.disabled = false
+			$Texture.visible = true
 		else:
 			$CollisionShape2D.disabled = true
 			$Texture.visible = false
@@ -228,38 +228,57 @@ func _on_area_exited(area):
 
 
 func _on_player_get_in_bed():
-	get_tree().change_scene_to_file("res://Scene/Rooms/entrance.tscn")
+	get_tree().change_scene_to_file("res://Scene/Rooms/bedroom.tscn")
 	State.have_gigi = false
 	State.Day += 1
 
 func _on_player_picked_up():
 	if item == "key":
+		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_2.dialogue"), "find_key")
 		State.key_taken = true
 		queue_free()
-	elif item == "car" and opened == false:
+	elif item == "car" and State.key_taken == false:
+		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_2.dialogue"), "gigi_in_car")
+	elif item == "car" and opened == false and State.key_taken == true:
 		opened = true
 		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Car/OBJ_Car_05.png"))
-	elif item == "car" and opened == true:
+	elif item == "car" and opened == true and State.key_taken == true:
+		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_2.dialogue"), "unlock_car")
 		$CollisionShape2D.disabled = true
 		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Car/OBJ_Car_03.png"))
 		State.have_gigi = true
 	elif item == "note":
+		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_3.dialogue"), "living_room_sticky")
 		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_StckyNote/OBJ_StckyNote_01.png"))
 		$CollisionShape2D.disabled = true
 		State.password_known = true
-	elif item == "laptop":
+	elif item == "laptop" and State.password_known == false:
+		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_3.dialogue"), "bedroom_computer")
+	elif item == "laptop" and State.password_known == true:
+		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_3.dialogue"), "bedroom_laptop_2")
 		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Laptop/OBJ_Laptop_01.png"))
 		$CollisionShape2D.disabled = true
 		State.ordered_return = true
-	elif item == "box":
-		State.have_gigi = true
+	elif item == "box" and opened == false:
+		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_CardboardBox/OBJ_CardboardBoxB_02.png"))
+		opened = true
 		State.ordered_return = false
+	elif item == "box" and opened == true:
+		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_3.dialogue"), "entrance_night_end")
+		State.have_gigi = true
 		queue_free()	
 	elif item == "receipt":
+		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_3.dialogue"), "front_entrance_receipt")
 		$Texture.visible = false
 		$CollisionShape2D.disabled = true
 		State.read_receipt = true
 	elif item == "fuelcell":
+		if State.Day == 5 and location == "basement" and type == "fuelcell1":
+			DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "basement_battery")
+		elif State.Day == 5 and location == "kitchen" and type == "fuelcell2":
+			DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "kitchen_battery")
+		elif State.Day == 5 and location == "bathroom" and type == "fuelcell3":
+			DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "bathroom_battery")
 		State.fuel_cell += 1
 		queue_free()
 		
@@ -272,9 +291,13 @@ func _on_player_pick_up_gigi():
 
 func _on_player_picked_up_2():
 	if item == "crowbar":
+		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_4.dialogue"), "garage_crowbar_get")
 		State.have_crowbar = true
 		queue_free()
+	elif item == "trapdoor" and State.have_crowbar == false and State.trapdoor_locked == true:
+		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_4.dialogue"), "living_room_basement_discovered")
 	elif item == "trapdoor" and State.have_crowbar == true and State.trapdoor_locked == true:
+		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_4.dialogue"), "basement_open")
 		State.trapdoor_locked = false
 		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_TrapFloor/OBJ_TrapFloor_02.png"))
 	elif item == "trapdoor" and State.trapdoor_locked == false:

@@ -7,6 +7,6 @@ signal garage_pos
 func _ready():
 	if State.used_door == true:
 		emit_signal("garage_pos")
-	if State.Day == 2:
-		# if Demi interacts with the car before having the key, play the locked out dialog
-		pass
+	if State.Day == 5 and State.garage_trigger == false:
+		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "garage_enter_first_time")
+		State.garage_trigger = true

@@ -32,7 +32,7 @@ texture = ExtResource("3_xw2fl")
 centered = false
 
 [node name="Player" parent="." instance=ExtResource("2_5gxhm")]
-position = Vector2(760, 192)
+position = Vector2(432, 268)
 
 [node name="HallwayB Door" parent="." instance=ExtResource("4_hlej4")]
 position = Vector2(768, 112)

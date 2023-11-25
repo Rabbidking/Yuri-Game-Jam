@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bgh547qu4toco"]
+[gd_scene load_steps=16 format=3 uid="uid://bgh547qu4toco"]
 
 [ext_resource type="Script" path="res://Script/Rooms/bedroom.gd" id="1_v28qo"]
 [ext_resource type="PackedScene" uid="uid://be0wmp3b3b4qv" path="res://Scene/player.tscn" id="2_5gxhm"]
@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://bj4q74gq65ql8" path="res://Sprites/Furniture/OBJ_Table/OBJ_TableA.png" id="13_mucln"]
 [ext_resource type="Texture2D" uid="uid://dndifb3evvqj7" path="res://Sprites/Furniture/OBJ_Chair/OBJ_ChairC.png" id="14_fh7f2"]
 [ext_resource type="PackedScene" uid="uid://co1a7h15avswg" path="res://Scene/interactable.tscn" id="15_yqdcl"]
-[ext_resource type="PackedScene" uid="uid://bqg7gl6eklem6" path="res://Scene/hud.tscn" id="16_xel7l"]
 
 [node name="bedroom" type="Node2D"]
 script = ExtResource("1_v28qo")
@@ -82,8 +81,6 @@ item = &"bed"
 [node name="Laptop" parent="." instance=ExtResource("15_yqdcl")]
 position = Vector2(510, 347)
 item = &"laptop"
-
-[node name="HUD" parent="." instance=ExtResource("16_xel7l")]
 
 [connection signal="bedroom_pos" from="." to="Player" method="_on_bedroom_bedroom_pos"]
 [connection signal="get_in_bed" from="Player" to="Bed" method="_on_player_get_in_bed"]

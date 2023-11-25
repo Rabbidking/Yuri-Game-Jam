@@ -10,3 +10,4 @@ res://Scene/hud.tscn
 res://Script/pause_menu.gd
 res://Scene/player.tscn
 res://Script/HUD.gd
+res://Script/Rooms/bedroom.gd

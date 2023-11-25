@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://2sgrr1gkcehs"]
+[gd_scene load_steps=9 format=3 uid="uid://2sgrr1gkcehs"]
 
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="1_6gcqm"]
 [ext_resource type="Script" path="res://Script/Rooms/basement.gd" id="1_kto8c"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://c8d5hla3410jd" path="res://Scene/gigi.tscn" id="5_d8335"]
 [ext_resource type="PackedScene" uid="uid://b0k3gal2wpctt" path="res://fade_transition.tscn" id="7_uibtd"]
 [ext_resource type="PackedScene" uid="uid://co1a7h15avswg" path="res://Scene/interactable.tscn" id="8_x84fp"]
-[ext_resource type="PackedScene" uid="uid://bqg7gl6eklem6" path="res://Scene/hud.tscn" id="9_im1mb"]
 
 [node name="basement" type="Node2D"]
 script = ExtResource("1_kto8c")
@@ -44,8 +43,6 @@ position = Vector2(402, 186)
 item = &"fuelcell"
 location = &"basement"
 type = &"fuelcell1"
-
-[node name="HUD" parent="." instance=ExtResource("9_im1mb")]
 
 [connection signal="basement_pos" from="." to="Player" method="_on_basement_basement_pos"]
 [connection signal="pick_up_gigi" from="Player" to="Gigi" method="_on_player_pick_up_gigi"]

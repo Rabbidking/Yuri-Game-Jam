@@ -5,6 +5,7 @@ var is_paused: bool = false:
 		is_paused = value
 		get_tree().paused = is_paused
 		visible = is_paused
+		$"../HUD".visible = !visible
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("pause"):
@@ -13,6 +14,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _on_continue_pressed() -> void:
 	is_paused = false
+	$"../HUD".visible = true
 
 
 func _on_save_pressed() -> void:

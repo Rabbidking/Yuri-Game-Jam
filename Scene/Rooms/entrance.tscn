@@ -77,7 +77,7 @@ door_type = &"side_right"
 position = Vector2(574, 460)
 item = &"receipt"
 
-[node name="Props" type="Node" parent="."]
+[node name="Props" type="Node2D" parent="."]
 
 [node name="ObjBookshelfI" type="Sprite2D" parent="Props"]
 position = Vector2(425, 434)

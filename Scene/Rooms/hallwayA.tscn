@@ -65,7 +65,7 @@ door_type = &"front"
 
 [node name="Fade_Transition" parent="." instance=ExtResource("5_ah00y")]
 
-[node name="Props" type="Node" parent="."]
+[node name="Props" type="Node2D" parent="."]
 
 [node name="ObjBenchB" type="Sprite2D" parent="Props"]
 position = Vector2(646, 207)

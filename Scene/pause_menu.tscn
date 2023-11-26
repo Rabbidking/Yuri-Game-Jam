@@ -1,10 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dry4nsiv75bef"]
+[gd_scene load_steps=6 format=3 uid="uid://dry4nsiv75bef"]
 
 [ext_resource type="Script" path="res://Script/pause_menu.gd" id="1_cis1t"]
 [ext_resource type="Texture2D" uid="uid://cn0feka8cno05" path="res://Sprites/UI/Paused Button.png" id="1_eo7of"]
 [ext_resource type="Texture2D" uid="uid://c8eopfikboiwx" path="res://Sprites/UI/Continue Button.png" id="1_s5cmd"]
-[ext_resource type="Texture2D" uid="uid://btm0n4l7wyhkt" path="res://Sprites/UI/Save Button.png" id="2_0jmbv"]
-[ext_resource type="Texture2D" uid="uid://pd2q1btg5llx" path="res://Sprites/UI/Paused Load Button.png" id="3_ehs4y"]
 [ext_resource type="Texture2D" uid="uid://5mtbqfbscq4r" path="res://Sprites/UI/Paused Options Button.png" id="4_vbokc"]
 [ext_resource type="Texture2D" uid="uid://pmm611o6ox41" path="res://Sprites/UI/Paused Quit Button.png" id="5_cu1kp"]
 
@@ -46,16 +44,6 @@ scale = Vector2(2, 2)
 layout_mode = 2
 texture_normal = ExtResource("1_s5cmd")
 
-[node name="Save" type="TextureButton" parent="GridContainer"]
-layout_mode = 2
-texture_normal = ExtResource("2_0jmbv")
-stretch_mode = 0
-
-[node name="Load" type="TextureButton" parent="GridContainer"]
-layout_mode = 2
-texture_normal = ExtResource("3_ehs4y")
-stretch_mode = 0
-
 [node name="Options" type="TextureButton" parent="GridContainer"]
 layout_mode = 2
 texture_normal = ExtResource("4_vbokc")
@@ -72,7 +60,5 @@ scale = Vector2(2, 2)
 texture = ExtResource("1_eo7of")
 
 [connection signal="pressed" from="GridContainer/Continue" to="." method="_on_continue_pressed"]
-[connection signal="pressed" from="GridContainer/Save" to="." method="_on_save_pressed"]
-[connection signal="pressed" from="GridContainer/Load" to="." method="_on_load_pressed"]
 [connection signal="pressed" from="GridContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="GridContainer/Quit" to="." method="_on_quit_pressed"]

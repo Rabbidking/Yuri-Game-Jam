@@ -1,3 +1,4 @@
+res://dialog_balloon/balloon.tscn
 res://Scene/Rooms/bedroom.tscn
 res://Scene/Rooms/entrance.tscn
 res://Scene/Rooms/basement.tscn
@@ -5,5 +6,8 @@ res://Scene/Rooms/hallwayA.tscn
 res://Scene/Rooms/hallway_b.tscn
 res://Scene/Rooms/kitchen.tscn
 res://Scene/Rooms/study.tscn
-res://dialog_balloon/balloon.gd
-res://dialog_balloon/balloon.tscn
+res://Scene/pause_menu.tscn
+res://Scene/player.tscn
+res://Scene/Rooms/garage.tscn
+res://Scene/Rooms/bathroom.tscn
+res://Scene/Rooms/living_room.tscn

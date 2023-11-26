@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_3blns"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_75kkp"]
 
 [resource]
-script = ExtResource("1_3blns")
+script = ExtResource("1_75kkp")
 using_states = PackedStringArray()
 titles = {
 "basement_battery": "51",
@@ -63,7 +63,7 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "13",
 "next_id": "14",
-"tags": PackedStringArray("gigi=Default"),
+"tags": PackedStringArray("gigi=Blush"),
 "text": "I haven’t been this sore ever since Valentine's Day.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "I haven’t been this sore ever since Valentine's Day.",
@@ -700,4 +700,4 @@ lines = {
 "type": "goto"
 }
 }
-metadata/dialogue_manager_version = "2.29.0"
+metadata/dialogue_manager_version = "2.29.2"

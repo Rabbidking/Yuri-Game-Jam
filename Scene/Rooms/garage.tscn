@@ -99,6 +99,82 @@ texture = ExtResource("14_vfen8")
 position = Vector2(419, 169)
 texture = ExtResource("14_568lq")
 
+[node name="ObjLocker" type="Sprite2D" parent="Props"]
+position = Vector2(689, 85)
+texture = ExtResource("20_4jpge")
+
+[node name="ObjBroom" type="Sprite2D" parent="Props"]
+position = Vector2(271, 110)
+texture = ExtResource("21_aqels")
+
+[node name="ObjTableG" type="Sprite2D" parent="Props"]
+position = Vector2(594, 482)
+texture = ExtResource("22_brmmf")
+
+[node name="ObjToolBoxB" type="Sprite2D" parent="Props"]
+position = Vector2(573, 475)
+texture = ExtResource("23_oujvj")
+
+[node name="ObjOpenBookA" type="Sprite2D" parent="Props"]
+position = Vector2(610, 472)
+texture = ExtResource("24_dq0o0")
+
+[node name="ObjSodaCanA" type="Sprite2D" parent="Props"]
+position = Vector2(545, 497)
+texture = ExtResource("25_g4evi")
+
+[node name="ObjCardboardBoxA" type="Sprite2D" parent="Props"]
+position = Vector2(655, 483)
+texture = ExtResource("9_7uouc")
+
+[node name="ObjBookPileA" type="Sprite2D" parent="Props"]
+position = Vector2(649, 477)
+texture = ExtResource("26_jjxo4")
+
+[node name="ObjSoccerBall" type="Sprite2D" parent="Props"]
+position = Vector2(846, 207)
+texture = ExtResource("27_hj8dg")
+
+[node name="ObjRecordPile" type="Sprite2D" parent="Props"]
+position = Vector2(537, 118)
+texture = ExtResource("28_cxym6")
+
+[node name="ObjStorageContainerB" type="Sprite2D" parent="Props"]
+position = Vector2(267, 194)
+texture = ExtResource("29_hpcma")
+
+[node name="ObjStorageContainerB2" type="Sprite2D" parent="Props"]
+position = Vector2(841, 260)
+texture = ExtResource("29_hpcma")
+
+[node name="ObjStorageContainerA" type="Sprite2D" parent="Props"]
+position = Vector2(272, 485)
+texture = ExtResource("30_fme88")
+
+[node name="ObjCardboardBoxB" type="Sprite2D" parent="Props"]
+position = Vector2(831, 307)
+texture = ExtResource("10_xh18e")
+
+[node name="ObjClockB" type="Sprite2D" parent="Props"]
+position = Vector2(831, 296)
+texture = ExtResource("31_sr8vq")
+
+[node name="ObjCardboardBoxE" type="Sprite2D" parent="Props"]
+position = Vector2(834, 34)
+texture = ExtResource("13_eie68")
+
+[node name="ObjCardboardBoxF" type="Sprite2D" parent="Props"]
+position = Vector2(814, 89)
+texture = ExtResource("14_vfen8")
+
+[node name="ObjSodaCanD" type="Sprite2D" parent="Props"]
+position = Vector2(835, 111)
+texture = ExtResource("32_vpysh")
+
+[node name="ObjBenchC" type="Sprite2D" parent="Props"]
+position = Vector2(323, 109)
+texture = ExtResource("33_ryji1")
+
 [node name="Player" parent="." instance=ExtResource("3_8hijy")]
 position = Vector2(213, 280)
 
@@ -128,82 +204,6 @@ item = &"teleporter_slot2"
 [node name="Teleporter Slot3" parent="." instance=ExtResource("17_4lf0m")]
 position = Vector2(498, 459)
 item = &"teleporter_slot3"
-
-[node name="ObjLocker" type="Sprite2D" parent="."]
-position = Vector2(689, 85)
-texture = ExtResource("20_4jpge")
-
-[node name="ObjBroom" type="Sprite2D" parent="."]
-position = Vector2(271, 110)
-texture = ExtResource("21_aqels")
-
-[node name="ObjTableG" type="Sprite2D" parent="."]
-position = Vector2(594, 482)
-texture = ExtResource("22_brmmf")
-
-[node name="ObjToolBoxB" type="Sprite2D" parent="."]
-position = Vector2(573, 475)
-texture = ExtResource("23_oujvj")
-
-[node name="ObjOpenBookA" type="Sprite2D" parent="."]
-position = Vector2(610, 472)
-texture = ExtResource("24_dq0o0")
-
-[node name="ObjSodaCanA" type="Sprite2D" parent="."]
-position = Vector2(545, 497)
-texture = ExtResource("25_g4evi")
-
-[node name="ObjCardboardBoxA" type="Sprite2D" parent="."]
-position = Vector2(655, 483)
-texture = ExtResource("9_7uouc")
-
-[node name="ObjBookPileA" type="Sprite2D" parent="."]
-position = Vector2(649, 477)
-texture = ExtResource("26_jjxo4")
-
-[node name="ObjSoccerBall" type="Sprite2D" parent="."]
-position = Vector2(846, 207)
-texture = ExtResource("27_hj8dg")
-
-[node name="ObjRecordPile" type="Sprite2D" parent="."]
-position = Vector2(537, 118)
-texture = ExtResource("28_cxym6")
-
-[node name="ObjStorageContainerB" type="Sprite2D" parent="."]
-position = Vector2(267, 194)
-texture = ExtResource("29_hpcma")
-
-[node name="ObjStorageContainerB2" type="Sprite2D" parent="."]
-position = Vector2(841, 260)
-texture = ExtResource("29_hpcma")
-
-[node name="ObjStorageContainerA" type="Sprite2D" parent="."]
-position = Vector2(272, 485)
-texture = ExtResource("30_fme88")
-
-[node name="ObjCardboardBoxB" type="Sprite2D" parent="."]
-position = Vector2(831, 307)
-texture = ExtResource("10_xh18e")
-
-[node name="ObjClockB" type="Sprite2D" parent="."]
-position = Vector2(831, 296)
-texture = ExtResource("31_sr8vq")
-
-[node name="ObjCardboardBoxE" type="Sprite2D" parent="."]
-position = Vector2(834, 34)
-texture = ExtResource("13_eie68")
-
-[node name="ObjCardboardBoxF" type="Sprite2D" parent="."]
-position = Vector2(814, 89)
-texture = ExtResource("14_vfen8")
-
-[node name="ObjSodaCanD" type="Sprite2D" parent="."]
-position = Vector2(835, 111)
-texture = ExtResource("32_vpysh")
-
-[node name="ObjBenchC" type="Sprite2D" parent="."]
-position = Vector2(323, 109)
-texture = ExtResource("33_ryji1")
 
 [connection signal="garage_pos" from="." to="Player" method="_on_garage_garage_pos"]
 [connection signal="picked_up" from="Player" to="Car" method="_on_player_picked_up"]

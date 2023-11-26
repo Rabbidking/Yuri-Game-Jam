@@ -99,6 +99,179 @@ texture = ExtResource("9_0ytrm")
 position = Vector2(565, 324)
 texture = ExtResource("10_4k5n3")
 
+[node name="ObjWindowF" type="Sprite2D" parent="Prop"]
+modulate = Color(1, 1, 1, 0.196078)
+position = Vector2(329, 456)
+texture = ExtResource("14_e3kxy")
+
+[node name="ObjWindowF2" type="Sprite2D" parent="Prop"]
+modulate = Color(1, 1, 1, 0.196078)
+position = Vector2(834, 456)
+texture = ExtResource("14_e3kxy")
+flip_h = true
+
+[node name="ObjWindowF3" type="Sprite2D" parent="Prop"]
+modulate = Color(1, 1, 1, 0.196078)
+position = Vector2(578, 456)
+texture = ExtResource("14_e3kxy")
+
+[node name="ObjSofaF" type="Sprite2D" parent="Prop"]
+position = Vector2(560, 152)
+texture = ExtResource("16_stao7")
+
+[node name="ObjBookshelfC" type="Sprite2D" parent="Prop"]
+position = Vector2(287, 82)
+texture = ExtResource("16_nssg7")
+
+[node name="ObjBookshelfA" type="Sprite2D" parent="Prop"]
+position = Vector2(857, 83)
+texture = ExtResource("17_c2kaw")
+
+[node name="ObjPlantB" type="Sprite2D" parent="Prop"]
+position = Vector2(928, 110)
+texture = ExtResource("18_anwoy")
+
+[node name="ObjChestA01" type="Sprite2D" parent="Prop"]
+position = Vector2(794, 112)
+texture = ExtResource("20_cpenu")
+
+[node name="ObjCarpetB" type="Sprite2D" parent="Prop"]
+position = Vector2(294, 217)
+texture = ExtResource("21_27i7y")
+
+[node name="ObjBookshelfB" type="Sprite2D" parent="Prop"]
+position = Vector2(359, 114)
+texture = ExtResource("22_4ndvm")
+
+[node name="ObjPictureB" type="Sprite2D" parent="Prop"]
+position = Vector2(371, 104)
+texture = ExtResource("23_jruxc")
+
+[node name="ObjPictureD" type="Sprite2D" parent="Prop"]
+position = Vector2(557, 80)
+texture = ExtResource("24_fuk2s")
+
+[node name="ObjSpeakersA" type="Sprite2D" parent="Prop"]
+position = Vector2(494, 325)
+texture = ExtResource("26_dqwwh")
+
+[node name="ObjSpeakersA2" type="Sprite2D" parent="Prop"]
+position = Vector2(635, 325)
+texture = ExtResource("26_dqwwh")
+
+[node name="ObjClockA" type="Sprite2D" parent="Prop"]
+position = Vector2(418, 83)
+texture = ExtResource("28_rr78m")
+
+[node name="ObjTableJ" type="Sprite2D" parent="Prop"]
+position = Vector2(462, 145)
+texture = ExtResource("28_euqrb")
+
+[node name="ObjTableK" type="Sprite2D" parent="Prop"]
+position = Vector2(755, 110)
+texture = ExtResource("29_c11t3")
+
+[node name="ObjSodaCanA" type="Sprite2D" parent="Prop"]
+position = Vector2(482, 159)
+texture = ExtResource("30_ohty6")
+
+[node name="ObjPillowB" type="Sprite2D" parent="Prop"]
+position = Vector2(658, 148)
+texture = ExtResource("31_f04nh")
+
+[node name="ObjBookshelfD" type="Sprite2D" parent="Prop"]
+position = Vector2(497, 448)
+texture = ExtResource("32_xtcbb")
+
+[node name="ObjBookshelfE" type="Sprite2D" parent="Prop"]
+position = Vector2(426, 482)
+texture = ExtResource("33_2quov")
+
+[node name="ObjBathTrashCan" type="Sprite2D" parent="Prop"]
+position = Vector2(382, 498)
+texture = ExtResource("34_au4g6")
+
+[node name="ObjBathTrashCan2" type="Sprite2D" parent="Prop"]
+position = Vector2(928, 307)
+texture = ExtResource("34_au4g6")
+
+[node name="ObjBookshelfG" type="Sprite2D" parent="Prop"]
+position = Vector2(927, 421)
+texture = ExtResource("35_ffrfr")
+
+[node name="ObjTableK2" type="Sprite2D" parent="Prop"]
+position = Vector2(928, 320)
+texture = ExtResource("29_c11t3")
+
+[node name="ObjBookPileA" type="Sprite2D" parent="Prop"]
+position = Vector2(440, 477)
+texture = ExtResource("36_n0sue")
+
+[node name="ObjPlantG" type="Sprite2D" parent="Prop"]
+position = Vector2(924, 482)
+texture = ExtResource("37_m822f")
+
+[node name="ObjPlantD" type="Sprite2D" parent="Prop"]
+position = Vector2(641, 451)
+texture = ExtResource("38_mrgm2")
+
+[node name="ObjChairE" type="Sprite2D" parent="Prop"]
+position = Vector2(729, 129)
+texture = ExtResource("39_q6w3y")
+
+[node name="ObjPlantC" type="Sprite2D" parent="Prop"]
+position = Vector2(755, 106)
+texture = ExtResource("40_8jvsw")
+
+[node name="ObjCardboardBoxA" type="Sprite2D" parent="Prop"]
+position = Vector2(924, 150)
+texture = ExtResource("41_k36xn")
+
+[node name="ObjCardboardBoxF" type="Sprite2D" parent="Prop"]
+position = Vector2(931, 139)
+texture = ExtResource("42_eb3k8")
+
+[node name="ObjCardboardBoxE" type="Sprite2D" parent="Prop"]
+position = Vector2(930, 171)
+texture = ExtResource("43_v2jw8")
+
+[node name="ObjSodaCanB" type="Sprite2D" parent="Prop"]
+position = Vector2(927, 316)
+texture = ExtResource("44_86med")
+
+[node name="ObjStorageContainerB" type="Sprite2D" parent="Prop"]
+position = Vector2(228, 480)
+texture = ExtResource("45_5xqbw")
+
+[node name="ObjBenchB" type="Sprite2D" parent="Prop"]
+position = Vector2(222, 183)
+texture = ExtResource("46_dwmy8")
+
+[node name="ObjBenchA" type="Sprite2D" parent="Prop"]
+position = Vector2(752, 480)
+texture = ExtResource("47_hlnxy")
+
+[node name="ObjSofaG" type="Sprite2D" parent="Prop"]
+position = Vector2(657, 152)
+texture = ExtResource("46_jtqpd")
+
+[node name="ObjSofaJ" type="Sprite2D" parent="Prop"]
+position = Vector2(446, 226)
+texture = ExtResource("47_de7e3")
+
+[node name="ObjPillowC" type="Sprite2D" parent="Prop"]
+position = Vector2(532, 148)
+texture = ExtResource("48_25rcu")
+
+[node name="ObjPillowC2" type="Sprite2D" parent="Prop"]
+position = Vector2(589, 148)
+texture = ExtResource("48_25rcu")
+flip_h = true
+
+[node name="ObjPillowD" type="Sprite2D" parent="Prop"]
+position = Vector2(658, 148)
+texture = ExtResource("49_uwv4s")
+
 [node name="Note" parent="." instance=ExtResource("11_vw6on")]
 position = Vector2(559, 187)
 item = &"note"
@@ -107,179 +280,6 @@ item = &"note"
 position = Vector2(666, 233)
 item = &"gigi"
 location = &"livingroom"
-
-[node name="ObjWindowF" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.196078)
-position = Vector2(329, 456)
-texture = ExtResource("14_e3kxy")
-
-[node name="ObjWindowF2" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.196078)
-position = Vector2(834, 456)
-texture = ExtResource("14_e3kxy")
-flip_h = true
-
-[node name="ObjWindowF3" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.196078)
-position = Vector2(578, 456)
-texture = ExtResource("14_e3kxy")
-
-[node name="ObjSofaF" type="Sprite2D" parent="."]
-position = Vector2(560, 152)
-texture = ExtResource("16_stao7")
-
-[node name="ObjBookshelfC" type="Sprite2D" parent="."]
-position = Vector2(287, 82)
-texture = ExtResource("16_nssg7")
-
-[node name="ObjBookshelfA" type="Sprite2D" parent="."]
-position = Vector2(857, 83)
-texture = ExtResource("17_c2kaw")
-
-[node name="ObjPlantB" type="Sprite2D" parent="."]
-position = Vector2(928, 110)
-texture = ExtResource("18_anwoy")
-
-[node name="ObjChestA01" type="Sprite2D" parent="."]
-position = Vector2(794, 112)
-texture = ExtResource("20_cpenu")
-
-[node name="ObjCarpetB" type="Sprite2D" parent="."]
-position = Vector2(294, 217)
-texture = ExtResource("21_27i7y")
-
-[node name="ObjBookshelfB" type="Sprite2D" parent="."]
-position = Vector2(359, 114)
-texture = ExtResource("22_4ndvm")
-
-[node name="ObjPictureB" type="Sprite2D" parent="."]
-position = Vector2(371, 104)
-texture = ExtResource("23_jruxc")
-
-[node name="ObjPictureD" type="Sprite2D" parent="."]
-position = Vector2(557, 80)
-texture = ExtResource("24_fuk2s")
-
-[node name="ObjSpeakersA" type="Sprite2D" parent="."]
-position = Vector2(494, 325)
-texture = ExtResource("26_dqwwh")
-
-[node name="ObjSpeakersA2" type="Sprite2D" parent="."]
-position = Vector2(635, 325)
-texture = ExtResource("26_dqwwh")
-
-[node name="ObjClockA" type="Sprite2D" parent="."]
-position = Vector2(418, 83)
-texture = ExtResource("28_rr78m")
-
-[node name="ObjTableJ" type="Sprite2D" parent="."]
-position = Vector2(462, 145)
-texture = ExtResource("28_euqrb")
-
-[node name="ObjTableK" type="Sprite2D" parent="."]
-position = Vector2(755, 110)
-texture = ExtResource("29_c11t3")
-
-[node name="ObjSodaCanA" type="Sprite2D" parent="."]
-position = Vector2(482, 159)
-texture = ExtResource("30_ohty6")
-
-[node name="ObjPillowB" type="Sprite2D" parent="."]
-position = Vector2(658, 148)
-texture = ExtResource("31_f04nh")
-
-[node name="ObjBookshelfD" type="Sprite2D" parent="."]
-position = Vector2(497, 448)
-texture = ExtResource("32_xtcbb")
-
-[node name="ObjBookshelfE" type="Sprite2D" parent="."]
-position = Vector2(426, 482)
-texture = ExtResource("33_2quov")
-
-[node name="ObjBathTrashCan" type="Sprite2D" parent="."]
-position = Vector2(382, 498)
-texture = ExtResource("34_au4g6")
-
-[node name="ObjBathTrashCan2" type="Sprite2D" parent="."]
-position = Vector2(928, 307)
-texture = ExtResource("34_au4g6")
-
-[node name="ObjBookshelfG" type="Sprite2D" parent="."]
-position = Vector2(927, 421)
-texture = ExtResource("35_ffrfr")
-
-[node name="ObjTableK2" type="Sprite2D" parent="."]
-position = Vector2(928, 320)
-texture = ExtResource("29_c11t3")
-
-[node name="ObjBookPileA" type="Sprite2D" parent="."]
-position = Vector2(440, 477)
-texture = ExtResource("36_n0sue")
-
-[node name="ObjPlantG" type="Sprite2D" parent="."]
-position = Vector2(924, 482)
-texture = ExtResource("37_m822f")
-
-[node name="ObjPlantD" type="Sprite2D" parent="."]
-position = Vector2(641, 451)
-texture = ExtResource("38_mrgm2")
-
-[node name="ObjChairE" type="Sprite2D" parent="."]
-position = Vector2(729, 129)
-texture = ExtResource("39_q6w3y")
-
-[node name="ObjPlantC" type="Sprite2D" parent="."]
-position = Vector2(755, 106)
-texture = ExtResource("40_8jvsw")
-
-[node name="ObjCardboardBoxA" type="Sprite2D" parent="."]
-position = Vector2(924, 150)
-texture = ExtResource("41_k36xn")
-
-[node name="ObjCardboardBoxF" type="Sprite2D" parent="."]
-position = Vector2(931, 139)
-texture = ExtResource("42_eb3k8")
-
-[node name="ObjCardboardBoxE" type="Sprite2D" parent="."]
-position = Vector2(930, 171)
-texture = ExtResource("43_v2jw8")
-
-[node name="ObjSodaCanB" type="Sprite2D" parent="."]
-position = Vector2(927, 316)
-texture = ExtResource("44_86med")
-
-[node name="ObjStorageContainerB" type="Sprite2D" parent="."]
-position = Vector2(228, 480)
-texture = ExtResource("45_5xqbw")
-
-[node name="ObjBenchB" type="Sprite2D" parent="."]
-position = Vector2(222, 183)
-texture = ExtResource("46_dwmy8")
-
-[node name="ObjBenchA" type="Sprite2D" parent="."]
-position = Vector2(752, 480)
-texture = ExtResource("47_hlnxy")
-
-[node name="ObjSofaG" type="Sprite2D" parent="."]
-position = Vector2(657, 152)
-texture = ExtResource("46_jtqpd")
-
-[node name="ObjSofaJ" type="Sprite2D" parent="."]
-position = Vector2(446, 226)
-texture = ExtResource("47_de7e3")
-
-[node name="ObjPillowC" type="Sprite2D" parent="."]
-position = Vector2(532, 148)
-texture = ExtResource("48_25rcu")
-
-[node name="ObjPillowC2" type="Sprite2D" parent="."]
-position = Vector2(589, 148)
-texture = ExtResource("48_25rcu")
-flip_h = true
-
-[node name="ObjPillowD" type="Sprite2D" parent="."]
-position = Vector2(658, 148)
-texture = ExtResource("49_uwv4s")
 
 [connection signal="living_pos" from="." to="Player" method="_on_living_room_living_pos"]
 [connection signal="living_pos_1" from="." to="Player" method="_on_living_room_living_pos_1"]

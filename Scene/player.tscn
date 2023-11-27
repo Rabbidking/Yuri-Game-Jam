@@ -123,7 +123,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walk Back",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -149,7 +149,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walk Front",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -172,7 +172,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walk Side",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jscp4"]
@@ -188,7 +188,7 @@ script = ExtResource("1_1scjf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_q53r6")
-animation = &"Idle Side"
+animation = &"Walk Side"
 autoplay = "Idle Side"
 
 [node name="Texture" type="Sprite2D" parent="."]

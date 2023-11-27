@@ -12,7 +12,7 @@ Gigi: [#gigi=Default]Ah, my body is too sore! I need a massage, please!
 Demi: [#demi=Default]Uh sure, let’s go then.
 Gigi: [#gigi=Blush]I haven’t been this sore ever since Valentine's Day.
 Demi: [#demi=Blush](I hope she takes off the onesie for once.)
-
+do load_next_scene()
 => END
 
 ~ night

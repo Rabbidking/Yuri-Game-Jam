@@ -16,7 +16,7 @@ Gigi: [#gigi=Default]Do you think it’s because of the pills?
 Demi: [#demi=Default]Maybe? Give me a second, I’ll call the doctor.
 Demi calls the doctor, but the call goes to voice mail.
 Demi: [#demi=Annoyed]Damn, he’s not picking up. Guess we should try tomorrow. 
-
+do load_next_scene()
 => END
 
 ~ night

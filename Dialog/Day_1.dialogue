@@ -7,6 +7,7 @@ Gigi: [#gigi=Default]The chairs weren’t cushy enough, speaking of which, don�
 Demi: [#demi=Happy]Oh, that would be great! Um, just don’t add any weird stuff to my cup ok?
 Gigi: [#gigi=Grin]I promise! Once I take care of a few chores I’m going to bed early.
 Demi: [#demi=Default]Don’t work too hard, call if you need anything.
+do load_next_scene()
 
 => END
 

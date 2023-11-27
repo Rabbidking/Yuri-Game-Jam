@@ -8,7 +8,7 @@ Gigi: [#gigi=Default]Whew, then why do you look more tired than usual?
 Demi: [#demi=Default]Oh umm, I lost track of time while streaming last night.
 Gigi: [#gigi=Default]That makes sense, do you still want to go for a walk at the park?
 Demi: [#demi=Default]Yeah, I should be ready in a minute.
-
+do load_next_scene()
 => END
 
 ~ night

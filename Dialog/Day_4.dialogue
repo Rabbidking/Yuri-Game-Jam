@@ -5,6 +5,7 @@ Gigi: [#gigi=Default]Well, I could just stop taking the pills…
 Demi: [#demi=Default]But then your insomnia will get worse, and besides, we still don’t know for sure if the pills are the cause of it.
 Gigi: [#gigi=Default]I know, I just don’t like causing trouble for you.
 Demi: [#demi=Default]It’s fine babe, I will always look after you.
+do load_next_scene()
 => END
 
 ~ night

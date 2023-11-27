@@ -148,15 +148,12 @@ func _ready():
 		if State.Day == 5 and location == "basement" and type == "fuelcell1" and State.fuel_cell1 == false:
 			$CollisionShape2D.disabled = false
 			$Texture.visible = true
-			State.fuel_cell1 = true
 		elif State.Day == 5 and location == "kitchen" and type == "fuelcell2" and State.fuel_cell2 == false:
 			$CollisionShape2D.disabled = false
 			$Texture.visible = true
-			State.fuel_cell2 = true
 		elif State.Day == 5 and location == "bathroom" and type == "fuelcell3" and State.fuel_cell3 == false:
 			$CollisionShape2D.disabled = false
 			$Texture.visible = true
-			State.fuel_cell3 = true
 		else:
 			$CollisionShape2D.disabled = true
 			$Texture.visible = false
@@ -228,9 +225,9 @@ func _on_area_exited(area):
 
 
 func _on_player_get_in_bed():
-	get_tree().change_scene_to_file("res://Scene/Rooms/bedroom.tscn")
 	State.have_gigi = false
 	State.Day += 1
+	load_next_scene()
 
 func _on_player_picked_up():
 	if item == "key":
@@ -275,10 +272,13 @@ func _on_player_picked_up():
 	elif item == "fuelcell":
 		if State.Day == 5 and location == "basement" and type == "fuelcell1":
 			DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "basement_battery")
+			State.fuel_cell1 = true
 		elif State.Day == 5 and location == "kitchen" and type == "fuelcell2":
 			DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "kitchen_battery")
+			State.fuel_cell2 = true
 		elif State.Day == 5 and location == "bathroom" and type == "fuelcell3":
 			DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "bathroom_battery")
+			State.fuel_cell3 = true
 		State.fuel_cell += 1
 		queue_free()
 		
@@ -287,7 +287,7 @@ func _on_player_pick_up_gigi():
 		if item == "gigi":
 			State.have_gigi == true
 			queue_free()
-
+			
 
 func _on_player_picked_up_2():
 	if item == "crowbar":
@@ -313,7 +313,6 @@ func _on_player_picked_up_3():
 		if State.slot1_empty == false and State.slot2_empty == false and State.slot3_empty == false:
 			print("Functioning")
 
-
 func _on_player_picked_up_4():
 	if item == "teleporter_slot2" and State.fuel_cell > 0 and State.slot2_empty == true:
 		State.fuel_cell -= 1
@@ -332,3 +331,23 @@ func _on_player_picked_up_5():
 		if State.slot1_empty == false and State.slot2_empty == false and State.slot3_empty == false:
 			print("Functioning")
 		
+
+func load_next_scene():
+	if State.Day == 1 and State.day_1_intro == true:
+		get_tree().change_scene_to_file("res://Scene/Rooms/bedroom.tscn")
+	elif State.Day == 2 and State.day_2_intro == false:
+		get_tree().change_scene_to_file("res://Scene/Rooms/kitchen.tscn")
+	elif State.Day == 2 and State.day_2_intro == true:
+		get_tree().change_scene_to_file("res://Scene/Rooms/bedroom.tscn")
+	elif State.Day == 3 and State.day_3_intro == false:
+		get_tree().change_scene_to_file("res://Scene/Rooms/kitchen.tscn")
+	elif State.Day == 3 and State.day_3_intro == true:
+		get_tree().change_scene_to_file("res://Scene/Rooms/bedroom.tscn")
+	elif State.Day == 4 and State.day_4_intro == false:
+		get_tree().change_scene_to_file("res://Scene/Rooms/living_room.tscn")
+	elif State.Day == 4 and State.day_4_intro == true:
+		get_tree().change_scene_to_file("res://Scene/Rooms/bedroom.tscn")
+	elif State.Day == 5 and State.day_5_intro == false:
+		get_tree().change_scene_to_file("res://Scene/Rooms/living_room.tscn")
+	elif State.Day == 5 and State.day_5_intro == true:
+		get_tree().change_scene_to_file("res://Scene/Rooms/bedroom.tscn")

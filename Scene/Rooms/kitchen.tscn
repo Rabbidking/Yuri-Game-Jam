@@ -125,7 +125,7 @@ texture = ExtResource("37_h88o1")
 
 [node name="Player" parent="." instance=ExtResource("3_x1r0e")]
 y_sort_enabled = true
-position = Vector2(777, 332)
+position = Vector2(555, 333)
 
 [node name="Entrance Door" parent="." instance=ExtResource("5_ag6y0")]
 position = Vector2(847, 323)

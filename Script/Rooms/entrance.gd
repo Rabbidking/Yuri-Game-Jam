@@ -5,6 +5,7 @@ signal entrance_pos_2
 signal entrance_pos_3
 
 #var receipt = preload("res://Scene/object.tscn")
+var cutscene_mode = false
 
 func _ready():
 #	if State.Day == 3:
@@ -21,6 +22,7 @@ func _ready():
 			emit_signal("entrance_pos_2")
 		elif State.door_used == "entrance_2":
 			emit_signal("entrance_pos_3")
+			
 
 #func inst(pos):
 #	var instance = recepit.instantiate()

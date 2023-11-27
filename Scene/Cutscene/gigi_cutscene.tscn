@@ -1,0 +1,44 @@
+[gd_scene load_steps=9 format=3 uid="uid://djpubl3t4t2on"]
+
+[ext_resource type="Texture2D" uid="uid://dttf1avmh5fmj" path="res://Sprites/Characters/Gigi/Idle/Gigi-Idle-1.png" id="1_xcw5i"]
+[ext_resource type="Texture2D" uid="uid://eclv1wovxtk" path="res://Sprites/Characters/Gigi/Idle/Gigi-Idle-2.png" id="2_wwehp"]
+[ext_resource type="Texture2D" uid="uid://e3ehukxkxovc" path="res://Sprites/Characters/Gigi/Idle/Gigi-Idle-3.png" id="3_kktfp"]
+[ext_resource type="Texture2D" uid="uid://blpqrw0hvvgs8" path="res://Sprites/Characters/Gigi/Idle/Gigi-Idle-4.png" id="4_vg1e5"]
+[ext_resource type="Texture2D" uid="uid://cutb0khgxn3g" path="res://Sprites/Characters/Gigi/Idle/Gigi-Idle-5.png" id="5_7wikh"]
+[ext_resource type="Texture2D" uid="uid://dumpqsxiqd5nn" path="res://Sprites/Characters/Gigi/Idle/Gigi-Idle-6.png" id="6_1e76t"]
+[ext_resource type="Texture2D" uid="uid://cixa4wh4327ae" path="res://Sprites/Characters/Gigi/Idle/Gigi-Idle-7.png" id="7_ho2ra"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wpf2g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xcw5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_wwehp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kktfp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vg1e5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7wikh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1e76t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ho2ra")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Gigi_Cutscene" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wpf2g")
+autoplay = "default"

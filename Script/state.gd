@@ -1,6 +1,6 @@
 extends Node
 
-var Day = 5	#day adjustments
+var Day = 1	#day adjustments
 var key_taken = false
 var have_gigi = false
 var password_known = false

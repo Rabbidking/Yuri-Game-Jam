@@ -1,17 +1,50 @@
-[gd_scene load_steps=12 format=3 uid="uid://c8d5hla3410jd"]
+[gd_scene load_steps=19 format=3 uid="uid://c8d5hla3410jd"]
 
 [ext_resource type="Script" path="res://Script/interactable.gd" id="1_01v7x"]
 [ext_resource type="Texture2D" uid="uid://bkg2agt6rhy0y" path="res://sample/Green.png" id="2_aj3l5"]
 [ext_resource type="Texture2D" uid="uid://bq5ce2e0rwuro" path="res://Sprites/Characters/Gigi/Sleeping/Gigi-Sleeping-1.png" id="3_n2rx7"]
+[ext_resource type="Texture2D" uid="uid://dttf1avmh5fmj" path="res://Sprites/Characters/Gigi/Idle/Gigi-Idle-1.png" id="3_y5bdb"]
+[ext_resource type="Texture2D" uid="uid://eclv1wovxtk" path="res://Sprites/Characters/Gigi/Idle/Gigi-Idle-2.png" id="4_dpd2d"]
 [ext_resource type="Texture2D" uid="uid://b8ljvwfltkgfn" path="res://Sprites/Characters/Gigi/Sleeping/Gigi-Sleeping-2.png" id="4_h810l"]
 [ext_resource type="Texture2D" uid="uid://gbn3qr1j1o7a" path="res://Sprites/Characters/Gigi/Sleeping/Gigi-Sleeping-3.png" id="5_qwnrw"]
+[ext_resource type="Texture2D" uid="uid://e3ehukxkxovc" path="res://Sprites/Characters/Gigi/Idle/Gigi-Idle-3.png" id="5_rrg55"]
+[ext_resource type="Texture2D" uid="uid://blpqrw0hvvgs8" path="res://Sprites/Characters/Gigi/Idle/Gigi-Idle-4.png" id="6_agsof"]
 [ext_resource type="Texture2D" uid="uid://c4wq7s6vguypa" path="res://Sprites/Characters/Gigi/Sleeping/Gigi-Sleeping-4.png" id="6_ep464"]
 [ext_resource type="Texture2D" uid="uid://dv4mic0aijri7" path="res://Sprites/Characters/Gigi/Sleeping/Gigi-Sleeping-5.png" id="7_cqf7g"]
+[ext_resource type="Texture2D" uid="uid://cutb0khgxn3g" path="res://Sprites/Characters/Gigi/Idle/Gigi-Idle-5.png" id="7_rw7aj"]
 [ext_resource type="Texture2D" uid="uid://7d8w8um0g6be" path="res://Sprites/Characters/Gigi/Sleeping/Gigi-Sleeping-6.png" id="8_mditi"]
+[ext_resource type="Texture2D" uid="uid://dumpqsxiqd5nn" path="res://Sprites/Characters/Gigi/Idle/Gigi-Idle-6.png" id="8_vs4vm"]
 [ext_resource type="Texture2D" uid="uid://cd76g5xepwyjh" path="res://Sprites/Characters/Gigi/Sleeping/Gigi-Sleeping-7.png" id="9_l7vjp"]
+[ext_resource type="Texture2D" uid="uid://cixa4wh4327ae" path="res://Sprites/Characters/Gigi/Idle/Gigi-Idle-7.png" id="9_ye0hl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iiqsq"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_y5bdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dpd2d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rrg55")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_agsof")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rw7aj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vs4vm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ye0hl")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_n2rx7")
@@ -53,7 +86,7 @@ texture = ExtResource("2_aj3l5")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 visible = false
 sprite_frames = SubResource("SpriteFrames_iiqsq")
-animation = &"Sleep"
+animation = &"Idle"
 autoplay = "Sleep"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

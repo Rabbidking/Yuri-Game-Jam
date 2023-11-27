@@ -11,6 +11,8 @@ script = ExtResource("1_7gari")
 
 [node name="Texture" type="Sprite2D" parent="."]
 
+[node name="Texture" type="Sprite2D" parent="Texture"]
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(1.5, 1.7)
 shape = SubResource("RectangleShape2D_ywmvi")

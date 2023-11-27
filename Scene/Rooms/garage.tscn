@@ -94,7 +94,7 @@ layer_0/tile_data = PackedInt32Array(917511, 9, 0, 983047, 9, 1, 917512, 65545, 
 
 [node name="Player" parent="." instance=ExtResource("3_8hijy")]
 y_sort_enabled = true
-position = Vector2(213, 280)
+position = Vector2(480, 295)
 
 [node name="Props" type="Node2D" parent="."]
 y_sort_enabled = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dn3o4ik2vi8l8"]
+[gd_scene load_steps=26 format=3 uid="uid://dn3o4ik2vi8l8"]
 
 [ext_resource type="Script" path="res://Script/Rooms/entrance.gd" id="1_4k0mf"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_e8lwr"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://dpx54v2ia4fbv" path="res://Sprites/Furniture/OBJ_Plant/OBJ_PlantG.png" id="22_k4wv2"]
 [ext_resource type="Texture2D" uid="uid://bympayqugjfyt" path="res://Sprites/Furniture/OBJ_SmallItems/OBJ_SoccerBall.png" id="23_qd1u1"]
 [ext_resource type="Texture2D" uid="uid://dpy4bwoc15pb5" path="res://Sprites/Furniture/OBJ_Carpet/OBJ_CarpetH.png" id="24_02jyq"]
+[ext_resource type="AudioStream" uid="uid://db6snhlijg234" path="res://Audio/SFXW001_indoor_roomtone_entrance hall.wav" id="25_an1wc"]
 [ext_resource type="Texture2D" uid="uid://0ns00vrf56ae" path="res://Sprites/Furniture/OBJ_Carpet/OBJ_CarpetB.png" id="25_r6j74"]
 
 [node name="entrance" type="Node2D"]
@@ -148,6 +149,11 @@ texture = ExtResource("23_qd1u1")
 [node name="ObjLightstandC" type="Sprite2D" parent="Props"]
 position = Vector2(735, 222)
 texture = ExtResource("21_cbvi3")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("25_an1wc")
+volume_db = -5.0
+autoplay = true
 
 [connection signal="entrance_pos_1" from="." to="Player" method="_on_entrance_entrance_pos_1"]
 [connection signal="entrance_pos_2" from="." to="Player" method="_on_entrance_entrance_pos_2"]

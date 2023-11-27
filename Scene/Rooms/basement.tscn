@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://2sgrr1gkcehs"]
+[gd_scene load_steps=31 format=3 uid="uid://2sgrr1gkcehs"]
 
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="1_6gcqm"]
 [ext_resource type="Script" path="res://Script/Rooms/basement.gd" id="1_kto8c"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://cpnkj6j71tlwq" path="res://Sprites/Furniture/OBJ_SmallItems/OBJ_StorageContainerB.png" id="28_wacce"]
 [ext_resource type="Texture2D" uid="uid://bm0jj5x5qx0o8" path="res://Sprites/Furniture/OBJ_SmallItems/OBJ_StorageContainerA.png" id="29_ws5s4"]
 [ext_resource type="Texture2D" uid="uid://l5014vtnf4xf" path="res://Sprites/Furniture/OBJ_ToolBox/OBJ_ToolBoxA.png" id="30_a07e5"]
+[ext_resource type="AudioStream" uid="uid://rhaj7t8ogik6" path="res://Audio/SFXW001_indoor_basement neutral sound.wav" id="30_epv88"]
 
 [node name="basement" type="Node2D"]
 script = ExtResource("1_kto8c")
@@ -180,6 +181,11 @@ texture = ExtResource("15_2nxth")
 [node name="ObjToolBoxA" type="Sprite2D" parent="."]
 position = Vector2(392, 291)
 texture = ExtResource("30_a07e5")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("30_epv88")
+volume_db = -5.0
+autoplay = true
 
 [connection signal="basement_pos" from="." to="Player" method="_on_basement_basement_pos"]
 [connection signal="pick_up_gigi" from="Player" to="Gigi" method="_on_player_pick_up_gigi"]

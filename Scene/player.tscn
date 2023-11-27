@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://be0wmp3b3b4qv"]
+[gd_scene load_steps=43 format=3 uid="uid://be0wmp3b3b4qv"]
 
 [ext_resource type="Script" path="res://Script/player.gd" id="1_1scjf"]
 [ext_resource type="Texture2D" uid="uid://cesubyhcfgfps" path="res://sample/Blue.png" id="1_8e4yr"]
@@ -38,6 +38,7 @@
 [ext_resource type="Texture2D" uid="uid://dwqa48pyifctr" path="res://Sprites/Characters/Demi/Walk/Demi-Walk-Side-6.png" id="35_52dkp"]
 [ext_resource type="PackedScene" uid="uid://dry4nsiv75bef" path="res://Scene/pause_menu.tscn" id="37_5ywcm"]
 [ext_resource type="PackedScene" uid="uid://bqg7gl6eklem6" path="res://Scene/hud.tscn" id="38_1bygi"]
+[ext_resource type="AudioStream" uid="uid://dbowng50glnue" path="res://Audio/Magic Positive 3.wav" id="39_l1hpk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q53r6"]
 animations = [{
@@ -209,6 +210,9 @@ shape = SubResource("RectangleShape2D_hqqmg")
 [node name="HUD" parent="CanvasLayer" instance=ExtResource("38_1bygi")]
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("37_5ywcm")]
+
+[node name="ItemGet" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("39_l1hpk")
 
 [connection signal="area_entered" from="Interact Collision" to="." method="_on_interact_collision_area_entered"]
 [connection signal="area_exited" from="Interact Collision" to="." method="_on_interact_collision_area_exited"]

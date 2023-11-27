@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://ccu1tfbkedf7s"]
+
+[ext_resource type="Script" path="res://Script/main_menu.gd" id="1_uagy8"]
+[ext_resource type="Texture2D" uid="uid://doygkmfhyvs20" path="res://Sprites/UI/Start Button.png" id="2_b50sy"]
+[ext_resource type="Texture2D" uid="uid://ct4wq6sswwkbt" path="res://Sprites/UI/Options Button.png" id="3_36fcf"]
+[ext_resource type="Texture2D" uid="uid://p7d8i4to7k16" path="res://Sprites/UI/Load Button.png" id="3_eiryr"]
+[ext_resource type="Texture2D" uid="uid://ckxymlnqj3mxb" path="res://Sprites/UI/Quit Button.png" id="4_4itt2"]
+
+[node name="MainMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uagy8")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -105.0
+offset_top = -58.0
+offset_right = 5.0
+offset_bottom = 101.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+
+[node name="Start" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("2_b50sy")
+
+[node name="Level Select" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("3_eiryr")
+
+[node name="Options" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("3_36fcf")
+stretch_mode = 0
+
+[node name="Quit" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("4_4itt2")
+stretch_mode = 0
+
+[connection signal="pressed" from="GridContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="GridContainer/Level Select" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="GridContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="GridContainer/Quit" to="." method="_on_quit_pressed"]

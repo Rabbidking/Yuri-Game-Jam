@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_5hhqq"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_phjpb"]
 
 [resource]
-script = ExtResource("1_5hhqq")
+script = ExtResource("1_phjpb")
 using_states = PackedStringArray()
 titles = {
 "afternoon": "3",
@@ -105,7 +105,7 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "23",
 "next_id": "24",
-"tags": PackedStringArray("demi=Default"),
+"tags": PackedStringArray("demi=Annoyed"),
 "text": "Um, Gigi?",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Um, Gigi?",
@@ -117,9 +117,9 @@ lines = {
 "id": "24",
 "next_id": "26",
 "tags": PackedStringArray("gigi=Sleeping"),
-"text": ". . .",
+"text": "ZZZZZZ...",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": ". . .",
+"translation_key": "ZZZZZZ...",
 "type": "dialogue"
 },
 "26": {

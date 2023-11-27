@@ -10,6 +10,7 @@ extends CanvasLayer
 @onready var left_character_label: Label = %LeftCharacterLabel
 @onready var right_character_label: Label = %RightCharacterLabel
 @onready var indicator: TextureRect = $Balloon/Indicator
+@onready var talk_sound: AudioStreamPlayer = $TalkSound
 
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
@@ -167,3 +168,9 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 
 func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 	next(response.next_id)
+
+
+func _on_dialogue_label_spoke(letter, letter_index, speed) -> void:
+	if not dialogue_line.character.is_empty() and not letter in [".", " "]:
+		talk_sound.pitch_scale = randf_range(0.9, 1.1)
+		talk_sound.play()

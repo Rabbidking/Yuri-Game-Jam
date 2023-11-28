@@ -75,6 +75,7 @@ var night_5_intro = false
 var garage_trigger = false
 # This flag is meant to change Gigi's label and portrait into Mimi's for the night 5 scenes.
 # Set to true once night_5_intro is true, set back to false once we load the ending cutscene
+var mimi_is_here = false
 var mimi_replace_gigi = false
 
 #Set to false when we have all three batteries. Play the teleporter_interact_not_enough_batteries dialogue until then

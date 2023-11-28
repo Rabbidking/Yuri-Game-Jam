@@ -2,6 +2,7 @@ extends Area2D
 
 
 signal pick_up_object
+signal spawn_mimi
 
 @export var item : StringName
 @export var location : StringName
@@ -15,9 +16,9 @@ func _ready():
 		State.items.append(global_position)
 	
 	if item == "bed":
-		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Bed/OBJ_BedA_01.png"))
-		$CollisionShape2D.scale = Vector2(2.5, 1)
-		$CollisionShape2D.position = Vector2(0, 0)
+		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Bed/OBJ_BedB_01.png"))
+		$CollisionShape2D.scale = Vector2(2, 1.5)
+		$CollisionShape2D.position = Vector2(0, 24)
 	if item == "gigi":
 		if State.Day == 1 and location == "livingroom" and State.have_gigi != true:
 			$AnimatedSprite2D.visible = true
@@ -165,7 +166,7 @@ func pick_up():
 func _on_area_entered(area):
 	if area.is_in_group("Interact"):
 		if item == "bed" and State.have_gigi == true:
-			$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Bed/OBJ_BedA_02.png"))
+			$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Bed/OBJ_BedB_02.png"))
 		elif item == "car" and opened == false and State.have_gigi == false:
 			$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Car/OBJ_Car_02.png"))
 		elif item == "car" and opened == true and State.have_gigi == false:
@@ -195,7 +196,7 @@ func _on_area_entered(area):
 
 func _on_area_exited(area):
 	if item == "bed" and State.have_gigi == true:
-		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Bed/OBJ_BedA_01.png"))
+		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Bed/OBJ_BedB_01.png"))
 	elif item == "car" and opened == false and State.have_gigi == false:
 		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Car/OBJ_Car_01.png"))
 	elif item == "car" and opened == true and State.have_gigi == false:
@@ -311,6 +312,7 @@ func _on_player_picked_up_3():
 		$CollisionShape2D.disabled == true
 		State.slot1_empty = false
 		if State.slot1_empty == false and State.slot2_empty == false and State.slot3_empty == false:
+			load_next_scene_3()
 			print("Functioning")
 
 func _on_player_picked_up_4():
@@ -320,6 +322,7 @@ func _on_player_picked_up_4():
 		$CollisionShape2D.disabled == true
 		State.slot2_empty = false
 		if State.slot1_empty == false and State.slot2_empty == false and State.slot3_empty == false:
+			load_next_scene_3()
 			print("Functioning")
 
 func _on_player_picked_up_5():
@@ -329,6 +332,7 @@ func _on_player_picked_up_5():
 		$CollisionShape2D.disabled == true
 		State.slot3_empty = false
 		if State.slot1_empty == false and State.slot2_empty == false and State.slot3_empty == false:
+			load_next_scene_3()
 			print("Functioning")
 		
 
@@ -351,3 +355,19 @@ func load_next_scene():
 		get_tree().change_scene_to_file("res://Scene/Rooms/living_room.tscn")
 	elif State.Day == 5 and State.day_5_intro == true:
 		get_tree().change_scene_to_file("res://Scene/Rooms/bedroom.tscn")
+
+
+func load_next_scene_2():
+	if State.Day == 5 and State.mimi_is_here == false:
+		State.mimi_is_here = true
+		get_tree().change_scene_to_file("res://Scene/Rooms/garage.tscn")
+	elif State.Day == 5 and State.mimi_is_here == true:
+		get_tree().change_scene_to_file("res://Scene/Rooms/living_room.tscn")
+	elif State.Day == 6:
+		get_tree().change_scene_to_file("res://Scene/Rooms/kitchen.tscn")
+	elif State.Day == 7:
+		get_tree().change_scene_to_file("res://Scene/main_menu.tscn")
+
+func load_next_scene_3():
+	if State.Day == 5 and State.slot1_empty == false and State.slot2_empty == false and State.slot3_empty == false:
+		get_tree().change_scene_to_file("res://Scene/Rooms/garage.tscn")

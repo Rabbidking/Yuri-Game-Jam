@@ -51,7 +51,6 @@ metadata/_edit_vertical_guides_ = [576.0]
 
 [node name="Player" parent="." instance=ExtResource("3_gii68")]
 position = Vector2(568, 288)
-scale = Vector2(1, 1)
 
 [node name="Background" type="Sprite2D" parent="."]
 visible = false
@@ -104,6 +103,7 @@ door_name = &"hallwayB_1"
 door_type = &"front"
 
 [node name="Fade_Transition" parent="." instance=ExtResource("5_ah00y")]
+context = &"hallway_a"
 
 [node name="Props" type="Node2D" parent="."]
 y_sort_enabled = true

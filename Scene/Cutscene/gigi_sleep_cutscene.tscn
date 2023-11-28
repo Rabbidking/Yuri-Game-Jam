@@ -1,0 +1,44 @@
+[gd_scene load_steps=9 format=3 uid="uid://bjhka0j0l4ayp"]
+
+[ext_resource type="Texture2D" uid="uid://bq5ce2e0rwuro" path="res://Sprites/Characters/Gigi/Sleeping/Gigi-Sleeping-1.png" id="1_6b8bb"]
+[ext_resource type="Texture2D" uid="uid://b8ljvwfltkgfn" path="res://Sprites/Characters/Gigi/Sleeping/Gigi-Sleeping-2.png" id="2_lgvcj"]
+[ext_resource type="Texture2D" uid="uid://gbn3qr1j1o7a" path="res://Sprites/Characters/Gigi/Sleeping/Gigi-Sleeping-3.png" id="3_m85es"]
+[ext_resource type="Texture2D" uid="uid://c4wq7s6vguypa" path="res://Sprites/Characters/Gigi/Sleeping/Gigi-Sleeping-4.png" id="4_codd0"]
+[ext_resource type="Texture2D" uid="uid://dv4mic0aijri7" path="res://Sprites/Characters/Gigi/Sleeping/Gigi-Sleeping-5.png" id="5_ohcyk"]
+[ext_resource type="Texture2D" uid="uid://7d8w8um0g6be" path="res://Sprites/Characters/Gigi/Sleeping/Gigi-Sleeping-6.png" id="6_fwc7g"]
+[ext_resource type="Texture2D" uid="uid://cd76g5xepwyjh" path="res://Sprites/Characters/Gigi/Sleeping/Gigi-Sleeping-7.png" id="7_nor8a"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sd21c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6b8bb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_lgvcj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_m85es")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_codd0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ohcyk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fwc7g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nor8a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Gigi_Sleep_Cutscene" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_sd21c")
+autoplay = "default"

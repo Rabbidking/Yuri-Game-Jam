@@ -56,16 +56,21 @@ Demi: [#demi=Annoyed]Ugh, this is heavy!
 Demi inserts the Batteries and turns the Teleporter on.
 Demi: [#demi=Default] I have no idea how this works, but I have to get Gigi back!
 #Teleporter emits a bright flash here. Do the flash before moving on to the next line, or move stuff to new dialogues.
+do load_next_scene_2()
+=> END
+
+~ teleporter_flash
 Demi: [#demi=Shocked]Ack! Too bright!
 #A figure carrying Gigi steps out of the light as it dissipates.
 Demi: [#demi=Shocked]It’s..it’s you!
 #Mimi's portrait appears on the right
-Demi: [#demi=Shocked](Holy crap, Mimi is here!? She teleported to her mom’s house.)
+Demi: [#demi=Shocked](Holy crap, Mimi is here!? Gigi teleported to her mom’s house.)
 Mimi: [#mimi=Default]So, we finally get to meet in person.
 Demi: [#demi=Shocked]I- uh- um... good to see you?
 Mimi: [#mimi=Happy]No need to be shy, this isn’t the first time we've seen each other. 
 Mimi: [#mimi=Default]How about we put Gigi to bed and we can chat, hmm?
 Demi: [#demi=Default]Yeah, let’s do that.
+do load_next_scene_2()
 => END
 
 ~ night_end
@@ -87,6 +92,7 @@ Mimi: [#mimi=Happy]No need to promise, I know you will do that.
 Mimi: [#mimi=Default]Anyway, you should get some rest. Maybe I will visit you both soon.
 Demi: [#demi=Happy]Of course, we would love to have you over for dinner.
 Mimi: [#mimi=Happy]I certainly look forward to it, sleep well.
+do load_next_scene_2()
 => END
 
 

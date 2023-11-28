@@ -124,7 +124,7 @@ position = Vector2(840, 395)
 texture = ExtResource("21_27i7y")
 
 [node name="Player" parent="." instance=ExtResource("2_r5daw")]
-position = Vector2(535, 150)
+position = Vector2(306, 327)
 
 [node name="Entrance Door" parent="." instance=ExtResource("4_nhv12")]
 position = Vector2(240, 320)
@@ -132,6 +132,7 @@ door_name = &"entrance_2"
 door_type = &"side_left"
 
 [node name="Fade_Transition" parent="." instance=ExtResource("3_ype08")]
+context = &"living_room"
 
 [node name="Prop" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -165,7 +166,7 @@ position = Vector2(578, 456)
 texture = ExtResource("14_e3kxy")
 
 [node name="ObjSofaF" type="Sprite2D" parent="Prop"]
-z_index = -1
+z_index = -2
 position = Vector2(560, 152)
 texture = ExtResource("16_stao7")
 
@@ -317,10 +318,12 @@ position = Vector2(446, 226)
 texture = ExtResource("47_de7e3")
 
 [node name="ObjPillowC" type="Sprite2D" parent="Prop"]
+z_index = -1
 position = Vector2(532, 148)
 texture = ExtResource("48_25rcu")
 
 [node name="ObjPillowC2" type="Sprite2D" parent="Prop"]
+z_index = -1
 position = Vector2(589, 148)
 texture = ExtResource("48_25rcu")
 flip_h = true

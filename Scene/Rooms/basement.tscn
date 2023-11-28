@@ -94,6 +94,7 @@ location = &"basement"
 
 [node name="Fade_Transition" parent="." instance=ExtResource("7_uibtd")]
 z_index = 2
+context = &"basement"
 
 [node name="Fuel Cell" parent="." instance=ExtResource("8_x84fp")]
 position = Vector2(402, 186)

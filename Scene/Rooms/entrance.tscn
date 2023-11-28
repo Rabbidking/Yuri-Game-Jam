@@ -117,6 +117,7 @@ door_name = &"living room"
 door_type = &"side_right"
 
 [node name="Fade_Transition" parent="." instance=ExtResource("6_2lyao")]
+context = &"entrance"
 
 [node name="Receipt" parent="." instance=ExtResource("7_c5q0q")]
 position = Vector2(574, 460)

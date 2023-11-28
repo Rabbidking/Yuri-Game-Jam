@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://kqgksx6kp4v3"]
+
+[ext_resource type="Texture2D" uid="uid://ibebl424koqb" path="res://Sprites/Characters/Demi/Sit/Demi-Sit-1.png" id="1_7xb6f"]
+[ext_resource type="Texture2D" uid="uid://cyq4w56odg3l5" path="res://Sprites/Characters/Demi/Sit/Demi-Sit-2.png" id="2_j6rh4"]
+[ext_resource type="Texture2D" uid="uid://cr867nrm733o2" path="res://Sprites/Characters/Demi/Sit/Demi-Sit-3.png" id="3_6qim0"]
+[ext_resource type="Texture2D" uid="uid://dwoymvgk2lma0" path="res://Sprites/Characters/Demi/Sit/Demi-Sit-4.png" id="4_qy6hn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tdlwo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7xb6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_j6rh4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6qim0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qy6hn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Demi_Sit_Cutscene" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_tdlwo")
+autoplay = "default"

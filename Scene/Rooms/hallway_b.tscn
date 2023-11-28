@@ -121,6 +121,7 @@ door_name = &"bathroom"
 door_type = &"front"
 
 [node name="Fade_Transition" parent="." instance=ExtResource("4_orgmt")]
+context = &"hallway_b"
 
 [node name="Props" type="Node2D" parent="."]
 

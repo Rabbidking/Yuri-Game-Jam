@@ -32,4 +32,5 @@ Demi: [#demi=Happy]And then I... I fell in love with you.
 Gigi: [#gigi=Grin]Want to skip streaming for a day and spend some time together?
 Demi: [#demi=Happy]Fuck yeah, screw streaming, all I want to do is be with you today.
 #Fade out to end screen
+do load_next_scene_2()
 => END

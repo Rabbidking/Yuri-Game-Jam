@@ -162,6 +162,7 @@ door_name = &"hallwayB_4"
 door_type = &"back"
 
 [node name="Fade_Transition" parent="." instance=ExtResource("3_3i7g3")]
+context = &"bathroom"
 
 [node name="Fuel Cell" parent="." instance=ExtResource("17_jyyl4")]
 position = Vector2(783, 371)

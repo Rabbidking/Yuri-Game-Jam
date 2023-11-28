@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cj6plskwurkeb"]
+
+[ext_resource type="Texture2D" uid="uid://dypxgjp1rab7r" path="res://Sprites/Characters/Gigi/Sit/Gigi-Sit-1.png" id="1_y4nek"]
+[ext_resource type="Texture2D" uid="uid://deidx414dhyjj" path="res://Sprites/Characters/Gigi/Sit/Gigi-Sit-2.png" id="2_qke7i"]
+[ext_resource type="Texture2D" uid="uid://bbqjygty3rf5f" path="res://Sprites/Characters/Gigi/Sit/Gigi-Sit-3.png" id="3_b7mfo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n31tj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_y4nek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qke7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_b7mfo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Gigi_Sit_Cutscene" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_n31tj")
+autoplay = "default"

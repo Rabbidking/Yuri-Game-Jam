@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://bgh547qu4toco"]
+[gd_scene load_steps=49 format=3 uid="uid://bgh547qu4toco"]
 
 [ext_resource type="Script" path="res://Script/Rooms/bedroom.gd" id="1_v28qo"]
 [ext_resource type="PackedScene" uid="uid://be0wmp3b3b4qv" path="res://Scene/player.tscn" id="2_5gxhm"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://cafmsu4vdnnfq" path="res://Scene/door.tscn" id="4_hlej4"]
 [ext_resource type="Texture2D" uid="uid://g232eiioanda" path="res://Sprites/Tiles/Floor/Carpet-Pink.png" id="4_vuhgm"]
 [ext_resource type="Texture2D" uid="uid://bhbkfmwm22siq" path="res://Sprites/Tiles/Walls/Wood Wall.png" id="5_ud4w2"]
-[ext_resource type="Texture2D" uid="uid://boi5i483osykw" path="res://Sprites/Furniture/OBJ_Bed/OBJ_BedA.png" id="7_fo6ks"]
 [ext_resource type="Texture2D" uid="uid://ceq8hwa8mly2a" path="res://Sprites/Furniture/OBJ_Lightstand/OBJ_LightstandA.png" id="8_iw3a8"]
 [ext_resource type="Texture2D" uid="uid://dimlbd7204yb1" path="res://Sprites/Furniture/OBJ_Safe/OBJ_Safe_01.png" id="9_6nixw"]
 [ext_resource type="Texture2D" uid="uid://cneci0dnik2mf" path="res://Sprites/Furniture/OBJ_Window/OBJ_WindowB.png" id="10_c2l4g"]
@@ -107,6 +106,7 @@ door_name = &"hallwayB_2"
 door_type = &"front"
 
 [node name="Fade_Transition" parent="." instance=ExtResource("3_p58s7")]
+context = &"bedroom"
 
 [node name="Player" parent="." instance=ExtResource("2_5gxhm")]
 y_sort_enabled = true
@@ -114,10 +114,6 @@ position = Vector2(425, 321)
 
 [node name="Prop" type="Node2D" parent="."]
 y_sort_enabled = true
-
-[node name="Bed" type="Sprite2D" parent="Prop"]
-position = Vector2(360, 288)
-texture = ExtResource("7_fo6ks")
 
 [node name="Light" type="Sprite2D" parent="Prop"]
 position = Vector2(817, 149)
@@ -274,7 +270,7 @@ position = Vector2(511, 398)
 texture = ExtResource("14_fh7f2")
 
 [node name="Bed" parent="." instance=ExtResource("15_yqdcl")]
-position = Vector2(362, 334)
+position = Vector2(360, 309)
 item = &"bed"
 
 [node name="Laptop" parent="." instance=ExtResource("15_yqdcl")]

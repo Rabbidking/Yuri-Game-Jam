@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7t7q8sy22mwc"]
+
+[ext_resource type="Texture2D" uid="uid://bmpq3ryv5u1kw" path="res://Sprites/Characters/Sit/Mimi-Sit-1.png" id="1_epjd7"]
+[ext_resource type="Texture2D" uid="uid://egsvqe0ayh72" path="res://Sprites/Characters/Sit/Mimi-Sit-2.png" id="2_y8rl8"]
+[ext_resource type="Texture2D" uid="uid://h57rlx3ohlim" path="res://Sprites/Characters/Sit/Mimi-Sit-3.png" id="3_7dgdw"]
+[ext_resource type="Texture2D" uid="uid://b0o8c8ko82tot" path="res://Sprites/Characters/Sit/Mimi-Sit-4.png" id="4_ihgji"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j4xie"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_epjd7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_y8rl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7dgdw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ihgji")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Mimi_Sit_Cutscene" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_j4xie")
+flip_h = true

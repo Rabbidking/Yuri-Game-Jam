@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://2sgrr1gkcehs"]
+[gd_scene load_steps=49 format=3 uid="uid://2sgrr1gkcehs"]
 
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="1_6gcqm"]
 [ext_resource type="Script" path="res://Script/Rooms/basement.gd" id="1_kto8c"]
@@ -61,6 +61,42 @@ sources/1 = SubResource("TileSetAtlasSource_xhfp5")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pat20"]
 size = Vector2(446, 117)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_quccm"]
+size = Vector2(50, 74)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oolpd"]
+size = Vector2(33, 72)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g3key"]
+size = Vector2(75, 37)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y474p"]
+size = Vector2(32, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wjyce"]
+size = Vector2(50, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f1ceu"]
+size = Vector2(54, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f70gd"]
+size = Vector2(70, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tgpfv"]
+size = Vector2(42, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ssne0"]
+size = Vector2(31, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nxvp8"]
+size = Vector2(23, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uf4bx"]
+size = Vector2(33, 41)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nff4u"]
+size = Vector2(27, 33)
 
 [node name="basement" type="Node2D"]
 y_sort_enabled = true
@@ -261,6 +297,57 @@ position = Vector2(795, 285)
 rotation = 1.5708
 scale = Vector2(1.32, 1)
 shape = SubResource("RectangleShape2D_pat20")
+
+[node name="Object Collision" type="StaticBody2D" parent="."]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(385, 328)
+shape = SubResource("RectangleShape2D_quccm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(374.5, 413)
+shape = SubResource("RectangleShape2D_oolpd")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(400.5, 473.5)
+shape = SubResource("RectangleShape2D_g3key")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(469, 132)
+shape = SubResource("RectangleShape2D_y474p")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(518, 138)
+shape = SubResource("RectangleShape2D_wjyce")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(587, 128)
+shape = SubResource("RectangleShape2D_f1ceu")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(678, 125.5)
+shape = SubResource("RectangleShape2D_f70gd")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(711, 478)
+shape = SubResource("RectangleShape2D_tgpfv")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(709.5, 422)
+shape = SubResource("RectangleShape2D_ssne0")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(719.5, 380)
+shape = SubResource("RectangleShape2D_nxvp8")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(704.5, 260.5)
+shape = SubResource("RectangleShape2D_uf4bx")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(718.5, 212.5)
+shape = SubResource("RectangleShape2D_nff4u")
 
 [connection signal="basement_pos" from="." to="Player" method="_on_basement_basement_pos"]
 [connection signal="pick_up_object" from="Gigi" to="Player" method="_on_gigi_pick_up_object"]

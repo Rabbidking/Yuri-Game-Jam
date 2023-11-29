@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://ccu1tfbkedf7s"]
+[gd_scene load_steps=8 format=3 uid="uid://ccu1tfbkedf7s"]
 
 [ext_resource type="Script" path="res://Script/main_menu.gd" id="1_uagy8"]
 [ext_resource type="Texture2D" uid="uid://doygkmfhyvs20" path="res://Sprites/UI/Start Button.png" id="2_b50sy"]
 [ext_resource type="Texture2D" uid="uid://ct4wq6sswwkbt" path="res://Sprites/UI/Options Button.png" id="3_36fcf"]
 [ext_resource type="Texture2D" uid="uid://p7d8i4to7k16" path="res://Sprites/UI/Load Button.png" id="3_eiryr"]
 [ext_resource type="Texture2D" uid="uid://ckxymlnqj3mxb" path="res://Sprites/UI/Quit Button.png" id="4_4itt2"]
+[ext_resource type="Texture2D" uid="uid://p5wruijdkvlm" path="res://Sprites/UI/Blank_Blue.png" id="6_h0cwn"]
+[ext_resource type="FontFile" uid="uid://v4qs8ufergem" path="res://Kenney Mini Square.ttf" id="7_tlc71"]
 
 [node name="MainMenu" type="Control"]
 process_mode = 3
@@ -53,7 +55,107 @@ size_flags_horizontal = 4
 texture_normal = ExtResource("4_4itt2")
 stretch_mode = 0
 
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -105.0
+offset_top = -240.0
+offset_right = -5.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.2, 1.675)
+
+[node name="Day 1" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_h0cwn")
+
+[node name="Day 1 Label" type="Label" parent="VBoxContainer/Day 1"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 8.5
+offset_right = 70.0
+offset_bottom = 31.5
+theme_override_fonts/font = ExtResource("7_tlc71")
+text = "Day 1"
+
+[node name="Day 2" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_h0cwn")
+
+[node name="Day 2 Label" type="Label" parent="VBoxContainer/Day 2"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 8.5
+offset_right = 74.0
+offset_bottom = 31.5
+theme_override_fonts/font = ExtResource("7_tlc71")
+text = "Day 2"
+
+[node name="Day 3" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_h0cwn")
+
+[node name="Day 3 Label" type="Label" parent="VBoxContainer/Day 3"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 8.5
+offset_right = 74.0
+offset_bottom = 31.5
+theme_override_fonts/font = ExtResource("7_tlc71")
+text = "Day 3"
+
+[node name="Day 4" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_h0cwn")
+
+[node name="Day 4 Label" type="Label" parent="VBoxContainer/Day 4"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 8.5
+offset_right = 74.0
+offset_bottom = 31.5
+theme_override_fonts/font = ExtResource("7_tlc71")
+text = "Day 4"
+
+[node name="Day 5" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_h0cwn")
+
+[node name="Day 5 Label" type="Label" parent="VBoxContainer/Day 5"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 8.5
+offset_right = 74.0
+offset_bottom = 31.5
+theme_override_fonts/font = ExtResource("7_tlc71")
+text = "Day 5"
+
+[node name="Back" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_h0cwn")
+
+[node name="Back" type="Label" parent="VBoxContainer/Back"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 8.5
+offset_right = 74.0
+offset_bottom = 31.5
+theme_override_fonts/font = ExtResource("7_tlc71")
+text = "Back"
+
 [connection signal="pressed" from="GridContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="GridContainer/Level Select" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="GridContainer/Level Select" to="." method="_on_level_select_pressed"]
 [connection signal="pressed" from="GridContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="GridContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="VBoxContainer/Day 1" to="." method="_on_day_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/Day 2" to="." method="_on_day_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Day 3" to="." method="_on_day_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Day 4" to="." method="_on_day_4_pressed"]
+[connection signal="pressed" from="VBoxContainer/Day 5" to="." method="_on_day_5_pressed"]
+[connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]

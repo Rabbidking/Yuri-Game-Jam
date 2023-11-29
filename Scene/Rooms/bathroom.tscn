@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://dc2utvich756a"]
+[gd_scene load_steps=57 format=3 uid="uid://dc2utvich756a"]
 
 [ext_resource type="Script" path="res://Script/Rooms/bathroom.gd" id="1_vfmt4"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_i51h5"]
@@ -130,6 +130,30 @@ sources/9 = SubResource("TileSetAtlasSource_wj0ii")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ey7s7"]
 size = Vector2(446, 117)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tyrjf"]
+size = Vector2(51, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yyw6i"]
+size = Vector2(87, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vxerx"]
+size = Vector2(20, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q3ujc"]
+size = Vector2(17, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w864g"]
+size = Vector2(55, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x8p7y"]
+size = Vector2(22, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qbm7o"]
+size = Vector2(20, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xof8n"]
+size = Vector2(67, 25)
+
 [node name="bathroom" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_vfmt4")
@@ -160,12 +184,9 @@ position = Vector2(546, 422)
 texture = ExtResource("4_wrbmt")
 
 [node name="HallwayB Door" parent="." instance=ExtResource("4_bb88q")]
-position = Vector2(559, 469)
+position = Vector2(559, 472)
 door_name = &"hallwayB_4"
 door_type = &"back"
-
-[node name="Fade_Transition" parent="." instance=ExtResource("3_3i7g3")]
-context = &"bathroom"
 
 [node name="Fuel Cell" parent="." instance=ExtResource("17_jyyl4")]
 position = Vector2(783, 371)
@@ -242,6 +263,7 @@ position = Vector2(554, 237)
 texture = ExtResource("16_5lqf6")
 
 [node name="ObjClosetB" type="Sprite2D" parent="Props"]
+z_index = 1
 position = Vector2(790, 441)
 texture = ExtResource("23_8of7e")
 
@@ -261,6 +283,10 @@ texture = ExtResource("27_ddsev")
 [node name="ObjPlantC" type="Sprite2D" parent="Props"]
 position = Vector2(454, 384)
 texture = ExtResource("26_bayrr")
+
+[node name="Fade_Transition" parent="." instance=ExtResource("3_3i7g3")]
+z_index = 1
+context = &"bathroom"
 
 [node name="Walls" type="StaticBody2D" parent="."]
 collision_layer = 6
@@ -287,9 +313,44 @@ rotation = 1.5708
 scale = Vector2(0.839999, 1)
 shape = SubResource("RectangleShape2D_ey7s7")
 
+[node name="Object Collision" type="StaticBody2D" parent="."]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(790.5, 484)
+shape = SubResource("RectangleShape2D_tyrjf")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(632.5, 485.5)
+shape = SubResource("RectangleShape2D_yyw6i")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(741, 492)
+shape = SubResource("RectangleShape2D_vxerx")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(452.5, 414.5)
+shape = SubResource("RectangleShape2D_q3ujc")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(472.5, 251)
+shape = SubResource("RectangleShape2D_w864g")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(523, 249.5)
+shape = SubResource("RectangleShape2D_x8p7y")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(581, 249)
+shape = SubResource("RectangleShape2D_qbm7o")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(784.5, 254.5)
+shape = SubResource("RectangleShape2D_xof8n")
+
 [connection signal="bathroom_pos" from="." to="Player" method="_on_bathroom_bathroom_pos"]
-[connection signal="player_can_move" from="Fade_Transition" to="Player" method="_on_fade_transition_player_can_move"]
 [connection signal="area_entered" from="Fuel Cell" to="Fuel Cell" method="_on_area_entered"]
 [connection signal="area_exited" from="Fuel Cell" to="Fuel Cell" method="_on_area_exited"]
 [connection signal="pick_up_object" from="Fuel Cell" to="Player" method="_on_fuel_cell_pick_up_object"]
 [connection signal="picked_up" from="Player" to="Fuel Cell" method="_on_player_picked_up"]
+[connection signal="player_can_move" from="Fade_Transition" to="Player" method="_on_fade_transition_player_can_move"]

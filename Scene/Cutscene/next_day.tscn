@@ -156,5 +156,5 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(4.96875, 4.37931)
 theme_override_fonts/font = ExtResource("1_mdsj7")
-text = "Everyman"
+text = "next day"
 metadata/_edit_use_anchors_ = true

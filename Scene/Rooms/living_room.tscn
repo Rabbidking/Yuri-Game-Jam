@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://cxsg6w4sslowi"]
+[gd_scene load_steps=69 format=3 uid="uid://cxsg6w4sslowi"]
 
 [ext_resource type="Script" path="res://Script/Rooms/living_room.gd" id="1_2g2a4"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="1_a7n2q"]
@@ -89,6 +89,41 @@ sources/2 = SubResource("TileSetAtlasSource_jbld7")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8u82"]
 size = Vector2(446, 117)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2g6j"]
+size = Vector2(63, 56)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ea7hm"]
+size = Vector2(174, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5lc3a"]
+size = Vector2(33, 67)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u5qt1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3oupb"]
+size = Vector2(28, 150)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uy33c"]
+size = Vector2(20, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t1uct"]
+size = Vector2(130, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5tppe"]
+size = Vector2(33, 45)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1pwnw"]
+size = Vector2(28, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m1m8h"]
+size = Vector2(10, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qnulg"]
+size = Vector2(59, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yxqfe"]
+size = Vector2(166, 23)
+
 [node name="living room" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_2g2a4")
@@ -135,6 +170,7 @@ door_name = &"entrance_2"
 door_type = &"side_left"
 
 [node name="Fade_Transition" parent="." instance=ExtResource("3_ype08")]
+z_index = 2
 context = &"living_room"
 
 [node name="Prop" type="Node2D" parent="."]
@@ -317,7 +353,7 @@ position = Vector2(657, 152)
 texture = ExtResource("46_jtqpd")
 
 [node name="ObjSofaJ" type="Sprite2D" parent="Prop"]
-position = Vector2(446, 226)
+position = Vector2(446, 213)
 texture = ExtResource("47_de7e3")
 
 [node name="ObjPillowC" type="Sprite2D" parent="Prop"]
@@ -368,6 +404,57 @@ position = Vector2(1001, 285)
 rotation = 1.5708
 scale = Vector2(1.28, 1)
 shape = SubResource("RectangleShape2D_n8u82")
+
+[node name="Object Collision" type="StaticBody2D" parent="."]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(462.5, 168)
+shape = SubResource("RectangleShape2D_h2g6j")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(599, 144.5)
+shape = SubResource("RectangleShape2D_ea7hm")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(925.5, 161.5)
+shape = SubResource("RectangleShape2D_5lc3a")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(929, 332)
+shape = SubResource("RectangleShape2D_u5qt1")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(927, 434)
+shape = SubResource("RectangleShape2D_3oupb")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(641, 499.5)
+shape = SubResource("RectangleShape2D_uy33c")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(465, 494)
+shape = SubResource("RectangleShape2D_t1uct")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(227.5, 486.5)
+shape = SubResource("RectangleShape2D_5tppe")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(445, 206)
+shape = SubResource("RectangleShape2D_1pwnw")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(436, 223)
+shape = SubResource("RectangleShape2D_m1m8h")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(559.5, 203)
+shape = SubResource("RectangleShape2D_qnulg")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(565, 342.5)
+shape = SubResource("RectangleShape2D_yxqfe")
 
 [connection signal="living_pos" from="." to="Player" method="_on_living_room_living_pos"]
 [connection signal="living_pos_1" from="." to="Player" method="_on_living_room_living_pos_1"]

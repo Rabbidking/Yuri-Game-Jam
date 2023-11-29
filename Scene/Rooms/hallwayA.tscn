@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://b0pfj3nycfflx"]
+[gd_scene load_steps=24 format=3 uid="uid://b0pfj3nycfflx"]
 
 [ext_resource type="Script" path="res://Script/Rooms/hallwayA.gd" id="1_h463u"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_yv8w3"]
@@ -47,6 +47,12 @@ sources/1 = SubResource("TileSetAtlasSource_ivtun")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xc5xg"]
 size = Vector2(446, 117)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q0i3g"]
+size = Vector2(60, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k2qwn"]
+size = Vector2(72, 24)
+
 [node name="hallwayA" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_h463u")
@@ -91,12 +97,12 @@ position = Vector2(545, 474)
 texture = ExtResource("15_wldsc")
 
 [node name="Entrance Door" parent="." instance=ExtResource("4_txjha")]
-position = Vector2(547, 531)
+position = Vector2(547, 536)
 door_name = &"entrance"
 door_type = &"back"
 
 [node name="Garage Door" parent="." instance=ExtResource("4_txjha")]
-position = Vector2(646, 284)
+position = Vector2(654, 284)
 door_name = &"garage"
 door_type = &"side_right"
 
@@ -144,7 +150,7 @@ texture = ExtResource("12_gsqsw")
 collision_layer = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
-position = Vector2(582, 80)
+position = Vector2(582, 68)
 scale = Vector2(0.440002, 1)
 shape = SubResource("RectangleShape2D_xc5xg")
 
@@ -170,6 +176,17 @@ position = Vector2(645, 566)
 rotation = 1.5708
 scale = Vector2(0.839999, 1)
 shape = SubResource("RectangleShape2D_xc5xg")
+
+[node name="Object Collision" type="StaticBody2D" parent="."]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(632, 150.5)
+shape = SubResource("RectangleShape2D_q0i3g")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(623, 366)
+shape = SubResource("RectangleShape2D_k2qwn")
 
 [connection signal="hallwayA_pos_1" from="." to="Player" method="_on_hallway_a_hallway_a_pos_1"]
 [connection signal="hallwayA_pos_2" from="." to="Player" method="_on_hallway_a_hallway_a_pos_2"]

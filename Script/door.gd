@@ -7,20 +7,28 @@ extends Area2D
 
 func _ready():
 	if door_type == "front":
+		$Sprite2D.visible = true
+		$Sprite2D.position = Vector2(-7, 3)
+		$Sprite2D.scale = Vector2(-0.73, -1.17)
 		$"Door Sprite".texture = load("res://Sprites/Furniture/OBJ_Door/OBJ_DoorB.png")
 		$"Door Sprite".position = Vector2(-9, -8)
 		$"Door Collision".position = Vector2(-9, -30)
 	elif door_type == "side_right":
+		$Sprite2D.visible = false
 		$"Door Sprite".texture = load("res://Sprites/Furniture/OBJ_Door/OBJ_DoorD.png")
 		$"Door Sprite".position = Vector2(-7, -8)
 		$"Door Collision".position = Vector2(30, 2)
 		$"Door Sprite".flip_h = false
 	elif door_type == "side_left":
+		$Sprite2D.visible = false
 		$"Door Sprite".texture = load("res://Sprites/Furniture/OBJ_Door/OBJ_DoorD.png")
 		$"Door Sprite".position = Vector2(-7, -8)
 		$"Door Collision".position = Vector2(-45, 2)
 		$"Door Sprite".flip_h = true
 	elif door_type == "back":
+		$Sprite2D.visible = true
+		$Sprite2D.position = Vector2(-7, 3)
+		$Sprite2D.scale = Vector2(-0.73, -1.17)
 		$"Door Sprite".texture = load("res://Sprites/Furniture/OBJ_Door/OBJ_DoorC.png")
 		$"Door Sprite".position = Vector2(-9, -8)
 		$"Door Collision".position = Vector2(-9, 40)

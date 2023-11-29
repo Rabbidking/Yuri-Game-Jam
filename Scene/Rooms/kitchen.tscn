@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://xejcukxa4s3w"]
+[gd_scene load_steps=74 format=3 uid="uid://xejcukxa4s3w"]
 
 [ext_resource type="Script" path="res://Script/Rooms/kitchen.gd" id="1_lkrb5"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_vd0cc"]
@@ -98,6 +98,51 @@ sources/3 = SubResource("TileSetAtlasSource_ib35q")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_44u42"]
 size = Vector2(446, 117)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3g1fw"]
+size = Vector2(87, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qeddn"]
+size = Vector2(22, 56)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_215gh"]
+size = Vector2(33, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rlrrj"]
+size = Vector2(20, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xgepe"]
+size = Vector2(77, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rufit"]
+size = Vector2(51, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fmne1"]
+size = Vector2(139, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2qa86"]
+size = Vector2(26, 115)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gt6g3"]
+size = Vector2(20, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6nbxr"]
+size = Vector2(77, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sviis"]
+size = Vector2(20, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sy242"]
+size = Vector2(234, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xlm13"]
+size = Vector2(22, 95)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7uqbm"]
+size = Vector2(68, 57)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dtj2h"]
+size = Vector2(41, 61)
+
 [node name="kitchen" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_lkrb5")
@@ -136,6 +181,7 @@ door_name = &"entrance_1"
 door_type = &"side_right"
 
 [node name="Fade_Transition" parent="." instance=ExtResource("4_rw3ta")]
+z_index = 2
 context = &"kitchen"
 
 [node name="Fuel Cell" parent="." instance=ExtResource("17_2q5hf")]
@@ -221,6 +267,7 @@ texture = ExtResource("19_egl2e")
 
 [node name="ObjWindowF" type="Sprite2D" parent="Prop"]
 modulate = Color(1, 1, 1, 0.196078)
+z_index = 1
 position = Vector2(407, 457)
 texture = ExtResource("20_wg6mx")
 
@@ -357,6 +404,7 @@ position = Vector2(347, 81)
 texture = ExtResource("43_h88w6")
 
 [node name="ObjBookshelfF" type="Sprite2D" parent="Prop"]
+z_index = 1
 position = Vector2(482, 449)
 texture = ExtResource("44_37avd")
 
@@ -404,6 +452,69 @@ position = Vector2(923, 285)
 rotation = 1.5708
 scale = Vector2(1.28, 1)
 shape = SubResource("RectangleShape2D_44u42")
+
+[node name="Object Collision" type="StaticBody2D" parent="."]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(819.5, 122.5)
+shape = SubResource("RectangleShape2D_3g1fw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(854, 202)
+shape = SubResource("RectangleShape2D_qeddn")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(846.5, 406)
+shape = SubResource("RectangleShape2D_215gh")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(850, 493)
+shape = SubResource("RectangleShape2D_rlrrj")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(597, 488)
+shape = SubResource("RectangleShape2D_xgepe")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(665.5, 492)
+shape = SubResource("RectangleShape2D_rufit")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(447.5, 493)
+shape = SubResource("RectangleShape2D_fmne1")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(300, 398.5)
+shape = SubResource("RectangleShape2D_2qa86")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(304, 498.5)
+shape = SubResource("RectangleShape2D_gt6g3")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(327.5, 139)
+shape = SubResource("RectangleShape2D_6nbxr")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(299, 168)
+shape = SubResource("RectangleShape2D_sviis")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(585, 123)
+shape = SubResource("RectangleShape2D_sy242")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(479, 153.5)
+shape = SubResource("RectangleShape2D_xlm13")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(610, 344.5)
+shape = SubResource("RectangleShape2D_7uqbm")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(402.5, 194.5)
+shape = SubResource("RectangleShape2D_dtj2h")
 
 [connection signal="kitchen_pos" from="." to="Player" method="_on_kitchen_kitchen_pos"]
 [connection signal="picked_up" from="Player" to="Fuel Cell" method="_on_player_picked_up"]

@@ -1,6 +1,10 @@
 extends Node
 
 var Day = 1	#day adjustments
+var Day_2_unlock = false
+var Day_3_unlock = false
+var Day_4_unlock = false
+var Day_5_unlock = false
 var key_taken = false
 var have_gigi = false
 var password_known = false

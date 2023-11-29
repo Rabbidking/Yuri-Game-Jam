@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://c52j41y7ex3nl"]
+[gd_scene load_steps=55 format=3 uid="uid://c52j41y7ex3nl"]
 
 [ext_resource type="Script" path="res://Script/Rooms/garage.gd" id="1_6bnx0"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_wm4sm"]
@@ -95,6 +95,33 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ykeua"]
 size = Vector2(446, 117)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o7qmi"]
+size = Vector2(30, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gbw44"]
+size = Vector2(92, 71)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wrl47"]
+size = Vector2(72, 86)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_81juc"]
+size = Vector2(48, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ua1q"]
+size = Vector2(189, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gi4vx"]
+size = Vector2(29, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m38xe"]
+size = Vector2(17, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b5qju"]
+size = Vector2(41, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t2gno"]
+size = Vector2(113, 35)
 
 [node name="garage" type="Node2D"]
 y_sort_enabled = true
@@ -266,7 +293,7 @@ position = Vector2(323, 109)
 texture = ExtResource("33_ryji1")
 
 [node name="HallwayA Door" parent="." instance=ExtResource("4_5bamk")]
-position = Vector2(152, 271)
+position = Vector2(145, 271)
 door_name = &"hallwayA_2"
 door_type = &"side_left"
 
@@ -331,6 +358,45 @@ position = Vector2(171, 99)
 rotation = 1.5708
 scale = Vector2(0.500867, 1.12)
 shape = SubResource("RectangleShape2D_ykeua")
+
+[node name="Object Collision" type="StaticBody2D" parent="."]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(266, 196)
+shape = SubResource("RectangleShape2D_o7qmi")
+
+[node name="teleporter" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(420, 179.5)
+shape = SubResource("RectangleShape2D_gbw44")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(564, 161)
+shape = SubResource("RectangleShape2D_wrl47")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(625, 140)
+shape = SubResource("RectangleShape2D_81juc")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(756.5, 126)
+shape = SubResource("RectangleShape2D_4ua1q")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(841.5, 287)
+shape = SubResource("RectangleShape2D_gi4vx")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(818.5, 314)
+shape = SubResource("RectangleShape2D_m38xe")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(272.5, 506)
+shape = SubResource("RectangleShape2D_b5qju")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(615.5, 493.5)
+shape = SubResource("RectangleShape2D_t2gno")
 
 [connection signal="garage_pos" from="." to="Player" method="_on_garage_garage_pos"]
 [connection signal="picked_up" from="Player" to="Car" method="_on_player_picked_up"]

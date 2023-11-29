@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dn3o4ik2vi8l8"]
+[gd_scene load_steps=40 format=3 uid="uid://dn3o4ik2vi8l8"]
 
 [ext_resource type="Script" path="res://Script/Rooms/entrance.gd" id="1_4k0mf"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_e8lwr"]
@@ -66,6 +66,24 @@ sources/2 = SubResource("TileSetAtlasSource_incgu")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qhq81"]
 size = Vector2(446, 117)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5rhgp"]
+size = Vector2(53, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_leoso"]
+size = Vector2(20, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_54mdd"]
+size = Vector2(25, 61)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xe0gc"]
+size = Vector2(21, 102)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_22agk"]
+size = Vector2(76, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_meq1v"]
+size = Vector2(20, 14)
+
 [node name="entrance" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_4k0mf")
@@ -110,12 +128,12 @@ door_name = &"hallwayA_1"
 door_type = &"front"
 
 [node name="Kitchen Door" parent="." instance=ExtResource("5_331hk")]
-position = Vector2(434, 350)
+position = Vector2(432, 350)
 door_name = &"kitchen"
 door_type = &"side_left"
 
 [node name="Living Room Door" parent="." instance=ExtResource("5_331hk")]
-position = Vector2(733, 350)
+position = Vector2(735, 350)
 door_name = &"living room"
 door_type = &"side_right"
 
@@ -245,6 +263,33 @@ shape = SubResource("RectangleShape2D_qhq81")
 position = Vector2(730, 68)
 scale = Vector2(0.48, 2.52)
 shape = SubResource("RectangleShape2D_qhq81")
+
+[node name="Object Collision" type="StaticBody2D" parent="."]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(454.5, 228.5)
+shape = SubResource("RectangleShape2D_5rhgp")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(511, 240.5)
+shape = SubResource("RectangleShape2D_leoso")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(735.5, 262.5)
+shape = SubResource("RectangleShape2D_54mdd")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(420.5, 443)
+shape = SubResource("RectangleShape2D_xe0gc")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(698, 478.5)
+shape = SubResource("RectangleShape2D_22agk")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(624, 479)
+shape = SubResource("RectangleShape2D_meq1v")
 
 [connection signal="entrance_pos_1" from="." to="Player" method="_on_entrance_entrance_pos_1"]
 [connection signal="entrance_pos_2" from="." to="Player" method="_on_entrance_entrance_pos_2"]

@@ -47,7 +47,7 @@ func _ready():
 		$CollisionShape2D.scale = Vector2(1.5, 1.45)
 		$CollisionShape2D.position = Vector2(0, 14)
 		if State.ordered_return == true:
-			$Texture.visible = false
+			#$Texture.visible = false
 			$CollisionShape2D.disabled = true
 		if State.Day != 3:
 			$CollisionShape2D.disabled = true
@@ -260,7 +260,7 @@ func _on_player_picked_up():
 	elif item == "box" and opened == false:
 		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_CardboardBox/OBJ_CardboardBoxB_02.png"))
 		opened = true
-		State.ordered_return = false
+		#State.ordered_return = false
 	elif item == "box" and opened == true:
 		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_3.dialogue"), "entrance_night_end")
 		State.have_gigi = true
@@ -340,18 +340,26 @@ func load_next_scene():
 	if State.Day == 1 and State.day_1_intro == true:
 		get_tree().change_scene_to_file("res://Scene/Rooms/bedroom.tscn")
 	elif State.Day == 2 and State.day_2_intro == false:
+		State.Day_2_unlock = true
+		save_write()
 		get_tree().change_scene_to_file("res://Scene/Rooms/kitchen.tscn")
 	elif State.Day == 2 and State.day_2_intro == true:
 		get_tree().change_scene_to_file("res://Scene/Rooms/bedroom.tscn")
 	elif State.Day == 3 and State.day_3_intro == false:
+		State.Day_3_unlock = true
+		save_write()
 		get_tree().change_scene_to_file("res://Scene/Rooms/kitchen.tscn")
 	elif State.Day == 3 and State.day_3_intro == true:
 		get_tree().change_scene_to_file("res://Scene/Rooms/bedroom.tscn")
 	elif State.Day == 4 and State.day_4_intro == false:
+		State.Day_4_unlock = true
+		save_write()
 		get_tree().change_scene_to_file("res://Scene/Rooms/living_room.tscn")
 	elif State.Day == 4 and State.day_4_intro == true:
 		get_tree().change_scene_to_file("res://Scene/Rooms/bedroom.tscn")
 	elif State.Day == 5 and State.day_5_intro == false:
+		State.Day_5_unlock = true
+		save_write()
 		get_tree().change_scene_to_file("res://Scene/Rooms/living_room.tscn")
 	elif State.Day == 5 and State.day_5_intro == true:
 		get_tree().change_scene_to_file("res://Scene/Rooms/bedroom.tscn")
@@ -371,3 +379,21 @@ func load_next_scene_2():
 func load_next_scene_3():
 	if State.Day == 5 and State.slot1_empty == false and State.slot2_empty == false and State.slot3_empty == false:
 		get_tree().change_scene_to_file("res://Scene/Rooms/garage.tscn")
+
+
+func save():
+	var save_dict = {
+		"day_2_unlock": State.Day_2_unlock,
+		"day_3_unlock": State.Day_3_unlock,
+		"day_4_unlock": State.Day_4_unlock,
+		"day_5_unlock": State.Day_5_unlock
+	}
+	
+	return save_dict
+	
+func save_write():
+	var save_game = FileAccess.open("user://yurisavegame.save", FileAccess.WRITE)
+	var json_string = JSON.stringify(save())
+	save_game.store_line(json_string)
+	print(save_game)
+	print("saving")

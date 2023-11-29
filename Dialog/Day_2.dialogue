@@ -14,6 +14,7 @@ do load_next_scene()
 ~ night
 Demi wakes up again alone in bed.
 Demi: [#demi=Default](Shoot, is she sleepwalking again?)
+Demi: [#demi=Default](I heard someone get in the car, it must be Gigi.)
 => END
 
 ~ gigi_in_car

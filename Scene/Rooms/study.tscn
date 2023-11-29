@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dc6fk5kkjoeet"]
+[gd_scene load_steps=43 format=3 uid="uid://dc6fk5kkjoeet"]
 
 [ext_resource type="Script" path="res://Script/Rooms/study.gd" id="1_3gauq"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_ecvp5"]
@@ -56,6 +56,39 @@ sources/1 = SubResource("TileSetAtlasSource_b605f")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_23km7"]
 size = Vector2(446, 117)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_42xp2"]
+size = Vector2(128, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5vtud"]
+size = Vector2(112, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mym1h"]
+size = Vector2(31, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pbmwc"]
+size = Vector2(60, 37)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivtu2"]
+size = Vector2(19, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8es8t"]
+size = Vector2(20, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s83ib"]
+size = Vector2(40, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8qepq"]
+size = Vector2(52, 45)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_og7jo"]
+size = Vector2(37, 92)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6jb8j"]
+size = Vector2(12, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yyjup"]
+size = Vector2(29, 18)
 
 [node name="Study" type="Node2D"]
 y_sort_enabled = true
@@ -190,7 +223,7 @@ position = Vector2(557, 305)
 texture = ExtResource("17_00o17")
 
 [node name="HallwayB Door" parent="." instance=ExtResource("3_qbrfg")]
-position = Vector2(485, 427)
+position = Vector2(485, 440)
 door_name = &"hallwayB_3"
 door_type = &"back"
 
@@ -198,8 +231,55 @@ door_type = &"back"
 context = &"study"
 
 [node name="Key" parent="." instance=ExtResource("13_edtby")]
-position = Vector2(546, 256)
+position = Vector2(619, 173)
 item = &"key"
+
+[node name="Object Collision" type="StaticBody2D" parent="."]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(509, 167)
+shape = SubResource("RectangleShape2D_42xp2")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(666, 172)
+shape = SubResource("RectangleShape2D_5vtud")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(669.5, 202)
+shape = SubResource("RectangleShape2D_mym1h")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(662, 344.5)
+shape = SubResource("RectangleShape2D_pbmwc")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(557.5, 323)
+shape = SubResource("RectangleShape2D_ivtu2")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(711, 399)
+shape = SubResource("RectangleShape2D_8es8t")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(697, 450)
+shape = SubResource("RectangleShape2D_s83ib")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(569, 442.5)
+shape = SubResource("RectangleShape2D_8qepq")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(463.5, 247)
+shape = SubResource("RectangleShape2D_og7jo")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(546, 364)
+shape = SubResource("RectangleShape2D_6jb8j")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(554.5, 392)
+shape = SubResource("RectangleShape2D_yyjup")
 
 [connection signal="study_pos" from="." to="Player" method="_on_study_study_pos"]
 [connection signal="picked_up" from="Player" to="Key" method="_on_player_picked_up"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dc6fk5kkjoeet"]
+[gd_scene load_steps=32 format=3 uid="uid://dc6fk5kkjoeet"]
 
 [ext_resource type="Script" path="res://Script/Rooms/study.gd" id="1_3gauq"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_ecvp5"]
@@ -54,6 +54,9 @@ texture = ExtResource("6_pwxld")
 sources/0 = SubResource("TileSetAtlasSource_mt726")
 sources/1 = SubResource("TileSetAtlasSource_b605f")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_23km7"]
+size = Vector2(446, 117)
+
 [node name="Study" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_3gauq")
@@ -81,6 +84,28 @@ layer_0/tile_data = PackedInt32Array(655387, 0, 0, 720923, 0, 1, 655388, 65536, 
 z_index = -1
 position = Vector2(560, 252)
 texture = ExtResource("25_nt4a2")
+
+[node name="Walls" type="StaticBody2D" parent="."]
+disable_mode = 1
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
+position = Vector2(576, 100.5)
+shape = SubResource("RectangleShape2D_23km7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
+position = Vector2(576, 538)
+shape = SubResource("RectangleShape2D_23km7")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls"]
+position = Vector2(373, 285)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_23km7")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls"]
+position = Vector2(795, 285)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_23km7")
 
 [node name="Player" parent="." instance=ExtResource("2_q2sx0")]
 position = Vector2(481, 355)

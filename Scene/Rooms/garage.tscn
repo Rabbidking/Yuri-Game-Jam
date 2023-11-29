@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://c52j41y7ex3nl"]
+[gd_scene load_steps=46 format=3 uid="uid://c52j41y7ex3nl"]
 
 [ext_resource type="Script" path="res://Script/Rooms/garage.gd" id="1_6bnx0"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_wm4sm"]
@@ -92,6 +92,9 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ykeua"]
+size = Vector2(446, 117)
 
 [node name="garage" type="Node2D"]
 y_sort_enabled = true
@@ -291,6 +294,43 @@ item = &"teleporter_slot2"
 [node name="Teleporter Slot3" parent="." instance=ExtResource("17_4lf0m")]
 position = Vector2(498, 459)
 item = &"teleporter_slot3"
+
+[node name="Walls" type="StaticBody2D" parent="."]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
+position = Vector2(549, 53)
+scale = Vector2(2.04, 1)
+shape = SubResource("RectangleShape2D_ykeua")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
+position = Vector2(578, 582)
+scale = Vector2(1.8, 1)
+shape = SubResource("RectangleShape2D_ykeua")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls"]
+position = Vector2(61, 287)
+rotation = 1.5708
+scale = Vector2(1.08, 0.88)
+shape = SubResource("RectangleShape2D_ykeua")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls"]
+position = Vector2(936, 285)
+rotation = 1.5708
+scale = Vector2(1.28, 1)
+shape = SubResource("RectangleShape2D_ykeua")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Walls"]
+position = Vector2(177, 429)
+rotation = 1.5708
+scale = Vector2(0.500867, 1.12)
+shape = SubResource("RectangleShape2D_ykeua")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Walls"]
+position = Vector2(171, 99)
+rotation = 1.5708
+scale = Vector2(0.500867, 1.12)
+shape = SubResource("RectangleShape2D_ykeua")
 
 [connection signal="garage_pos" from="." to="Player" method="_on_garage_garage_pos"]
 [connection signal="picked_up" from="Player" to="Car" method="_on_player_picked_up"]

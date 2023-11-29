@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://dc2utvich756a"]
+[gd_scene load_steps=49 format=3 uid="uid://dc2utvich756a"]
 
 [ext_resource type="Script" path="res://Script/Rooms/bathroom.gd" id="1_vfmt4"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_i51h5"]
@@ -126,6 +126,9 @@ sources/6 = SubResource("TileSetAtlasSource_goc5r")
 sources/7 = SubResource("TileSetAtlasSource_maojx")
 sources/8 = SubResource("TileSetAtlasSource_yk8bj")
 sources/9 = SubResource("TileSetAtlasSource_wj0ii")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ey7s7"]
+size = Vector2(446, 117)
 
 [node name="bathroom" type="Node2D"]
 y_sort_enabled = true
@@ -258,6 +261,31 @@ texture = ExtResource("27_ddsev")
 [node name="ObjPlantC" type="Sprite2D" parent="Props"]
 position = Vector2(454, 384)
 texture = ExtResource("26_bayrr")
+
+[node name="Walls" type="StaticBody2D" parent="."]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
+position = Vector2(624, 229)
+scale = Vector2(1.44, 0.2)
+shape = SubResource("RectangleShape2D_ey7s7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
+position = Vector2(639, 566)
+scale = Vector2(1.8, 1)
+shape = SubResource("RectangleShape2D_ey7s7")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls"]
+position = Vector2(381, 342)
+rotation = 1.5708
+scale = Vector2(1.08, 0.88)
+shape = SubResource("RectangleShape2D_ey7s7")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls"]
+position = Vector2(891, 326)
+rotation = 1.5708
+scale = Vector2(0.839999, 1)
+shape = SubResource("RectangleShape2D_ey7s7")
 
 [connection signal="bathroom_pos" from="." to="Player" method="_on_bathroom_bathroom_pos"]
 [connection signal="player_can_move" from="Fade_Transition" to="Player" method="_on_fade_transition_player_can_move"]

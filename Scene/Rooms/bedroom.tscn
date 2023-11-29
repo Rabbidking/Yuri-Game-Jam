@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://bgh547qu4toco"]
+[gd_scene load_steps=50 format=3 uid="uid://bgh547qu4toco"]
 
 [ext_resource type="Script" path="res://Script/Rooms/bedroom.gd" id="1_v28qo"]
 [ext_resource type="PackedScene" uid="uid://be0wmp3b3b4qv" path="res://Scene/player.tscn" id="2_5gxhm"]
@@ -71,6 +71,9 @@ texture = ExtResource("5_ud4w2")
 [sub_resource type="TileSet" id="TileSet_p8ec2"]
 sources/0 = SubResource("TileSetAtlasSource_lhowl")
 sources/1 = SubResource("TileSetAtlasSource_kilu8")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57aik"]
+size = Vector2(446, 117)
 
 [node name="bedroom" type="Node2D"]
 y_sort_enabled = true
@@ -284,6 +287,31 @@ texture = ExtResource("44_ltiou")
 [node name="ObjSodaCanB" type="Sprite2D" parent="."]
 position = Vector2(710, 325)
 texture = ExtResource("45_fkvk0")
+
+[node name="Walls" type="StaticBody2D" parent="."]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
+position = Vector2(562, 65)
+scale = Vector2(1.44, 1)
+shape = SubResource("RectangleShape2D_57aik")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
+position = Vector2(578, 551)
+scale = Vector2(1.8, 1)
+shape = SubResource("RectangleShape2D_57aik")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls"]
+position = Vector2(268, 287)
+rotation = 1.5708
+scale = Vector2(1.08, 0.88)
+shape = SubResource("RectangleShape2D_57aik")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls"]
+position = Vector2(889, 285)
+rotation = 1.5708
+scale = Vector2(1.12, 1)
+shape = SubResource("RectangleShape2D_57aik")
 
 [connection signal="bedroom_pos" from="." to="Player" method="_on_bedroom_bedroom_pos"]
 [connection signal="player_can_move" from="Fade_Transition" to="Player" method="_on_fade_transition_player_can_move"]

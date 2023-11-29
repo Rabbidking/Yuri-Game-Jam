@@ -1,10 +1,12 @@
+Node
+CollisionShape2D
+StaticBody2D
 Node2D
 TileMap
 AudioStreamPlayer
 AudioStreamPlayer2D
 TextureRect
 Area2D
-CollisionShape2D
 CanvasLayer
 TextureButton
 Label

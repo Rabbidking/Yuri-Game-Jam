@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://2sgrr1gkcehs"]
+[gd_scene load_steps=37 format=3 uid="uid://2sgrr1gkcehs"]
 
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="1_6gcqm"]
 [ext_resource type="Script" path="res://Script/Rooms/basement.gd" id="1_kto8c"]
@@ -58,6 +58,9 @@ texture = ExtResource("4_wqcj8")
 [sub_resource type="TileSet" id="TileSet_vajm3"]
 sources/0 = SubResource("TileSetAtlasSource_m0vgj")
 sources/1 = SubResource("TileSetAtlasSource_xhfp5")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pat20"]
+size = Vector2(446, 117)
 
 [node name="basement" type="Node2D"]
 y_sort_enabled = true
@@ -233,6 +236,31 @@ texture = ExtResource("11_tva2y")
 stream = ExtResource("30_epv88")
 volume_db = -5.0
 autoplay = true
+
+[node name="Walls" type="StaticBody2D" parent="."]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
+position = Vector2(563, 58)
+scale = Vector2(1.44, 1)
+shape = SubResource("RectangleShape2D_pat20")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
+position = Vector2(560, 551)
+scale = Vector2(1.8, 1)
+shape = SubResource("RectangleShape2D_pat20")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls"]
+position = Vector2(304, 287)
+rotation = 1.5708
+scale = Vector2(1.08, 0.88)
+shape = SubResource("RectangleShape2D_pat20")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls"]
+position = Vector2(795, 285)
+rotation = 1.5708
+scale = Vector2(1.32, 1)
+shape = SubResource("RectangleShape2D_pat20")
 
 [connection signal="basement_pos" from="." to="Player" method="_on_basement_basement_pos"]
 [connection signal="pick_up_object" from="Gigi" to="Player" method="_on_gigi_pick_up_object"]

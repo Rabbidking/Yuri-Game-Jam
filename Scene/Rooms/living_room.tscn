@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://cxsg6w4sslowi"]
+[gd_scene load_steps=57 format=3 uid="uid://cxsg6w4sslowi"]
 
 [ext_resource type="Script" path="res://Script/Rooms/living_room.gd" id="1_2g2a4"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="1_a7n2q"]
@@ -85,6 +85,9 @@ texture = ExtResource("5_lpe4i")
 sources/0 = SubResource("TileSetAtlasSource_xffe2")
 sources/1 = SubResource("TileSetAtlasSource_veahj")
 sources/2 = SubResource("TileSetAtlasSource_jbld7")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n8u82"]
+size = Vector2(446, 117)
 
 [node name="living room" type="Node2D"]
 y_sort_enabled = true
@@ -340,6 +343,31 @@ item = &"note"
 position = Vector2(666, 233)
 item = &"gigi"
 location = &"livingroom"
+
+[node name="Walls" type="StaticBody2D" parent="."]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
+position = Vector2(573, 69)
+scale = Vector2(1.68, 1)
+shape = SubResource("RectangleShape2D_n8u82")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
+position = Vector2(578, 568)
+scale = Vector2(1.8, 1)
+shape = SubResource("RectangleShape2D_n8u82")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls"]
+position = Vector2(156, 287)
+rotation = 1.5708
+scale = Vector2(1.08, 0.88)
+shape = SubResource("RectangleShape2D_n8u82")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls"]
+position = Vector2(1001, 285)
+rotation = 1.5708
+scale = Vector2(1.28, 1)
+shape = SubResource("RectangleShape2D_n8u82")
 
 [connection signal="living_pos" from="." to="Player" method="_on_living_room_living_pos"]
 [connection signal="living_pos_1" from="." to="Player" method="_on_living_room_living_pos_1"]

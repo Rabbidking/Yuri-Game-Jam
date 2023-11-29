@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b0pfj3nycfflx"]
+[gd_scene load_steps=22 format=3 uid="uid://b0pfj3nycfflx"]
 
 [ext_resource type="Script" path="res://Script/Rooms/hallwayA.gd" id="1_h463u"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_yv8w3"]
@@ -43,6 +43,9 @@ texture = ExtResource("5_omwkp")
 [sub_resource type="TileSet" id="TileSet_8j3ww"]
 sources/0 = SubResource("TileSetAtlasSource_pxhay")
 sources/1 = SubResource("TileSetAtlasSource_ivtun")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xc5xg"]
+size = Vector2(446, 117)
 
 [node name="hallwayA" type="Node2D"]
 y_sort_enabled = true
@@ -136,6 +139,37 @@ texture = ExtResource("11_xj4mr")
 [node name="ObjStorageContainerA" type="Sprite2D" parent="Props"]
 position = Vector2(606, 350)
 texture = ExtResource("12_gsqsw")
+
+[node name="Walls" type="StaticBody2D" parent="."]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
+position = Vector2(582, 80)
+scale = Vector2(0.440002, 1)
+shape = SubResource("RectangleShape2D_xc5xg")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
+position = Vector2(543, 625)
+scale = Vector2(1.8, 1)
+shape = SubResource("RectangleShape2D_xc5xg")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls"]
+position = Vector2(444, 291)
+rotation = 1.5708
+scale = Vector2(1.36, 0.88)
+shape = SubResource("RectangleShape2D_xc5xg")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls"]
+position = Vector2(728, 211)
+rotation = 1.5708
+scale = Vector2(0.839999, 1)
+shape = SubResource("RectangleShape2D_xc5xg")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Walls"]
+position = Vector2(645, 566)
+rotation = 1.5708
+scale = Vector2(0.839999, 1)
+shape = SubResource("RectangleShape2D_xc5xg")
 
 [connection signal="hallwayA_pos_1" from="." to="Player" method="_on_hallway_a_hallway_a_pos_1"]
 [connection signal="hallwayA_pos_2" from="." to="Player" method="_on_hallway_a_hallway_a_pos_2"]

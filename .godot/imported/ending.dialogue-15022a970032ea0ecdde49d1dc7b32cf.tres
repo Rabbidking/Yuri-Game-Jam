@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_n036d"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_at0wu"]
 
 [resource]
-script = ExtResource("1_n036d")
+script = ExtResource("1_at0wu")
 using_states = PackedStringArray()
 titles = {
 "ending": "3"
@@ -294,6 +294,18 @@ lines = {
 },
 "35": {
 "id": "35",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "load_next_scene_2",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "36",
+"type": "mutation"
+},
+"36": {
+"id": "36",
 "is_snippet": false,
 "next_id": "end",
 "type": "goto"

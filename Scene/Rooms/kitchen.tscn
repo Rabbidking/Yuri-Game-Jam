@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://xejcukxa4s3w"]
+[gd_scene load_steps=59 format=3 uid="uid://xejcukxa4s3w"]
 
 [ext_resource type="Script" path="res://Script/Rooms/kitchen.gd" id="1_lkrb5"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_vd0cc"]
@@ -94,6 +94,9 @@ sources/0 = SubResource("TileSetAtlasSource_5pahu")
 sources/1 = SubResource("TileSetAtlasSource_4g8hs")
 sources/2 = SubResource("TileSetAtlasSource_qscdx")
 sources/3 = SubResource("TileSetAtlasSource_ib35q")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_44u42"]
+size = Vector2(446, 117)
 
 [node name="kitchen" type="Node2D"]
 y_sort_enabled = true
@@ -376,6 +379,31 @@ texture = ExtResource("48_p3heo")
 [node name="ObjSodaCanD" type="Sprite2D" parent="Prop"]
 position = Vector2(624, 464)
 texture = ExtResource("48_88x52")
+
+[node name="Walls" type="StaticBody2D" parent="."]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
+position = Vector2(569, 69)
+scale = Vector2(1.32, 1)
+shape = SubResource("RectangleShape2D_44u42")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
+position = Vector2(578, 565)
+scale = Vector2(1.8, 1)
+shape = SubResource("RectangleShape2D_44u42")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls"]
+position = Vector2(222, 287)
+rotation = 1.5708
+scale = Vector2(1.08, 0.88)
+shape = SubResource("RectangleShape2D_44u42")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls"]
+position = Vector2(923, 285)
+rotation = 1.5708
+scale = Vector2(1.28, 1)
+shape = SubResource("RectangleShape2D_44u42")
 
 [connection signal="kitchen_pos" from="." to="Player" method="_on_kitchen_kitchen_pos"]
 [connection signal="picked_up" from="Player" to="Fuel Cell" method="_on_player_picked_up"]

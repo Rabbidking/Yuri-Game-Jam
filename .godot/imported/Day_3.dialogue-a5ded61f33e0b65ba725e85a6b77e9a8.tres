@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_mli4r"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_3lvl0"]
 
 [resource]
-script = ExtResource("1_mli4r")
+script = ExtResource("1_3lvl0")
 using_states = PackedStringArray()
 titles = {
 "bedroom_computer": "35",
@@ -52,9 +52,9 @@ lines = {
 "id": "12",
 "next_id": "13",
 "tags": PackedStringArray(),
-"text": ". . .",
+"text": "Demi explains the recent events to Gigi.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": ". . .",
+"translation_key": "Demi explains the recent events to Gigi.",
 "type": "dialogue"
 },
 "13": {
@@ -116,12 +116,24 @@ lines = {
 "character": "Demi",
 "character_replacements": Array[Dictionary]([]),
 "id": "18",
-"next_id": "20",
+"next_id": "19",
 "tags": PackedStringArray("demi=Annoyed"),
 "text": "Damn, he’s not picking up. Guess we should try tomorrow.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Damn, he’s not picking up. Guess we should try tomorrow.",
 "type": "dialogue"
+},
+"19": {
+"id": "19",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "load_next_scene",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "20",
+"type": "mutation"
 },
 "20": {
 "id": "20",

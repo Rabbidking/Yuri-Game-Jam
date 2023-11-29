@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_phjpb"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_fx5on"]
 
 [resource]
-script = ExtResource("1_phjpb")
+script = ExtResource("1_fx5on")
 using_states = PackedStringArray()
 titles = {
 "afternoon": "3",
-"bedroom": "35",
-"living_room": "21",
-"night_start": "14",
-"pick_up_gigi": "29"
+"bedroom": "36",
+"living_room": "22",
+"night_start": "15",
+"pick_up_gigi": "30"
 }
 character_names = PackedStringArray("Demi", "Gigi")
 first_title = "3"
@@ -21,83 +21,84 @@ lines = {
 "text": "afternoon",
 "type": "title"
 },
-"11": {
-"id": "11",
+"10": {
+"id": "10",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "load_next_scene",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "12",
+"type": "mutation"
+},
+"12": {
+"id": "12",
 "is_snippet": false,
 "next_id": "end",
 "type": "goto"
 },
-"13": {
-"id": "13",
-"next_id": "14",
+"14": {
+"id": "14",
+"next_id": "15",
 "text": "night_start",
 "type": "title"
 },
-"14": {
+"15": {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
-"id": "14",
-"next_id": "15",
+"id": "15",
+"next_id": "16",
 "tags": PackedStringArray(),
 "text": "Demi wakes up alone in bed.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Demi wakes up alone in bed.",
 "type": "dialogue"
 },
-"15": {
+"16": {
 "character": "Demi",
 "character_replacements": Array[Dictionary]([]),
-"id": "15",
-"next_id": "16",
+"id": "16",
+"next_id": "17",
 "tags": PackedStringArray("demi=Default"),
 "text": "Babe, are you here? Did she get up for a glass of water?",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Babe, are you here? Did she get up for a glass of water?",
 "type": "dialogue"
 },
-"16": {
+"17": {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
-"id": "16",
-"next_id": "18",
+"id": "17",
+"next_id": "19",
 "tags": PackedStringArray(),
 "text": "Demi waits five minutes before getting up to look for Gigi.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Demi waits five minutes before getting up to look for Gigi.",
 "type": "dialogue"
 },
-"18": {
-"id": "18",
+"19": {
+"id": "19",
 "is_snippet": false,
 "next_id": "end",
 "type": "goto"
 },
-"20": {
-"id": "20",
-"next_id": "21",
-"text": "living_room",
-"type": "title"
-},
 "21": {
-"character": "Demi",
-"character_replacements": Array[Dictionary]([]),
 "id": "21",
 "next_id": "22",
-"tags": PackedStringArray("demi=Shocked"),
-"text": "Holy-!",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Holy-!",
-"type": "dialogue"
+"text": "living_room",
+"type": "title"
 },
 "22": {
 "character": "Demi",
 "character_replacements": Array[Dictionary]([]),
 "id": "22",
 "next_id": "23",
-"tags": PackedStringArray("demi=Default"),
-"text": "Damn girl you scared me, what are you doing standing like a creepo in the dark?",
+"tags": PackedStringArray("demi=Shocked"),
+"text": "Holy-!",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Damn girl you scared me, what are you doing standing like a creepo in the dark?",
+"translation_key": "Holy-!",
 "type": "dialogue"
 },
 "23": {
@@ -105,45 +106,45 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "23",
 "next_id": "24",
+"tags": PackedStringArray("demi=Default"),
+"text": "Damn girl you scared me, what are you doing standing like a creepo in the dark?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Damn girl you scared me, what are you doing standing like a creepo in the dark?",
+"type": "dialogue"
+},
+"24": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "24",
+"next_id": "25",
 "tags": PackedStringArray("demi=Annoyed"),
 "text": "Um, Gigi?",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Um, Gigi?",
 "type": "dialogue"
 },
-"24": {
+"25": {
 "character": "Gigi",
 "character_replacements": Array[Dictionary]([]),
-"id": "24",
-"next_id": "26",
+"id": "25",
+"next_id": "27",
 "tags": PackedStringArray("gigi=Sleeping"),
 "text": "ZZZZZZ...",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "ZZZZZZ...",
 "type": "dialogue"
 },
-"26": {
-"id": "26",
+"27": {
+"id": "27",
 "is_snippet": false,
 "next_id": "end",
 "type": "goto"
 },
-"28": {
-"id": "28",
-"next_id": "29",
-"text": "pick_up_gigi",
-"type": "title"
-},
 "29": {
-"character": "Demi",
-"character_replacements": Array[Dictionary]([]),
 "id": "29",
 "next_id": "30",
-"tags": PackedStringArray("demi=Annoyed"),
-"text": "(Is she still sleeping? Ok, that’s freaking weird…)",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "(Is she still sleeping? Ok, that’s freaking weird…)",
-"type": "dialogue"
+"text": "pick_up_gigi",
+"type": "title"
 },
 "3": {
 "character": "Demi",
@@ -160,45 +161,45 @@ lines = {
 "character": "Demi",
 "character_replacements": Array[Dictionary]([]),
 "id": "30",
-"next_id": "32",
+"next_id": "31",
+"tags": PackedStringArray("demi=Annoyed"),
+"text": "(Is she still sleeping? Ok, that’s freaking weird…)",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "(Is she still sleeping? Ok, that’s freaking weird…)",
+"type": "dialogue"
+},
+"31": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "31",
+"next_id": "33",
 "tags": PackedStringArray("demi=Default"),
 "text": "(Well, better get her back in bed I guess.)",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "(Well, better get her back in bed I guess.)",
 "type": "dialogue"
 },
-"32": {
-"id": "32",
+"33": {
+"id": "33",
 "is_snippet": false,
 "next_id": "end",
 "type": "goto"
 },
-"34": {
-"id": "34",
-"next_id": "35",
+"35": {
+"id": "35",
+"next_id": "36",
 "text": "bedroom",
 "type": "title"
 },
-"35": {
+"36": {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
-"id": "35",
-"next_id": "36",
+"id": "36",
+"next_id": "37",
 "tags": PackedStringArray(),
 "text": "Demi places Gigi back in bed and lies down next to her.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Demi places Gigi back in bed and lies down next to her.",
-"type": "dialogue"
-},
-"36": {
-"character": "Demi",
-"character_replacements": Array[Dictionary]([]),
-"id": "36",
-"next_id": "37",
-"tags": PackedStringArray("demi=Annoyed"),
-"text": "(Should I tell her about this? I had never seen Gigi do that before.)",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "(Should I tell her about this? I had never seen Gigi do that before.)",
 "type": "dialogue"
 },
 "37": {
@@ -207,9 +208,9 @@ lines = {
 "id": "37",
 "next_id": "38",
 "tags": PackedStringArray("demi=Annoyed"),
-"text": "(Maybe it’s just a one-time thing? I’ll think about it later.)",
+"text": "(Should I tell her about this? I had never seen Gigi do that before.)",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "(Maybe it’s just a one-time thing? I’ll think about it later.)",
+"translation_key": "(Should I tell her about this? I had never seen Gigi do that before.)",
 "type": "dialogue"
 },
 "38": {
@@ -217,23 +218,22 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "38",
 "next_id": "39",
+"tags": PackedStringArray("demi=Annoyed"),
+"text": "(Maybe it’s just a one-time thing? I’ll think about it later.)",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "(Maybe it’s just a one-time thing? I’ll think about it later.)",
+"type": "dialogue"
+},
+"39": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "39",
+"next_id": "40",
 "tags": PackedStringArray("demi=Default"),
 "text": "Goodnight, Gigi.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Goodnight, Gigi.",
 "type": "dialogue"
-},
-"39": {
-"id": "39",
-"mutation": {
-"expression": Array[Dictionary]([{
-"function": "_on_player_get_in_bed",
-"type": "function",
-"value": Array[Array]([])
-}])
-},
-"next_id": "40",
-"type": "mutation"
 },
 "4": {
 "character": "Gigi",
@@ -248,6 +248,18 @@ lines = {
 },
 "40": {
 "id": "40",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "_on_player_get_in_bed",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "41",
+"type": "mutation"
+},
+"41": {
+"id": "41",
 "is_snippet": false,
 "next_id": "end",
 "type": "goto"
@@ -300,7 +312,7 @@ lines = {
 "character": "Demi",
 "character_replacements": Array[Dictionary]([]),
 "id": "9",
-"next_id": "11",
+"next_id": "10",
 "tags": PackedStringArray("demi=Default"),
 "text": "Don’t work too hard, call if you need anything.",
 "text_replacements": Array[Dictionary]([]),

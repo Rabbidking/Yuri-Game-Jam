@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://dn3o4ik2vi8l8"]
+[gd_scene load_steps=34 format=3 uid="uid://dn3o4ik2vi8l8"]
 
 [ext_resource type="Script" path="res://Script/Rooms/entrance.gd" id="1_4k0mf"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_e8lwr"]
@@ -62,6 +62,9 @@ texture = ExtResource("6_0q4h0")
 sources/0 = SubResource("TileSetAtlasSource_s3k41")
 sources/1 = SubResource("TileSetAtlasSource_pdadg")
 sources/2 = SubResource("TileSetAtlasSource_incgu")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qhq81"]
+size = Vector2(446, 117)
 
 [node name="entrance" type="Node2D"]
 y_sort_enabled = true
@@ -207,6 +210,41 @@ texture = ExtResource("21_cbvi3")
 stream = ExtResource("25_an1wc")
 volume_db = -5.0
 autoplay = true
+
+[node name="Walls" type="StaticBody2D" parent="."]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
+position = Vector2(576, -28)
+scale = Vector2(0.24, 1)
+shape = SubResource("RectangleShape2D_qhq81")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
+position = Vector2(575, 545)
+scale = Vector2(1.8, 1)
+shape = SubResource("RectangleShape2D_qhq81")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls"]
+position = Vector2(349, 287)
+rotation = 1.5708
+scale = Vector2(1.08, 0.88)
+shape = SubResource("RectangleShape2D_qhq81")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls"]
+position = Vector2(809, 285)
+rotation = 1.5708
+scale = Vector2(1.56, 1)
+shape = SubResource("RectangleShape2D_qhq81")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Walls"]
+position = Vector2(424, 68)
+scale = Vector2(0.48, 2.52)
+shape = SubResource("RectangleShape2D_qhq81")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Walls"]
+position = Vector2(730, 68)
+scale = Vector2(0.48, 2.52)
+shape = SubResource("RectangleShape2D_qhq81")
 
 [connection signal="entrance_pos_1" from="." to="Player" method="_on_entrance_entrance_pos_1"]
 [connection signal="entrance_pos_2" from="." to="Player" method="_on_entrance_entrance_pos_2"]

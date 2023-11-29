@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_yfvx8"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_btyjp"]
 
 [resource]
-script = ExtResource("1_yfvx8")
+script = ExtResource("1_btyjp")
 using_states = PackedStringArray()
 titles = {
 "end_night": "37",
@@ -26,12 +26,24 @@ lines = {
 "character": "Demi",
 "character_replacements": Array[Dictionary]([]),
 "id": "10",
-"next_id": "12",
+"next_id": "11",
 "tags": PackedStringArray("demi=Default"),
 "text": "Yeah, I should be ready in a minute.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Yeah, I should be ready in a minute.",
 "type": "dialogue"
+},
+"11": {
+"id": "11",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "load_next_scene",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "12",
+"type": "mutation"
 },
 "12": {
 "id": "12",

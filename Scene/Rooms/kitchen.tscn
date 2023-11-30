@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://xejcukxa4s3w"]
+[gd_scene load_steps=75 format=3 uid="uid://xejcukxa4s3w"]
 
 [ext_resource type="Script" path="res://Script/Rooms/kitchen.gd" id="1_lkrb5"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_vd0cc"]
@@ -52,6 +52,7 @@
 [ext_resource type="Texture2D" uid="uid://ceobhn5j8d0cf" path="res://Sprites/Furniture/OBJ_RecycleBin/OBJ_RecycleBin.png" id="47_q5iat"]
 [ext_resource type="Texture2D" uid="uid://6djmbwyj02yw" path="res://Sprites/Furniture/OBJ_SmallItems/OBJ_SodaCanD.png" id="48_88x52"]
 [ext_resource type="Texture2D" uid="uid://bbaej48gxweem" path="res://Sprites/Furniture/OBJ_Bathroom/OBJ_BathTrashCan.png" id="48_p3heo"]
+[ext_resource type="AudioStream" uid="uid://mmh4n3hfvjc8" path="res://Audio/kitchen_roomtone_with_refrigerator_002.wav" id="53_njyrr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5pahu"]
 texture = ExtResource("4_5mc62")
@@ -515,6 +516,11 @@ shape = SubResource("RectangleShape2D_7uqbm")
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="Object Collision"]
 position = Vector2(402.5, 194.5)
 shape = SubResource("RectangleShape2D_dtj2h")
+
+[node name="Ambience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("53_njyrr")
+volume_db = -10.0
+autoplay = true
 
 [connection signal="kitchen_pos" from="." to="Player" method="_on_kitchen_kitchen_pos"]
 [connection signal="picked_up" from="Player" to="Fuel Cell" method="_on_player_picked_up"]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://chlff5hn65yd0"
-path="res://.godot/imported/Night HUD.png-e50aaa88dfa3073c45fd5169b6688acd.ctex"
+path="res://.godot/imported/Night HUD.png-98fbe2fdc042dd36ff15d10293592b2e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI/Night HUD.png"
-dest_files=["res://.godot/imported/Night HUD.png-e50aaa88dfa3073c45fd5169b6688acd.ctex"]
+source_file="res://UI/Night HUD.png"
+dest_files=["res://.godot/imported/Night HUD.png-98fbe2fdc042dd36ff15d10293592b2e.ctex"]
 
 [params]
 

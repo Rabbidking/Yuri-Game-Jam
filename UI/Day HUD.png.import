@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7i68c7d71cbx"
-path="res://.godot/imported/Day HUD.png-4b60495d1c2331bae55024a85eecd646.ctex"
+path="res://.godot/imported/Day HUD.png-d52375e4ad11639d9caf6e66cb956cfc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI/Day HUD.png"
-dest_files=["res://.godot/imported/Day HUD.png-4b60495d1c2331bae55024a85eecd646.ctex"]
+source_file="res://UI/Day HUD.png"
+dest_files=["res://.godot/imported/Day HUD.png-d52375e4ad11639d9caf6e66cb956cfc.ctex"]
 
 [params]
 

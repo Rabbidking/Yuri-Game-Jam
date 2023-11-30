@@ -49,6 +49,8 @@ var dialogue_line: DialogueLine:
 		# Check if only one character is active in the dialogue. If so, hide RightPortrait and its children.
 		# Demi should usually be the only person on the left frame. If she has to jump to the other frame,
 		# flip the portrait. Same with Gigi and Mimi.
+		
+		#===========================================================================================
 
 		left_character_label.visible = dialogue_line.character.begins_with("Demi")
 		left_character_label.text = tr(dialogue_line.character, "dialogue")

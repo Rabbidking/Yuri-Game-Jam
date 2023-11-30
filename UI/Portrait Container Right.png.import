@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://btmap46njjcr"
-path="res://.godot/imported/Portrait Container Right.png-de3df82acd2d9630ab3d81bc8b3b8332.ctex"
+path="res://.godot/imported/Portrait Container Right.png-4f3e624daeaa4c36bf1189f9e1b1535e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI/Portrait Container Right.png"
-dest_files=["res://.godot/imported/Portrait Container Right.png-de3df82acd2d9630ab3d81bc8b3b8332.ctex"]
+source_file="res://UI/Portrait Container Right.png"
+dest_files=["res://.godot/imported/Portrait Container Right.png-4f3e624daeaa4c36bf1189f9e1b1535e.ctex"]
 
 [params]
 

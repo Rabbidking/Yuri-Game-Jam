@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b2dbcar0pqojs"
+path="res://.godot/imported/AMBRoom_Bedroom, Groundfloor, Doors & Windows Closed_344 Audio_UK Residential Room Tones.wav-dad76749db08ddf5a3402105f9dc0f0a.sample"
+
+[deps]
+
+source_file="res://Audio/AMBRoom_Bedroom, Groundfloor, Doors & Windows Closed_344 Audio_UK Residential Room Tones.wav"
+dest_files=["res://.godot/imported/AMBRoom_Bedroom, Groundfloor, Doors & Windows Closed_344 Audio_UK Residential Room Tones.wav-dad76749db08ddf5a3402105f9dc0f0a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

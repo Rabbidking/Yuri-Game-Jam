@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" path="res://dialog_balloon/balloon.gd" id="1_4u26j"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
-[ext_resource type="Texture2D" uid="uid://rf17eue30xxp" path="res://Sprites/UI/Dialogue Box.png" id="2_bq6v5"]
-[ext_resource type="Texture2D" uid="uid://c0j821yxo4a6n" path="res://Sprites/UI/Portrait Container Left.png" id="2_j3x8f"]
+[ext_resource type="Texture2D" uid="uid://rf17eue30xxp" path="res://UI/Dialogue Box.png" id="2_bq6v5"]
+[ext_resource type="Texture2D" uid="uid://c0j821yxo4a6n" path="res://UI/Portrait Container Left.png" id="2_j3x8f"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_72ixx"]
-[ext_resource type="Texture2D" uid="uid://dp5570w5kx0ve" path="res://Sprites/UI/Name Container.png" id="3_fp166"]
-[ext_resource type="Texture2D" uid="uid://btmap46njjcr" path="res://Sprites/UI/Portrait Container Right.png" id="4_514dc"]
+[ext_resource type="Texture2D" uid="uid://dp5570w5kx0ve" path="res://UI/Name Container.png" id="3_fp166"]
+[ext_resource type="Texture2D" uid="uid://btmap46njjcr" path="res://UI/Portrait Container Right.png" id="4_514dc"]
 [ext_resource type="FontFile" uid="uid://v4qs8ufergem" path="res://Kenney Mini Square.ttf" id="4_nkv70"]
-[ext_resource type="Texture2D" uid="uid://dyu8huu56f2hq" path="res://Sprites/UI/Play Button.png" id="9_bknrm"]
+[ext_resource type="Texture2D" uid="uid://dyu8huu56f2hq" path="res://UI/Play Button.png" id="9_bknrm"]
 [ext_resource type="AudioStream" uid="uid://c0xciw8wbk56q" path="res://Audio/sound.wav" id="10_h16pl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
@@ -97,6 +97,8 @@ offset_top = 5.0
 offset_right = 211.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0.188235, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("4_nkv70")
 text = "Character"
 horizontal_alignment = 1
@@ -126,6 +128,8 @@ offset_top = 5.0
 offset_right = 211.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0.188235, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("4_nkv70")
 text = "Character"
 horizontal_alignment = 1
@@ -181,6 +185,8 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0.188235, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
 theme_override_fonts/normal_font = ExtResource("4_nkv70")
 text = "Dialogue..."
 seconds_per_step = 0.04

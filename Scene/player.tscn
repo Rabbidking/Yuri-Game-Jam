@@ -211,7 +211,7 @@ shape = SubResource("RectangleShape2D_hqqmg")
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("37_5ywcm")]
 
-[node name="ItemGet" type="AudioStreamPlayer2D" parent="."]
+[node name="ItemGet" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("39_l1hpk")
 
 [connection signal="area_entered" from="Interact Collision" to="." method="_on_interact_collision_area_entered"]

@@ -1,6 +1,6 @@
 extends Node
 
-var Day = 1	#day adjustments
+var Day = 5	#day adjustments
 var Day_2_unlock = false
 var Day_3_unlock = false
 var Day_4_unlock = false

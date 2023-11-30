@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c6kg5xifhu3lp"
+path="res://.godot/imported/Ambience, Empty Garage Hum, Metal Gate Hitting, Wind Outside, Scary-AmbiX.wav-303c5594af280d42cdfa540c00343540.sample"
+
+[deps]
+
+source_file="res://Audio/Ambience, Empty Garage Hum, Metal Gate Hitting, Wind Outside, Scary-AmbiX.wav"
+dest_files=["res://.godot/imported/Ambience, Empty Garage Hum, Metal Gate Hitting, Wind Outside, Scary-AmbiX.wav-303c5594af280d42cdfa540c00343540.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

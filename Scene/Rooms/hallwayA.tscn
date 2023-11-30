@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://b0pfj3nycfflx"]
+[gd_scene load_steps=26 format=3 uid="uid://b0pfj3nycfflx"]
 
 [ext_resource type="Script" path="res://Script/Rooms/hallwayA.gd" id="1_h463u"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_yv8w3"]
@@ -17,6 +17,8 @@
 [ext_resource type="Texture2D" uid="uid://b8eex8pmbui1c" path="res://Sprites/Furniture/OBJ_Picture/OBJ_PictureF.png" id="13_nahm5"]
 [ext_resource type="Texture2D" uid="uid://g2mqcqh0rlxg" path="res://Sprites/Furniture/OBJ_Carpet/OBJ_CarpetG.png" id="14_p5jqu"]
 [ext_resource type="Texture2D" uid="uid://0ns00vrf56ae" path="res://Sprites/Furniture/OBJ_Carpet/OBJ_CarpetB.png" id="15_wldsc"]
+[ext_resource type="AudioStream" uid="uid://cjqkj58mx01gn" path="res://Audio/ROOM TONE Hotel Hallway 2, 5am, Chiang Mai, Thailand, LR.wav" id="18_a86it"]
+[ext_resource type="AudioStream" uid="uid://ba6ecp15dc7ou" path="res://Audio/BELLDoor-INT_Door Bell Low Tone_JSE_DO_Distance Stereo.wav" id="19_shxus"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pxhay"]
 texture = ExtResource("4_kh1d4")
@@ -187,6 +189,14 @@ shape = SubResource("RectangleShape2D_q0i3g")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Object Collision"]
 position = Vector2(623, 366)
 shape = SubResource("RectangleShape2D_k2qwn")
+
+[node name="Ambient" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_a86it")
+volume_db = -10.0
+autoplay = true
+
+[node name="doorbell" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_shxus")
 
 [connection signal="hallwayA_pos_1" from="." to="Player" method="_on_hallway_a_hallway_a_pos_1"]
 [connection signal="hallwayA_pos_2" from="." to="Player" method="_on_hallway_a_hallway_a_pos_2"]

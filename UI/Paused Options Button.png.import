@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5mtbqfbscq4r"
-path="res://.godot/imported/Paused Options Button.png-07a592c8c7bbc5375222cd93d158fad6.ctex"
+path="res://.godot/imported/Paused Options Button.png-3a20da5f631020987492e9cd68a57a30.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI/Paused Options Button.png"
-dest_files=["res://.godot/imported/Paused Options Button.png-07a592c8c7bbc5375222cd93d158fad6.ctex"]
+source_file="res://UI/Paused Options Button.png"
+dest_files=["res://.godot/imported/Paused Options Button.png-3a20da5f631020987492e9cd68a57a30.ctex"]
 
 [params]
 

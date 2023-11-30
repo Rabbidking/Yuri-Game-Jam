@@ -40,6 +40,7 @@ func _ready():
 		$"Door Sprite".texture = load("res://Sprites/Furniture/OBJ_Door/OBJ_DoorA.png")
 
 func _on_body_entered(body):
+	$AudioStreamPlayer.play()
 	State.used_door = true
 	if body.is_in_group("Player"):
 		if door_name == "bathroom":
@@ -96,4 +97,5 @@ func _on_body_entered(body):
 		if door_name == "living_roomA":
 			State.door_used = "living_roomA"
 			get_tree().change_scene_to_file("res://Scene/Rooms/living_room.tscn")
+		
 

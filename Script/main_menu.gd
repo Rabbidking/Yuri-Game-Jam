@@ -1,5 +1,6 @@
 extends Control
 
+@onready var options: TextureButton = $GridContainer/Options
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -39,8 +40,8 @@ func _on_level_select_pressed():
 		
 		
 func _on_options_pressed() -> void:
-	pass # Replace with function body.
-	#Options Menu here
+	$GridContainer.visible = false
+	$Options.visible = true
 
 
 func _on_quit_pressed() -> void:
@@ -92,3 +93,8 @@ func _on_back_pressed():
 	$VBoxContainer.visible = false
 	$GridContainer.visible = true
 
+
+
+func _on_options_back_pressed() -> void:
+	$Options.visible = false
+	$GridContainer.visible = true

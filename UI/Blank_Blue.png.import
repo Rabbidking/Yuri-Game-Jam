@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://p5wruijdkvlm"
-path="res://.godot/imported/Blank_Blue.png-106930f3d56b380a714c4dccd75c9a22.ctex"
+path="res://.godot/imported/Blank_Blue.png-d3e5c0f36ce189be3f220625e0f57ecf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI/Blank_Blue.png"
-dest_files=["res://.godot/imported/Blank_Blue.png-106930f3d56b380a714c4dccd75c9a22.ctex"]
+source_file="res://UI/Blank_Blue.png"
+dest_files=["res://.godot/imported/Blank_Blue.png-d3e5c0f36ce189be3f220625e0f57ecf.ctex"]
 
 [params]
 

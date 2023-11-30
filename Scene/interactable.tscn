@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://co1a7h15avswg"]
+[gd_scene load_steps=4 format=3 uid="uid://co1a7h15avswg"]
 
 [ext_resource type="Script" path="res://Script/interactable.gd" id="1_7gari"]
+[ext_resource type="AudioStream" uid="uid://dpyxstjtvgdna" path="res://Audio/Wood 12.wav" id="2_6lcvm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ywmvi"]
 size = Vector2(38, 35.75)
@@ -15,3 +16,7 @@ script = ExtResource("1_7gari")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ywmvi")
+
+[node name="trapdoor_open" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_6lcvm")
+volume_db = -5.0

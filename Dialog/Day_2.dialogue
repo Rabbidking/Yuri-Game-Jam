@@ -24,9 +24,20 @@ Demi: [#demi=Default]Gigi usually takes my jacket to the bedroom...
 
 => END
 
+~ gigi_in_car_with_key
+Demi: [#demi=Shocked]Hey Hun! Gigi, wake up! Can you hear me!? 
+Demi: [#demi=Default]Good thing I got my key.
+
+=> END
+
 ~ find_key
 Demi: [#demi=Default]Please be here... 
 Demi: [#demi=Happy]Oh, thank goodness!
+Got Car Key.
+=> END
+
+~ find_key_before
+Demi: [#demi=Default]Huh, did I put this here? I usually put this in the bedroom.
 Got Car Key.
 => END
 

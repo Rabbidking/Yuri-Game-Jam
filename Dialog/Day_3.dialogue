@@ -37,9 +37,22 @@ Demi: [#demi=Default](Wait, Gigi doesn’t remember passwords, she writes them d
 Demi: [#demi=Default](Gigi always checks her social media on the couch.)
 => END
 
+~ bedroom_computer_before
+Demi: [#demi=Default](Gigi's laptop, she usually forgets to turn it off.)
+=> END
+
 ~ living_room_sticky
 Got Gigi's Password.
 Demi: [#demi=Default](Great, now I can get Gigi back!)
+=> END
+
+~ living_room_sticky_before
+Got Gigi's Password.
+Demi: [#demi=Default](Gigi's password, looks like she still can't remember her password)
+=> END
+
+~ bedroom_laptop_1
+Demi: [#demi=Default](I better not, Gigi would be upset if I looked in her account without asking her first.)
 => END
 
 ~ bedroom_laptop_2

@@ -232,12 +232,18 @@ func _on_player_get_in_bed():
 
 func _on_player_picked_up():
 	if item == "key":
-		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_2.dialogue"), "find_key")
+		if State.garage_first_check_car == true:
+			DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_2.dialogue"), "find_key")
+		elif State.garage_first_check_car == false:
+			DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_2.dialogue"), "find_key_before")
 		State.key_taken = true
 		queue_free()
 	elif item == "car" and State.key_taken == false:
 		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_2.dialogue"), "gigi_in_car")
+		State.garage_first_check_car = true
 	elif item == "car" and opened == false and State.key_taken == true:
+		if State.garage_first_check_car == false:
+			DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_2.dialogue"), "gigi_in_car_with_key")
 		opened = true
 		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Car/OBJ_Car_05.png"))
 	elif item == "car" and opened == true and State.key_taken == true:
@@ -246,17 +252,26 @@ func _on_player_picked_up():
 		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Car/OBJ_Car_03.png"))
 		State.have_gigi = true
 	elif item == "note":
-		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_3.dialogue"), "living_room_sticky")
+		if State.read_receipt == true:
+			DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_3.dialogue"), "living_room_sticky")
+		elif State.read_receipt == false:
+			DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_3.dialogue"), "living_room_sticky_before")
 		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_StckyNote/OBJ_StckyNote_01.png"))
 		$CollisionShape2D.disabled = true
 		State.password_known = true
 	elif item == "laptop" and State.password_known == false:
-		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_3.dialogue"), "bedroom_computer")
-	elif item == "laptop" and State.password_known == true:
-		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_3.dialogue"), "bedroom_laptop_2")
-		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Laptop/OBJ_Laptop_01.png"))
-		$CollisionShape2D.disabled = true
-		State.ordered_return = true
+		if State.read_receipt == true:
+			DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_3.dialogue"), "bedroom_computer")
+		elif State.read_receipt == false:
+			DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_3.dialogue"), "bedroom_computer_before")
+	elif item == "laptop" and State.password_known == true: 
+		if State.read_receipt == true:
+			DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_3.dialogue"), "bedroom_laptop_2")
+			$Texture.set_texture(load("res://Sprites/Furniture/OBJ_Laptop/OBJ_Laptop_01.png"))
+			$CollisionShape2D.disabled = true
+			State.ordered_return = true
+		elif State.read_receipt == false:
+			DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_3.dialogue"), "bedroom_laptop_1")
 	elif item == "box" and opened == false:
 		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_CardboardBox/OBJ_CardboardBoxB_02.png"))
 		opened = true
@@ -292,13 +307,20 @@ func _on_player_pick_up_gigi():
 
 func _on_player_picked_up_2():
 	if item == "crowbar":
-		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_4.dialogue"), "garage_crowbar_get")
+		if State.living_room_trapdoor == true:
+			DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_4.dialogue"), "garage_crowbar_get")
+		elif State.living_room_trapdoor == false:
+			DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_4.dialogue"), "garage_crowbar_get_before")
 		State.have_crowbar = true
 		queue_free()
 	elif item == "trapdoor" and State.have_crowbar == false and State.trapdoor_locked == true:
 		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_4.dialogue"), "living_room_basement_discovered")
+		State.living_room_trapdoor = true
 	elif item == "trapdoor" and State.have_crowbar == true and State.trapdoor_locked == true:
-		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_4.dialogue"), "basement_open")
+		if State.living_room_trapdoor == true:
+			DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_4.dialogue"), "basement_open")
+		elif State.living_room_trapdoor == false:
+			DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_4.dialogue"), "basement_open_with_crowbar")
 		State.trapdoor_locked = false
 		$Texture.set_texture(load("res://Sprites/Furniture/OBJ_TrapFloor/OBJ_TrapFloor_02.png"))
 	elif item == "trapdoor" and State.trapdoor_locked == false:

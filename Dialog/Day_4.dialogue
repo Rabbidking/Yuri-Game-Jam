@@ -24,8 +24,18 @@ Demi: [#demi=Default]Darn, it’s boarded up. Better get a crowbar.
 Demi: [#demi=Smirk]Nice, this should work.
 => END
 
+~ garage_crowbar_get_before
+(Got a Crowbar)
+Demi: [#demi=Smirk]This will be handy as a weapon.
+=> END
+
 ~ basement_open
 Demi: [#demi=Default]I probably should call the cops…nah they’re jerks. 
+Demi: [#demi=Shocked] What the heck, it’s a basement? And there are even lights in there too.
+=> END
+
+~ basement_open_with_crowbar
+Demi: [#demi=Default]Good thing I brought a crowbar.
 Demi: [#demi=Shocked] What the heck, it’s a basement? And there are even lights in there too.
 => END
 

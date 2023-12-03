@@ -1,17 +1,19 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_ct6id"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_urnm4"]
 
 [resource]
-script = ExtResource("1_ct6id")
+script = ExtResource("1_urnm4")
 using_states = PackedStringArray()
 titles = {
-"end_night": "38",
-"find_key": "28",
+"end_night": "49",
+"find_key": "34",
+"find_key_before": "40",
 "gigi_in_car": "21",
+"gigi_in_car_with_key": "28",
 "morning": "3",
 "night": "15",
-"unlock_car": "34"
+"unlock_car": "45"
 }
 character_names = PackedStringArray("Gigi", "Demi")
 first_title = "3"
@@ -144,7 +146,7 @@ lines = {
 "27": {
 "id": "27",
 "next_id": "28",
-"text": "find_key",
+"text": "gigi_in_car_with_key",
 "type": "title"
 },
 "28": {
@@ -152,21 +154,21 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "28",
 "next_id": "29",
-"tags": PackedStringArray("demi=Default"),
-"text": "Please be here...",
+"tags": PackedStringArray("demi=Shocked"),
+"text": "Hey Hun! Gigi, wake up! Can you hear me!?",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Please be here...",
+"translation_key": "Hey Hun! Gigi, wake up! Can you hear me!?",
 "type": "dialogue"
 },
 "29": {
 "character": "Demi",
 "character_replacements": Array[Dictionary]([]),
 "id": "29",
-"next_id": "30",
-"tags": PackedStringArray("demi=Happy"),
-"text": "Oh, thank goodness!",
+"next_id": "31",
+"tags": PackedStringArray("demi=Default"),
+"text": "Good thing I got my key.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Oh, thank goodness!",
+"translation_key": "Good thing I got my key.",
 "type": "dialogue"
 },
 "3": {
@@ -180,17 +182,6 @@ lines = {
 "translation_key": "Hey, hun are you OK, you don’t look like you slept well.",
 "type": "dialogue"
 },
-"30": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "30",
-"next_id": "31",
-"tags": PackedStringArray(),
-"text": "Got Car Key.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Got Car Key.",
-"type": "dialogue"
-},
 "31": {
 "id": "31",
 "is_snippet": false,
@@ -200,7 +191,7 @@ lines = {
 "33": {
 "id": "33",
 "next_id": "34",
-"text": "unlock_car",
+"text": "find_key",
 "type": "title"
 },
 "34": {
@@ -208,45 +199,45 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "34",
 "next_id": "35",
-"tags": PackedStringArray("demi=Annoyed"),
-"text": "How did she lock herself in the car?",
+"tags": PackedStringArray("demi=Default"),
+"text": "Please be here...",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "How did she lock herself in the car?",
+"translation_key": "Please be here...",
 "type": "dialogue"
 },
 "35": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
 "id": "35",
+"next_id": "36",
+"tags": PackedStringArray("demi=Happy"),
+"text": "Oh, thank goodness!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Oh, thank goodness!",
+"type": "dialogue"
+},
+"36": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "36",
+"next_id": "37",
+"tags": PackedStringArray(),
+"text": "Got Car Key.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Got Car Key.",
+"type": "dialogue"
+},
+"37": {
+"id": "37",
 "is_snippet": false,
 "next_id": "end",
 "type": "goto"
 },
-"37": {
-"id": "37",
-"next_id": "38",
-"text": "end_night",
-"type": "title"
-},
-"38": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "38",
-"next_id": "39",
-"tags": PackedStringArray(),
-"text": "Demi places Gigi in bed and ponders to herself.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Demi places Gigi in bed and ponders to herself.",
-"type": "dialogue"
-},
 "39": {
-"character": "Demi",
-"character_replacements": Array[Dictionary]([]),
 "id": "39",
 "next_id": "40",
-"tags": PackedStringArray("demi=Annoyed"),
-"text": "This is bad, if Gigi keeps sleepwalking she might hurt herself.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "This is bad, if Gigi keeps sleepwalking she might hurt herself.",
-"type": "dialogue"
+"text": "find_key_before",
+"type": "title"
 },
 "4": {
 "character": "Demi",
@@ -264,29 +255,68 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "40",
 "next_id": "41",
-"tags": PackedStringArray("demi=Annoyed"),
-"text": "I should tell her but I don’t want to worry her. What should I do?",
+"tags": PackedStringArray("demi=Default"),
+"text": "Huh, did I put this here? I usually put this in the bedroom.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "I should tell her but I don’t want to worry her. What should I do?",
+"translation_key": "Huh, did I put this here? I usually put this in the bedroom.",
 "type": "dialogue"
 },
 "41": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
 "id": "41",
-"mutation": {
-"expression": Array[Dictionary]([{
-"function": "_on_player_get_in_bed",
-"type": "function",
-"value": Array[Array]([])
-}])
+"next_id": "42",
+"tags": PackedStringArray(),
+"text": "Got Car Key.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Got Car Key.",
+"type": "dialogue"
 },
-"next_id": "43",
-"type": "mutation"
-},
-"43": {
-"id": "43",
+"42": {
+"id": "42",
 "is_snippet": false,
 "next_id": "end",
 "type": "goto"
+},
+"44": {
+"id": "44",
+"next_id": "45",
+"text": "unlock_car",
+"type": "title"
+},
+"45": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "45",
+"next_id": "46",
+"tags": PackedStringArray("demi=Annoyed"),
+"text": "How did she lock herself in the car?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "How did she lock herself in the car?",
+"type": "dialogue"
+},
+"46": {
+"id": "46",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"48": {
+"id": "48",
+"next_id": "49",
+"text": "end_night",
+"type": "title"
+},
+"49": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "49",
+"next_id": "50",
+"tags": PackedStringArray(),
+"text": "Demi places Gigi in bed and ponders to herself.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Demi places Gigi in bed and ponders to herself.",
+"type": "dialogue"
 },
 "5": {
 "character": "Gigi",
@@ -298,6 +328,46 @@ lines = {
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Gasp* Did I accidentally infect you with insomnia?",
 "type": "dialogue"
+},
+"50": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "50",
+"next_id": "51",
+"tags": PackedStringArray("demi=Annoyed"),
+"text": "This is bad, if Gigi keeps sleepwalking she might hurt herself.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "This is bad, if Gigi keeps sleepwalking she might hurt herself.",
+"type": "dialogue"
+},
+"51": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "51",
+"next_id": "52",
+"tags": PackedStringArray("demi=Annoyed"),
+"text": "I should tell her but I don’t want to worry her. What should I do?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I should tell her but I don’t want to worry her. What should I do?",
+"type": "dialogue"
+},
+"52": {
+"id": "52",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "_on_player_get_in_bed",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "54",
+"type": "mutation"
+},
+"54": {
+"id": "54",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
 },
 "6": {
 "character": "Demi",

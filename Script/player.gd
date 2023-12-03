@@ -23,21 +23,21 @@ func _ready():
 func _unhandled_input(event: InputEvent) -> void:
 	if dont_move == false:
 		#Movement
-		if Input.is_action_pressed("ui_up"):
+		if Input.is_action_pressed("up"):
 			$"Interact Collision/2D Interact Collision".position = Vector2(-64, -64)
 			velocity = Vector2(0, -SPEED)
 			$AnimatedSprite2D.play("Walk Back")
 			front_side = false
 			back_side = true
 			
-		elif Input.is_action_pressed("ui_down"):
+		elif Input.is_action_pressed("down"):
 			$"Interact Collision/2D Interact Collision".position = Vector2(-64, 64)
 			velocity = Vector2(0, SPEED)
 			$AnimatedSprite2D.play("Walk Front")
 			front_side = true
 			back_side = false
 			
-		elif Input.is_action_pressed("ui_left"):
+		elif Input.is_action_pressed("left"):
 			$"Interact Collision/2D Interact Collision".position = Vector2(-128,0)
 			velocity = Vector2(-SPEED, 0)
 			$AnimatedSprite2D.play("Walk Side")
@@ -45,7 +45,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			front_side = false
 			back_side = false
 			
-		elif Input.is_action_pressed("ui_right"):
+		elif Input.is_action_pressed("right"):
 			$"Interact Collision/2D Interact Collision".position = Vector2(0, 0)
 			velocity = Vector2(SPEED, 0)
 			$AnimatedSprite2D.play("Walk Side")

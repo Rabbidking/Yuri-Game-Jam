@@ -1,6 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://br6whsvghc2re"]
+[gd_scene load_steps=8 format=3 uid="uid://br6whsvghc2re"]
 
 [ext_resource type="FontFile" uid="uid://v4qs8ufergem" path="res://Kenney Mini Square.ttf" id="1_n27cw"]
+[ext_resource type="PackedScene" uid="uid://7hcy3ov66k0w" path="res://Scene/Options/hotkey_rebind_button.tscn" id="2_7sox0"]
+[ext_resource type="PackedScene" uid="uid://wm51kbmxwtar" path="res://Scene/Options/window_mode.tscn" id="3_ahqoh"]
+[ext_resource type="PackedScene" uid="uid://vhccxmr60thj" path="res://Scene/Options/resolution_mode.tscn" id="4_prebj"]
+
+[sub_resource type="Theme" id="Theme_gv867"]
+default_font = ExtResource("1_n27cw")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5ernj"]
 
@@ -13,6 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_gv867")
 
 [node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 1
@@ -28,8 +35,9 @@ grow_vertical = 2
 tab_alignment = 1
 
 [node name="Sound" type="TabBar" parent="TabContainer"]
-visible = false
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("1_n27cw")
 
 [node name="MarginContainer" type="MarginContainer" parent="TabContainer/Sound"]
@@ -57,56 +65,25 @@ text = "Master Volume"
 
 [node name="Label2" type="Label" parent="TabContainer/Sound/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
 text = "Music"
 
 [node name="Label3" type="Label" parent="TabContainer/Sound/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
 text = "Sound Effects"
 
 [node name="Label4" type="Label" parent="TabContainer/Sound/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "123456"
 
-[node name="Graphics" type="TabBar" parent="TabContainer"]
+[node name="Controls" type="TabBar" parent="TabContainer"]
 visible = false
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_n27cw")
-
-[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Graphics"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 24
-theme_override_constants/margin_top = 24
-theme_override_constants/margin_right = 24
-theme_override_constants/margin_bottom = 24
-
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Graphics/MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 64
-alignment = 1
-
-[node name="Label" type="Label" parent="TabContainer/Graphics/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "123456"
-
-[node name="Label2" type="Label" parent="TabContainer/Graphics/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "123456"
-
-[node name="Label3" type="Label" parent="TabContainer/Graphics/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "123456"
-
-[node name="Label4" type="Label" parent="TabContainer/Graphics/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "123456"
-
-[node name="Controls" type="TabBar" parent="TabContainer"]
-layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("1_n27cw")
 
 [node name="MarginContainer" type="MarginContainer" parent="TabContainer/Controls"]
@@ -126,20 +103,79 @@ layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Controls/MarginContainer/ScrollContainer"]
 layout_mode = 2
+theme_override_constants/separation = 64
 
 [node name="HSeparator" type="HSeparator" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 32
+theme_override_constants/separation = 12
 theme_override_styles/separator = SubResource("StyleBoxEmpty_5ernj")
+
+[node name="Hotkey_Rebind_Button" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_7sox0")]
+layout_mode = 2
+action_name = "up"
+
+[node name="Hotkey_Rebind_Button2" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_7sox0")]
+layout_mode = 2
+action_name = "down"
+
+[node name="Hotkey_Rebind_Button3" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_7sox0")]
+layout_mode = 2
+action_name = "left"
+
+[node name="Hotkey_Rebind_Button4" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_7sox0")]
+layout_mode = 2
+action_name = "right"
+
+[node name="Hotkey_Rebind_Button5" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_7sox0")]
+layout_mode = 2
+action_name = "Interact"
+
+[node name="Hotkey_Rebind_Button6" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_7sox0")]
+layout_mode = 2
+action_name = "pause"
 
 [node name="HSeparator2" type="HSeparator" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 32
+theme_override_constants/separation = 12
 theme_override_styles/separator = SubResource("StyleBoxEmpty_p5yax")
+
+[node name="Graphics" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("1_n27cw")
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Graphics"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Graphics/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Graphics/MarginContainer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 128
+
+[node name="Window_Mode" parent="TabContainer/Graphics/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_ahqoh")]
+layout_mode = 2
+
+[node name="Resolution_Mode" parent="TabContainer/Graphics/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("4_prebj")]
+layout_mode = 2
 
 [node name="Accessibility" type="TabBar" parent="TabContainer"]
 visible = false
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("1_n27cw")
 
 [node name="MarginContainer" type="MarginContainer" parent="TabContainer/Accessibility"]

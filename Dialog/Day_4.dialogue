@@ -21,12 +21,12 @@ Demi: [#demi=Default]Darn, it’s boarded up. Better get a crowbar.
 
 ~ garage_crowbar_get
 (Got a Crowbar)
-Demi: [#demi=Smirk]Nice, this should work.
+Demi: [#demi=Default]Nice, this should work.
 => END
 
 ~ garage_crowbar_get_before
 (Got a Crowbar)
-Demi: [#demi=Smirk]This will be handy as a weapon.
+Demi: [#demi=Default]This will be handy as a weapon.
 => END
 
 ~ basement_open

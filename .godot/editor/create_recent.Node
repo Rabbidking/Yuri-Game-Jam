@@ -1,8 +1,12 @@
-AudioStreamPlayer
-HSeparator
+VSeparator
 VBoxContainer
 ScrollContainer
+OptionButton
+HSeparator
 Label
+HBoxContainer
+Button
+AudioStreamPlayer
 MarginContainer
 TabBar
 TabContainer
@@ -22,4 +26,3 @@ Control
 Sprite2D
 RichTextLabel
 Panel
-HBoxContainer

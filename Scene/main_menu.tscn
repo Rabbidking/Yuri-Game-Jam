@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ccu1tfbkedf7s"]
+[gd_scene load_steps=9 format=3 uid="uid://ccu1tfbkedf7s"]
 
 [ext_resource type="Script" path="res://Script/main_menu.gd" id="1_uagy8"]
 [ext_resource type="Texture2D" uid="uid://doygkmfhyvs20" path="res://UI/Start Button.png" id="2_b50sy"]
@@ -7,10 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ckxymlnqj3mxb" path="res://UI/Quit Button.png" id="4_4itt2"]
 [ext_resource type="Texture2D" uid="uid://p5wruijdkvlm" path="res://UI/Blank_Blue.png" id="6_h0cwn"]
 [ext_resource type="FontFile" uid="uid://v4qs8ufergem" path="res://Kenney Mini Square.ttf" id="7_tlc71"]
-[ext_resource type="PackedScene" uid="uid://br6whsvghc2re" path="res://Scene/settings_tab_container.tscn" id="8_jdsn2"]
-
-[sub_resource type="Theme" id="Theme_fe87t"]
-default_font = ExtResource("7_tlc71")
+[ext_resource type="PackedScene" uid="uid://br6whsvghc2re" path="res://Scene/Options/settings_tab_container.tscn" id="8_jdsn2"]
 
 [node name="MainMenu" type="Control"]
 process_mode = 3
@@ -182,7 +179,6 @@ vertical_alignment = 1
 
 [node name="Settings_Tab_Container" parent="Options" instance=ExtResource("8_jdsn2")]
 layout_mode = 2
-theme = SubResource("Theme_fe87t")
 
 [node name="OptionsBack" type="TextureButton" parent="Options"]
 layout_mode = 2

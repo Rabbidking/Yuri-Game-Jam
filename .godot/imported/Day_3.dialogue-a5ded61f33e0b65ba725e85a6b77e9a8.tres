@@ -1,17 +1,20 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_3lvl0"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_okn2a"]
 
 [resource]
-script = ExtResource("1_3lvl0")
+script = ExtResource("1_okn2a")
 using_states = PackedStringArray()
 titles = {
 "bedroom_computer": "35",
-"bedroom_laptop_2": "46",
-"entrance_night_end": "50",
+"bedroom_computer_before": "41",
+"bedroom_laptop_1": "55",
+"bedroom_laptop_2": "59",
+"entrance_night_end": "63",
 "front_entrance_receipt": "27",
-"goodnight": "55",
-"living_room_sticky": "41",
+"goodnight": "68",
+"living_room_sticky": "45",
+"living_room_sticky_before": "50",
 "morning": "3",
 "night": "23"
 }
@@ -290,42 +293,42 @@ lines = {
 "40": {
 "id": "40",
 "next_id": "41",
-"text": "living_room_sticky",
+"text": "bedroom_computer_before",
 "type": "title"
 },
 "41": {
-"character": "",
+"character": "Demi",
 "character_replacements": Array[Dictionary]([]),
 "id": "41",
 "next_id": "42",
+"tags": PackedStringArray("demi=Default"),
+"text": "(Gigi's laptop, she usually forgets to turn it off.)",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "(Gigi's laptop, she usually forgets to turn it off.)",
+"type": "dialogue"
+},
+"42": {
+"id": "42",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"44": {
+"id": "44",
+"next_id": "45",
+"text": "living_room_sticky",
+"type": "title"
+},
+"45": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "45",
+"next_id": "46",
 "tags": PackedStringArray(),
 "text": "Got Gigi's Password.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Got Gigi's Password.",
 "type": "dialogue"
-},
-"42": {
-"character": "Demi",
-"character_replacements": Array[Dictionary]([]),
-"id": "42",
-"next_id": "43",
-"tags": PackedStringArray("demi=Default"),
-"text": "(Great, now I can get Gigi back!)",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "(Great, now I can get Gigi back!)",
-"type": "dialogue"
-},
-"43": {
-"id": "43",
-"is_snippet": false,
-"next_id": "end",
-"type": "goto"
-},
-"45": {
-"id": "45",
-"next_id": "46",
-"text": "bedroom_laptop_2",
-"type": "title"
 },
 "46": {
 "character": "Demi",
@@ -333,9 +336,9 @@ lines = {
 "id": "46",
 "next_id": "47",
 "tags": PackedStringArray("demi=Default"),
-"text": "(Ok, she should be here any minute according to the site’s cancellation policy.)",
+"text": "(Great, now I can get Gigi back!)",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "(Ok, she should be here any minute according to the site’s cancellation policy.)",
+"translation_key": "(Great, now I can get Gigi back!)",
 "type": "dialogue"
 },
 "47": {
@@ -347,7 +350,7 @@ lines = {
 "49": {
 "id": "49",
 "next_id": "50",
-"text": "entrance_night_end",
+"text": "living_room_sticky_before",
 "type": "title"
 },
 "5": {
@@ -362,14 +365,14 @@ lines = {
 "type": "dialogue"
 },
 "50": {
-"character": "Demi",
+"character": "",
 "character_replacements": Array[Dictionary]([]),
 "id": "50",
 "next_id": "51",
-"tags": PackedStringArray("demi=Happy"),
-"text": "Thank goodness you’re safe.",
+"tags": PackedStringArray(),
+"text": "Got Gigi's Password.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Thank goodness you’re safe.",
+"translation_key": "Got Gigi's Password.",
 "type": "dialogue"
 },
 "51": {
@@ -378,9 +381,9 @@ lines = {
 "id": "51",
 "next_id": "52",
 "tags": PackedStringArray("demi=Default"),
-"text": "Well, off to bed then.",
+"text": "(Gigi's password, looks like she still can't remember her password)",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Well, off to bed then.",
+"translation_key": "(Gigi's password, looks like she still can't remember her password)",
 "type": "dialogue"
 },
 "52": {
@@ -392,7 +395,7 @@ lines = {
 "54": {
 "id": "54",
 "next_id": "55",
-"text": "goodnight",
+"text": "bedroom_laptop_1",
 "type": "title"
 },
 "55": {
@@ -401,28 +404,33 @@ lines = {
 "id": "55",
 "next_id": "56",
 "tags": PackedStringArray("demi=Default"),
-"text": "Goodnight, Gigi.",
+"text": "(I better not, Gigi would be upset if I looked in her account without asking her first.)",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Goodnight, Gigi.",
+"translation_key": "(I better not, Gigi would be upset if I looked in her account without asking her first.)",
 "type": "dialogue"
 },
 "56": {
 "id": "56",
-"mutation": {
-"expression": Array[Dictionary]([{
-"function": "_on_player_get_in_bed",
-"type": "function",
-"value": Array[Array]([])
-}])
-},
-"next_id": "57",
-"type": "mutation"
-},
-"57": {
-"id": "57",
 "is_snippet": false,
 "next_id": "end",
 "type": "goto"
+},
+"58": {
+"id": "58",
+"next_id": "59",
+"text": "bedroom_laptop_2",
+"type": "title"
+},
+"59": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "59",
+"next_id": "60",
+"tags": PackedStringArray("demi=Default"),
+"text": "(Ok, she should be here any minute according to the site’s cancellation policy.)",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "(Ok, she should be here any minute according to the site’s cancellation policy.)",
+"type": "dialogue"
 },
 "6": {
 "character": "Gigi",
@@ -435,6 +443,75 @@ lines = {
 "translation_key": "You didn’t say anything and stared at me for 1 hour 23 minutes and 21 seconds.",
 "type": "dialogue"
 },
+"60": {
+"id": "60",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"62": {
+"id": "62",
+"next_id": "63",
+"text": "entrance_night_end",
+"type": "title"
+},
+"63": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "63",
+"next_id": "64",
+"tags": PackedStringArray("demi=Happy"),
+"text": "Thank goodness you’re safe.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Thank goodness you’re safe.",
+"type": "dialogue"
+},
+"64": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "64",
+"next_id": "65",
+"tags": PackedStringArray("demi=Default"),
+"text": "Well, off to bed then.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Well, off to bed then.",
+"type": "dialogue"
+},
+"65": {
+"id": "65",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"67": {
+"id": "67",
+"next_id": "68",
+"text": "goodnight",
+"type": "title"
+},
+"68": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "68",
+"next_id": "69",
+"tags": PackedStringArray("demi=Default"),
+"text": "Goodnight, Gigi.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Goodnight, Gigi.",
+"type": "dialogue"
+},
+"69": {
+"id": "69",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "_on_player_get_in_bed",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "70",
+"type": "mutation"
+},
 "7": {
 "character": "Demi",
 "character_replacements": Array[Dictionary]([]),
@@ -445,6 +522,12 @@ lines = {
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Ah, I was just thinking about something. Don’t mind me.",
 "type": "dialogue"
+},
+"70": {
+"id": "70",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
 },
 "8": {
 "character": "Gigi",

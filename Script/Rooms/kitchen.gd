@@ -9,6 +9,7 @@ signal kitchen_pos
 func _ready():
 	if State.used_door == true:
 		emit_signal("kitchen_pos")
+		$DoorOpen.play()
 	if State.Day == 2 and State.day_2_intro == false:
 		$Fade_Transition.visible = false
 		$Player.visible = false

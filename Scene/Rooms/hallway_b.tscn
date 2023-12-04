@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://c2c7bs8g3nh5b"]
+[gd_scene load_steps=54 format=3 uid="uid://c2c7bs8g3nh5b"]
 
 [ext_resource type="Script" path="res://Script/Rooms/hallway_b.gd" id="1_lly7g"]
 [ext_resource type="PackedScene" uid="uid://be0wmp3b3b4qv" path="res://Scene/player.tscn" id="2_d86dv"]
@@ -38,6 +38,7 @@
 [ext_resource type="Texture2D" uid="uid://dq4a36psmwhvw" path="res://Sprites/Furniture/OBJ_Carpet/OBJ_CarpetC.png" id="34_8311c"]
 [ext_resource type="Texture2D" uid="uid://dgwsujl7vj8ev" path="res://Sprites/Furniture/OBJ_Window/OBJ_WindowF.png" id="35_b8wse"]
 [ext_resource type="AudioStream" uid="uid://cjqkj58mx01gn" path="res://Audio/ROOM TONE Hotel Hallway 2, 5am, Chiang Mai, Thailand, LR.wav" id="38_j2pys"]
+[ext_resource type="AudioStream" uid="uid://cis7ichx3jklf" path="res://Audio/Door 1 Close.wav" id="39_1b6qq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v6cr1"]
 texture = ExtResource("4_rnpty")
@@ -350,6 +351,11 @@ shape = SubResource("RectangleShape2D_yj4bv")
 stream = ExtResource("38_j2pys")
 volume_db = -10.0
 autoplay = true
+bus = &"SFX"
+
+[node name="DoorOpen" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("39_1b6qq")
+volume_db = -10.0
 
 [connection signal="hallwayB_pos_1" from="." to="Player" method="_on_hallway_b_hallway_b_pos_1"]
 [connection signal="hallwayB_pos_2" from="." to="Player" method="_on_hallway_b_hallway_b_pos_2"]

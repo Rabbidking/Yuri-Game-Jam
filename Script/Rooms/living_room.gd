@@ -12,11 +12,15 @@ func _ready():
 	if State.used_door == true:
 		if State.door_used == "living room":
 			emit_signal("living_pos")
+			$DoorOpen.play()
 		if State.door_used == "living_roomA":
 			emit_signal("living_pos_1")
+			$LadderClimb.play()
+			
 	if State.Day == 1 and State.first_time_found_gigi == false:
 		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_1.dialogue"), "living_room")
 		State.first_time_found_gigi = true
+		
 	elif State.Day == 4 and State.day_4_intro == false:
 		$Player.visible = false
 		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_4.dialogue"), "morning")
@@ -27,6 +31,7 @@ func _ready():
 		add_child(gigi)
 		gigi.position = Vector2(583, 139)
 		State.day_4_intro = true
+		
 	elif State.Day == 5 and State.day_5_intro == false:
 		$Player.visible = false
 		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "morning")
@@ -37,6 +42,7 @@ func _ready():
 		add_child(gigi)
 		gigi.position = Vector2(583, 139)
 		State.day_5_intro = true
+		
 	elif State.Day == 5 and State.mimi_is_here == true:
 		$Player.visible = false
 		State.Day += 1

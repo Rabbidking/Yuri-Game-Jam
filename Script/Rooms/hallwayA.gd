@@ -12,3 +12,7 @@ func _ready():
 			emit_signal("hallwayA_pos_2")
 		elif State.door_used == "hallwayA_3":
 			emit_signal("hallwayA_pos_3")
+		$DoorOpen.play()
+	
+	if State.gigi_at_entrance:
+		$doorbell.play()

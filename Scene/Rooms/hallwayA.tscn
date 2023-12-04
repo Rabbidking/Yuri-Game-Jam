@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b0pfj3nycfflx"]
+[gd_scene load_steps=27 format=3 uid="uid://b0pfj3nycfflx"]
 
 [ext_resource type="Script" path="res://Script/Rooms/hallwayA.gd" id="1_h463u"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_yv8w3"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://0ns00vrf56ae" path="res://Sprites/Furniture/OBJ_Carpet/OBJ_CarpetB.png" id="15_wldsc"]
 [ext_resource type="AudioStream" uid="uid://cjqkj58mx01gn" path="res://Audio/ROOM TONE Hotel Hallway 2, 5am, Chiang Mai, Thailand, LR.wav" id="18_a86it"]
 [ext_resource type="AudioStream" uid="uid://ba6ecp15dc7ou" path="res://Audio/BELLDoor-INT_Door Bell Low Tone_JSE_DO_Distance Stereo.wav" id="19_shxus"]
+[ext_resource type="AudioStream" uid="uid://cis7ichx3jklf" path="res://Audio/Door 1 Close.wav" id="20_bcvda"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pxhay"]
 texture = ExtResource("4_kh1d4")
@@ -194,9 +195,15 @@ shape = SubResource("RectangleShape2D_k2qwn")
 stream = ExtResource("18_a86it")
 volume_db = -10.0
 autoplay = true
+bus = &"SFX"
 
 [node name="doorbell" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("19_shxus")
+bus = &"SFX"
+
+[node name="DoorOpen" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_bcvda")
+volume_db = -10.0
 
 [connection signal="hallwayA_pos_1" from="." to="Player" method="_on_hallway_a_hallway_a_pos_1"]
 [connection signal="hallwayA_pos_2" from="." to="Player" method="_on_hallway_a_hallway_a_pos_2"]

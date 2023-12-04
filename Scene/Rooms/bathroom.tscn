@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://dc2utvich756a"]
+[gd_scene load_steps=59 format=3 uid="uid://dc2utvich756a"]
 
 [ext_resource type="Script" path="res://Script/Rooms/bathroom.gd" id="1_vfmt4"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_i51h5"]
@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://cgtdksx1yem7g" path="res://Sprites/Furniture/OBJ_Plant/OBJ_PlantC.png" id="26_bayrr"]
 [ext_resource type="Texture2D" uid="uid://cneci0dnik2mf" path="res://Sprites/Furniture/OBJ_Window/OBJ_WindowB.png" id="27_ddsev"]
 [ext_resource type="AudioStream" uid="uid://deuu0nafj8djj" path="res://Audio/AMBISONIC_A INT Bathroom 01.wav" id="37_lhgj0"]
+[ext_resource type="AudioStream" uid="uid://cis7ichx3jklf" path="res://Audio/Door 1 Close.wav" id="38_8cesd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gpm1s"]
 texture = ExtResource("4_v6j41")
@@ -353,6 +354,11 @@ shape = SubResource("RectangleShape2D_xof8n")
 stream = ExtResource("37_lhgj0")
 volume_db = -10.0
 autoplay = true
+bus = &"SFX"
+
+[node name="DoorOpen" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("38_8cesd")
+volume_db = -10.0
 
 [connection signal="bathroom_pos" from="." to="Player" method="_on_bathroom_bathroom_pos"]
 [connection signal="area_entered" from="Fuel Cell" to="Fuel Cell" method="_on_area_entered"]

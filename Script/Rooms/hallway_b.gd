@@ -15,3 +15,4 @@ func _ready():
 			emit_signal("hallwayB_pos_3")
 		elif State.door_used == "hallwayB_4":
 			emit_signal("hallwayB_pos_4")
+		$DoorOpen.play()

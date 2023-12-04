@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://c52j41y7ex3nl"]
+[gd_scene load_steps=57 format=3 uid="uid://c52j41y7ex3nl"]
 
 [ext_resource type="Script" path="res://Script/Rooms/garage.gd" id="1_6bnx0"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_wm4sm"]
@@ -41,6 +41,7 @@
 [ext_resource type="Texture2D" uid="uid://6djmbwyj02yw" path="res://Sprites/Furniture/OBJ_SmallItems/OBJ_SodaCanD.png" id="32_vpysh"]
 [ext_resource type="Texture2D" uid="uid://5524yo0eydps" path="res://Sprites/Furniture/OBJ_Bench/OBJ_BenchC.png" id="33_ryji1"]
 [ext_resource type="AudioStream" uid="uid://c6kg5xifhu3lp" path="res://Audio/Ambience, Empty Garage Hum, Metal Gate Hitting, Wind Outside, Scary-AmbiX.wav" id="41_1qn3w"]
+[ext_resource type="AudioStream" uid="uid://cis7ichx3jklf" path="res://Audio/Door 1 Close.wav" id="42_gy8yv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v6mny"]
 texture = ExtResource("16_1c7q4")
@@ -403,6 +404,11 @@ shape = SubResource("RectangleShape2D_t2gno")
 stream = ExtResource("41_1qn3w")
 volume_db = -10.0
 autoplay = true
+bus = &"SFX"
+
+[node name="DoorOpen" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("42_gy8yv")
+volume_db = -10.0
 
 [connection signal="garage_pos" from="." to="Player" method="_on_garage_garage_pos"]
 [connection signal="picked_up" from="Player" to="Car" method="_on_player_picked_up"]

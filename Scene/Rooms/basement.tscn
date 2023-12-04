@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://2sgrr1gkcehs"]
+[gd_scene load_steps=50 format=3 uid="uid://2sgrr1gkcehs"]
 
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="1_6gcqm"]
 [ext_resource type="Script" path="res://Script/Rooms/basement.gd" id="1_kto8c"]
@@ -32,6 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://bm0jj5x5qx0o8" path="res://Sprites/Furniture/OBJ_SmallItems/OBJ_StorageContainerA.png" id="29_ws5s4"]
 [ext_resource type="Texture2D" uid="uid://l5014vtnf4xf" path="res://Sprites/Furniture/OBJ_ToolBox/OBJ_ToolBoxA.png" id="30_a07e5"]
 [ext_resource type="AudioStream" uid="uid://rhaj7t8ogik6" path="res://Audio/SFXW001_indoor_basement neutral sound.wav" id="30_epv88"]
+[ext_resource type="AudioStream" uid="uid://bl2wasvmsxxxl" path="res://Audio/ladder-82581.wav" id="33_6dtnh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m0vgj"]
 texture = ExtResource("4_k2dgl")
@@ -272,6 +273,7 @@ texture = ExtResource("11_tva2y")
 stream = ExtResource("30_epv88")
 volume_db = -10.0
 autoplay = true
+bus = &"SFX"
 
 [node name="Walls" type="StaticBody2D" parent="."]
 collision_layer = 6
@@ -348,6 +350,10 @@ shape = SubResource("RectangleShape2D_uf4bx")
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="Object Collision"]
 position = Vector2(718.5, 212.5)
 shape = SubResource("RectangleShape2D_nff4u")
+
+[node name="LadderClimb" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("33_6dtnh")
+volume_db = -10.0
 
 [connection signal="basement_pos" from="." to="Player" method="_on_basement_basement_pos"]
 [connection signal="pick_up_object" from="Gigi" to="Player" method="_on_gigi_pick_up_object"]

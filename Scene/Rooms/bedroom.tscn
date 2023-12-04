@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://bgh547qu4toco"]
+[gd_scene load_steps=66 format=3 uid="uid://bgh547qu4toco"]
 
 [ext_resource type="Script" path="res://Script/Rooms/bedroom.gd" id="1_v28qo"]
 [ext_resource type="PackedScene" uid="uid://be0wmp3b3b4qv" path="res://Scene/player.tscn" id="2_5gxhm"]
@@ -46,6 +46,7 @@
 [ext_resource type="Texture2D" uid="uid://hh6eug76smyw" path="res://Sprites/Furniture/OBJ_SmallItems/OBJ_SodaCanA.png" id="44_ltiou"]
 [ext_resource type="Texture2D" uid="uid://bobd68u3op4h6" path="res://Sprites/Furniture/OBJ_SmallItems/OBJ_SodaCanB.png" id="45_fkvk0"]
 [ext_resource type="AudioStream" uid="uid://b2dbcar0pqojs" path="res://Audio/AMBRoom_Bedroom, Groundfloor, Doors & Windows Closed_344 Audio_UK Residential Room Tones.wav" id="46_o80py"]
+[ext_resource type="AudioStream" uid="uid://cis7ichx3jklf" path="res://Audio/Door 1 Close.wav" id="47_s2pyl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lhowl"]
 texture = ExtResource("4_vuhgm")
@@ -420,6 +421,11 @@ shape = SubResource("RectangleShape2D_wwcn5")
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("46_o80py")
 autoplay = true
+bus = &"SFX"
+
+[node name="DoorOpen" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("47_s2pyl")
+volume_db = -10.0
 
 [connection signal="bedroom_pos" from="." to="Player" method="_on_bedroom_bedroom_pos"]
 [connection signal="player_can_move" from="Fade_Transition" to="Player" method="_on_fade_transition_player_can_move"]

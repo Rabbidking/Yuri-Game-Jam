@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://dc6fk5kkjoeet"]
+[gd_scene load_steps=45 format=3 uid="uid://dc6fk5kkjoeet"]
 
 [ext_resource type="Script" path="res://Script/Rooms/study.gd" id="1_3gauq"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_ecvp5"]
@@ -27,6 +27,8 @@
 [ext_resource type="Texture2D" uid="uid://ct5bpnxxnalfd" path="res://Sprites/Furniture/OBJ_SmallItems/OBJ_RecordPile.png" id="19_2oiap"]
 [ext_resource type="Texture2D" uid="uid://bbaej48gxweem" path="res://Sprites/Furniture/OBJ_Bathroom/OBJ_BathTrashCan.png" id="21_ukbc1"]
 [ext_resource type="Texture2D" uid="uid://dq4a36psmwhvw" path="res://Sprites/Furniture/OBJ_Carpet/OBJ_CarpetC.png" id="25_nt4a2"]
+[ext_resource type="AudioStream" uid="uid://cjqkj58mx01gn" path="res://Audio/ROOM TONE Hotel Hallway 2, 5am, Chiang Mai, Thailand, LR.wav" id="28_fvc88"]
+[ext_resource type="AudioStream" uid="uid://cis7ichx3jklf" path="res://Audio/Door 1 Close.wav" id="29_a17ey"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mt726"]
 texture = ExtResource("4_f61lq")
@@ -280,6 +282,16 @@ shape = SubResource("RectangleShape2D_6jb8j")
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="Object Collision"]
 position = Vector2(554.5, 392)
 shape = SubResource("RectangleShape2D_yyjup")
+
+[node name="Ambient" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("28_fvc88")
+volume_db = -10.0
+autoplay = true
+bus = &"SFX"
+
+[node name="DoorOpen" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("29_a17ey")
+volume_db = -10.0
 
 [connection signal="study_pos" from="." to="Player" method="_on_study_study_pos"]
 [connection signal="picked_up" from="Player" to="Key" method="_on_player_picked_up"]

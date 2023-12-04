@@ -22,6 +22,7 @@ func _ready():
 			emit_signal("entrance_pos_2")
 		elif State.door_used == "entrance_2":
 			emit_signal("entrance_pos_3")
+		$DoorOpen.play()
 			
 
 #func inst(pos):

@@ -1,12 +1,14 @@
+HSlider
 VSeparator
-VBoxContainer
-ScrollContainer
-OptionButton
-HSeparator
 Label
 HBoxContainer
-Button
+VBoxContainer
+ScrollContainer
 AudioStreamPlayer
+AudioStreamPlayer2D
+OptionButton
+HSeparator
+Button
 MarginContainer
 TabBar
 TabContainer
@@ -15,7 +17,6 @@ CollisionShape2D
 StaticBody2D
 Node2D
 TileMap
-AudioStreamPlayer2D
 TextureRect
 Area2D
 CanvasLayer

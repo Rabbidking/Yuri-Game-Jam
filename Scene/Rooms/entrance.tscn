@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://dn3o4ik2vi8l8"]
+[gd_scene load_steps=41 format=3 uid="uid://dn3o4ik2vi8l8"]
 
 [ext_resource type="Script" path="res://Script/Rooms/entrance.gd" id="1_4k0mf"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_e8lwr"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://dpy4bwoc15pb5" path="res://Sprites/Furniture/OBJ_Carpet/OBJ_CarpetH.png" id="24_02jyq"]
 [ext_resource type="AudioStream" uid="uid://db6snhlijg234" path="res://Audio/SFXW001_indoor_roomtone_entrance hall.wav" id="25_an1wc"]
 [ext_resource type="Texture2D" uid="uid://0ns00vrf56ae" path="res://Sprites/Furniture/OBJ_Carpet/OBJ_CarpetB.png" id="25_r6j74"]
+[ext_resource type="AudioStream" uid="uid://cis7ichx3jklf" path="res://Audio/Door 1 Close.wav" id="29_e4ep1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s3k41"]
 texture = ExtResource("4_knpib")
@@ -228,6 +229,7 @@ texture = ExtResource("21_cbvi3")
 stream = ExtResource("25_an1wc")
 volume_db = -5.0
 autoplay = true
+bus = &"SFX"
 
 [node name="Walls" type="StaticBody2D" parent="."]
 collision_layer = 6
@@ -290,6 +292,10 @@ shape = SubResource("RectangleShape2D_22agk")
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Object Collision"]
 position = Vector2(624, 479)
 shape = SubResource("RectangleShape2D_meq1v")
+
+[node name="DoorOpen" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("29_e4ep1")
+volume_db = -10.0
 
 [connection signal="entrance_pos_1" from="." to="Player" method="_on_entrance_entrance_pos_1"]
 [connection signal="entrance_pos_2" from="." to="Player" method="_on_entrance_entrance_pos_2"]

@@ -12,6 +12,8 @@ signal gigi_awake
 func _ready():
 	if State.used_door == true:
 		emit_signal("garage_pos")
+		$DoorOpen.play()
+		
 	if State.Day != 5:
 		$Props/Teleporter.visible = false
 		$"Object Collision/teleporter".disabled = true

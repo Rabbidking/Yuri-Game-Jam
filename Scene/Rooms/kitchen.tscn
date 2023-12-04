@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://xejcukxa4s3w"]
+[gd_scene load_steps=76 format=3 uid="uid://xejcukxa4s3w"]
 
 [ext_resource type="Script" path="res://Script/Rooms/kitchen.gd" id="1_lkrb5"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_vd0cc"]
@@ -53,6 +53,7 @@
 [ext_resource type="Texture2D" uid="uid://6djmbwyj02yw" path="res://Sprites/Furniture/OBJ_SmallItems/OBJ_SodaCanD.png" id="48_88x52"]
 [ext_resource type="Texture2D" uid="uid://bbaej48gxweem" path="res://Sprites/Furniture/OBJ_Bathroom/OBJ_BathTrashCan.png" id="48_p3heo"]
 [ext_resource type="AudioStream" uid="uid://mmh4n3hfvjc8" path="res://Audio/kitchen_roomtone_with_refrigerator_002.wav" id="53_njyrr"]
+[ext_resource type="AudioStream" uid="uid://cis7ichx3jklf" path="res://Audio/Door 1 Close.wav" id="54_jhoj0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5pahu"]
 texture = ExtResource("4_5mc62")
@@ -521,6 +522,11 @@ shape = SubResource("RectangleShape2D_dtj2h")
 stream = ExtResource("53_njyrr")
 volume_db = -10.0
 autoplay = true
+bus = &"SFX"
+
+[node name="DoorOpen" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("54_jhoj0")
+volume_db = -10.0
 
 [connection signal="kitchen_pos" from="." to="Player" method="_on_kitchen_kitchen_pos"]
 [connection signal="picked_up" from="Player" to="Fuel Cell" method="_on_player_picked_up"]

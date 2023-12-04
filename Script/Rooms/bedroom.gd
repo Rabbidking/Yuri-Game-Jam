@@ -7,6 +7,8 @@ signal bedroom_pos
 func _ready():
 	if State.used_door == true:
 		emit_signal("bedroom_pos")
+		$DoorOpen.play()
+		
 	if State.Day == 1 and State.night_1_intro == false:
 		$Player.position = Vector2(425, 320)
 		$Fade_Transition.visible = false

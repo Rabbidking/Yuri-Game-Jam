@@ -40,3 +40,4 @@ res://Script/Rooms/hallway_b.gd
 res://Script/Rooms/kitchen.gd
 res://Scene/Options/audio_slider_settings.tscn
 res://Scene/Options/audio_slider_settings.gd
+res://Script/SettingsSignalBus.gd

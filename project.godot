@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 State="*res://Script/state.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Interactable="*res://Script/interactable.gd"
+SettingsSignalBus="*res://Script/SettingsSignalBus.gd"
 
 [dialogue_manager]
 

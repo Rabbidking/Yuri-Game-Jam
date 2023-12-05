@@ -23,9 +23,18 @@ Demi: [#demi=Default]Oh well, it was worth a shot. Better find her.
 
 => END
 
+~ hallway_A_Enter
+
+Demi: [#demi=Default]The sounds came from the Garage again.
+Demi: [#demi=Default]I hope Gigi didn't hurt herself making something.
+
+=> END
+
 ~ garage_enter_first_time
 
 Demi: [#demi=Shocked]…What is this? Some kind of teleporter?
+Demi: [#demi=Default]Hmm, there are 3 empty slots.
+Demi: [#demi=Default]Looks like the slots need some kind of battery.
 
 => END
 
@@ -37,9 +46,20 @@ Demi: [#demi=Default]Maybe that’s where the batteries go?
 
 => END
 
+~ slot_interact_not_enough_batteries
+
+Demi: [#demi=Annoyed]I don't have a battery.
+
+=> END
+
 ~ kitchen_battery
 Picked up a Battery
 Demi: [#demi=Annoyed]Is this even safe to hold?
+=> END
+
+~ kitchen_battery_before
+Picked up a Battery
+Demi: [#demi=Annoyed]Whatever this is, I don't want this near the food.
 => END
 
 ~ bathroom_battery
@@ -47,9 +67,19 @@ Picked up a Battery
 Demi: [#demi=Annoyed]I hope this didn't get wet.
 => END
 
+~ bathroom_battery_before
+Picked up a Battery
+Demi: [#demi=Annoyed]This doesn't look safe near water.
+=> END
+
 ~ basement_battery
 Picked up a Battery
 Demi: [#demi=Annoyed]Ugh, this is heavy!
+=> END
+
+~ basement_battery_before
+Picked up a Battery
+Demi: [#demi=Annoyed]What the heck are these things.
 => END
 
 ~ teleporter_place_batteries

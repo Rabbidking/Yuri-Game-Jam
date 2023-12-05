@@ -13,6 +13,17 @@ func _ready():
 		elif State.door_used == "hallwayA_3":
 			emit_signal("hallwayA_pos_3")
 		$DoorOpen.play()
-	
-	if State.gigi_at_entrance:
+		
+	if State.Day == 2 and State.hallway_A_car == false:
+		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_2.dialogue"), "hallway_A_car_sound")
+		State.hallway_A_car = true
+	elif State.Day == 3 and State.hallway_A_doorbell == false:
 		$doorbell.play()
+		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_3.dialogue"), "hallway_A_doorbell")
+		State.hallway_A_doorbell = true
+	elif State.Day == 5 and State.hallway_A_electric == false:
+		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "hallway_A_Enter")
+		State.hallway_A_electric = true
+		
+#	if State.gigi_at_entrance:
+#		$doorbell.play()		

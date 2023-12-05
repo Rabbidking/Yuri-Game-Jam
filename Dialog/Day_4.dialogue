@@ -14,6 +14,10 @@ Demi: [#demi=Shocked](What was that?)
 Demi: [#demi=Shocked](Oh shoot, she's gone again!)
 => END
 
+~ entrance_sound
+Demi: [#demi=Default]Sounds like banging in the living room.
+=> END
+
 ~ living_room_basement_discovered
 Demi: [#demi=Default]What the heck? Who built this and when? 
 Demi: [#demi=Default]Darn, it’s boarded up. Better get a crowbar.

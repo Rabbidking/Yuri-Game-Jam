@@ -17,7 +17,13 @@ Demi: [#demi=Default](Shoot, is she sleepwalking again?)
 Demi: [#demi=Default](I heard someone get in the car, it must be Gigi.)
 => END
 
+~ hallway_A_car_sound
+Demi: [#demi=Shocked]What's that sound?
+Demi: [#demi=Shocked]Is someone messing with my car?
+=> END
+
 ~ gigi_in_car
+Demi sees Gigi locked herself in the trunk of the car!
 Demi: [#demi=Shocked]Hey Hun! Gigi, wake up! Can you hear me!? 
 Demi: [#demi=Default]Darn, it’s locked. Where did I leave my keys again? 
 Demi: [#demi=Default]Gigi usually takes my jacket to the bedroom...

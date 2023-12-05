@@ -23,7 +23,10 @@ func _ready():
 		elif State.door_used == "entrance_2":
 			emit_signal("entrance_pos_3")
 		$DoorOpen.play()
-			
+	
+	if State.Day == 4 and State.entrance_sound == false:
+		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_4.dialogue"), "entrance_sound")
+		State.entrance_sound = true
 
 #func inst(pos):
 #	var instance = recepit.instantiate()

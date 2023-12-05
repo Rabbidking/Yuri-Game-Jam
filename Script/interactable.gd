@@ -320,13 +320,22 @@ func _on_player_picked_up():
 		hide()
 		collision_shape_2d.set_deferred("disabled", true)
 		if State.Day == 5 and location == "basement" and type == "fuelcell1":
-			DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "basement_battery")
+			if State.garage_trigger == true:
+				DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "basement_battery")
+			elif State.garage_trigger == false:
+				DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "basement_battery_before")
 			State.fuel_cell1 = true
 		elif State.Day == 5 and location == "kitchen" and type == "fuelcell2":
-			DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "kitchen_battery")
+			if State.garage_trigger == true:
+				DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "kitchen_battery")
+			elif State.garage_trigger == false:
+				DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "kitchen_battery_before")
 			State.fuel_cell2 = true
 		elif State.Day == 5 and location == "bathroom" and type == "fuelcell3":
-			DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "bathroom_battery")
+			if State.garage_trigger == true:
+				DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "bathroom_battery")
+			elif State.garage_trigger == false:
+				DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "bathroom_battery_before")
 			State.fuel_cell3 = true
 		State.fuel_cell += 1
 		#queue_free()
@@ -334,8 +343,9 @@ func _on_player_picked_up():
 
 func _on_player_pick_up_gigi():
 		if item == "gigi":
+			item_get.play()
 			State.have_gigi == true
-			queue_free()
+			hide()
 			
 
 func _on_player_picked_up_2():
@@ -376,6 +386,8 @@ func _on_player_picked_up_3():
 		if State.slot1_empty == false and State.slot2_empty == false and State.slot3_empty == false:
 			load_next_scene_3()
 			print("Functioning")
+	elif item == "teleporter_slot1" and State.fuel_cell == 0 and State.slot1_empty == true:
+		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "slot_interact_not_enough_batteries")
 
 func _on_player_picked_up_4():
 	if item == "teleporter_slot2" and State.fuel_cell > 0 and State.slot2_empty == true:
@@ -386,6 +398,8 @@ func _on_player_picked_up_4():
 		if State.slot1_empty == false and State.slot2_empty == false and State.slot3_empty == false:
 			load_next_scene_3()
 			print("Functioning")
+	elif item == "teleporter_slot2" and State.fuel_cell == 0 and State.slot2_empty == true:
+		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "slot_interact_not_enough_batteries")
 
 func _on_player_picked_up_5():
 	if item == "teleporter_slot3" and State.fuel_cell > 0 and State.slot3_empty == true:
@@ -396,6 +410,8 @@ func _on_player_picked_up_5():
 		if State.slot1_empty == false and State.slot2_empty == false and State.slot3_empty == false:
 			load_next_scene_3()
 			print("Functioning")
+	elif item == "teleporter_slot3" and State.fuel_cell == 0 and State.slot3_empty == true:
+		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "slot_interact_not_enough_batteries")
 		
 
 func load_next_scene():

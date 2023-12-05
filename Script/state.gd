@@ -24,6 +24,7 @@ var night_1_end = false
 # night 2 specific flags
 var day_2_intro = false
 var night_2_intro = false
+var hallway_A_car = false
 var garage_first_check_car = false
 var key_taken = false
 var garage_open_trunk = false
@@ -32,6 +33,7 @@ var night_2_end = false
 # night 3 specific flags
 var day_3_intro = false
 var night_3_intro = false
+var hallway_A_doorbell = false
 var front_ent_recept_first_check = false
 var read_receipt = false
 var password_known = false
@@ -48,6 +50,7 @@ var night_3_end = false
 var day_4_intro = false
 var night_4_intro = false
 
+var entrance_sound = false
 var have_crowbar = false
 var trapdoor_locked = true
 #This should only be true if we're in night 4 and 5
@@ -67,7 +70,7 @@ var night_4_end = false
 # night 5 specific flags
 var day_5_intro = false
 var night_5_intro = false
-
+var hallway_A_electric = false
 var garage_trigger = false
 # This flag is meant to change Gigi's label and portrait into Mimi's for the night 5 scenes.
 # Set to true once night_5_intro is true, set back to false once we load the ending cutscene

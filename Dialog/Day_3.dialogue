@@ -23,6 +23,10 @@ do load_next_scene()
 Demi: [#demi=Default](It happened again, where did she go this time?)
 => END
 
+~ hallway_A_doorbell
+Demi: [#demi=Annoyed](Who could possibly be ringing the door bell at this time of the night?)
+=> END
+
 ~ front_entrance_receipt
 Demi: [#demi=Default](This is bad, I can’t find Gigi anywhere.)
 Demi: [#demi=Default](Huh? A delivery receipt? I didn’t mail anything out today.)

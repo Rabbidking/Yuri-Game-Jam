@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c8d5hla3410jd"]
+[gd_scene load_steps=20 format=3 uid="uid://c8d5hla3410jd"]
 
 [ext_resource type="Script" path="res://Script/interactable.gd" id="1_01v7x"]
 [ext_resource type="Texture2D" uid="uid://bkg2agt6rhy0y" path="res://sample/Green.png" id="2_aj3l5"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dumpqsxiqd5nn" path="res://Sprites/Characters/Gigi/Idle/Gigi-Idle-6.png" id="8_vs4vm"]
 [ext_resource type="Texture2D" uid="uid://cd76g5xepwyjh" path="res://Sprites/Characters/Gigi/Sleeping/Gigi-Sleeping-7.png" id="9_l7vjp"]
 [ext_resource type="Texture2D" uid="uid://cixa4wh4327ae" path="res://Sprites/Characters/Gigi/Idle/Gigi-Idle-7.png" id="9_ye0hl"]
+[ext_resource type="AudioStream" uid="uid://dbowng50glnue" path="res://Audio/Magic Positive 3.wav" id="17_13ys5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iiqsq"]
 animations = [{
@@ -91,6 +92,10 @@ autoplay = "Sleep"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_hxuws")
+
+[node name="ItemGet" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("17_13ys5")
+bus = &"SFX"
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

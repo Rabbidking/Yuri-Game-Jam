@@ -63,7 +63,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				$AnimatedSprite2D.play("Idle Side")
 				
 		#Interact
-		if Input.is_action_just_pressed("Interact") and interactable == true:
+		if Input.is_action_just_pressed("interact") and interactable == true:
 			print(interactable_item)
 			State.is_dialog_active = true
 			if interactable_item == "gigi":

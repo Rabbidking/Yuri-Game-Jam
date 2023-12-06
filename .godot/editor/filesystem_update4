@@ -6,3 +6,4 @@ res://Scene/main_menu.tscn
 res://Scene/interactable.tscn
 res://Scene/Rooms/bedroom.tscn
 res://Scene/Options/hotkey_rebind_button.tscn
+res://Script/player.gd

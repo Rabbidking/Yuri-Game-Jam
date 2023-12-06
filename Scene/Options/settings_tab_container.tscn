@@ -104,23 +104,22 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_5ernj")
 
 [node name="Hotkey_Rebind_Button" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_7sox0")]
 layout_mode = 2
-action_name = "up"
 
 [node name="Hotkey_Rebind_Button2" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_7sox0")]
 layout_mode = 2
-action_name = "down"
+action_name = "right"
 
 [node name="Hotkey_Rebind_Button3" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_7sox0")]
 layout_mode = 2
-action_name = "left"
+action_name = "up"
 
 [node name="Hotkey_Rebind_Button4" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_7sox0")]
 layout_mode = 2
-action_name = "right"
+action_name = "down"
 
 [node name="Hotkey_Rebind_Button5" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_7sox0")]
 layout_mode = 2
-action_name = "Interact"
+action_name = "interact"
 
 [node name="Hotkey_Rebind_Button6" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_7sox0")]
 layout_mode = 2

@@ -1,18 +1,19 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_6onqi"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_418yx"]
 
 [resource]
-script = ExtResource("1_6onqi")
+script = ExtResource("1_418yx")
 using_states = PackedStringArray()
 titles = {
-"basement_gigi": "43",
-"basement_open": "33",
-"basement_open_with_crowbar": "38",
-"bedroom": "48",
-"garage_crowbar_get": "23",
-"garage_crowbar_get_before": "28",
-"living_room_basement_discovered": "18",
+"basement_gigi": "47",
+"basement_open": "37",
+"basement_open_with_crowbar": "42",
+"bedroom": "52",
+"entrance_sound": "18",
+"garage_crowbar_get": "27",
+"garage_crowbar_get_before": "32",
+"living_room_basement_discovered": "22",
 "morning": "2",
 "night": "12"
 }
@@ -73,7 +74,7 @@ lines = {
 "17": {
 "id": "17",
 "next_id": "18",
-"text": "living_room_basement_discovered",
+"text": "entrance_sound",
 "type": "title"
 },
 "18": {
@@ -82,21 +83,16 @@ lines = {
 "id": "18",
 "next_id": "19",
 "tags": PackedStringArray("demi=Default"),
-"text": "What the heck? Who built this and when?",
+"text": "Sounds like banging in the living room.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "What the heck? Who built this and when?",
+"translation_key": "Sounds like banging in the living room.",
 "type": "dialogue"
 },
 "19": {
-"character": "Demi",
-"character_replacements": Array[Dictionary]([]),
 "id": "19",
-"next_id": "20",
-"tags": PackedStringArray("demi=Default"),
-"text": "Darn, it’s boarded up. Better get a crowbar.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Darn, it’s boarded up. Better get a crowbar.",
-"type": "dialogue"
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
 },
 "2": {
 "character": "Gigi",
@@ -109,73 +105,73 @@ lines = {
 "translation_key": "Did you call him?",
 "type": "dialogue"
 },
-"20": {
-"id": "20",
+"21": {
+"id": "21",
+"next_id": "22",
+"text": "living_room_basement_discovered",
+"type": "title"
+},
+"22": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "22",
+"next_id": "23",
+"tags": PackedStringArray("demi=Default"),
+"text": "What the heck? Who built this and when?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What the heck? Who built this and when?",
+"type": "dialogue"
+},
+"23": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "23",
+"next_id": "24",
+"tags": PackedStringArray("demi=Default"),
+"text": "Darn, it’s boarded up. Better get a crowbar.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Darn, it’s boarded up. Better get a crowbar.",
+"type": "dialogue"
+},
+"24": {
+"id": "24",
 "is_snippet": false,
 "next_id": "end",
 "type": "goto"
 },
-"22": {
-"id": "22",
-"next_id": "23",
+"26": {
+"id": "26",
+"next_id": "27",
 "text": "garage_crowbar_get",
 "type": "title"
 },
-"23": {
+"27": {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
-"id": "23",
-"next_id": "24",
+"id": "27",
+"next_id": "28",
 "tags": PackedStringArray(),
 "text": "(Got a Crowbar)",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "(Got a Crowbar)",
 "type": "dialogue"
 },
-"24": {
+"28": {
 "character": "Demi",
 "character_replacements": Array[Dictionary]([]),
-"id": "24",
-"next_id": "25",
+"id": "28",
+"next_id": "29",
 "tags": PackedStringArray("demi=Default"),
 "text": "Nice, this should work.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Nice, this should work.",
 "type": "dialogue"
 },
-"25": {
-"id": "25",
+"29": {
+"id": "29",
 "is_snippet": false,
 "next_id": "end",
 "type": "goto"
-},
-"27": {
-"id": "27",
-"next_id": "28",
-"text": "garage_crowbar_get_before",
-"type": "title"
-},
-"28": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "28",
-"next_id": "29",
-"tags": PackedStringArray(),
-"text": "(Got a Crowbar)",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "(Got a Crowbar)",
-"type": "dialogue"
-},
-"29": {
-"character": "Demi",
-"character_replacements": Array[Dictionary]([]),
-"id": "29",
-"next_id": "30",
-"tags": PackedStringArray("demi=Default"),
-"text": "This will be handy as a weapon.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "This will be handy as a weapon.",
-"type": "dialogue"
 },
 "3": {
 "character": "Demi",
@@ -188,17 +184,22 @@ lines = {
 "translation_key": "Yeah…he said he would look into the prescription, but also suggested that you should keep taking the pills in the meantime.",
 "type": "dialogue"
 },
-"30": {
-"id": "30",
-"is_snippet": false,
-"next_id": "end",
-"type": "goto"
+"31": {
+"id": "31",
+"next_id": "32",
+"text": "garage_crowbar_get_before",
+"type": "title"
 },
 "32": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
 "id": "32",
 "next_id": "33",
-"text": "basement_open",
-"type": "title"
+"tags": PackedStringArray(),
+"text": "(Got a Crowbar)",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "(Got a Crowbar)",
+"type": "dialogue"
 },
 "33": {
 "character": "Demi",
@@ -206,55 +207,50 @@ lines = {
 "id": "33",
 "next_id": "34",
 "tags": PackedStringArray("demi=Default"),
-"text": "I probably should call the cops…nah they’re jerks.",
+"text": "This will be handy as a weapon.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "I probably should call the cops…nah they’re jerks.",
+"translation_key": "This will be handy as a weapon.",
 "type": "dialogue"
 },
 "34": {
-"character": "Demi",
-"character_replacements": Array[Dictionary]([]),
 "id": "34",
-"next_id": "35",
-"tags": PackedStringArray("demi=Shocked"),
-"text": "What the heck, it’s a basement? And there are even lights in there too.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "What the heck, it’s a basement? And there are even lights in there too.",
-"type": "dialogue"
-},
-"35": {
-"id": "35",
 "is_snippet": false,
 "next_id": "end",
 "type": "goto"
 },
+"36": {
+"id": "36",
+"next_id": "37",
+"text": "basement_open",
+"type": "title"
+},
 "37": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
 "id": "37",
 "next_id": "38",
-"text": "basement_open_with_crowbar",
-"type": "title"
+"tags": PackedStringArray("demi=Default"),
+"text": "I probably should call the cops…nah they’re jerks.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I probably should call the cops…nah they’re jerks.",
+"type": "dialogue"
 },
 "38": {
 "character": "Demi",
 "character_replacements": Array[Dictionary]([]),
 "id": "38",
 "next_id": "39",
-"tags": PackedStringArray("demi=Default"),
-"text": "Good thing I brought a crowbar.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Good thing I brought a crowbar.",
-"type": "dialogue"
-},
-"39": {
-"character": "Demi",
-"character_replacements": Array[Dictionary]([]),
-"id": "39",
-"next_id": "40",
 "tags": PackedStringArray("demi=Shocked"),
 "text": "What the heck, it’s a basement? And there are even lights in there too.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "What the heck, it’s a basement? And there are even lights in there too.",
 "type": "dialogue"
+},
+"39": {
+"id": "39",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
 },
 "4": {
 "character": "Gigi",
@@ -267,17 +263,22 @@ lines = {
 "translation_key": "Well, I could just stop taking the pills…",
 "type": "dialogue"
 },
-"40": {
-"id": "40",
-"is_snippet": false,
-"next_id": "end",
-"type": "goto"
+"41": {
+"id": "41",
+"next_id": "42",
+"text": "basement_open_with_crowbar",
+"type": "title"
 },
 "42": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
 "id": "42",
 "next_id": "43",
-"text": "basement_gigi",
-"type": "title"
+"tags": PackedStringArray("demi=Default"),
+"text": "Good thing I brought a crowbar.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Good thing I brought a crowbar.",
+"type": "dialogue"
 },
 "43": {
 "character": "Demi",
@@ -285,55 +286,50 @@ lines = {
 "id": "43",
 "next_id": "44",
 "tags": PackedStringArray("demi=Shocked"),
-"text": "Did…did she build all this while sleepwalking?",
+"text": "What the heck, it’s a basement? And there are even lights in there too.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Did…did she build all this while sleepwalking?",
+"translation_key": "What the heck, it’s a basement? And there are even lights in there too.",
 "type": "dialogue"
 },
 "44": {
-"character": "Demi",
-"character_replacements": Array[Dictionary]([]),
 "id": "44",
-"next_id": "45",
-"tags": PackedStringArray("demi=Default"),
-"text": "But how did she board up the trapdoor from down here?",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "But how did she board up the trapdoor from down here?",
-"type": "dialogue"
-},
-"45": {
-"id": "45",
 "is_snippet": false,
 "next_id": "end",
 "type": "goto"
 },
+"46": {
+"id": "46",
+"next_id": "47",
+"text": "basement_gigi",
+"type": "title"
+},
 "47": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
 "id": "47",
 "next_id": "48",
-"text": "bedroom",
-"type": "title"
+"tags": PackedStringArray("demi=Shocked"),
+"text": "Did…did she build all this while sleepwalking?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Did…did she build all this while sleepwalking?",
+"type": "dialogue"
 },
 "48": {
 "character": "Demi",
 "character_replacements": Array[Dictionary]([]),
 "id": "48",
 "next_id": "49",
-"tags": PackedStringArray("demi=Annoyed"),
-"text": "Ugh, I must be exhausted if the noise didn’t wake me up.",
+"tags": PackedStringArray("demi=Default"),
+"text": "But how did she board up the trapdoor from down here?",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Ugh, I must be exhausted if the noise didn’t wake me up.",
+"translation_key": "But how did she board up the trapdoor from down here?",
 "type": "dialogue"
 },
 "49": {
-"character": "Demi",
-"character_replacements": Array[Dictionary]([]),
 "id": "49",
-"next_id": "50",
-"tags": PackedStringArray("demi=Default"),
-"text": "I hope the Doctor knows what's happening...",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "I hope the Doctor knows what's happening...",
-"type": "dialogue"
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
 },
 "5": {
 "character": "Demi",
@@ -346,8 +342,36 @@ lines = {
 "translation_key": "But then your insomnia will get worse, and besides, we still don’t know for sure if the pills are the cause of it.",
 "type": "dialogue"
 },
-"50": {
-"id": "50",
+"51": {
+"id": "51",
+"next_id": "52",
+"text": "bedroom",
+"type": "title"
+},
+"52": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "52",
+"next_id": "53",
+"tags": PackedStringArray("demi=Annoyed"),
+"text": "Ugh, I must be exhausted if the noise didn’t wake me up.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ugh, I must be exhausted if the noise didn’t wake me up.",
+"type": "dialogue"
+},
+"53": {
+"character": "Demi",
+"character_replacements": Array[Dictionary]([]),
+"id": "53",
+"next_id": "54",
+"tags": PackedStringArray("demi=Default"),
+"text": "I hope the Doctor knows what's happening...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I hope the Doctor knows what's happening...",
+"type": "dialogue"
+},
+"54": {
+"id": "54",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "_on_player_get_in_bed",
@@ -355,11 +379,11 @@ lines = {
 "value": Array[Array]([])
 }])
 },
-"next_id": "51",
+"next_id": "55",
 "type": "mutation"
 },
-"51": {
-"id": "51",
+"55": {
+"id": "55",
 "is_snippet": false,
 "next_id": "end",
 "type": "goto"

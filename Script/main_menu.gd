@@ -96,5 +96,6 @@ func _on_back_pressed():
 
 
 func _on_options_back_pressed() -> void:
+	SettingsSignalBus.emit_set_settings_dictionary(SettingsContainer.create_storage_dictionary())
 	$Options.visible = false
 	$GridContainer.visible = true

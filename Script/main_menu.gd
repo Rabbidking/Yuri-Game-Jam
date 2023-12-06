@@ -1,10 +1,14 @@
 extends Control
 
 @onready var options: TextureButton = $GridContainer/Options
+@onready var settings_tab_container: Control = $Options/Settings_Tab_Container as SettingsTabContainer
+
+signal exit_options_menu
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	settings_tab_container.exit_options_menu.connect(_on_options_back_pressed)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -96,6 +100,7 @@ func _on_back_pressed():
 
 
 func _on_options_back_pressed() -> void:
+	exit_options_menu.emit()
 	SettingsSignalBus.emit_set_settings_dictionary(SettingsContainer.create_storage_dictionary())
 	$Options.visible = false
 	$GridContainer.visible = true

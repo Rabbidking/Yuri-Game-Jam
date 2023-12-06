@@ -32,6 +32,7 @@ var is_waiting_for_input: bool = false:
 ## See if we are running a long mutation and should hide the balloon
 var will_hide_balloon: bool = false
 
+var left_portrait_path: String = ""
 var right_portrait_path: String = ""
 
 ## The current line
@@ -51,33 +52,85 @@ var dialogue_line: DialogueLine:
 		# flip the portrait. Same with Gigi and Mimi.
 		
 		#===========================================================================================
-
+		left_portrait_path = "res://Sprites/Portraits/Demi %s.png" % dialogue_line.get_tag_value("demi")
 		left_character_label.visible = dialogue_line.character.begins_with("Demi")
 		left_character_label.text = tr(dialogue_line.character, "dialogue")
 		left_nameplate.visible = not dialogue_line.character.is_empty()
+		right_portrait.texture = null
+		right_character_label.text = ""
 		
-		if State.mimi_replace_gigi == false:
-			right_character_label.visible = dialogue_line.character.begins_with("Gigi")
-		else:
-			right_character_label.visible = dialogue_line.character.begins_with("Mimi")
+		if dialogue_line.character.is_empty():
+			left_nameplate.visible = not dialogue_line.character.is_empty()
+			right_nameplate.visible = not dialogue_line.character.is_empty()
 			
-		right_nameplate.visible = not dialogue_line.character.is_empty()
-		right_character_label.text = tr(dialogue_line.character, "dialogue")
+		if dialogue_line.character.begins_with("Demi"):
+			left_portrait.modulate = Color(1, 1, 1)
+			right_portrait.modulate = Color(0.5, 0.5, 0.5)
 		
-		var left_portrait_path: String = "res://Sprites/Portraits/Demi %s.png" % dialogue_line.get_tag_value("demi")
-		if ResourceLoader.exists(left_portrait_path):
-			left_portrait.texture = load(left_portrait_path)
-		else:
-			left_portrait.texture = null
 		
-		if State.mimi_replace_gigi == false:
+			
+		if dialogue_line.character.begins_with("Gigi"):
+			right_portrait.modulate = Color(1, 1, 1)
 			right_portrait_path = "res://Sprites/Portraits/Gigi %s.png" % dialogue_line.get_tag_value("gigi")
-		else:
+			right_character_label.visible = dialogue_line.character.begins_with("Gigi")
+			right_character_label.text = tr(dialogue_line.character, "dialogue")
+			right_nameplate.visible = not dialogue_line.character.is_empty()
+			
+			left_character_label.text = ""
+			left_portrait_path = "res://Sprites/Portraits/Demi Default.png"
+			left_portrait.modulate = Color(0.5, 0.5, 0.5)
+			
+		
+		if dialogue_line.character.begins_with("Mimi"):
+			right_portrait.modulate = Color(1, 1, 1)
 			right_portrait_path = "res://Sprites/Portraits/Mimi %s.png" % dialogue_line.get_tag_value("mimi")
-		if ResourceLoader.exists(right_portrait_path):
+			right_character_label.visible = dialogue_line.character.begins_with("Mimi")
+			right_character_label.text = tr(dialogue_line.character, "dialogue")
+			right_nameplate.visible = not dialogue_line.character.is_empty()
+			
+			left_character_label.text = ""
+			left_portrait_path = "res://Sprites/Portraits/Demi Default.png"
+			left_portrait.modulate = Color(0.5, 0.5, 0.5)
+			
+			
+		
+		if ResourceLoader.exists(left_portrait_path) or ResourceLoader.exists(right_portrait_path):
+			left_portrait.texture = load(left_portrait_path)
 			right_portrait.texture = load(right_portrait_path)
 		else:
+			left_portrait.texture = null
 			right_portrait.texture = null
+			
+#		if ResourceLoader.exists(right_portrait_path):
+#			right_portrait.texture = load(right_portrait_path)
+#		else:
+#			right_portrait.texture = null
+#		left_character_label.visible = dialogue_line.character.begins_with("Demi")
+#		left_character_label.text = tr(dialogue_line.character, "dialogue")
+#		left_nameplate.visible = not dialogue_line.character.is_empty()
+#
+#		if State.mimi_replace_gigi == false:
+#			right_character_label.visible = dialogue_line.character.begins_with("Gigi")
+#		else:
+#			right_character_label.visible = dialogue_line.character.begins_with("Mimi")
+#
+#		right_nameplate.visible = not dialogue_line.character.is_empty()
+#		right_character_label.text = tr(dialogue_line.character, "dialogue")
+#
+#		var left_portrait_path: String = "res://Sprites/Portraits/Demi %s.png" % dialogue_line.get_tag_value("demi")
+#		if ResourceLoader.exists(left_portrait_path):
+#			left_portrait.texture = load(left_portrait_path)
+#		else:
+#			left_portrait.texture = null
+#
+#		if State.mimi_replace_gigi == false:
+#			right_portrait_path = "res://Sprites/Portraits/Gigi %s.png" % dialogue_line.get_tag_value("gigi")
+#		else:
+#			right_portrait_path = "res://Sprites/Portraits/Mimi %s.png" % dialogue_line.get_tag_value("mimi")
+#		if ResourceLoader.exists(right_portrait_path):
+#			right_portrait.texture = load(right_portrait_path)
+#		else:
+#			right_portrait.texture = null
 			
 		#===========================================================================================
 

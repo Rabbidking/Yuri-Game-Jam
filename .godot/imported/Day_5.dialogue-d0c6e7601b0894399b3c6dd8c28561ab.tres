@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_xvoyo"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_isf18"]
 
 [resource]
-script = ExtResource("1_xvoyo")
+script = ExtResource("1_isf18")
 using_states = PackedStringArray()
 titles = {
 "basement_battery": "76",
@@ -236,7 +236,7 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "119",
 "next_id": "120",
-"tags": PackedStringArray("demi=Default"),
+"tags": PackedStringArray("demi=Happy"),
 "text": "I really appreciate knowing that you support me. I promise to keep looking after Gigi.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "I really appreciate knowing that you support me. I promise to keep looking after Gigi.",
@@ -947,4 +947,4 @@ lines = {
 "type": "dialogue"
 }
 }
-metadata/dialogue_manager_version = "2.29.2"
+metadata/dialogue_manager_version = "2.30.0"

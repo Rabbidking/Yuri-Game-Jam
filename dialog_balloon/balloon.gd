@@ -60,6 +60,8 @@ var dialogue_line: DialogueLine:
 		right_character_label.text = ""
 		
 		if dialogue_line.character.is_empty():
+			#left_portrait.visible = not dialogue_line.character.is_empty()
+			right_portrait.visible = not dialogue_line.character.is_empty()
 			left_nameplate.visible = not dialogue_line.character.is_empty()
 			right_nameplate.visible = not dialogue_line.character.is_empty()
 			
@@ -70,6 +72,7 @@ var dialogue_line: DialogueLine:
 		
 			
 		if dialogue_line.character.begins_with("Gigi"):
+			right_portrait.visible = true
 			right_portrait.modulate = Color(1, 1, 1)
 			right_portrait_path = "res://Sprites/Portraits/Gigi %s.png" % dialogue_line.get_tag_value("gigi")
 			right_character_label.visible = dialogue_line.character.begins_with("Gigi")

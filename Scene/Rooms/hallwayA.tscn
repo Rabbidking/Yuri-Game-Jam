@@ -96,6 +96,7 @@ position = Vector2(559, 268)
 texture = ExtResource("14_p5jqu")
 
 [node name="ObjCarpetB" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(545, 474)
 texture = ExtResource("15_wldsc")
 

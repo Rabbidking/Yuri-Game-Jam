@@ -1,9 +1,10 @@
-res://dialog_balloon/balloon.tscn
+res://Scene/Rooms/entrance.tscn
 res://Resources/Settings/PlayerKeybindDefault.tres
-res://dialog_balloon/balloon.gd
 res://Scene/Options/settings_tab_container.tscn
 res://Scene/main_menu.tscn
 res://Scene/interactable.tscn
 res://Scene/Rooms/bedroom.tscn
 res://Scene/Options/hotkey_rebind_button.tscn
-res://Script/player.gd
+res://dialog_balloon/balloon.tscn
+res://Scene/player.tscn
+res://Scene/Rooms/hallwayA.tscn

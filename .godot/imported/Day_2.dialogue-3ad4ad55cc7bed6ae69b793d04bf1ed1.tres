@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_4cg3k"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_rgcxp"]
 
 [resource]
-script = ExtResource("1_4cg3k")
+script = ExtResource("1_rgcxp")
 using_states = PackedStringArray()
 titles = {
 "end_night": "55",
@@ -178,9 +178,9 @@ lines = {
 "id": "29",
 "next_id": "31",
 "tags": PackedStringArray("demi=Default"),
-"text": "Gigi usually takes my jacket to the bedroom...",
+"text": "Gigi usually takes my jacket to the study room...",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Gigi usually takes my jacket to the bedroom...",
+"translation_key": "Gigi usually takes my jacket to the study room...",
 "type": "dialogue"
 },
 "3": {
@@ -460,4 +460,4 @@ lines = {
 "type": "dialogue"
 }
 }
-metadata/dialogue_manager_version = "2.29.2"
+metadata/dialogue_manager_version = "2.30.0"

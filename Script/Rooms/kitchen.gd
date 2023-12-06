@@ -11,7 +11,10 @@ func _ready():
 		emit_signal("kitchen_pos")
 		$DoorOpen.play()
 	if State.Day == 2 and State.day_2_intro == false:
-		$Fade_Transition.visible = false
+		$Prop/ObjWindowD.set_texture(load("res://Sprites/Furniture/OBJ_Window/OBJ_WindowC.png"))
+		$Prop/ObjWindowD2.set_texture(load("res://Sprites/Furniture/OBJ_Window/OBJ_WindowC.png"))
+		$Prop/ObjWindowF.set_texture(load("res://Sprites/Furniture/OBJ_Window/OBJ_WindowC.png"))
+		$Prop/ObjWindowF2.set_texture(load("res://Sprites/Furniture/OBJ_Window/OBJ_WindowC.png"))
 		$Player.visible = false
 		var next_day = next_fade.instantiate()
 		add_child(next_day)
@@ -24,7 +27,10 @@ func _ready():
 		gigi.position = Vector2(607, 294)
 		State.day_2_intro = true
 	elif State.Day == 3 and State.day_3_intro == false:
-		$Fade_Transition.visible = false
+		$Prop/ObjWindowD.set_texture(load("res://Sprites/Furniture/OBJ_Window/OBJ_WindowC.png"))
+		$Prop/ObjWindowD2.set_texture(load("res://Sprites/Furniture/OBJ_Window/OBJ_WindowC.png"))
+		$Prop/ObjWindowF.set_texture(load("res://Sprites/Furniture/OBJ_Window/OBJ_WindowC.png"))
+		$Prop/ObjWindowF2.set_texture(load("res://Sprites/Furniture/OBJ_Window/OBJ_WindowC.png"))
 		$Player.visible = false
 		var next_day = next_fade.instantiate()
 		add_child(next_day)
@@ -37,8 +43,11 @@ func _ready():
 		gigi.position = Vector2(607, 294)
 		State.day_3_intro = true
 	elif State.Day == 6:
+		$Prop/ObjWindowD.set_texture(load("res://Sprites/Furniture/OBJ_Window/OBJ_WindowC.png"))
+		$Prop/ObjWindowD2.set_texture(load("res://Sprites/Furniture/OBJ_Window/OBJ_WindowC.png"))
+		$Prop/ObjWindowF.set_texture(load("res://Sprites/Furniture/OBJ_Window/OBJ_WindowC.png"))
+		$Prop/ObjWindowF2.set_texture(load("res://Sprites/Furniture/OBJ_Window/OBJ_WindowC.png"))
 		State.Day += 1
-		$Fade_Transition.visible = false
 		$Player.visible = false
 		var next_day = next_fade.instantiate()
 		add_child(next_day)

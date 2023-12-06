@@ -9,6 +9,7 @@ signal exit_options_menu
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	settings_tab_container.exit_options_menu.connect(_on_options_back_pressed)
+	reset_stuff()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -76,21 +77,25 @@ func _on_day_1_pressed():
 func _on_day_2_pressed():
 	if State.Day_2_unlock == true:
 		State.Day = 2
+		State.cutscene_playing = true
 		get_tree().change_scene_to_file("res://Scene/Rooms/kitchen.tscn")
 
 func _on_day_3_pressed():
 	if State.Day_3_unlock == true:
 		State.Day = 3
+		State.cutscene_playing = true
 		get_tree().change_scene_to_file("res://Scene/Rooms/kitchen.tscn")
 
 func _on_day_4_pressed():
 	if State.Day_4_unlock == true:
 		State.Day = 4
+		State.cutscene_playing = true
 		get_tree().change_scene_to_file("res://Scene/Rooms/living_room.tscn")
 
 func _on_day_5_pressed():
 	if State.Day_5_unlock == true:
 		State.Day = 5
+		State.cutscene_playing = true
 		get_tree().change_scene_to_file("res://Scene/Rooms/living_room.tscn")
 
 func _on_back_pressed():
@@ -104,3 +109,58 @@ func _on_options_back_pressed() -> void:
 	SettingsSignalBus.emit_set_settings_dictionary(SettingsContainer.create_storage_dictionary())
 	$Options.visible = false
 	$GridContainer.visible = true
+
+func reset_stuff():
+	var have_gigi = false
+	var used_door = false
+	var door_used
+	var is_dialog_active = false
+	var cutscene_playing = false
+	var items = []
+	var collected_items = []
+	var is_day = false
+	var day_1_intro = false
+	var night_1_intro = false
+	var first_time_found_gigi = false
+	var night_1_end = false
+	var day_2_intro = false
+	var night_2_intro = false
+	var hallway_A_car = false
+	var garage_first_check_car = false
+	var key_taken = false
+	var garage_open_trunk = false
+	var night_2_end = false
+	var day_3_intro = false
+	var night_3_intro = false
+	var hallway_A_doorbell = false
+	var front_ent_recept_first_check = false
+	var read_receipt = false
+	var password_known = false
+	var ordered_return = false
+	var bedroom_laptop_no_password = true 
+	var living_room_sticky = false
+	var gigi_at_entrance = false
+	var night_3_end = false
+	var day_4_intro = false
+	var night_4_intro = false
+	var entrance_sound = false
+	var have_crowbar = false
+	var trapdoor_locked = true
+	var living_room_trapdoor = false
+	var trapdoor_no_crowbar = true
+	var trapdoor_with_crowbar = false
+	var gigi_found_in_basement = false
+	var night_4_end = false
+	var day_5_intro = false
+	var night_5_intro = false
+	var hallway_A_electric = false
+	var garage_trigger = false
+	var slot1_empty = true
+	var slot2_empty = true
+	var slot3_empty = true
+	var fuel_cell1 = false
+	var fuel_cell2 = false
+	var fuel_cell3 = false
+	var fuel_cell = 0
+	var mimi_is_here = false
+	var mimi_replace_gigi = false

@@ -385,7 +385,6 @@ func _on_player_picked_up_3():
 		State.slot1_empty = false
 		if State.slot1_empty == false and State.slot2_empty == false and State.slot3_empty == false:
 			load_next_scene_3()
-			print("Functioning")
 	elif item == "teleporter_slot1" and State.fuel_cell == 0 and State.slot1_empty == true:
 		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "slot_interact_not_enough_batteries")
 
@@ -397,7 +396,6 @@ func _on_player_picked_up_4():
 		State.slot2_empty = false
 		if State.slot1_empty == false and State.slot2_empty == false and State.slot3_empty == false:
 			load_next_scene_3()
-			print("Functioning")
 	elif item == "teleporter_slot2" and State.fuel_cell == 0 and State.slot2_empty == true:
 		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "slot_interact_not_enough_batteries")
 
@@ -409,12 +407,12 @@ func _on_player_picked_up_5():
 		State.slot3_empty = false
 		if State.slot1_empty == false and State.slot2_empty == false and State.slot3_empty == false:
 			load_next_scene_3()
-			print("Functioning")
 	elif item == "teleporter_slot3" and State.fuel_cell == 0 and State.slot3_empty == true:
 		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "slot_interact_not_enough_batteries")
 		
 
 func load_next_scene():
+	State.cutscene_playing = true
 	if State.Day == 1 and State.day_1_intro == true:
 		get_tree().change_scene_to_file("res://Scene/Rooms/bedroom.tscn")
 	elif State.Day == 2 and State.day_2_intro == false:
@@ -455,6 +453,7 @@ func load_next_scene_2():
 		get_tree().change_scene_to_file("res://Scene/main_menu.tscn")
 
 func load_next_scene_3():
+	State.cutscene_playing = true
 	if State.Day == 5 and State.slot1_empty == false and State.slot2_empty == false and State.slot3_empty == false:
 		get_tree().change_scene_to_file("res://Scene/Rooms/garage.tscn")
 

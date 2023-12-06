@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0k3gal2wpctt"]
+[gd_scene load_steps=8 format=3 uid="uid://b0k3gal2wpctt"]
 
 [ext_resource type="Script" path="res://Fade_Transition.gd" id="1_8qk8j"]
 [ext_resource type="FontFile" uid="uid://v4qs8ufergem" path="res://Kenney Mini Square.ttf" id="2_ak047"]
@@ -120,11 +120,15 @@ tracks/2/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_b5ycb"]
+resource_name = "nothing"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1wj7y"]
 _data = {
 "RESET": SubResource("Animation_xax4g"),
 "fade_in": SubResource("Animation_omxdf"),
-"fade_out": SubResource("Animation_463xr")
+"fade_out": SubResource("Animation_463xr"),
+"nothing": SubResource("Animation_b5ycb")
 }
 
 [node name="Fade_Transition" type="Node2D"]

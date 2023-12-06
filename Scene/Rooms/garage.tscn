@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://c52j41y7ex3nl"]
+[gd_scene load_steps=58 format=3 uid="uid://c52j41y7ex3nl"]
 
 [ext_resource type="Script" path="res://Script/Rooms/garage.gd" id="1_6bnx0"]
 [ext_resource type="Texture2D" uid="uid://3lngvcxsuih4" path="res://sample/Purple.png" id="2_wm4sm"]
@@ -124,6 +124,9 @@ size = Vector2(41, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t2gno"]
 size = Vector2(113, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j3yha"]
+size = Vector2(72, 56)
 
 [node name="garage" type="Node2D"]
 y_sort_enabled = true
@@ -399,6 +402,10 @@ shape = SubResource("RectangleShape2D_b5qju")
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Object Collision"]
 position = Vector2(615.5, 493.5)
 shape = SubResource("RectangleShape2D_t2gno")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Object Collision"]
+position = Vector2(737, 365)
+shape = SubResource("RectangleShape2D_j3yha")
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("41_1qn3w")

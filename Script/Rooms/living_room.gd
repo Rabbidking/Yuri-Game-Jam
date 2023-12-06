@@ -4,6 +4,8 @@ extends Node2D
 @onready var gigi_spawn = preload("res://Scene/Cutscene/gigi_cutscene.tscn")
 @onready var demi_spawn = preload("res://Scene/Cutscene/demi_sit_cutscene.tscn")
 @onready var mimi_spawn = preload("res://Scene/Cutscene/mimi_sit_cutscene.tscn")
+@onready var next_fade = preload("res://Scene/Cutscene/next_day.tscn")
+@onready var minute = preload("res://Scene/Cutscene/1_minute_later.tscn")
 
 signal living_pos
 signal living_pos_1
@@ -22,6 +24,8 @@ func _ready():
 		State.first_time_found_gigi = true
 		
 	elif State.Day == 4 and State.day_4_intro == false:
+		var next_day = next_fade.instantiate()
+		add_child(next_day)
 		$Player.visible = false
 		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_4.dialogue"), "morning")
 		var demi = demi_spawn.instantiate()
@@ -33,6 +37,8 @@ func _ready():
 		State.day_4_intro = true
 		
 	elif State.Day == 5 and State.day_5_intro == false:
+		var next_day = next_fade.instantiate()
+		add_child(next_day)
 		$Player.visible = false
 		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "morning")
 		var demi = demi_spawn.instantiate()
@@ -44,6 +50,8 @@ func _ready():
 		State.day_5_intro = true
 		
 	elif State.Day == 5 and State.mimi_is_here == true:
+		var minute_later = minute.instantiate()
+		add_child(minute_later)
 		$Player.visible = false
 		State.Day += 1
 		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "night_end")

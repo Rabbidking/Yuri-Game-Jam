@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ckxymlnqj3mxb" path="res://UI/Quit Button.png" id="4_4itt2"]
 [ext_resource type="Texture2D" uid="uid://p5wruijdkvlm" path="res://UI/Blank_Blue.png" id="6_h0cwn"]
 [ext_resource type="FontFile" uid="uid://v4qs8ufergem" path="res://Kenney Mini Square.ttf" id="7_tlc71"]
-[ext_resource type="PackedScene" uid="uid://br6whsvghc2re" path="res://Scene/Options/settings_tab_container.tscn" id="8_jdsn2"]
+[ext_resource type="PackedScene" uid="uid://br6whsvghc2re" path="res://Scene/settings_tab_container.tscn" id="8_jdsn2"]
 
 [node name="MainMenu" type="Control"]
 process_mode = 3

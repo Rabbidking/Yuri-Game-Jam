@@ -1,6 +1,6 @@
 extends Node
 
-var Day = 3	#day adjustments
+var Day = 1	#day adjustments
 var Day_2_unlock = false
 var Day_3_unlock = false
 var Day_4_unlock = false
@@ -9,7 +9,7 @@ var have_gigi = false
 var used_door = false
 var door_used
 var is_dialog_active = false
-
+var cutscene_playing = false
 var items = []
 var collected_items = []
 

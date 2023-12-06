@@ -15,6 +15,7 @@ func _ready():
 		$DoorOpen.play()
 		
 	if State.Day != 5:
+		$Fade_Transition.visible = false
 		$Props/Teleporter.visible = false
 		$"Object Collision/teleporter".disabled = true
 	if State.Day == 1 and State.day_1_intro == false:
@@ -29,7 +30,6 @@ func _ready():
 		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "garage_enter_first_time")
 		State.garage_trigger = true
 	elif State.Day == 5 and State.slot1_empty == false and State.slot2_empty == false and State.slot3_empty == false and State.mimi_is_here == false:
-		$Fade_Transition.visible = false
 		var minute_later = minute.instantiate()
 		add_child(minute_later)
 		$Props/Teleporter/Portal.visible = true
@@ -37,10 +37,11 @@ func _ready():
 		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "teleporter_place_batteries")
 	elif State.Day == 5 and State.mimi_is_here == true:
 		$Fade_Transition.visible = false
+		spawn_them()
 		$Props/Teleporter/Portal.visible = true
 		$Player.position = Vector2(305, 265)
 		DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_5.dialogue"), "teleporter_flash")
-		spawn_them()
+		
 
 func spawn_them():
 	var flashing = flash.instantiate()

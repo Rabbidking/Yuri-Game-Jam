@@ -168,6 +168,7 @@ texture = ExtResource("21_27i7y")
 position = Vector2(306, 327)
 
 [node name="Entrance Door" parent="." instance=ExtResource("4_nhv12")]
+z_index = 1
 position = Vector2(240, 320)
 door_name = &"entrance_2"
 door_type = &"side_left"

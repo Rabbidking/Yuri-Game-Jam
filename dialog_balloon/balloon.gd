@@ -69,7 +69,6 @@ var dialogue_line: DialogueLine:
 			left_portrait.modulate = Color(1, 1, 1)
 			right_portrait.modulate = Color(0.5, 0.5, 0.5)
 		
-		
 			
 		if dialogue_line.character.begins_with("Gigi"):
 			right_portrait.visible = true
@@ -85,6 +84,7 @@ var dialogue_line: DialogueLine:
 			
 		
 		if dialogue_line.character.begins_with("Mimi"):
+			right_portrait.visible = true
 			right_portrait.modulate = Color(1, 1, 1)
 			right_portrait_path = "res://Sprites/Portraits/Mimi %s.png" % dialogue_line.get_tag_value("mimi")
 			right_character_label.visible = dialogue_line.character.begins_with("Mimi")

@@ -163,4 +163,4 @@ func reset_stuff():
 	var fuel_cell3 = false
 	var fuel_cell = 0
 	var mimi_is_here = false
-	var mimi_replace_gigi = false
+	#var mimi_replace_gigi = false

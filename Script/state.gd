@@ -1,6 +1,6 @@
 extends Node
 
-var Day = 1	#day adjustments
+var Day = 5	#day adjustments
 var Day_2_unlock = false
 var Day_3_unlock = false
 var Day_4_unlock = false
@@ -82,7 +82,7 @@ var fuel_cell2 = false
 var fuel_cell3 = false
 var fuel_cell = 0
 var mimi_is_here = false
-var mimi_replace_gigi = false
+#var mimi_replace_gigi = false
 
 #Set to false when we have all three batteries. Play the teleporter_interact_not_enough_batteries dialogue until then
 var teleporter_needs_batteries = true

@@ -1,597 +1,597 @@
 3acdcc5cb6df755358dde907981ccea8
-::res://::1701904376
-default_bus_layout.tres::AudioBusLayout::4063243458369164154::1701899933::0::1::::<><>::
-Fade_Transition.gd::GDScript::-1::1701899933::0::1::::<>Node2D<>::
-fade_transition.tscn::PackedScene::4163496360994995737::1701899933::0::1::::<><>::res://Fade_Transition.gd<>uid://v4qs8ufergem
-icon.svg::CompressedTexture2D::7082876504604578583::1701057865::1701900021::1::::<><>::
-Kenney Mini Square.ttf::FontFile::1534838051840805908::1701057865::1701057865::1::::<><>::
-Player.gd::GDScript::-1::1701899933::0::1::::<>CharacterBody2D<>::
-Player.tscn::PackedScene::1560553356649051403::1701057865::0::1::::<><>::res://Player.gd<>uid://c7587abkktylj
-test.tscn::PackedScene::5314750345154119997::1701057865::0::1::::<><>::uid://wh7c6fwwssj8
-tilemap.png::CompressedTexture2D::1291938120162730072::1701057865::1701057865::1::::<><>::
-::res://addons/::1701071633
-::res://addons/dialogue_manager/::1701899933
-constants.gd::GDScript::-1::1701057865::0::1::::<>Node<>::
-dialogue_label.gd::GDScript::-1::1701899933::0::1::::DialogueLabel<>RichTextLabel<>res://addons/dialogue_manager/assets/icon.svg::
-dialogue_label.tscn::PackedScene::5518490004210093266::1701057865::0::1::::<><>::res://addons/dialogue_manager/dialogue_label.gd
-dialogue_line.gd::GDScript::-1::1701057865::0::1::::DialogueLine<>RefCounted<>::
-dialogue_manager.gd::GDScript::-1::1701899933::0::1::::<>Node<>::
-dialogue_reponses_menu.gd::GDScript::-1::1701899933::0::1::::DialogueResponsesMenu<>VBoxContainer<>res://addons/dialogue_manager/assets/responses_menu.svg::
-dialogue_resource.gd::GDScript::-1::1701057865::0::1::::DialogueResource<>Resource<>res://addons/dialogue_manager/assets/icon.svg::
-dialogue_response.gd::GDScript::-1::1701899933::0::1::::DialogueResponse<>RefCounted<>::
-editor_translation_parser_plugin.gd::GDScript::-1::1701899933::0::1::::<>EditorTranslationParserPlugin<>::
-import_plugin.gd::GDScript::-1::1701899933::0::1::::<>EditorImportPlugin<>::
-plugin.cfg::TextFile::-1::1701899933::0::1::::<><>::
-plugin.gd::GDScript::-1::1701899933::0::1::::<>EditorPlugin<>::
-settings.gd::GDScript::-1::1701899933::0::1::::<>Node<>::
-test_scene.gd::GDScript::-1::1701899933::0::1::::BaseDialogueTestScene<>Node2D<>::
-test_scene.tscn::PackedScene::-1::1701057865::0::1::::<><>::res://addons/dialogue_manager/test_scene.gd
-::res://addons/dialogue_manager/assets/::1701072613
-icon.svg::CompressedTexture2D::9148339284877624195::1701057865::1701057865::1::::<><>::
-responses_menu.svg::CompressedTexture2D::8371359403825774630::1701057865::1701057865::1::::<><>::
-update.svg::CompressedTexture2D::9126631778427806641::1701057865::1701057865::1::::<><>::
-::res://addons/dialogue_manager/components/::1701899933
-code_edit.gd::GDScript::-1::1701057865::0::1::::<>CodeEdit<>::
-code_edit.tscn::PackedScene::5379618807048408118::1701057865::0::1::::<><>::res://addons/dialogue_manager/components/code_edit_syntax_highlighter.gd<>res://addons/dialogue_manager/components/code_edit.gd
-code_edit_syntax_highlighter.gd::GDScript::-1::1701057865::0::1::::<>SyntaxHighlighter<>::
-dialogue_cache.gd::GDScript::-1::1701899933::0::1::::<>Node<>::
-download_update_panel.gd::GDScript::-1::1701057865::0::1::::<>Control<>::
-download_update_panel.tscn::PackedScene::1130642722554629364::1701057865::0::1::::<><>::res://addons/dialogue_manager/components/download_update_panel.gd<>uid://d3baj6rygkb3f
-errors_panel.gd::GDScript::-1::1701057865::0::1::::<>HBoxContainer<>::
-errors_panel.tscn::PackedScene::6105315990352960875::1701057865::0::1::::<><>::res://addons/dialogue_manager/components/errors_panel.gd
-files_list.gd::GDScript::-1::1701057865::0::1::::<>VBoxContainer<>::
-files_list.tscn::PackedScene::8113335055803740416::1701057865::0::1::::<><>::res://addons/dialogue_manager/components/files_list.gd<>uid://d3lr2uas6ax8v
-parser.gd::GDScript::-1::1701899933::0::1::::DialogueManagerParser<>Object<>::
-parse_result.gd::GDScript::-1::1701899933::0::1::::DialogueManagerParseResult<>RefCounted<>::
-resolved_line_data.gd::GDScript::-1::1701057865::0::1::::<>RefCounted<>::
-resolved_tag_data.gd::GDScript::-1::1701057865::0::1::::<>RefCounted<>::
-search_and_replace.gd::GDScript::-1::1701057865::0::1::::<>VBoxContainer<>::
-search_and_replace.tscn::PackedScene::458254375860855630::1701057865::0::1::::<><>::res://addons/dialogue_manager/components/search_and_replace.gd
-title_list.gd::GDScript::-1::1701057865::0::1::::<>VBoxContainer<>::
-title_list.tscn::PackedScene::6134415340044566558::1701057865::0::1::::<><>::res://addons/dialogue_manager/components/title_list.gd
-update_button.gd::GDScript::-1::1701057865::0::1::::<>Button<>::
-update_button.tscn::PackedScene::5825087957514786930::1701057865::0::1::::<><>::res://addons/dialogue_manager/components/update_button.gd<>uid://qdxrxv3c3hxk
-::res://addons/dialogue_manager/example_balloon/::1701072613
-example_balloon.gd::GDScript::-1::1701057865::0::1::::<>CanvasLayer<>::
-example_balloon.tscn::PackedScene::2304415056852043862::1701057865::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo
-small_example_balloon.tscn::PackedScene::1883859960814163368::1701057865::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo
-::res://addons/dialogue_manager/l10n/::1701899933
-en.mo::Translation::-1::1701057865::0::1::::<><>::
-en.po::Translation::-1::1701899933::0::1::::<><>::
-zh.po::Translation::-1::1701057865::0::1::::<><>::
-zh_TW.po::Translation::-1::1701057865::0::1::::<><>::
-::res://addons/dialogue_manager/views/::1701899933
-main_view.gd::GDScript::-1::1701899933::0::1::::<>Control<>::
-main_view.tscn::PackedScene::4884668666408697448::1701899933::0::1::::<><>::res://addons/dialogue_manager/views/main_view.gd<>uid://civ6shmka5e8u
-settings_view.gd::GDScript::-1::1701899933::0::1::::<>TabContainer<>::
-settings_view.tscn::PackedScene::5839841081119266502::1701899933::0::1::::<><>::res://addons/dialogue_manager/views/settings_view.gd
-::res://Audio/::1701900022
-Ambience, Empty Garage Hum, Metal Gate Hitting, Wind Outside, Scary-AmbiX.wav::AudioStreamWAV::6969758394112388389::1701899933::1701899933::1::::<><>::
-AMBISONIC_A INT Bathroom 01.wav::AudioStreamWAV::7482564648459636735::1701899932::1701899932::1::::<><>::
-AMBRoom_Bedroom, Groundfloor, Doors & Windows Closed_344 Audio_UK Residential Room Tones.wav::AudioStreamWAV::4287776911180982092::1701899933::1701899933::1::::<><>::
-BELLDoor-INT_Door Bell Low Tone_JSE_DO_Distance Stereo.wav::AudioStreamWAV::2450663663010184560::1701899933::1701899933::1::::<><>::
-BM Futuristic Machinery 09.wav::AudioStreamWAV::2262281188337693097::1701057865::1701057865::1::::<><>::
-Door 1 Close.wav::AudioStreamWAV::5373468263126432203::1701057865::1701057865::1::::<><>::
-HumBuzz-Buzz-03.wav::AudioStreamWAV::611881242764410359::1701057865::1701057865::1::::<><>::
-kitchen_roomtone_with_refrigerator_002.wav::AudioStreamWAV::867516190061354209::1701899933::1701900022::1::::<><>::
-ladder-82581.wav::AudioStreamWAV::3215572915343339277::1701899933::1701899933::1::::<><>::
-Magic Positive 3.wav::AudioStreamWAV::7259711535064383288::1701057865::1701057865::1::::<><>::
-ROOM TONE Hotel Hallway 2, 5am, Chiang Mai, Thailand, LR.wav::AudioStreamWAV::5438195873522282425::1701899933::1701899933::1::::<><>::
-SFXW001_indoor_basement neutral sound.wav::AudioStreamWAV::1207678769886924675::1701057865::1701057865::1::::<><>::
-SFXW001_indoor_roomtone_entrance hall.wav::AudioStreamWAV::7294563111315826625::1701057865::1701057865::1::::<><>::
-sound.wav::AudioStreamWAV::6575180074510752006::1701057865::1701057865::1::::<><>::
-Wood 12.wav::AudioStreamWAV::8263069419609608678::1701899933::1701899933::1::::<><>::
-::res://Dialog/::1701900021
-Day_1.dialogue::Resource::6479744145614467134::1701899933::1701900021::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
-Day_2.dialogue::Resource::3589407439008615189::1701899933::1701900021::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
-Day_3.dialogue::Resource::5303619945221573512::1701899933::1701900021::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
-Day_4.dialogue::Resource::1514875075690527006::1701899933::1701900021::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
-Day_5.dialogue::Resource::2037074766995301287::1701899933::1701900021::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
-ending.dialogue::Resource::1252596740368610562::1701899933::1701900021::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
-main.dialogue::Resource::3698788334996701756::1701057865::1701900021::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
-::res://dialog_balloon/::1701904290
-balloon.gd::GDScript::-1::1701899933::0::1::::<>CanvasLayer<>::
-balloon.tscn::PackedScene::2588735576791396106::1701904290::0::1::::<><>::res://dialog_balloon/balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>uid://rf17eue30xxp::::res://UI/Dialogue Box.png<>uid://c0j821yxo4a6n::::res://UI/Portrait Container Left.png<>res://addons/dialogue_manager/dialogue_reponses_menu.gd<>uid://dp5570w5kx0ve::::res://UI/Name Container.png<>uid://btmap46njjcr::::res://UI/Portrait Container Right.png<>uid://v4qs8ufergem::::res://Kenney Mini Square.ttf<>uid://dyu8huu56f2hq::::res://UI/Play Button.png<>uid://c0xciw8wbk56q::::res://Audio/sound.wav
-small_balloon.tscn::PackedScene::1883859960814163368::1701057865::0::1::::<><>::res://dialog_balloon/balloon.gd<>uid://ckvgyvclnwggo
-::res://Resources/::1701899933
-::res://Resources/Settings/::1701900055
-DefaultSettings.tres::Resource/Resource::4012773508583805420::1701899933::0::1::::<><>::res://Resources/Settings/SettingsResource.gd
-PlayerKeybindDefault.tres::Resource/PlayerKeybindResource::380769631175243415::1701900055::0::1::::<><>::res://Resources/Settings/PlayerKeybindResource.gd
-PlayerKeybindResource.gd::GDScript::-1::1701899933::0::1::::PlayerKeybindResource<>Resource<>::
-SettingsResource.gd::GDScript::-1::1701899933::0::1::::DefaultSettingsResource<>Resource<>::
-::res://sample/::1701072613
-Blue.png::CompressedTexture2D::5091972938632470820::1701057865::1701057865::1::::<><>::
-Green.png::CompressedTexture2D::3102335091325382450::1701057865::1701057865::1::::<><>::
-Purple.png::CompressedTexture2D::1988796919978783947::1701057865::1701057865::1::::<><>::
-Red.png::CompressedTexture2D::1735034909657885456::1701057865::1701057865::1::::<><>::
-Sky.png::CompressedTexture2D::7014540141669112660::1701057865::1701057865::1::::<><>::
-Yellow.png::CompressedTexture2D::1774731507011467911::1701057865::1701057865::1::::<><>::
-::res://Scene/::1701904290
-bed.tscn::PackedScene::2162847093175319028::1701057865::0::1::::<><>::res://Script/interactable.gd<>uid://bbdwjegcdo5o3
-door.tscn::PackedScene::4783925100584996710::1701899933::0::1::::<><>::res://Script/door.gd<>uid://cesubyhcfgfps
-gigi.tscn::PackedScene::7097100930112626617::1701899933::0::1::::<><>::res://Script/interactable.gd<>uid://bkg2agt6rhy0y
-hud.tscn::PackedScene::3523782732799265023::1701057865::0::1::::<><>::res://Script/HUD.gd<>uid://b7i68c7d71cbx
-interactable.tscn::PackedScene::5809216554521441826::1701904290::0::1::::<><>::res://Script/interactable.gd<>uid://dpyxstjtvgdna::::res://Audio/Wood 12.wav<>uid://dbowng50glnue::::res://Audio/Magic Positive 3.wav
-main_menu.tscn::PackedScene::4956119446260963006::1701904290::0::1::::<><>::res://Script/main_menu.gd<>uid://doygkmfhyvs20::::res://UI/Start Button.png<>uid://ct4wq6sswwkbt::::res://UI/Options Button.png<>uid://p7d8i4to7k16::::res://UI/Load Button.png<>uid://ckxymlnqj3mxb::::res://UI/Quit Button.png<>uid://p5wruijdkvlm::::res://UI/Blank_Blue.png<>uid://v4qs8ufergem::::res://Kenney Mini Square.ttf<>uid://br6whsvghc2re::::res://Scene/settings_tab_container.tscn
-object.tscn::PackedScene::2162847093175319028::1701057865::0::1::::<><>::uid://bkg2agt6rhy0y
-pause_menu.tscn::PackedScene::8403802425911104417::1701057865::0::1::::<><>::res://Script/pause_menu.gd<>uid://cn0feka8cno05
-player.tscn::PackedScene::2720143536652147985::1701904290::0::1::::<><>::res://Script/player.gd<>uid://cesubyhcfgfps::::res://sample/Blue.png<>uid://2qp1wxe7f0lr::::res://Sprites/Characters/Demi/Idle/Demi-Idle-Back-1.png<>uid://chcjgrb2vcwet::::res://Sprites/Characters/Demi/Idle/Demi-Idle-Back-2.png<>uid://cmmhl8nhh06wm::::res://Sprites/Characters/Demi/Idle/Demi-Idle-Back-3.png<>uid://cgaryv7ymuotg::::res://Sprites/Characters/Demi/Idle/Demi-Idle-Back-4.png<>uid://dal3boceqr60x::::res://Sprites/Characters/Demi/Idle/Demi-Idle-Front-1.png<>uid://2mpl86uletv8::::res://Sprites/Characters/Demi/Idle/Demi-Idle-Front-2.png<>uid://db12v3ugfc0wv::::res://Sprites/Characters/Demi/Idle/Demi-Idle-Front-3.png<>uid://dcyc7xo54bdsr::::res://Sprites/Characters/Demi/Idle/Demi-Idle-Front-4.png<>uid://bwihsugvkvu8j::::res://Sprites/Characters/Demi/Idle/Demi-Idle-1.png<>uid://cyk5m22v3vsl8::::res://Sprites/Characters/Demi/Idle/Demi-Idle-2.png<>uid://xc0jmjwnmp2x::::res://Sprites/Characters/Demi/Idle/Demi-Idle-3.png<>uid://bdnmdl21v2x65::::res://Sprites/Characters/Demi/Idle/Demi-Idle-4.png<>uid://cduwwxfm13fs::::res://Sprites/Characters/Demi/Idle/Demi-Idle-5.png<>uid://c5f1j7ad85jwu::::res://Sprites/Characters/Demi/Idle/Demi-Idle-6.png<>uid://cuforkij06gv0::::res://Sprites/Characters/Demi/Walk/Demi-Walk-Back-1.png<>uid://crin55jtvgamg::::res://Sprites/Characters/Demi/Walk/Demi-Walk-Back-2.png<>uid://dyv5ch5qcfbtf::::res://Sprites/Characters/Demi/Walk/Demi-Walk-Back-3.png<>uid://b6pmwogj75obs::::res://Sprites/Characters/Demi/Walk/Demi-Walk-Back-4.png<>uid://ciirfiwy8u7k2::::res://Sprites/Characters/Demi/Walk/Demi-Walk-Back-5.png<>uid://bqvd5rhgk5qpb::::res://Sprites/Characters/Demi/Walk/Demi-Walk-Back-6.png<>uid://fin0or7rx637::::res://Sprites/Characters/Demi/Walk/Demi-Walk-Back-7.png<>uid://si2m41hotl15::::res://Sprites/Characters/Demi/Walk/Demi-Walk-Front-1.png<>uid://c8ohgkuatsvuu::::res://Sprites/Characters/Demi/Walk/Demi-Walk-Front-2.png<>uid://dbyx6kjmtsbdi::::res://Sprites/Characters/Demi/Walk/Demi-Walk-Front-3.png<>uid://jb0ijn0t01hd::::res://Sprites/Characters/Demi/Walk/Demi-Walk-Front-4.png<>uid://wnpmsa4nko5n::::res://Sprites/Characters/Demi/Walk/Demi-Walk-Front-5.png<>uid://d1vvv8i2cnsiv::::res://Sprites/Characters/Demi/Walk/Demi-Walk-Front-6.png<>uid://crblwll6tgwtl::::res://Sprites/Characters/Demi/Walk/Demi-Walk-Front-7.png<>uid://dtycvydljb7yd::::res://Sprites/Characters/Demi/Walk/Demi-Walk-Side-1.png<>uid://bu6we6tc1g64r::::res://Sprites/Characters/Demi/Walk/Demi-Walk-Side-2.png<>uid://dptv11e48huws::::res://Sprites/Characters/Demi/Walk/Demi-Walk-Side-3.png<>uid://cttuccmbeg4fq::::res://Sprites/Characters/Demi/Walk/Demi-Walk-Side-4.png<>uid://dfxdo3515gpxl::::res://Sprites/Characters/Demi/Walk/Demi-Walk-Side-5.png<>uid://dwqa48pyifctr::::res://Sprites/Characters/Demi/Walk/Demi-Walk-Side-6.png<>uid://dry4nsiv75bef::::res://Scene/pause_menu.tscn<>uid://bqg7gl6eklem6::::res://Scene/hud.tscn
-scene.tscn::PackedScene::8130421858299388171::1701057865::0::1::::<><>::uid://3lngvcxsuih4
-scene_1.tscn::PackedScene::4172428589893370665::1701057865::0::1::::<><>::uid://bkg2agt6rhy0y
-scene_2.tscn::PackedScene::6934844520987553197::1701057865::0::1::::<><>::uid://0jxtllnl6rfr
-settings_tab_container.tscn::PackedScene::3644975988456973746::1701899933::0::1::::<><>::uid://v4qs8ufergem
-test_dialogue.tscn::PackedScene::1901866899226262597::1701057865::0::1::::<><>::res://Script/test_dialogue.gd
-::res://Scene/Cutscene/::1701899933
-1 Minute Later.gd::GDScript::-1::1701899933::0::1::::<>Node2D<>::
-1_minute_later.tscn::PackedScene::5791228977752438219::1701899933::0::1::::<><>::res://Scene/Cutscene/1 Minute Later.gd<>uid://v4qs8ufergem
-demi_sit_cutscene.tscn::PackedScene::735301622714217490::1701899933::0::1::::<><>::uid://ibebl424koqb
-Flash.gd::GDScript::-1::1701899933::0::1::::<>Node2D<>::
-flash.tscn::PackedScene::6168910450857096198::1701899933::0::1::::<><>::res://Scene/Cutscene/Flash.gd<>uid://v4qs8ufergem
-gigi_cutscene.tscn::PackedScene::7823144057695905949::1701899933::0::1::::<><>::uid://dttf1avmh5fmj
-gigi_sit_cutscene.tscn::PackedScene::5469468031024130105::1701899933::0::1::::<><>::uid://dypxgjp1rab7r
-gigi_sleep_cutscene.tscn::PackedScene::3033179418780194871::1701899933::0::1::::<><>::uid://bq5ce2e0rwuro
-Later That Night.gd::GDScript::-1::1701899933::0::1::::<>Node2D<>::
-later_that_night.tscn::PackedScene::3906956290382553682::1701899933::0::1::::<><>::res://Scene/Cutscene/Later That Night.gd<>uid://v4qs8ufergem
-mimi_cutscene.tscn::PackedScene::1490045486155054062::1701899933::0::1::::<><>::uid://dvsem1rl32shk
-mimi_sit_cutscene.tscn::PackedScene::4673660136112919590::1701899933::0::1::::<><>::uid://bmpq3ryv5u1kw
-next_day.gd::GDScript::-1::1701899933::0::1::::<>Node2D<>::
-next_day.tscn::PackedScene::7358488028949481766::1701899933::0::1::::<><>::res://Scene/Cutscene/next_day.gd<>uid://v4qs8ufergem
-::res://Scene/Options/::1701904290
-audio_slider_settings.gd::GDScript::-1::1701899933::0::1::::<>Control<>::
-audio_slider_settings.tscn::PackedScene::1297467072685596553::1701899933::0::1::::<><>::res://Scene/Options/audio_slider_settings.gd
-graphics.tscn::PackedScene::2585587879404684494::1701899933::0::1::::<><>::
-hotkey_rebind_button.gd::GDScript::-1::1701899933::0::1::::HotkeyRebindButton<>Control<>::
-hotkey_rebind_button.tscn::PackedScene::2260659427012572184::1701904290::0::1::::<><>::res://Scene/Options/hotkey_rebind_button.gd
-resolution_mode.gd::GDScript::-1::1701899933::0::1::::<>Control<>::
-resolution_mode.tscn::PackedScene::1488542593639980955::1701899933::0::1::::<><>::uid://bc3qiwlm04o75
-settings_tab_container.gd::GDScript::-1::1701899933::0::1::::SettingsTabContainer<>Control<>::
-settings_tab_container.tscn::PackedScene::3644975988456973746::1701904290::0::1::::<><>::uid://v4qs8ufergem::::res://Kenney Mini Square.ttf<>uid://sqrdfwgbxkkf::::res://Scene/Options/audio_slider_settings.tscn<>uid://7hcy3ov66k0w::::res://Scene/Options/hotkey_rebind_button.tscn<>res://Scene/Options/settings_tab_container.gd<>uid://wm51kbmxwtar::::res://Scene/Options/window_mode.tscn<>uid://vhccxmr60thj::::res://Scene/Options/resolution_mode.tscn
-window_mode.gd::GDScript::-1::1701899933::0::1::::<>Control<>::
-window_mode.tscn::PackedScene::1570795560865104317::1701899933::0::1::::<><>::uid://bc3qiwlm04o75
-::res://Scene/Rooms/::1701904290
-basement.tscn::PackedScene::1932653171600859008::1701899933::0::1::::<><>::uid://3lngvcxsuih4
-bathroom.tscn::PackedScene::7356627323104811206::1701899933::0::1::::<><>::res://Script/Rooms/bathroom.gd<>uid://3lngvcxsuih4
-bedroom.tscn::PackedScene::2823879394018250226::1701904290::0::1::::<><>::res://Script/Rooms/bedroom.gd<>uid://be0wmp3b3b4qv::::res://Scene/player.tscn<>uid://3lngvcxsuih4::::res://sample/Purple.png<>uid://b0k3gal2wpctt::::res://fade_transition.tscn<>uid://cesubyhcfgfps::::res://sample/Blue.png<>uid://cafmsu4vdnnfq::::res://Scene/door.tscn<>uid://g232eiioanda::::res://Sprites/Tiles/Floor/Carpet-Pink.png<>uid://bhbkfmwm22siq::::res://Sprites/Tiles/Walls/Wood Wall.png<>uid://ceq8hwa8mly2a::::res://Sprites/Furniture/OBJ_Lightstand/OBJ_LightstandA.png<>uid://dimlbd7204yb1::::res://Sprites/Furniture/OBJ_Safe/OBJ_Safe_01.png<>uid://cneci0dnik2mf::::res://Sprites/Furniture/OBJ_Window/OBJ_WindowB.png<>uid://bdylafpj3r3sg::::res://Sprites/Furniture/OBJ_Drawer/OBJ_DrawerA.png<>uid://dcm43ir7u5chb::::res://Sprites/Furniture/OBJ_Closet/OBJ_ClosetA_01.png<>uid://dtniw5y5ipp3e::::res://Sprites/Furniture/OBJ_Plant/OBJ_PlantB.png<>uid://dndifb3evvqj7::::res://Sprites/Furniture/OBJ_Chair/OBJ_ChairC.png<>uid://co1a7h15avswg::::res://Scene/interactable.tscn<>uid://dxi2ois57cbrs::::res://Sprites/Furniture/OBJ_Bookshelf/OBJ_BookshelfB.png<>uid://da4phfyt6itcl::::res://Sprites/Furniture/OBJ_Bookshelf/OBJ_BookshelfF.png<>uid://dfwhwtnyhipta::::res://Sprites/Furniture/OBJ_Picture/OBJ_PictureC.png<>uid://cgwtp0v0ss04::::res://Sprites/Furniture/OBJ_Window/OBJ_WindowE.png<>uid://caq5qyqtnankv::::res://Sprites/Furniture/OBJ_Mirror/OBJ_MirrorA.png<>uid://l7vvqi4kpp07::::res://Sprites/Furniture/OBJ_Drawer/OBJ_DrawerE.png<>uid://c63oo3wdhvsmc::::res://Sprites/Furniture/OBJ_Table/OBJ_TableK.png<>uid://brie57g4d2d78::::res://Sprites/Furniture/OBJ_Table/OBJ_TableH.png<>uid://cfg3o6yr1o84i::::res://Sprites/Furniture/OBJ_Drawer/OBJ_DrawerB.png<>uid://5hio4ut5iys1::::res://Sprites/Furniture/OBJ_Drawer/OBJ_DrawerC.png<>uid://b8x5fbst0cb5n::::res://Sprites/Furniture/OBJ_Table/OBJ_TableI.png<>uid://ndv0n5oep7uc::::res://Sprites/Furniture/OBJ_SmallItems/OBJ_BookPileB.png<>uid://3yasrhfj1bx4::::res://Sprites/Furniture/OBJ_SmallItems/OBJ_SodaCanC.png<>uid://bx2gxvkb0r3kp::::res://Sprites/Furniture/OBJ_Plant/OBJ_PlantF.png<>uid://bbj0dnyyoe426::::res://Sprites/Furniture/OBJ_Closet/OBJ_ClosetB.png<>uid://dlb42bvld0c1x::::res://Sprites/Furniture/OBJ_SmallItems/OBJ_PillowA.png<>uid://b5efibs4vwvvr::::res://Sprites/Furniture/OBJ_Clock/OBJ_ClockB.png<>uid://p7yaq4208cri::::res://Sprites/Furniture/OBJ_SmallItems/OBJ_OpenBookA.png<>uid://bm0jj5x5qx0o8::::res://Sprites/Furniture/OBJ_SmallItems/OBJ_StorageContainerA.png<>uid://ci3hxtsuy16qo::::res://Sprites/Furniture/OBJ_Lightstand/OBJ_LightstandC.png<>uid://bbaej48gxweem::::res://Sprites/Furniture/OBJ_Bathroom/OBJ_BathTrashCan.png<>uid://b2u4rllapjx20::::res://Sprites/Furniture/OBJ_Plant/OBJ_PlantA.png<>uid://g2mqcqh0rlxg::::res://Sprites/Furniture/OBJ_Carpet/OBJ_CarpetG.png<>uid://b8eex8pmbui1c::::res://Sprites/Furniture/OBJ_Picture/OBJ_PictureF.png<>uid://bkdjvohpd6kgh::::res://Sprites/Furniture/OBJ_Chair/OBJ_ChairA.png<>uid://cfkp6k8fpd0yq::::res://Sprites/Furniture/OBJ_Chair/OBJ_ChairB.png<>uid://oad3u5svay6h::::res://Sprites/Furniture/OBJ_Table/OBJ_TableJ.png<>uid://hh6eug76smyw::::res://Sprites/Furniture/OBJ_SmallItems/OBJ_SodaCanA.png<>uid://bobd68u3op4h6::::res://Sprites/Furniture/OBJ_SmallItems/OBJ_SodaCanB.png<>uid://b2dbcar0pqojs::::res://Audio/AMBRoom_Bedroom, Groundfloor, Doors & Windows Closed_344 Audio_UK Residential Room Tones.wav<>uid://cis7ichx3jklf::::res://Audio/Door 1 Close.wav
-entrance.tscn::PackedScene::8130421858299388171::1701904290::0::1::::<><>::res://Script/Rooms/entrance.gd<>uid://3lngvcxsuih4::::res://sample/Purple.png<>uid://cesubyhcfgfps::::res://sample/Blue.png<>uid://dd5q5qltjwike::::res://Sprites/Tiles/Floor/Wood.png<>uid://be0wmp3b3b4qv::::res://Scene/player.tscn<>uid://cafmsu4vdnnfq::::res://Scene/door.tscn<>uid://dyblstk7k1bh7::::res://Sprites/Tiles/Floor/Carpet-Purple.png<>uid://bkhqnxp5hpydt::::res://Sprites/Tiles/Walls/Basic Wall-Yellow.png<>uid://b0k3gal2wpctt::::res://fade_transition.tscn<>uid://co1a7h15avswg::::res://Scene/interactable.tscn<>uid://f27xjooaf4m6::::res://Sprites/Furniture/OBJ_Bookshelf/OBJ_BookshelfI.png<>uid://ch3yockplpnug::::res://Sprites/Furniture/OBJ_Bookshelf/OBJ_BookshelfE.png<>uid://oqevhg4m1n32::::res://Sprites/Furniture/OBJ_Bench/OBJ_BenchA.png<>uid://dgwsujl7vj8ev::::res://Sprites/Furniture/OBJ_Window/OBJ_WindowF.png<>uid://cp6871gdxq45w::::res://Sprites/Furniture/OBJ_Picture/OBJ_PictureE.png<>uid://bdylafpj3r3sg::::res://Sprites/Furniture/OBJ_Drawer/OBJ_DrawerA.png<>uid://oggkxcqmlpbf::::res://Sprites/Furniture/OBJ_Plant/OBJ_PlantD.png<>uid://coxspcldvtj80::::res://Sprites/Furniture/OBJ_Telephone/OBJ_Telephone_01.png<>uid://l7vvqi4kpp07::::res://Sprites/Furniture/OBJ_Drawer/OBJ_DrawerE.png<>uid://cpx3c8hy30ins::::res://Sprites/Furniture/OBJ_CoatRack/OBJ_CoatRack.png<>uid://ceq8hwa8mly2a::::res://Sprites/Furniture/OBJ_Lightstand/OBJ_LightstandA.png<>uid://caq5qyqtnankv::::res://Sprites/Furniture/OBJ_Mirror/OBJ_MirrorA.png<>uid://ci3hxtsuy16qo::::res://Sprites/Furniture/OBJ_Lightstand/OBJ_LightstandC.png<>uid://dpx54v2ia4fbv::::res://Sprites/Furniture/OBJ_Plant/OBJ_PlantG.png<>uid://bympayqugjfyt::::res://Sprites/Furniture/OBJ_SmallItems/OBJ_SoccerBall.png<>uid://dpy4bwoc15pb5::::res://Sprites/Furniture/OBJ_Carpet/OBJ_CarpetH.png<>uid://db6snhlijg234::::res://Audio/SFXW001_indoor_roomtone_entrance hall.wav<>uid://0ns00vrf56ae::::res://Sprites/Furniture/OBJ_Carpet/OBJ_CarpetB.png<>uid://cis7ichx3jklf::::res://Audio/Door 1 Close.wav
-garage.tscn::PackedScene::6934844520987553197::1701899933::0::1::::<><>::res://Script/Rooms/garage.gd<>uid://3lngvcxsuih4
-hallwayA.tscn::PackedScene::4172428589893370665::1701904290::0::1::::<><>::res://Script/Rooms/hallwayA.gd<>uid://3lngvcxsuih4::::res://sample/Purple.png<>uid://be0wmp3b3b4qv::::res://Scene/player.tscn<>uid://cesubyhcfgfps::::res://sample/Blue.png<>uid://dyblstk7k1bh7::::res://Sprites/Tiles/Floor/Carpet-Purple.png<>uid://cafmsu4vdnnfq::::res://Scene/door.tscn<>uid://b0k3gal2wpctt::::res://fade_transition.tscn<>uid://b0wo06ntqkdm5::::res://Sprites/Tiles/Walls/Basic Wall-Purple.png<>uid://dksaxg2omfisw::::res://Sprites/Furniture/OBJ_Bench/OBJ_BenchB.png<>uid://dxi2ois57cbrs::::res://Sprites/Furniture/OBJ_Bookshelf/OBJ_BookshelfB.png<>uid://b2u4rllapjx20::::res://Sprites/Furniture/OBJ_Plant/OBJ_PlantA.png<>uid://bcxxg6s2c3f1w::::res://Sprites/Furniture/OBJ_Lightstand/OBJ_LightstandB.png<>uid://cha5a6wgxf7ig::::res://Sprites/Furniture/OBJ_SmallItems/OBJ_BookPileA.png<>uid://bm0jj5x5qx0o8::::res://Sprites/Furniture/OBJ_SmallItems/OBJ_StorageContainerA.png<>uid://b8eex8pmbui1c::::res://Sprites/Furniture/OBJ_Picture/OBJ_PictureF.png<>uid://g2mqcqh0rlxg::::res://Sprites/Furniture/OBJ_Carpet/OBJ_CarpetG.png<>uid://0ns00vrf56ae::::res://Sprites/Furniture/OBJ_Carpet/OBJ_CarpetB.png<>uid://cjqkj58mx01gn::::res://Audio/ROOM TONE Hotel Hallway 2, 5am, Chiang Mai, Thailand, LR.wav<>uid://ba6ecp15dc7ou::::res://Audio/BELLDoor-INT_Door Bell Low Tone_JSE_DO_Distance Stereo.wav<>uid://cis7ichx3jklf::::res://Audio/Door 1 Close.wav
-hallway_b.tscn::PackedScene::6674014627393026113::1701899933::0::1::::<><>::res://Script/Rooms/hallway_b.gd<>uid://be0wmp3b3b4qv
-kitchen.tscn::PackedScene::1623152006174915294::1701899933::0::1::::<><>::res://Script/Rooms/kitchen.gd<>uid://3lngvcxsuih4
-living_room.tscn::PackedScene::6424764433357045668::1701899933::0::1::::<><>::res://Script/Rooms/living_room.gd<>uid://3lngvcxsuih4
-study.tscn::PackedScene::7363958483249587051::1701899933::0::1::::<><>::res://Script/Rooms/study.gd<>uid://3lngvcxsuih4
-::res://Script/::1701903888
-door.gd::GDScript::-1::1701899933::0::1::::<>Area2D<>::
-HUD.gd::GDScript::-1::1701057865::0::1::::<>Control<>::
-interactable.gd::GDScript::-1::1701899933::0::1::::<>Area2D<>::
-main_menu.gd::GDScript::-1::1701899933::0::1::::<>Control<>::
-pause_menu.gd::GDScript::-1::1701057865::0::1::::<>Control<>::
-player.gd::GDScript::-1::1701903888::0::1::::<>CharacterBody2D<>::
-SaveManager.gd::GDScript::-1::1701899933::0::1::::<>Node<>::
-scene.gd::GDScript::-1::1701057865::0::1::::<>Node2D<>::
-scene_1.gd::GDScript::-1::1701057865::0::1::::<>Node2D<>::
-scene_2.gd::GDScript::-1::1701057865::0::1::::<>Node2D<>::
-SettingsDataContainer.gd::GDScript::-1::1701899933::0::1::::<>Node<>::
-SettingsSignalBus.gd::GDScript::-1::1701899933::0::1::::<>Node<>::
-state.gd::GDScript::-1::1701899933::0::1::::<>Node<>::
-test_dialogue.gd::GDScript::-1::1701057865::0::1::::<>BaseDialogueTestScene<>::
-::res://Script/Rooms/::1701899933
-basement.gd::GDScript::-1::1701899933::0::1::::<>Node2D<>::
-bathroom.gd::GDScript::-1::1701899933::0::1::::<>Node2D<>::
-bedroom.gd::GDScript::-1::1701899933::0::1::::<>Node2D<>::
-entrance.gd::GDScript::-1::1701899933::0::1::::<>Node2D<>::
-garage.gd::GDScript::-1::1701899933::0::1::::<>Node2D<>::
-hallwayA.gd::GDScript::-1::1701899933::0::1::::<>Node2D<>::
-hallway_b.gd::GDScript::-1::1701899933::0::1::::<>Node2D<>::
-kitchen.gd::GDScript::-1::1701899933::0::1::::<>Node2D<>::
-living_room.gd::GDScript::-1::1701899933::0::1::::<>Node2D<>::
-study.gd::GDScript::-1::1701899933::0::1::::<>Node2D<>::
-::res://Sprites/::1701071633
-::res://Sprites/Characters/::1701899933
-::res://Sprites/Characters/Demi/::1701899933
-::res://Sprites/Characters/Demi/Idle/::1701072613
-Demi-Idle-1.png::CompressedTexture2D::3947548489706131363::1701057865::1701057865::1::::<><>::
-Demi-Idle-2.png::CompressedTexture2D::6479861792382010791::1701057865::1701057865::1::::<><>::
-Demi-Idle-3.png::CompressedTexture2D::1620006801348053145::1701057865::1701057865::1::::<><>::
-Demi-Idle-4.png::CompressedTexture2D::2624558707381931328::1701057865::1701057865::1::::<><>::
-Demi-Idle-5.png::CompressedTexture2D::147825639147953436::1701057865::1701057865::1::::<><>::
-Demi-Idle-6.png::CompressedTexture2D::6890424960183344900::1701057865::1701057865::1::::<><>::
-Demi-Idle-Back-1.png::CompressedTexture2D::1929087199093790035::1701057865::1701057865::1::::<><>::
-Demi-Idle-Back-2.png::CompressedTexture2D::5268850091755556467::1701057865::1701057865::1::::<><>::
-Demi-Idle-Back-3.png::CompressedTexture2D::5640326440455060812::1701057865::1701057865::1::::<><>::
-Demi-Idle-Back-4.png::CompressedTexture2D::5195050630676527268::1701057865::1701057865::1::::<><>::
-Demi-Idle-Front-1.png::CompressedTexture2D::7183672806585665389::1701057865::1701057865::1::::<><>::
-Demi-Idle-Front-2.png::CompressedTexture2D::1920803491983122247::1701057865::1701057865::1::::<><>::
-Demi-Idle-Front-3.png::CompressedTexture2D::7284803078628881925::1701057865::1701057865::1::::<><>::
-Demi-Idle-Front-4.png::CompressedTexture2D::7349364614909467161::1701057865::1701057865::1::::<><>::
-::res://Sprites/Characters/Demi/Sit/::1701899933
-Demi-Sit-1.png::CompressedTexture2D::5948265444896449317::1701899933::1701899933::1::::<><>::
-Demi-Sit-2.png::CompressedTexture2D::801392741460340688::1701899933::1701899933::1::::<><>::
-Demi-Sit-3.png::CompressedTexture2D::6562195833933208218::1701899933::1701899933::1::::<><>::
-Demi-Sit-4.png::CompressedTexture2D::3986138748736258215::1701899933::1701899933::1::::<><>::
-::res://Sprites/Characters/Demi/Walk/::1701072614
-Demi-Walk-Back-1.png::CompressedTexture2D::6187821063347752483::1701057865::1701057865::1::::<><>::
-Demi-Walk-Back-2.png::CompressedTexture2D::5983411216483658174::1701057865::1701057865::1::::<><>::
-Demi-Walk-Back-3.png::CompressedTexture2D::8888971727335560663::1701057865::1701057865::1::::<><>::
-Demi-Walk-Back-4.png::CompressedTexture2D::4594009139210712316::1701057865::1701057865::1::::<><>::
-Demi-Walk-Back-5.png::CompressedTexture2D::5351908711677364767::1701057865::1701057865::1::::<><>::
-Demi-Walk-Back-6.png::CompressedTexture2D::3553030743530078159::1701057865::1701057865::1::::<><>::
-Demi-Walk-Back-7.png::CompressedTexture2D::368293969042395740::1701057865::1701057865::1::::<><>::
-Demi-Walk-Front-1.png::CompressedTexture2D::1281576559528200470::1701057865::1701057865::1::::<><>::
-Demi-Walk-Front-2.png::CompressedTexture2D::7118410785866614864::1701057865::1701057865::1::::<><>::
-Demi-Walk-Front-3.png::CompressedTexture2D::7280448350967516018::1701057865::1701057865::1::::<><>::
-Demi-Walk-Front-4.png::CompressedTexture2D::635296675621649585::1701057865::1701057865::1::::<><>::
-Demi-Walk-Front-5.png::CompressedTexture2D::1571924602013557761::1701057865::1701057865::1::::<><>::
-Demi-Walk-Front-6.png::CompressedTexture2D::9028838223882450261::1701057865::1701057865::1::::<><>::
-Demi-Walk-Front-7.png::CompressedTexture2D::5968823857557001833::1701057865::1701057865::1::::<><>::
-Demi-Walk-Side-1.png::CompressedTexture2D::8542555347663599339::1701057865::1701057865::1::::<><>::
-Demi-Walk-Side-2.png::CompressedTexture2D::3855537841547110199::1701057865::1701057865::1::::<><>::
-Demi-Walk-Side-3.png::CompressedTexture2D::8252640743614894518::1701057865::1701057865::1::::<><>::
-Demi-Walk-Side-4.png::CompressedTexture2D::6146870608914495806::1701057865::1701057865::1::::<><>::
-Demi-Walk-Side-5.png::CompressedTexture2D::7557895627925409445::1701057865::1701057865::1::::<><>::
-Demi-Walk-Side-6.png::CompressedTexture2D::8736500200748175367::1701057865::1701057865::1::::<><>::
-::res://Sprites/Characters/Gigi/::1701899933
-::res://Sprites/Characters/Gigi/Idle/::1701072614
-Gigi-Idle-1.png::CompressedTexture2D::8532423306131071317::1701057865::1701057865::1::::<><>::
-Gigi-Idle-2.png::CompressedTexture2D::8399732909134388::1701057865::1701057865::1::::<><>::
-Gigi-Idle-3.png::CompressedTexture2D::338814387168549436::1701057865::1701057865::1::::<><>::
-Gigi-Idle-4.png::CompressedTexture2D::3190466654883758133::1701057865::1701057865::1::::<><>::
-Gigi-Idle-5.png::CompressedTexture2D::182821979872511722::1701057865::1701057865::1::::<><>::
-Gigi-Idle-6.png::CompressedTexture2D::8588751765818465431::1701057865::1701057865::1::::<><>::
-Gigi-Idle-7.png::CompressedTexture2D::5381885760540555004::1701057865::1701057865::1::::<><>::
-::res://Sprites/Characters/Gigi/Sit/::1701899933
-Gigi-Sit-1.png::CompressedTexture2D::7127882562438774289::1701899933::1701899933::1::::<><>::
-Gigi-Sit-2.png::CompressedTexture2D::4104756536360805914::1701899933::1701899933::1::::<><>::
-Gigi-Sit-3.png::CompressedTexture2D::6187292057740264164::1701899933::1701899933::1::::<><>::
-::res://Sprites/Characters/Gigi/Sleeping/::1701072614
-Gigi-Sleeping-1.png::CompressedTexture2D::3571503517153728256::1701057865::1701057865::1::::<><>::
-Gigi-Sleeping-2.png::CompressedTexture2D::4725945797413033711::1701057865::1701057865::1::::<><>::
-Gigi-Sleeping-3.png::CompressedTexture2D::424037630547219800::1701057865::1701057865::1::::<><>::
-Gigi-Sleeping-4.png::CompressedTexture2D::6854763755039892158::1701057865::1701057865::1::::<><>::
-Gigi-Sleeping-5.png::CompressedTexture2D::8693837756288028540::1701057865::1701057865::1::::<><>::
-Gigi-Sleeping-6.png::CompressedTexture2D::2254280842651964898::1701057865::1701057865::1::::<><>::
-Gigi-Sleeping-7.png::CompressedTexture2D::5051362539403087225::1701057865::1701057865::1::::<><>::
-::res://Sprites/Characters/Idle/::1701072614
-Mimi-Idle-1.png::CompressedTexture2D::8670652256956051960::1701057865::1701057865::1::::<><>::
-Mimi-Idle-2.png::CompressedTexture2D::133187942861823135::1701057865::1701057865::1::::<><>::
-Mimi-Idle-3.png::CompressedTexture2D::7983224948320014570::1701057865::1701057865::1::::<><>::
-Mimi-Idle-4.png::CompressedTexture2D::4219614124135054942::1701057865::1701057865::1::::<><>::
-::res://Sprites/Characters/Sit/::1701899933
-Mimi-Sit-1.png::CompressedTexture2D::1177737441312843238::1701899933::1701899933::1::::<><>::
-Mimi-Sit-2.png::CompressedTexture2D::471508048309831798::1701899933::1701899933::1::::<><>::
-Mimi-Sit-3.png::CompressedTexture2D::7309044768811831517::1701899933::1701899933::1::::<><>::
-Mimi-Sit-4.png::CompressedTexture2D::6978778995321376536::1701899933::1701899933::1::::<><>::
-::res://Sprites/Furniture/::1701071633
-::res://Sprites/Furniture/OBJ_ArcadeMachine/::1701072614
-OBJ_ArcadeMachineA.png::CompressedTexture2D::967303380980572210::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Bathroom/::1701072614
-OBJ_BathDrawer.png::CompressedTexture2D::783329263429073539::1701057865::1701057865::1::::<><>::
-OBJ_BathMirror.png::CompressedTexture2D::2250418868888415239::1701057865::1701057865::1::::<><>::
-OBJ_BathSink.png::CompressedTexture2D::3103095857192152901::1701057865::1701057865::1::::<><>::
-OBJ_BathTowel.png::CompressedTexture2D::1980853121738511103::1701057865::1701057865::1::::<><>::
-OBJ_BathTrashCan.png::CompressedTexture2D::2456870041907260996::1701057865::1701057865::1::::<><>::
-OBJ_LaundryBasket.png::CompressedTexture2D::8516860529928229864::1701057865::1701057865::1::::<><>::
-OBJ_LaundryHamper.png::CompressedTexture2D::4853760268294968805::1701057865::1701057865::1::::<><>::
-OBJ_Shower.png::CompressedTexture2D::7861191723087267776::1701057865::1701057865::1::::<><>::
-OBJ_Toilet.png::CompressedTexture2D::8044961355119750634::1701057865::1701057865::1::::<><>::
-OBJ_ToothBrushPaste.png::CompressedTexture2D::1571847655460519289::1701057865::1701057865::1::::<><>::
-OBJ_TowelHolder.png::CompressedTexture2D::8955434657654125010::1701057865::1701057865::1::::<><>::
-OBJ_TPHolder.png::CompressedTexture2D::7701880628994932829::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Bed/::1701072614
-OBJ_BedA.png::CompressedTexture2D::3387416888239601786::1701057865::1701057865::1::::<><>::
-OBJ_BedA_01.png::CompressedTexture2D::2464154726037011408::1701057865::1701057865::1::::<><>::
-OBJ_BedA_02.png::CompressedTexture2D::2653703915579177002::1701057865::1701057865::1::::<><>::
-OBJ_BedB_01.png::CompressedTexture2D::2433460769892967231::1701057865::1701057865::1::::<><>::
-OBJ_BedB_02.png::CompressedTexture2D::6412516884787716201::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Bench/::1701072614
-OBJ_BenchA.png::CompressedTexture2D::1015954602907457207::1701057865::1701057865::1::::<><>::
-OBJ_BenchB.png::CompressedTexture2D::7898350717794674050::1701057865::1701057865::1::::<><>::
-OBJ_BenchC.png::CompressedTexture2D::2169289071920544828::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Bookshelf/::1701072614
-OBJ_BookshelfA.png::CompressedTexture2D::8428352965992161141::1701057865::1701057865::1::::<><>::
-OBJ_BookshelfB.png::CompressedTexture2D::8791785286105075752::1701057865::1701057865::1::::<><>::
-OBJ_BookshelfC.png::CompressedTexture2D::9143052864148054706::1701057865::1701057865::1::::<><>::
-OBJ_BookshelfD.png::CompressedTexture2D::8040251727230024338::1701057865::1701057865::1::::<><>::
-OBJ_BookshelfE.png::CompressedTexture2D::5323448180098746986::1701057865::1701057865::1::::<><>::
-OBJ_BookshelfF.png::CompressedTexture2D::7220052561992960555::1701057865::1701057865::1::::<><>::
-OBJ_BookshelfG.png::CompressedTexture2D::7993962650987753186::1701057865::1701057865::1::::<><>::
-OBJ_BookshelfH.png::CompressedTexture2D::3122640186223908356::1701057865::1701057865::1::::<><>::
-OBJ_BookshelfI.png::CompressedTexture2D::408666929551854867::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Broom/::1701072614
-OBJ_Broom.png::CompressedTexture2D::7811983778818036213::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Car/::1701072614
-OBJ_Car_01.png::CompressedTexture2D::119309008030374019::1701057865::1701057865::1::::<><>::
-OBJ_Car_02.png::CompressedTexture2D::1794713383514168610::1701057865::1701057865::1::::<><>::
-OBJ_Car_03.png::CompressedTexture2D::4332726034901087983::1701057865::1701057865::1::::<><>::
-OBJ_Car_04.png::CompressedTexture2D::4083834341724545347::1701057865::1701057865::1::::<><>::
-OBJ_Car_05.png::CompressedTexture2D::3218546187083897150::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_CardboardBox/::1701072614
-OBJ_CardboardBoxA.png::CompressedTexture2D::8613055051402336337::1701057865::1701057865::1::::<><>::
-OBJ_CardboardBoxB.png::CompressedTexture2D::4791405795209124799::1701057865::1701057865::1::::<><>::
-OBJ_CardboardBoxB_01.png::CompressedTexture2D::4905322588334138725::1701057865::1701057865::1::::<><>::
-OBJ_CardboardBoxB_02.png::CompressedTexture2D::7684917783560686332::1701057865::1701057865::1::::<><>::
-OBJ_CardboardBoxC.png::CompressedTexture2D::1064221783610632772::1701057865::1701057865::1::::<><>::
-OBJ_CardboardBoxD.png::CompressedTexture2D::7380705580342122649::1701057865::1701057865::1::::<><>::
-OBJ_CardboardBoxE.png::CompressedTexture2D::6209001772424470354::1701057865::1701057865::1::::<><>::
-OBJ_CardboardBoxF.png::CompressedTexture2D::1553184080681030717::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Carpet/::1701072614
-OBJ_CarpetA.png::CompressedTexture2D::3043239595221422891::1701057865::1701057865::1::::<><>::
-OBJ_CarpetB.png::CompressedTexture2D::1782696898775950624::1701057865::1701057865::1::::<><>::
-OBJ_CarpetC.png::CompressedTexture2D::8342202158615559788::1701057865::1701057865::1::::<><>::
-OBJ_CarpetD.png::CompressedTexture2D::1281079869330385280::1701057865::1701057865::1::::<><>::
-OBJ_CarpetE.png::CompressedTexture2D::8216144347635349548::1701057865::1701057865::1::::<><>::
-OBJ_CarpetF.png::CompressedTexture2D::4716568741145760122::1701057865::1701057865::1::::<><>::
-OBJ_CarpetG.png::CompressedTexture2D::477628567919193144::1701057865::1701057865::1::::<><>::
-OBJ_CarpetH.png::CompressedTexture2D::8263403527599133004::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Chair/::1701072614
-OBJ_ChairA.png::CompressedTexture2D::3095086954769808707::1701057865::1701057865::1::::<><>::
-OBJ_ChairB.png::CompressedTexture2D::5145396054078927500::1701057865::1701057865::1::::<><>::
-OBJ_ChairC.png::CompressedTexture2D::8078404912536082442::1701057865::1701057865::1::::<><>::
-OBJ_ChairD.png::CompressedTexture2D::2472487435382227297::1701057865::1701057865::1::::<><>::
-OBJ_ChairE.png::CompressedTexture2D::5077538141718504282::1701057865::1701057865::1::::<><>::
-OBJ_ChairF.png::CompressedTexture2D::1093542467538242134::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Chest/::1701072614
-OBJ_ChestA_01.png::CompressedTexture2D::7691760545871991077::1701057865::1701057865::1::::<><>::
-OBJ_ChestA_02.png::CompressedTexture2D::643561505144680910::1701057865::1701057865::1::::<><>::
-OBJ_ChestA_03.png::CompressedTexture2D::1467659819924983080::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Clock/::1701072614
-OBJ_ClockA.png::CompressedTexture2D::7391224631575011814::1701057865::1701057865::1::::<><>::
-OBJ_ClockB.png::CompressedTexture2D::4500661456841792847::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Closet/::1701072614
-OBJ_ClosetA_01.png::CompressedTexture2D::7326223514353967975::1701057865::1701057865::1::::<><>::
-OBJ_ClosetA_02.png::CompressedTexture2D::2581124387931675796::1701057865::1701057865::1::::<><>::
-OBJ_ClosetA_03.png::CompressedTexture2D::4213772388171701868::1701057865::1701057865::1::::<><>::
-OBJ_ClosetB.png::CompressedTexture2D::2476712930306756137::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_CoatRack/::1701072614
-OBJ_CoatRack.png::CompressedTexture2D::5874860102898379060::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Crowbar/::1701072614
-OBJ_Crowbar_01.png::CompressedTexture2D::4014985678304696584::1701057865::1701057865::1::::<><>::
-OBJ_Crowbar_02.png::CompressedTexture2D::6407257180683649607::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Door/::1701072614
-OBJ_DoorA.png::CompressedTexture2D::2105771268084864782::1701057865::1701057865::1::::<><>::
-OBJ_DoorB.png::CompressedTexture2D::2619521345173576488::1701057865::1701057865::1::::<><>::
-OBJ_DoorC.png::CompressedTexture2D::5493914442021771411::1701057865::1701057865::1::::<><>::
-OBJ_DoorD.png::CompressedTexture2D::6108269659735056297::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Drawer/::1701072614
-OBJ_DrawerA.png::CompressedTexture2D::2647200453860918274::1701057865::1701057865::1::::<><>::
-OBJ_DrawerB.png::CompressedTexture2D::5137898595119749014::1701057865::1701057865::1::::<><>::
-OBJ_DrawerC.png::CompressedTexture2D::2120628245453138654::1701057865::1701057865::1::::<><>::
-OBJ_DrawerD.png::CompressedTexture2D::618794391064160499::1701057865::1701057865::1::::<><>::
-OBJ_DrawerE.png::CompressedTexture2D::839450780732003686::1701057865::1701057865::1::::<><>::
-OBJ_DrawerF.png::CompressedTexture2D::9065706271581846761::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Fridge/::1701072614
-OBJ_Fridge.png::CompressedTexture2D::3100224844969342185::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Fuelcell/::1701072614
-OBJ_Fuelcell_01.png::CompressedTexture2D::8634636022019981437::1701057865::1701057865::1::::<><>::
-OBJ_Fuelcell_02.png::CompressedTexture2D::6505836865766306146::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_GamingChair/::1701072614
-OBJ_GamingChair.png::CompressedTexture2D::5242096482408379182::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Heater/::1701072614
-OBJ_Heater.png::CompressedTexture2D::3711813607000739821::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Key/::1701072614
-OBJ_Key_01.png::CompressedTexture2D::3091528829695964983::1701057865::1701057865::1::::<><>::
-OBJ_Key_02.png::CompressedTexture2D::1682762987057402554::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Kitchen/::1701072614
-OBJ_KitchenCornerCounter.png::CompressedTexture2D::6978713555772792801::1701057865::1701057865::1::::<><>::
-OBJ_KitchenCounter.png::CompressedTexture2D::5022986768272905038::1701057865::1701057865::1::::<><>::
-OBJ_KitchenSideCounter.png::CompressedTexture2D::2028741468672227377::1701057865::1701057865::1::::<><>::
-OBJ_KitchenSink.png::CompressedTexture2D::8793244594929568046::1701057865::1701057865::1::::<><>::
-OBJ_KitchenStove.png::CompressedTexture2D::8374816294269917127::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Ladder/::1701072614
-OBJ_Ladder.png::CompressedTexture2D::8428074100238077425::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Laptop/::1701072614
-OBJ_Laptop_01.png::CompressedTexture2D::6445861115260701011::1701057865::1701057865::1::::<><>::
-OBJ_Laptop_02.png::CompressedTexture2D::3626347237133885806::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Lightstand/::1701072614
-OBJ_LightstandA.png::CompressedTexture2D::5088644104351484846::1701057865::1701057865::1::::<><>::
-OBJ_LightstandB.png::CompressedTexture2D::2575687922170468990::1701057865::1701057865::1::::<><>::
-OBJ_LightstandC.png::CompressedTexture2D::5392621812505283834::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Locker/::1701072614
-OBJ_Locker.png::CompressedTexture2D::7602448199925273753::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Mirror/::1701072614
-OBJ_MirrorA.png::CompressedTexture2D::4807722780094565709::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_PCSetup/::1701072614
-OBJ_PCSetup.png::CompressedTexture2D::568821096254128605::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Piano/::1701072614
-OBJ_Piano.png::CompressedTexture2D::5886127200100138480::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Picture/::1701072614
-OBJ_PictureA.png::CompressedTexture2D::3482282856590847228::1701057865::1701057865::1::::<><>::
-OBJ_PictureB.png::CompressedTexture2D::1756996002442943476::1701057865::1701057865::1::::<><>::
-OBJ_PictureC.png::CompressedTexture2D::7556087905400300210::1701057865::1701057865::1::::<><>::
-OBJ_PictureD.png::CompressedTexture2D::8159904961879974036::1701057865::1701057865::1::::<><>::
-OBJ_PictureE.png::CompressedTexture2D::5891731913542426582::1701057865::1701057865::1::::<><>::
-OBJ_PictureF.png::CompressedTexture2D::4711195732985265926::1701057865::1701057865::1::::<><>::
-OBJ_PictureG.png::CompressedTexture2D::8962913292335730951::1701057865::1701057865::1::::<><>::
-OBJ_PictureH.png::CompressedTexture2D::6865904016113418103::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Plant/::1701072614
-OBJ_PlantA.png::CompressedTexture2D::4324598763057908099::1701057865::1701057865::1::::<><>::
-OBJ_PlantB.png::CompressedTexture2D::8520213628562906544::1701057865::1701057865::1::::<><>::
-OBJ_PlantC.png::CompressedTexture2D::5233398597623249942::1701057865::1701057865::1::::<><>::
-OBJ_PlantD.png::CompressedTexture2D::995413449222574459::1701057865::1701057865::1::::<><>::
-OBJ_PlantE.png::CompressedTexture2D::9018732449103578023::1701057865::1701057865::1::::<><>::
-OBJ_PlantF.png::CompressedTexture2D::4056908780461813131::1701057865::1701057865::1::::<><>::
-OBJ_PlantG.png::CompressedTexture2D::8261449836864100979::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Receipt/::1701072614
-OBJ_Receipt_01.png::CompressedTexture2D::6517058981715278152::1701057865::1701057865::1::::<><>::
-OBJ_Receipt_02.png::CompressedTexture2D::7307065059477653396::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_RecycleBin/::1701072614
-OBJ_RecycleBin.png::CompressedTexture2D::5082571977646118389::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Safe/::1701072614
-OBJ_Safe_01.png::CompressedTexture2D::7746215214211739764::1701057865::1701057865::1::::<><>::
-OBJ_Safe_02.png::CompressedTexture2D::2275086705903470382::1701057865::1701057865::1::::<><>::
-OBJ_Safe_03.png::CompressedTexture2D::2737664167076704192::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_SmallItems/::1701072614
-OBJ_BookPileA.png::CompressedTexture2D::5265986445148556398::1701057865::1701057865::1::::<><>::
-OBJ_BookPileB.png::CompressedTexture2D::919968532042071330::1701057865::1701057865::1::::<><>::
-OBJ_Cup.png::CompressedTexture2D::1369652583696826311::1701057865::1701057865::1::::<><>::
-OBJ_FoosballTable.png::CompressedTexture2D::3622589674113385575::1701057865::1701057865::1::::<><>::
-OBJ_FruitBasket.png::CompressedTexture2D::1263708181508236033::1701057865::1701057865::1::::<><>::
-OBJ_Microwave.png::CompressedTexture2D::3327336457225508812::1701057865::1701057865::1::::<><>::
-OBJ_OpenBookA.png::CompressedTexture2D::1120350836961188874::1701057865::1701057865::1::::<><>::
-OBJ_PaperTowel.png::CompressedTexture2D::6496269361070081676::1701057865::1701057865::1::::<><>::
-OBJ_PillowA.png::CompressedTexture2D::7935212803546406187::1701057865::1701057865::1::::<><>::
-OBJ_PillowB.png::CompressedTexture2D::2374177734569739106::1701057865::1701057865::1::::<><>::
-OBJ_PillowC.png::CompressedTexture2D::7728511145307909953::1701057865::1701057865::1::::<><>::
-OBJ_PillowD.png::CompressedTexture2D::6322831544004543792::1701057865::1701057865::1::::<><>::
-OBJ_Plate.png::CompressedTexture2D::6073045856861890616::1701057865::1701057865::1::::<><>::
-OBJ_RecordPile.png::CompressedTexture2D::6168448952428404041::1701057865::1701057865::1::::<><>::
-OBJ_RecordPlayer.png::CompressedTexture2D::4006255882872364604::1701057865::1701057865::1::::<><>::
-OBJ_SoccerBall.png::CompressedTexture2D::4096637505140453503::1701057865::1701057865::1::::<><>::
-OBJ_SodaCanA.png::CompressedTexture2D::507662980927936630::1701057865::1701057865::1::::<><>::
-OBJ_SodaCanB.png::CompressedTexture2D::3371368148427132377::1701057865::1701057865::1::::<><>::
-OBJ_SodaCanC.png::CompressedTexture2D::2014865736203440879::1701057865::1701057865::1::::<><>::
-OBJ_SodaCanD.png::CompressedTexture2D::2182615256115479306::1701057865::1701057865::1::::<><>::
-OBJ_StorageContainerA.png::CompressedTexture2D::3280860388897409689::1701057865::1701057865::1::::<><>::
-OBJ_StorageContainerB.png::CompressedTexture2D::5853135818448806432::1701057865::1701057865::1::::<><>::
-OBJ_Teapot.png::CompressedTexture2D::6087483683965482127::1701057865::1701057865::1::::<><>::
-OBJ_Toaster.png::CompressedTexture2D::4546443612221588891::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Sofa/::1701072615
-OBJ_SofaA.png::CompressedTexture2D::1028725050763945182::1701057865::1701057865::1::::<><>::
-OBJ_SofaB.png::CompressedTexture2D::5102472206894504441::1701057865::1701057865::1::::<><>::
-OBJ_SofaC.png::CompressedTexture2D::4415959298629619910::1701057865::1701057865::1::::<><>::
-OBJ_SofaD.png::CompressedTexture2D::6686028729339927932::1701057865::1701057865::1::::<><>::
-OBJ_SofaE.png::CompressedTexture2D::520474338946646378::1701057865::1701057865::1::::<><>::
-OBJ_SofaF.png::CompressedTexture2D::9195957319362548918::1701057865::1701057865::1::::<><>::
-OBJ_SofaG.png::CompressedTexture2D::4756680900397330154::1701057865::1701057865::1::::<><>::
-OBJ_SofaH.png::CompressedTexture2D::5342662250038020107::1701057865::1701057865::1::::<><>::
-OBJ_SofaI.png::CompressedTexture2D::1279825224340514220::1701057865::1701057865::1::::<><>::
-OBJ_SofaJ.png::CompressedTexture2D::262939011082304930::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Speakers/::1701072615
-OBJ_SpeakersA.png::CompressedTexture2D::6906518401953627242::1701057865::1701057865::1::::<><>::
-OBJ_SpeakersB.png::CompressedTexture2D::6952717533914374403::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_StckyNote/::1701072615
-OBJ_StckyNote_01.png::CompressedTexture2D::8659840337198897426::1701057865::1701057865::1::::<><>::
-OBJ_StckyNote_02.png::CompressedTexture2D::2657556666781954220::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_StorageShelves/::1701072615
-OBJ_StorageShelves.png::CompressedTexture2D::5013365343886488286::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Table/::1701072615
-OBJ_TableA.png::CompressedTexture2D::3079017381807918007::1701057865::1701057865::1::::<><>::
-OBJ_TableB.png::CompressedTexture2D::672598472409322731::1701057865::1701057865::1::::<><>::
-OBJ_TableC.png::CompressedTexture2D::6264116103301207458::1701057865::1701057865::1::::<><>::
-OBJ_TableD.png::CompressedTexture2D::6848356810664237753::1701057865::1701057865::1::::<><>::
-OBJ_TableE.png::CompressedTexture2D::4330575872348147839::1701057865::1701057865::1::::<><>::
-OBJ_TableF.png::CompressedTexture2D::7992117555716800345::1701057865::1701057865::1::::<><>::
-OBJ_TableG.png::CompressedTexture2D::6564298101498389473::1701057865::1701057865::1::::<><>::
-OBJ_TableH.png::CompressedTexture2D::3596444180699075733::1701057865::1701057865::1::::<><>::
-OBJ_TableI.png::CompressedTexture2D::4751963732070654861::1701057865::1701057865::1::::<><>::
-OBJ_TableJ.png::CompressedTexture2D::982877061797154709::1701057865::1701057865::1::::<><>::
-OBJ_TableK.png::CompressedTexture2D::7007374641078287194::1701057865::1701057865::1::::<><>::
-OBJ_TableL.png::CompressedTexture2D::1777402813426483903::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Telephone/::1701072615
-OBJ_Telephone_01.png::CompressedTexture2D::5804085681645076647::1701057865::1701057865::1::::<><>::
-OBJ_Telephone_02.png::CompressedTexture2D::2803930614474455372::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_TeleporterBase/::1701072615
-OBJ_TeleporterBase.png::CompressedTexture2D::794159639848121342::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_TeleporterSlot/::1701072615
-OBJ_TeleporterSlot_01.png::CompressedTexture2D::797853760008620670::1701057865::1701057865::1::::<><>::
-OBJ_TeleporterSlot_02.png::CompressedTexture2D::5475292815275730432::1701057865::1701057865::1::::<><>::
-OBJ_TeleporterSlot_03.png::CompressedTexture2D::8443539646371619165::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Television/::1701072615
-OBJ_TelevisionA.png::CompressedTexture2D::5472051316292652936::1701057865::1701057865::1::::<><>::
-OBJ_TelevisionB.png::CompressedTexture2D::2596028972703151014::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Tire/::1701072615
-OBJ_Tire.png::CompressedTexture2D::3203665588901144125::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_ToolBox/::1701072615
-OBJ_ToolBoxA.png::CompressedTexture2D::835574524599761567::1701057865::1701057865::1::::<><>::
-OBJ_ToolBoxB.png::CompressedTexture2D::8691285708109823307::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_ToolCabinet/::1701072615
-OBJ_ToolCabinet.png::CompressedTexture2D::4241997289930210596::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_TrapFloor/::1701072615
-OBJ_TrapFloor_01.png::CompressedTexture2D::308452067777279986::1701057865::1701057865::1::::<><>::
-OBJ_TrapFloor_02.png::CompressedTexture2D::7961083864208746064::1701057865::1701057865::1::::<><>::
-OBJ_TrapFloor_03.png::CompressedTexture2D::6391598391516935892::1701057865::1701057865::1::::<><>::
-OBJ_TrapFloor_04.png::CompressedTexture2D::7130933986470168602::1701057865::1701057865::1::::<><>::
-OBJ_TrapFloor_05.png::CompressedTexture2D::6969379466489067359::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_TrashCan/::1701072615
-OBJ_TrashCan.png::CompressedTexture2D::1438284453428220246::1701057865::1701057865::1::::<><>::
-::res://Sprites/Furniture/OBJ_Window/::1701072615
-OBJ_WindowA.png::CompressedTexture2D::6605066406296790604::1701057865::1701057865::1::::<><>::
-OBJ_WindowB.png::CompressedTexture2D::5693690884353577017::1701057865::1701057865::1::::<><>::
-OBJ_WindowC.png::CompressedTexture2D::5805977966725024760::1701057865::1701057865::1::::<><>::
-OBJ_WindowD.png::CompressedTexture2D::568236541644091577::1701057865::1701057865::1::::<><>::
-OBJ_WindowE.png::CompressedTexture2D::154134485184122679::1701057865::1701057865::1::::<><>::
-OBJ_WindowF.png::CompressedTexture2D::7626940536430095353::1701057865::1701057865::1::::<><>::
-::res://Sprites/FX/::1701071632
-::res://Sprites/FX/FX_Portal/::1701072615
-FX_Portal_01.png::CompressedTexture2D::3873243102938260917::1701057865::1701057865::1::::<><>::
-FX_Portal_02.png::CompressedTexture2D::4746049295261178083::1701057865::1701057865::1::::<><>::
-FX_Portal_03.png::CompressedTexture2D::877806257068996327::1701057865::1701057865::1::::<><>::
-FX_Portal_04.png::CompressedTexture2D::848782562797171851::1701057865::1701057865::1::::<><>::
-FX_Portal_05.png::CompressedTexture2D::8703810715182660288::1701057865::1701057865::1::::<><>::
-FX_Portal_06.png::CompressedTexture2D::6154819105165839056::1701057865::1701057865::1::::<><>::
-::res://Sprites/Portraits/::1701072615
-Demi Annoyed.png::CompressedTexture2D::7587323489035248484::1701057865::1701057865::1::::<><>::
-Demi Blush.png::CompressedTexture2D::4843493223670271498::1701057865::1701057865::1::::<><>::
-Demi Default.png::CompressedTexture2D::9112714865250800969::1701057865::1701057865::1::::<><>::
-Demi Happy.png::CompressedTexture2D::7164925950316048094::1701057865::1701057865::1::::<><>::
-Demi Shocked.png::CompressedTexture2D::893814772704092931::1701057865::1701057865::1::::<><>::
-Demi Smirk.png::CompressedTexture2D::903035296186872673::1701057865::1701057865::1::::<><>::
-Gigi Blush.png::CompressedTexture2D::2343722317607448115::1701057865::1701057865::1::::<><>::
-Gigi Default.png::CompressedTexture2D::3468116739056773298::1701057865::1701057865::1::::<><>::
-Gigi Grin.png::CompressedTexture2D::9084432530615922169::1701057865::1701057865::1::::<><>::
-Gigi Sleeping.png::CompressedTexture2D::7788483023413483692::1701057865::1701057865::1::::<><>::
-Gigi Surprised.png::CompressedTexture2D::8505443164116906570::1701057865::1701057865::1::::<><>::
-Mimi Default.png::CompressedTexture2D::2199926129139896225::1701057865::1701057865::1::::<><>::
-Mimi Happy.png::CompressedTexture2D::7934673557714923646::1701057865::1701057865::1::::<><>::
-Mimi Smirk.png::CompressedTexture2D::1263415084898554893::1701057865::1701057865::1::::<><>::
-::res://Sprites/Tiles/::1701071633
-::res://Sprites/Tiles/Floor/::1701072615
-Carpet-Blue.png::CompressedTexture2D::7673981137727568938::1701057865::1701057865::1::::<><>::
-Carpet-Pink.png::CompressedTexture2D::478619776254744570::1701057865::1701057865::1::::<><>::
-Carpet-Purple.png::CompressedTexture2D::8846559722216876546::1701057865::1701057865::1::::<><>::
-Concrete.png::CompressedTexture2D::3476671855391348612::1701057865::1701057865::1::::<><>::
-Tile-Retro.png::CompressedTexture2D::7356185623537287603::1701057865::1701057865::1::::<><>::
-Tile-Terracotta.png::CompressedTexture2D::5230341725094813256::1701057865::1701057865::1::::<><>::
-Vinyl-Red.png::CompressedTexture2D::4121973702057692816::1701057865::1701057865::1::::<><>::
-Vinyl-Yellow.png::CompressedTexture2D::8477204083254499701::1701057865::1701057865::1::::<><>::
-Wood.png::CompressedTexture2D::7432785818559229144::1701057865::1701057865::1::::<><>::
-::res://Sprites/Tiles/Walls/::1701072615
-Basic Wall-Purple.png::CompressedTexture2D::4187454417170941874::1701057865::1701057865::1::::<><>::
-Basic Wall-White.png::CompressedTexture2D::1088644889664022713::1701057865::1701057865::1::::<><>::
-Basic Wall-Yellow.png::CompressedTexture2D::3103755684139024449::1701057865::1701057865::1::::<><>::
-Cinder Block Wall.png::CompressedTexture2D::9180012045037368016::1701057865::1701057865::1::::<><>::
-Wallpaper Wall-Blue.png::CompressedTexture2D::7534788658764222406::1701057865::1701057865::1::::<><>::
-Wallpaper Wall-Pink.png::CompressedTexture2D::3828900409183882410::1701057865::1701057865::1::::<><>::
-Wallpaper Wall-Yellow.png::CompressedTexture2D::2426555801865421799::1701057865::1701057865::1::::<><>::
-Wood Wall.png::CompressedTexture2D::2880423730658863984::1701057865::1701057865::1::::<><>::
-::res://Sprites/UI/::1701072615
-Continue Button.png::CompressedTexture2D::7098207818696250723::1701057865::1701057865::1::::<><>::
-Day HUD.png::CompressedTexture2D::4650920014777772401::1701057865::1701057865::1::::<><>::
-Dialogue Box.png::CompressedTexture2D::1205168259043392129::1701057865::1701057865::1::::<><>::
-Inventory Container.png::CompressedTexture2D::4009452643872525518::1701057865::1701057865::1::::<><>::
-Load Button.png::CompressedTexture2D::1119134290746940731::1701057865::1701057865::1::::<><>::
-Name Container.png::CompressedTexture2D::8275906041906343242::1701057865::1701057865::1::::<><>::
-Night HUD.png::CompressedTexture2D::5287185529227872287::1701057865::1701057865::1::::<><>::
-Options Button.png::CompressedTexture2D::6167662354798338733::1701057865::1701057865::1::::<><>::
-Pause Button.png::CompressedTexture2D::6105880609600826328::1701057865::1701057865::1::::<><>::
-Paused Button.png::CompressedTexture2D::5737217033407640528::1701057865::1701057865::1::::<><>::
-Paused Load Button.png::CompressedTexture2D::1060695087364229417::1701057865::1701057865::1::::<><>::
-Paused Options Button.png::CompressedTexture2D::2131594099013368507::1701057865::1701057865::1::::<><>::
-Paused Quit Button.png::CompressedTexture2D::1078390557593571184::1701057865::1701057865::1::::<><>::
-Play Button.png::CompressedTexture2D::8887099097559711810::1701057865::1701057865::1::::<><>::
-Portrait Container Left.png::CompressedTexture2D::6548195139067549267::1701057865::1701057865::1::::<><>::
-Portrait Container Right.png::CompressedTexture2D::110141458954180657::1701057865::1701057865::1::::<><>::
-Quit Button.png::CompressedTexture2D::5523689728042572655::1701057865::1701057865::1::::<><>::
-Save Button.png::CompressedTexture2D::3746323927658646371::1701057865::1701057865::1::::<><>::
-Start Button.png::CompressedTexture2D::8191833726360029887::1701057865::1701057865::1::::<><>::
-::res://UI/::1701899933
-Blank_Blue.png::CompressedTexture2D::1116131182768308214::1701899933::1701899933::1::::<><>::
-Blank_Gray.png::CompressedTexture2D::6997113631008242825::1701899933::1701899933::1::::<><>::
-Continue Button.png::CompressedTexture2D::7098207818696250723::1701899933::1701899933::1::::<><>::
-Day HUD.png::CompressedTexture2D::4650920014777772401::1701899933::1701899933::1::::<><>::
-Dialogue Box.png::CompressedTexture2D::1205168259043392129::1701899933::1701899933::1::::<><>::
-Inventory Container.png::CompressedTexture2D::4009452643872525518::1701899933::1701899933::1::::<><>::
-Load Button.png::CompressedTexture2D::1119134290746940731::1701899933::1701899933::1::::<><>::
-Name Container.png::CompressedTexture2D::8275906041906343242::1701899933::1701899933::1::::<><>::
-Night HUD.png::CompressedTexture2D::5287185529227872287::1701899933::1701899933::1::::<><>::
-Options Button.png::CompressedTexture2D::6167662354798338733::1701899933::1701899933::1::::<><>::
-Pause Button.png::CompressedTexture2D::6105880609600826328::1701899933::1701899933::1::::<><>::
-Paused Button.png::CompressedTexture2D::5737217033407640528::1701899933::1701899933::1::::<><>::
-Paused Load Button.png::CompressedTexture2D::1060695087364229417::1701899933::1701899933::1::::<><>::
-Paused Options Button.png::CompressedTexture2D::2131594099013368507::1701899933::1701899933::1::::<><>::
-Paused Quit Button.png::CompressedTexture2D::1078390557593571184::1701899933::1701899933::1::::<><>::
-Play Button.png::CompressedTexture2D::8887099097559711810::1701899933::1701899933::1::::<><>::
-Portrait Container Left.png::CompressedTexture2D::6548195139067549267::1701899933::1701899933::1::::<><>::
-Portrait Container Right.png::CompressedTexture2D::110141458954180657::1701899933::1701899933::1::::<><>::
-Quit Button.png::CompressedTexture2D::5523689728042572655::1701899933::1701899933::1::::<><>::
-Save Button.png::CompressedTexture2D::3746323927658646371::1701899933::1701899933::1::::<><>::
-Start Button.png::CompressedTexture2D::8191833726360029887::1701899933::1701899933::1::::<><>::
+::res://::1701924857
+default_bus_layout.tres::AudioBusLayout::4063243458369164154::1701907770::0::1::::<><>::
+Fade_Transition.gd::GDScript::-1::1701907770::0::1::::<>Node2D<>::
+fade_transition.tscn::PackedScene::4163496360994995737::1701907770::0::1::::<><>::res://Fade_Transition.gd<>uid://v4qs8ufergem
+icon.svg::CompressedTexture2D::7082876504604578583::1701907770::1701918348::1::::<><>::
+Kenney Mini Square.ttf::FontFile::1534838051840805908::1701907770::1701907770::1::::<><>::
+Player.gd::GDScript::-1::1701907770::0::1::::<>CharacterBody2D<>::
+Player.tscn::PackedScene::1560553356649051403::1701907770::0::1::::<><>::res://Player.gd<>uid://c7587abkktylj
+test.tscn::PackedScene::5314750345154119997::1701907770::0::1::::<><>::uid://wh7c6fwwssj8
+tilemap.png::CompressedTexture2D::1291938120162730072::1701907770::1701907770::1::::<><>::
+::res://addons/::1701907770
+::res://addons/dialogue_manager/::1701907770
+constants.gd::GDScript::-1::1701907770::0::1::::<>Node<>::
+dialogue_label.gd::GDScript::-1::1701907770::0::1::::DialogueLabel<>RichTextLabel<>res://addons/dialogue_manager/assets/icon.svg::
+dialogue_label.tscn::PackedScene::5518490004210093266::1701907770::0::1::::<><>::res://addons/dialogue_manager/dialogue_label.gd
+dialogue_line.gd::GDScript::-1::1701907770::0::1::::DialogueLine<>RefCounted<>::
+dialogue_manager.gd::GDScript::-1::1701907770::0::1::::<>Node<>::
+dialogue_reponses_menu.gd::GDScript::-1::1701907770::0::1::::DialogueResponsesMenu<>VBoxContainer<>res://addons/dialogue_manager/assets/responses_menu.svg::
+dialogue_resource.gd::GDScript::-1::1701907770::0::1::::DialogueResource<>Resource<>res://addons/dialogue_manager/assets/icon.svg::
+dialogue_response.gd::GDScript::-1::1701907770::0::1::::DialogueResponse<>RefCounted<>::
+editor_translation_parser_plugin.gd::GDScript::-1::1701907770::0::1::::<>EditorTranslationParserPlugin<>::
+import_plugin.gd::GDScript::-1::1701907770::0::1::::<>EditorImportPlugin<>::
+plugin.cfg::TextFile::-1::1701907770::0::1::::<><>::
+plugin.gd::GDScript::-1::1701907770::0::1::::<>EditorPlugin<>::
+settings.gd::GDScript::-1::1701907770::0::1::::<>Node<>::
+test_scene.gd::GDScript::-1::1701907770::0::1::::BaseDialogueTestScene<>Node2D<>::
+test_scene.tscn::PackedScene::-1::1701907770::0::1::::<><>::res://addons/dialogue_manager/test_scene.gd
+::res://addons/dialogue_manager/assets/::1701918348
+icon.svg::CompressedTexture2D::9148339284877624195::1701907770::1701918348::1::::<><>::
+responses_menu.svg::CompressedTexture2D::8371359403825774630::1701907770::1701918348::1::::<><>::
+update.svg::CompressedTexture2D::9126631778427806641::1701907770::1701918348::1::::<><>::
+::res://addons/dialogue_manager/components/::1701907770
+code_edit.gd::GDScript::-1::1701907770::0::1::::<>CodeEdit<>::
+code_edit.tscn::PackedScene::5379618807048408118::1701907770::0::1::::<><>::res://addons/dialogue_manager/components/code_edit_syntax_highlighter.gd<>res://addons/dialogue_manager/components/code_edit.gd
+code_edit_syntax_highlighter.gd::GDScript::-1::1701907770::0::1::::<>SyntaxHighlighter<>::
+dialogue_cache.gd::GDScript::-1::1701907770::0::1::::<>Node<>::
+download_update_panel.gd::GDScript::-1::1701907770::0::1::::<>Control<>::
+download_update_panel.tscn::PackedScene::1130642722554629364::1701907770::0::1::::<><>::res://addons/dialogue_manager/components/download_update_panel.gd<>uid://d3baj6rygkb3f
+errors_panel.gd::GDScript::-1::1701907770::0::1::::<>HBoxContainer<>::
+errors_panel.tscn::PackedScene::6105315990352960875::1701907770::0::1::::<><>::res://addons/dialogue_manager/components/errors_panel.gd
+files_list.gd::GDScript::-1::1701907770::0::1::::<>VBoxContainer<>::
+files_list.tscn::PackedScene::8113335055803740416::1701907770::0::1::::<><>::res://addons/dialogue_manager/components/files_list.gd<>uid://d3lr2uas6ax8v
+parser.gd::GDScript::-1::1701907770::0::1::::DialogueManagerParser<>Object<>::
+parse_result.gd::GDScript::-1::1701907770::0::1::::DialogueManagerParseResult<>RefCounted<>::
+resolved_line_data.gd::GDScript::-1::1701907770::0::1::::<>RefCounted<>::
+resolved_tag_data.gd::GDScript::-1::1701907770::0::1::::<>RefCounted<>::
+search_and_replace.gd::GDScript::-1::1701907770::0::1::::<>VBoxContainer<>::
+search_and_replace.tscn::PackedScene::458254375860855630::1701907770::0::1::::<><>::res://addons/dialogue_manager/components/search_and_replace.gd
+title_list.gd::GDScript::-1::1701907770::0::1::::<>VBoxContainer<>::
+title_list.tscn::PackedScene::6134415340044566558::1701907770::0::1::::<><>::res://addons/dialogue_manager/components/title_list.gd
+update_button.gd::GDScript::-1::1701907770::0::1::::<>Button<>::
+update_button.tscn::PackedScene::5825087957514786930::1701907770::0::1::::<><>::res://addons/dialogue_manager/components/update_button.gd<>uid://qdxrxv3c3hxk
+::res://addons/dialogue_manager/example_balloon/::1701907770
+example_balloon.gd::GDScript::-1::1701907770::0::1::::<>CanvasLayer<>::
+example_balloon.tscn::PackedScene::2304415056852043862::1701907770::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo
+small_example_balloon.tscn::PackedScene::1883859960814163368::1701907770::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo
+::res://addons/dialogue_manager/l10n/::1701907770
+en.mo::Translation::-1::1701907770::0::1::::<><>::
+en.po::Translation::-1::1701907770::0::1::::<><>::
+zh.po::Translation::-1::1701907770::0::1::::<><>::
+zh_TW.po::Translation::-1::1701907770::0::1::::<><>::
+::res://addons/dialogue_manager/views/::1701907770
+main_view.gd::GDScript::-1::1701907770::0::1::::<>Control<>::
+main_view.tscn::PackedScene::4884668666408697448::1701907770::0::1::::<><>::res://addons/dialogue_manager/views/main_view.gd<>uid://civ6shmka5e8u
+settings_view.gd::GDScript::-1::1701907770::0::1::::<>TabContainer<>::
+settings_view.tscn::PackedScene::5839841081119266502::1701907770::0::1::::<><>::res://addons/dialogue_manager/views/settings_view.gd
+::res://Audio/::1701918349
+Ambience, Empty Garage Hum, Metal Gate Hitting, Wind Outside, Scary-AmbiX.wav::AudioStreamWAV::6969758394112388389::1701907768::1701907768::1::::<><>::
+AMBISONIC_A INT Bathroom 01.wav::AudioStreamWAV::7482564648459636735::1701907767::1701907767::1::::<><>::
+AMBRoom_Bedroom, Groundfloor, Doors & Windows Closed_344 Audio_UK Residential Room Tones.wav::AudioStreamWAV::4287776911180982092::1701907768::1701907768::1::::<><>::
+BELLDoor-INT_Door Bell Low Tone_JSE_DO_Distance Stereo.wav::AudioStreamWAV::2450663663010184560::1701907768::1701907768::1::::<><>::
+BM Futuristic Machinery 09.wav::AudioStreamWAV::2262281188337693097::1701907768::1701907768::1::::<><>::
+Door 1 Close.wav::AudioStreamWAV::5373468263126432203::1701907768::1701907768::1::::<><>::
+HumBuzz-Buzz-03.wav::AudioStreamWAV::611881242764410359::1701907768::1701907768::1::::<><>::
+kitchen_roomtone_with_refrigerator_002.wav::AudioStreamWAV::867516190061354209::1701907770::1701918349::1::::<><>::
+ladder-82581.wav::AudioStreamWAV::3215572915343339277::1701907770::1701907770::1::::<><>::
+Magic Positive 3.wav::AudioStreamWAV::7259711535064383288::1701907768::1701907768::1::::<><>::
+ROOM TONE Hotel Hallway 2, 5am, Chiang Mai, Thailand, LR.wav::AudioStreamWAV::5438195873522282425::1701907769::1701907769::1::::<><>::
+SFXW001_indoor_basement neutral sound.wav::AudioStreamWAV::1207678769886924675::1701907769::1701907769::1::::<><>::
+SFXW001_indoor_roomtone_entrance hall.wav::AudioStreamWAV::7294563111315826625::1701907770::1701907770::1::::<><>::
+sound.wav::AudioStreamWAV::6575180074510752006::1701907770::1701907770::1::::<><>::
+Wood 12.wav::AudioStreamWAV::8263069419609608678::1701907770::1701907770::1::::<><>::
+::res://Dialog/::1701925068
+Day_1.dialogue::Resource::6479744145614467134::1701907770::1701918348::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
+Day_2.dialogue::Resource::3589407439008615189::1701907770::1701918348::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
+Day_3.dialogue::Resource::5303619945221573512::1701907770::1701918348::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
+Day_4.dialogue::Resource::1514875075690527006::1701907770::1701918348::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
+Day_5.dialogue::Resource::2037074766995301287::1701925068::1701925068::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
+ending.dialogue::Resource::1252596740368610562::1701907770::1701918348::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
+main.dialogue::Resource::3698788334996701756::1701907770::1701918348::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
+::res://dialog_balloon/::1701925012
+balloon.gd::GDScript::-1::1701925012::0::1::::<>CanvasLayer<>::
+balloon.tscn::PackedScene::2588735576791396106::1701925012::0::1::::<><>::res://dialog_balloon/balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>uid://rf17eue30xxp::::res://UI/Dialogue Box.png<>uid://c0j821yxo4a6n::::res://UI/Portrait Container Left.png<>res://addons/dialogue_manager/dialogue_reponses_menu.gd<>uid://dp5570w5kx0ve::::res://UI/Name Container.png<>uid://btmap46njjcr::::res://UI/Portrait Container Right.png<>uid://v4qs8ufergem::::res://Kenney Mini Square.ttf<>uid://dyu8huu56f2hq::::res://UI/Play Button.png<>uid://c0xciw8wbk56q::::res://Audio/sound.wav
+small_balloon.tscn::PackedScene::1883859960814163368::1701907770::0::1::::<><>::res://dialog_balloon/balloon.gd<>uid://ckvgyvclnwggo
+::res://Resources/::1701907770
+::res://Resources/Settings/::1701924868
+DefaultSettings.tres::Resource/Resource::4012773508583805420::1701907770::0::1::::<><>::res://Resources/Settings/SettingsResource.gd
+PlayerKeybindDefault.tres::Resource/PlayerKeybindResource::380769631175243415::1701924868::0::1::::<><>::res://Resources/Settings/PlayerKeybindResource.gd
+PlayerKeybindResource.gd::GDScript::-1::1701907770::0::1::::PlayerKeybindResource<>Resource<>::
+SettingsResource.gd::GDScript::-1::1701907770::0::1::::DefaultSettingsResource<>Resource<>::
+::res://sample/::1701907770
+Blue.png::CompressedTexture2D::5091972938632470820::1701907770::1701907770::1::::<><>::
+Green.png::CompressedTexture2D::3102335091325382450::1701907770::1701907770::1::::<><>::
+Purple.png::CompressedTexture2D::1988796919978783947::1701907770::1701907770::1::::<><>::
+Red.png::CompressedTexture2D::1735034909657885456::1701907770::1701907770::1::::<><>::
+Sky.png::CompressedTexture2D::7014540141669112660::1701907770::1701907770::1::::<><>::
+Yellow.png::CompressedTexture2D::1774731507011467911::1701907770::1701907770::1::::<><>::
+::res://Scene/::1701924871
+bed.tscn::PackedScene::2162847093175319028::1701907770::0::1::::<><>::res://Script/interactable.gd<>uid://bbdwjegcdo5o3
+door.tscn::PackedScene::4783925100584996710::1701907770::0::1::::<><>::res://Script/door.gd<>uid://cesubyhcfgfps
+gigi.tscn::PackedScene::7097100930112626617::1701907770::0::1::::<><>::res://Script/interactable.gd<>uid://bkg2agt6rhy0y
+hud.tscn::PackedScene::3523782732799265023::1701907770::0::1::::<><>::res://Script/HUD.gd<>uid://b7i68c7d71cbx
+interactable.tscn::PackedScene::5809216554521441826::1701924871::0::1::::<><>::res://Script/interactable.gd<>uid://dpyxstjtvgdna::::res://Audio/Wood 12.wav<>uid://dbowng50glnue::::res://Audio/Magic Positive 3.wav
+main_menu.tscn::PackedScene::4956119446260963006::1701924871::0::1::::<><>::res://Script/main_menu.gd<>uid://doygkmfhyvs20::::res://UI/Start Button.png<>uid://ct4wq6sswwkbt::::res://UI/Options Button.png<>uid://p7d8i4to7k16::::res://UI/Load Button.png<>uid://ckxymlnqj3mxb::::res://UI/Quit Button.png<>uid://p5wruijdkvlm::::res://UI/Blank_Blue.png<>uid://v4qs8ufergem::::res://Kenney Mini Square.ttf<>uid://br6whsvghc2re::::res://Scene/settings_tab_container.tscn
+object.tscn::PackedScene::2162847093175319028::1701907770::0::1::::<><>::uid://bkg2agt6rhy0y
+pause_menu.tscn::PackedScene::8403802425911104417::1701907770::0::1::::<><>::res://Script/pause_menu.gd<>uid://cn0feka8cno05
+player.tscn::PackedScene::2720143536652147985::1701918797::0::1::::<><>::res://Script/player.gd<>uid://cesubyhcfgfps
+scene.tscn::PackedScene::8130421858299388171::1701907770::0::1::::<><>::uid://3lngvcxsuih4
+scene_1.tscn::PackedScene::4172428589893370665::1701907770::0::1::::<><>::uid://bkg2agt6rhy0y
+scene_2.tscn::PackedScene::6934844520987553197::1701907770::0::1::::<><>::uid://0jxtllnl6rfr
+settings_tab_container.tscn::PackedScene::3644975988456973746::1701907770::0::1::::<><>::uid://v4qs8ufergem
+test_dialogue.tscn::PackedScene::1901866899226262597::1701907770::0::1::::<><>::res://Script/test_dialogue.gd
+::res://Scene/Cutscene/::1701907770
+1 Minute Later.gd::GDScript::-1::1701907770::0::1::::<>Node2D<>::
+1_minute_later.tscn::PackedScene::5791228977752438219::1701907770::0::1::::<><>::res://Scene/Cutscene/1 Minute Later.gd<>uid://v4qs8ufergem
+demi_sit_cutscene.tscn::PackedScene::735301622714217490::1701907770::0::1::::<><>::uid://ibebl424koqb
+Flash.gd::GDScript::-1::1701907770::0::1::::<>Node2D<>::
+flash.tscn::PackedScene::6168910450857096198::1701907770::0::1::::<><>::res://Scene/Cutscene/Flash.gd<>uid://v4qs8ufergem
+gigi_cutscene.tscn::PackedScene::7823144057695905949::1701907770::0::1::::<><>::uid://dttf1avmh5fmj
+gigi_sit_cutscene.tscn::PackedScene::5469468031024130105::1701907770::0::1::::<><>::uid://dypxgjp1rab7r
+gigi_sleep_cutscene.tscn::PackedScene::3033179418780194871::1701907770::0::1::::<><>::uid://bq5ce2e0rwuro
+Later That Night.gd::GDScript::-1::1701907770::0::1::::<>Node2D<>::
+later_that_night.tscn::PackedScene::3906956290382553682::1701907770::0::1::::<><>::res://Scene/Cutscene/Later That Night.gd<>uid://v4qs8ufergem
+mimi_cutscene.tscn::PackedScene::1490045486155054062::1701907770::0::1::::<><>::uid://dvsem1rl32shk
+mimi_sit_cutscene.tscn::PackedScene::4673660136112919590::1701907770::0::1::::<><>::uid://bmpq3ryv5u1kw
+next_day.gd::GDScript::-1::1701907770::0::1::::<>Node2D<>::
+next_day.tscn::PackedScene::7358488028949481766::1701907770::0::1::::<><>::res://Scene/Cutscene/next_day.gd<>uid://v4qs8ufergem
+::res://Scene/Options/::1701924872
+audio_slider_settings.gd::GDScript::-1::1701907770::0::1::::<>Control<>::
+audio_slider_settings.tscn::PackedScene::1297467072685596553::1701907770::0::1::::<><>::res://Scene/Options/audio_slider_settings.gd
+graphics.tscn::PackedScene::2585587879404684494::1701907770::0::1::::<><>::
+hotkey_rebind_button.gd::GDScript::-1::1701907770::0::1::::HotkeyRebindButton<>Control<>::
+hotkey_rebind_button.tscn::PackedScene::2260659427012572184::1701924872::0::1::::<><>::res://Scene/Options/hotkey_rebind_button.gd
+resolution_mode.gd::GDScript::-1::1701907770::0::1::::<>Control<>::
+resolution_mode.tscn::PackedScene::1488542593639980955::1701907770::0::1::::<><>::uid://bc3qiwlm04o75
+settings_tab_container.gd::GDScript::-1::1701907770::0::1::::SettingsTabContainer<>Control<>::
+settings_tab_container.tscn::PackedScene::3644975988456973746::1701924871::0::1::::<><>::uid://v4qs8ufergem::::res://Kenney Mini Square.ttf<>uid://sqrdfwgbxkkf::::res://Scene/Options/audio_slider_settings.tscn<>uid://7hcy3ov66k0w::::res://Scene/Options/hotkey_rebind_button.tscn<>res://Scene/Options/settings_tab_container.gd<>uid://wm51kbmxwtar::::res://Scene/Options/window_mode.tscn<>uid://vhccxmr60thj::::res://Scene/Options/resolution_mode.tscn
+window_mode.gd::GDScript::-1::1701907770::0::1::::<>Control<>::
+window_mode.tscn::PackedScene::1570795560865104317::1701907770::0::1::::<><>::uid://bc3qiwlm04o75
+::res://Scene/Rooms/::1701924872
+basement.tscn::PackedScene::1932653171600859008::1701907770::0::1::::<><>::uid://3lngvcxsuih4
+bathroom.tscn::PackedScene::7356627323104811206::1701907770::0::1::::<><>::res://Script/Rooms/bathroom.gd<>uid://3lngvcxsuih4
+bedroom.tscn::PackedScene::2823879394018250226::1701924872::0::1::::<><>::res://Script/Rooms/bedroom.gd<>uid://be0wmp3b3b4qv::::res://Scene/player.tscn<>uid://3lngvcxsuih4::::res://sample/Purple.png<>uid://b0k3gal2wpctt::::res://fade_transition.tscn<>uid://cesubyhcfgfps::::res://sample/Blue.png<>uid://cafmsu4vdnnfq::::res://Scene/door.tscn<>uid://g232eiioanda::::res://Sprites/Tiles/Floor/Carpet-Pink.png<>uid://bhbkfmwm22siq::::res://Sprites/Tiles/Walls/Wood Wall.png<>uid://ceq8hwa8mly2a::::res://Sprites/Furniture/OBJ_Lightstand/OBJ_LightstandA.png<>uid://dimlbd7204yb1::::res://Sprites/Furniture/OBJ_Safe/OBJ_Safe_01.png<>uid://cneci0dnik2mf::::res://Sprites/Furniture/OBJ_Window/OBJ_WindowB.png<>uid://bdylafpj3r3sg::::res://Sprites/Furniture/OBJ_Drawer/OBJ_DrawerA.png<>uid://dcm43ir7u5chb::::res://Sprites/Furniture/OBJ_Closet/OBJ_ClosetA_01.png<>uid://dtniw5y5ipp3e::::res://Sprites/Furniture/OBJ_Plant/OBJ_PlantB.png<>uid://dndifb3evvqj7::::res://Sprites/Furniture/OBJ_Chair/OBJ_ChairC.png<>uid://co1a7h15avswg::::res://Scene/interactable.tscn<>uid://dxi2ois57cbrs::::res://Sprites/Furniture/OBJ_Bookshelf/OBJ_BookshelfB.png<>uid://da4phfyt6itcl::::res://Sprites/Furniture/OBJ_Bookshelf/OBJ_BookshelfF.png<>uid://dfwhwtnyhipta::::res://Sprites/Furniture/OBJ_Picture/OBJ_PictureC.png<>uid://cgwtp0v0ss04::::res://Sprites/Furniture/OBJ_Window/OBJ_WindowE.png<>uid://caq5qyqtnankv::::res://Sprites/Furniture/OBJ_Mirror/OBJ_MirrorA.png<>uid://l7vvqi4kpp07::::res://Sprites/Furniture/OBJ_Drawer/OBJ_DrawerE.png<>uid://c63oo3wdhvsmc::::res://Sprites/Furniture/OBJ_Table/OBJ_TableK.png<>uid://brie57g4d2d78::::res://Sprites/Furniture/OBJ_Table/OBJ_TableH.png<>uid://cfg3o6yr1o84i::::res://Sprites/Furniture/OBJ_Drawer/OBJ_DrawerB.png<>uid://5hio4ut5iys1::::res://Sprites/Furniture/OBJ_Drawer/OBJ_DrawerC.png<>uid://b8x5fbst0cb5n::::res://Sprites/Furniture/OBJ_Table/OBJ_TableI.png<>uid://ndv0n5oep7uc::::res://Sprites/Furniture/OBJ_SmallItems/OBJ_BookPileB.png<>uid://3yasrhfj1bx4::::res://Sprites/Furniture/OBJ_SmallItems/OBJ_SodaCanC.png<>uid://bx2gxvkb0r3kp::::res://Sprites/Furniture/OBJ_Plant/OBJ_PlantF.png<>uid://bbj0dnyyoe426::::res://Sprites/Furniture/OBJ_Closet/OBJ_ClosetB.png<>uid://dlb42bvld0c1x::::res://Sprites/Furniture/OBJ_SmallItems/OBJ_PillowA.png<>uid://b5efibs4vwvvr::::res://Sprites/Furniture/OBJ_Clock/OBJ_ClockB.png<>uid://p7yaq4208cri::::res://Sprites/Furniture/OBJ_SmallItems/OBJ_OpenBookA.png<>uid://bm0jj5x5qx0o8::::res://Sprites/Furniture/OBJ_SmallItems/OBJ_StorageContainerA.png<>uid://ci3hxtsuy16qo::::res://Sprites/Furniture/OBJ_Lightstand/OBJ_LightstandC.png<>uid://bbaej48gxweem::::res://Sprites/Furniture/OBJ_Bathroom/OBJ_BathTrashCan.png<>uid://b2u4rllapjx20::::res://Sprites/Furniture/OBJ_Plant/OBJ_PlantA.png<>uid://g2mqcqh0rlxg::::res://Sprites/Furniture/OBJ_Carpet/OBJ_CarpetG.png<>uid://b8eex8pmbui1c::::res://Sprites/Furniture/OBJ_Picture/OBJ_PictureF.png<>uid://bkdjvohpd6kgh::::res://Sprites/Furniture/OBJ_Chair/OBJ_ChairA.png<>uid://cfkp6k8fpd0yq::::res://Sprites/Furniture/OBJ_Chair/OBJ_ChairB.png<>uid://oad3u5svay6h::::res://Sprites/Furniture/OBJ_Table/OBJ_TableJ.png<>uid://hh6eug76smyw::::res://Sprites/Furniture/OBJ_SmallItems/OBJ_SodaCanA.png<>uid://bobd68u3op4h6::::res://Sprites/Furniture/OBJ_SmallItems/OBJ_SodaCanB.png<>uid://b2dbcar0pqojs::::res://Audio/AMBRoom_Bedroom, Groundfloor, Doors & Windows Closed_344 Audio_UK Residential Room Tones.wav<>uid://cis7ichx3jklf::::res://Audio/Door 1 Close.wav
+entrance.tscn::PackedScene::8130421858299388171::1701924872::0::1::::<><>::res://Script/Rooms/entrance.gd<>uid://3lngvcxsuih4::::res://sample/Purple.png<>uid://cesubyhcfgfps::::res://sample/Blue.png<>uid://dd5q5qltjwike::::res://Sprites/Tiles/Floor/Wood.png<>uid://be0wmp3b3b4qv::::res://Scene/player.tscn<>uid://cafmsu4vdnnfq::::res://Scene/door.tscn<>uid://dyblstk7k1bh7::::res://Sprites/Tiles/Floor/Carpet-Purple.png<>uid://bkhqnxp5hpydt::::res://Sprites/Tiles/Walls/Basic Wall-Yellow.png<>uid://b0k3gal2wpctt::::res://fade_transition.tscn<>uid://co1a7h15avswg::::res://Scene/interactable.tscn<>uid://f27xjooaf4m6::::res://Sprites/Furniture/OBJ_Bookshelf/OBJ_BookshelfI.png<>uid://ch3yockplpnug::::res://Sprites/Furniture/OBJ_Bookshelf/OBJ_BookshelfE.png<>uid://oqevhg4m1n32::::res://Sprites/Furniture/OBJ_Bench/OBJ_BenchA.png<>uid://dgwsujl7vj8ev::::res://Sprites/Furniture/OBJ_Window/OBJ_WindowF.png<>uid://cp6871gdxq45w::::res://Sprites/Furniture/OBJ_Picture/OBJ_PictureE.png<>uid://bdylafpj3r3sg::::res://Sprites/Furniture/OBJ_Drawer/OBJ_DrawerA.png<>uid://oggkxcqmlpbf::::res://Sprites/Furniture/OBJ_Plant/OBJ_PlantD.png<>uid://coxspcldvtj80::::res://Sprites/Furniture/OBJ_Telephone/OBJ_Telephone_01.png<>uid://l7vvqi4kpp07::::res://Sprites/Furniture/OBJ_Drawer/OBJ_DrawerE.png<>uid://cpx3c8hy30ins::::res://Sprites/Furniture/OBJ_CoatRack/OBJ_CoatRack.png<>uid://ceq8hwa8mly2a::::res://Sprites/Furniture/OBJ_Lightstand/OBJ_LightstandA.png<>uid://caq5qyqtnankv::::res://Sprites/Furniture/OBJ_Mirror/OBJ_MirrorA.png<>uid://ci3hxtsuy16qo::::res://Sprites/Furniture/OBJ_Lightstand/OBJ_LightstandC.png<>uid://dpx54v2ia4fbv::::res://Sprites/Furniture/OBJ_Plant/OBJ_PlantG.png<>uid://bympayqugjfyt::::res://Sprites/Furniture/OBJ_SmallItems/OBJ_SoccerBall.png<>uid://dpy4bwoc15pb5::::res://Sprites/Furniture/OBJ_Carpet/OBJ_CarpetH.png<>uid://db6snhlijg234::::res://Audio/SFXW001_indoor_roomtone_entrance hall.wav<>uid://0ns00vrf56ae::::res://Sprites/Furniture/OBJ_Carpet/OBJ_CarpetB.png<>uid://cis7ichx3jklf::::res://Audio/Door 1 Close.wav
+garage.tscn::PackedScene::6934844520987553197::1701907770::0::1::::<><>::res://Script/Rooms/garage.gd<>uid://3lngvcxsuih4
+hallwayA.tscn::PackedScene::4172428589893370665::1701918798::0::1::::<><>::res://Script/Rooms/hallwayA.gd<>uid://3lngvcxsuih4
+hallway_b.tscn::PackedScene::6674014627393026113::1701907770::0::1::::<><>::res://Script/Rooms/hallway_b.gd<>uid://be0wmp3b3b4qv
+kitchen.tscn::PackedScene::1623152006174915294::1701907770::0::1::::<><>::res://Script/Rooms/kitchen.gd<>uid://3lngvcxsuih4
+living_room.tscn::PackedScene::6424764433357045668::1701907770::0::1::::<><>::res://Script/Rooms/living_room.gd<>uid://3lngvcxsuih4
+study.tscn::PackedScene::7363958483249587051::1701907770::0::1::::<><>::res://Script/Rooms/study.gd<>uid://3lngvcxsuih4
+::res://Script/::1701924868
+door.gd::GDScript::-1::1701907770::0::1::::<>Area2D<>::
+HUD.gd::GDScript::-1::1701907770::0::1::::<>Control<>::
+interactable.gd::GDScript::-1::1701907770::0::1::::<>Area2D<>::
+main_menu.gd::GDScript::-1::1701907770::0::1::::<>Control<>::
+pause_menu.gd::GDScript::-1::1701907770::0::1::::<>Control<>::
+player.gd::GDScript::-1::1701907770::0::1::::<>CharacterBody2D<>::
+SaveManager.gd::GDScript::-1::1701907770::0::1::::<>Node<>::
+scene.gd::GDScript::-1::1701907770::0::1::::<>Node2D<>::
+scene_1.gd::GDScript::-1::1701907770::0::1::::<>Node2D<>::
+scene_2.gd::GDScript::-1::1701907770::0::1::::<>Node2D<>::
+SettingsDataContainer.gd::GDScript::-1::1701907770::0::1::::<>Node<>::
+SettingsSignalBus.gd::GDScript::-1::1701907770::0::1::::<>Node<>::
+state.gd::GDScript::-1::1701924868::0::1::::<>Node<>::
+test_dialogue.gd::GDScript::-1::1701907770::0::1::::<>BaseDialogueTestScene<>::
+::res://Script/Rooms/::1701907770
+basement.gd::GDScript::-1::1701907770::0::1::::<>Node2D<>::
+bathroom.gd::GDScript::-1::1701907770::0::1::::<>Node2D<>::
+bedroom.gd::GDScript::-1::1701907770::0::1::::<>Node2D<>::
+entrance.gd::GDScript::-1::1701907770::0::1::::<>Node2D<>::
+garage.gd::GDScript::-1::1701907770::0::1::::<>Node2D<>::
+hallwayA.gd::GDScript::-1::1701907770::0::1::::<>Node2D<>::
+hallway_b.gd::GDScript::-1::1701907770::0::1::::<>Node2D<>::
+kitchen.gd::GDScript::-1::1701907770::0::1::::<>Node2D<>::
+living_room.gd::GDScript::-1::1701907770::0::1::::<>Node2D<>::
+study.gd::GDScript::-1::1701907770::0::1::::<>Node2D<>::
+::res://Sprites/::1701907770
+::res://Sprites/Characters/::1701907770
+::res://Sprites/Characters/Demi/::1701907770
+::res://Sprites/Characters/Demi/Idle/::1701907770
+Demi-Idle-1.png::CompressedTexture2D::3947548489706131363::1701907770::1701907770::1::::<><>::
+Demi-Idle-2.png::CompressedTexture2D::6479861792382010791::1701907770::1701907770::1::::<><>::
+Demi-Idle-3.png::CompressedTexture2D::1620006801348053145::1701907770::1701907770::1::::<><>::
+Demi-Idle-4.png::CompressedTexture2D::2624558707381931328::1701907770::1701907770::1::::<><>::
+Demi-Idle-5.png::CompressedTexture2D::147825639147953436::1701907770::1701907770::1::::<><>::
+Demi-Idle-6.png::CompressedTexture2D::6890424960183344900::1701907770::1701907770::1::::<><>::
+Demi-Idle-Back-1.png::CompressedTexture2D::1929087199093790035::1701907770::1701907770::1::::<><>::
+Demi-Idle-Back-2.png::CompressedTexture2D::5268850091755556467::1701907770::1701907770::1::::<><>::
+Demi-Idle-Back-3.png::CompressedTexture2D::5640326440455060812::1701907770::1701907770::1::::<><>::
+Demi-Idle-Back-4.png::CompressedTexture2D::5195050630676527268::1701907770::1701907770::1::::<><>::
+Demi-Idle-Front-1.png::CompressedTexture2D::7183672806585665389::1701907770::1701907770::1::::<><>::
+Demi-Idle-Front-2.png::CompressedTexture2D::1920803491983122247::1701907770::1701907770::1::::<><>::
+Demi-Idle-Front-3.png::CompressedTexture2D::7284803078628881925::1701907770::1701907770::1::::<><>::
+Demi-Idle-Front-4.png::CompressedTexture2D::7349364614909467161::1701907770::1701907770::1::::<><>::
+::res://Sprites/Characters/Demi/Sit/::1701907770
+Demi-Sit-1.png::CompressedTexture2D::5948265444896449317::1701907770::1701907770::1::::<><>::
+Demi-Sit-2.png::CompressedTexture2D::801392741460340688::1701907770::1701907770::1::::<><>::
+Demi-Sit-3.png::CompressedTexture2D::6562195833933208218::1701907770::1701907770::1::::<><>::
+Demi-Sit-4.png::CompressedTexture2D::3986138748736258215::1701907770::1701907770::1::::<><>::
+::res://Sprites/Characters/Demi/Walk/::1701907770
+Demi-Walk-Back-1.png::CompressedTexture2D::6187821063347752483::1701907770::1701907770::1::::<><>::
+Demi-Walk-Back-2.png::CompressedTexture2D::5983411216483658174::1701907770::1701907770::1::::<><>::
+Demi-Walk-Back-3.png::CompressedTexture2D::8888971727335560663::1701907770::1701907770::1::::<><>::
+Demi-Walk-Back-4.png::CompressedTexture2D::4594009139210712316::1701907770::1701907770::1::::<><>::
+Demi-Walk-Back-5.png::CompressedTexture2D::5351908711677364767::1701907770::1701907770::1::::<><>::
+Demi-Walk-Back-6.png::CompressedTexture2D::3553030743530078159::1701907770::1701907770::1::::<><>::
+Demi-Walk-Back-7.png::CompressedTexture2D::368293969042395740::1701907770::1701907770::1::::<><>::
+Demi-Walk-Front-1.png::CompressedTexture2D::1281576559528200470::1701907770::1701907770::1::::<><>::
+Demi-Walk-Front-2.png::CompressedTexture2D::7118410785866614864::1701907770::1701907770::1::::<><>::
+Demi-Walk-Front-3.png::CompressedTexture2D::7280448350967516018::1701907770::1701907770::1::::<><>::
+Demi-Walk-Front-4.png::CompressedTexture2D::635296675621649585::1701907770::1701907770::1::::<><>::
+Demi-Walk-Front-5.png::CompressedTexture2D::1571924602013557761::1701907770::1701907770::1::::<><>::
+Demi-Walk-Front-6.png::CompressedTexture2D::9028838223882450261::1701907770::1701907770::1::::<><>::
+Demi-Walk-Front-7.png::CompressedTexture2D::5968823857557001833::1701907770::1701907770::1::::<><>::
+Demi-Walk-Side-1.png::CompressedTexture2D::8542555347663599339::1701907770::1701907770::1::::<><>::
+Demi-Walk-Side-2.png::CompressedTexture2D::3855537841547110199::1701907770::1701907770::1::::<><>::
+Demi-Walk-Side-3.png::CompressedTexture2D::8252640743614894518::1701907770::1701907770::1::::<><>::
+Demi-Walk-Side-4.png::CompressedTexture2D::6146870608914495806::1701907770::1701907770::1::::<><>::
+Demi-Walk-Side-5.png::CompressedTexture2D::7557895627925409445::1701907770::1701907770::1::::<><>::
+Demi-Walk-Side-6.png::CompressedTexture2D::8736500200748175367::1701907770::1701907770::1::::<><>::
+::res://Sprites/Characters/Gigi/::1701907770
+::res://Sprites/Characters/Gigi/Idle/::1701907770
+Gigi-Idle-1.png::CompressedTexture2D::8532423306131071317::1701907770::1701907770::1::::<><>::
+Gigi-Idle-2.png::CompressedTexture2D::8399732909134388::1701907770::1701907770::1::::<><>::
+Gigi-Idle-3.png::CompressedTexture2D::338814387168549436::1701907770::1701907770::1::::<><>::
+Gigi-Idle-4.png::CompressedTexture2D::3190466654883758133::1701907770::1701907770::1::::<><>::
+Gigi-Idle-5.png::CompressedTexture2D::182821979872511722::1701907770::1701907770::1::::<><>::
+Gigi-Idle-6.png::CompressedTexture2D::8588751765818465431::1701907770::1701907770::1::::<><>::
+Gigi-Idle-7.png::CompressedTexture2D::5381885760540555004::1701907770::1701907770::1::::<><>::
+::res://Sprites/Characters/Gigi/Sit/::1701907770
+Gigi-Sit-1.png::CompressedTexture2D::7127882562438774289::1701907770::1701907770::1::::<><>::
+Gigi-Sit-2.png::CompressedTexture2D::4104756536360805914::1701907770::1701907770::1::::<><>::
+Gigi-Sit-3.png::CompressedTexture2D::6187292057740264164::1701907770::1701907770::1::::<><>::
+::res://Sprites/Characters/Gigi/Sleeping/::1701907770
+Gigi-Sleeping-1.png::CompressedTexture2D::3571503517153728256::1701907770::1701907770::1::::<><>::
+Gigi-Sleeping-2.png::CompressedTexture2D::4725945797413033711::1701907770::1701907770::1::::<><>::
+Gigi-Sleeping-3.png::CompressedTexture2D::424037630547219800::1701907770::1701907770::1::::<><>::
+Gigi-Sleeping-4.png::CompressedTexture2D::6854763755039892158::1701907770::1701907770::1::::<><>::
+Gigi-Sleeping-5.png::CompressedTexture2D::8693837756288028540::1701907770::1701907770::1::::<><>::
+Gigi-Sleeping-6.png::CompressedTexture2D::2254280842651964898::1701907770::1701907770::1::::<><>::
+Gigi-Sleeping-7.png::CompressedTexture2D::5051362539403087225::1701907770::1701907770::1::::<><>::
+::res://Sprites/Characters/Idle/::1701907770
+Mimi-Idle-1.png::CompressedTexture2D::8670652256956051960::1701907770::1701907770::1::::<><>::
+Mimi-Idle-2.png::CompressedTexture2D::133187942861823135::1701907770::1701907770::1::::<><>::
+Mimi-Idle-3.png::CompressedTexture2D::7983224948320014570::1701907770::1701907770::1::::<><>::
+Mimi-Idle-4.png::CompressedTexture2D::4219614124135054942::1701907770::1701907770::1::::<><>::
+::res://Sprites/Characters/Sit/::1701907770
+Mimi-Sit-1.png::CompressedTexture2D::1177737441312843238::1701907770::1701907770::1::::<><>::
+Mimi-Sit-2.png::CompressedTexture2D::471508048309831798::1701907770::1701907770::1::::<><>::
+Mimi-Sit-3.png::CompressedTexture2D::7309044768811831517::1701907770::1701907770::1::::<><>::
+Mimi-Sit-4.png::CompressedTexture2D::6978778995321376536::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/::1701907770
+::res://Sprites/Furniture/OBJ_ArcadeMachine/::1701907770
+OBJ_ArcadeMachineA.png::CompressedTexture2D::967303380980572210::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Bathroom/::1701907770
+OBJ_BathDrawer.png::CompressedTexture2D::783329263429073539::1701907770::1701907770::1::::<><>::
+OBJ_BathMirror.png::CompressedTexture2D::2250418868888415239::1701907770::1701907770::1::::<><>::
+OBJ_BathSink.png::CompressedTexture2D::3103095857192152901::1701907770::1701907770::1::::<><>::
+OBJ_BathTowel.png::CompressedTexture2D::1980853121738511103::1701907770::1701907770::1::::<><>::
+OBJ_BathTrashCan.png::CompressedTexture2D::2456870041907260996::1701907770::1701907770::1::::<><>::
+OBJ_LaundryBasket.png::CompressedTexture2D::8516860529928229864::1701907770::1701907770::1::::<><>::
+OBJ_LaundryHamper.png::CompressedTexture2D::4853760268294968805::1701907770::1701907770::1::::<><>::
+OBJ_Shower.png::CompressedTexture2D::7861191723087267776::1701907770::1701907770::1::::<><>::
+OBJ_Toilet.png::CompressedTexture2D::8044961355119750634::1701907770::1701907770::1::::<><>::
+OBJ_ToothBrushPaste.png::CompressedTexture2D::1571847655460519289::1701907770::1701907770::1::::<><>::
+OBJ_TowelHolder.png::CompressedTexture2D::8955434657654125010::1701907770::1701907770::1::::<><>::
+OBJ_TPHolder.png::CompressedTexture2D::7701880628994932829::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Bed/::1701907770
+OBJ_BedA.png::CompressedTexture2D::3387416888239601786::1701907770::1701907770::1::::<><>::
+OBJ_BedA_01.png::CompressedTexture2D::2464154726037011408::1701907770::1701907770::1::::<><>::
+OBJ_BedA_02.png::CompressedTexture2D::2653703915579177002::1701907770::1701907770::1::::<><>::
+OBJ_BedB_01.png::CompressedTexture2D::2433460769892967231::1701907770::1701907770::1::::<><>::
+OBJ_BedB_02.png::CompressedTexture2D::6412516884787716201::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Bench/::1701907770
+OBJ_BenchA.png::CompressedTexture2D::1015954602907457207::1701907770::1701907770::1::::<><>::
+OBJ_BenchB.png::CompressedTexture2D::7898350717794674050::1701907770::1701907770::1::::<><>::
+OBJ_BenchC.png::CompressedTexture2D::2169289071920544828::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Bookshelf/::1701907770
+OBJ_BookshelfA.png::CompressedTexture2D::8428352965992161141::1701907770::1701907770::1::::<><>::
+OBJ_BookshelfB.png::CompressedTexture2D::8791785286105075752::1701907770::1701907770::1::::<><>::
+OBJ_BookshelfC.png::CompressedTexture2D::9143052864148054706::1701907770::1701907770::1::::<><>::
+OBJ_BookshelfD.png::CompressedTexture2D::8040251727230024338::1701907770::1701907770::1::::<><>::
+OBJ_BookshelfE.png::CompressedTexture2D::5323448180098746986::1701907770::1701907770::1::::<><>::
+OBJ_BookshelfF.png::CompressedTexture2D::7220052561992960555::1701907770::1701907770::1::::<><>::
+OBJ_BookshelfG.png::CompressedTexture2D::7993962650987753186::1701907770::1701907770::1::::<><>::
+OBJ_BookshelfH.png::CompressedTexture2D::3122640186223908356::1701907770::1701907770::1::::<><>::
+OBJ_BookshelfI.png::CompressedTexture2D::408666929551854867::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Broom/::1701907770
+OBJ_Broom.png::CompressedTexture2D::7811983778818036213::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Car/::1701907770
+OBJ_Car_01.png::CompressedTexture2D::119309008030374019::1701907770::1701907770::1::::<><>::
+OBJ_Car_02.png::CompressedTexture2D::1794713383514168610::1701907770::1701907770::1::::<><>::
+OBJ_Car_03.png::CompressedTexture2D::4332726034901087983::1701907770::1701907770::1::::<><>::
+OBJ_Car_04.png::CompressedTexture2D::4083834341724545347::1701907770::1701907770::1::::<><>::
+OBJ_Car_05.png::CompressedTexture2D::3218546187083897150::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_CardboardBox/::1701907770
+OBJ_CardboardBoxA.png::CompressedTexture2D::8613055051402336337::1701907770::1701907770::1::::<><>::
+OBJ_CardboardBoxB.png::CompressedTexture2D::4791405795209124799::1701907770::1701907770::1::::<><>::
+OBJ_CardboardBoxB_01.png::CompressedTexture2D::4905322588334138725::1701907770::1701907770::1::::<><>::
+OBJ_CardboardBoxB_02.png::CompressedTexture2D::7684917783560686332::1701907770::1701907770::1::::<><>::
+OBJ_CardboardBoxC.png::CompressedTexture2D::1064221783610632772::1701907770::1701907770::1::::<><>::
+OBJ_CardboardBoxD.png::CompressedTexture2D::7380705580342122649::1701907770::1701907770::1::::<><>::
+OBJ_CardboardBoxE.png::CompressedTexture2D::6209001772424470354::1701907770::1701907770::1::::<><>::
+OBJ_CardboardBoxF.png::CompressedTexture2D::1553184080681030717::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Carpet/::1701907770
+OBJ_CarpetA.png::CompressedTexture2D::3043239595221422891::1701907770::1701907770::1::::<><>::
+OBJ_CarpetB.png::CompressedTexture2D::1782696898775950624::1701907770::1701907770::1::::<><>::
+OBJ_CarpetC.png::CompressedTexture2D::8342202158615559788::1701907770::1701907770::1::::<><>::
+OBJ_CarpetD.png::CompressedTexture2D::1281079869330385280::1701907770::1701907770::1::::<><>::
+OBJ_CarpetE.png::CompressedTexture2D::8216144347635349548::1701907770::1701907770::1::::<><>::
+OBJ_CarpetF.png::CompressedTexture2D::4716568741145760122::1701907770::1701907770::1::::<><>::
+OBJ_CarpetG.png::CompressedTexture2D::477628567919193144::1701907770::1701907770::1::::<><>::
+OBJ_CarpetH.png::CompressedTexture2D::8263403527599133004::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Chair/::1701907770
+OBJ_ChairA.png::CompressedTexture2D::3095086954769808707::1701907770::1701907770::1::::<><>::
+OBJ_ChairB.png::CompressedTexture2D::5145396054078927500::1701907770::1701907770::1::::<><>::
+OBJ_ChairC.png::CompressedTexture2D::8078404912536082442::1701907770::1701907770::1::::<><>::
+OBJ_ChairD.png::CompressedTexture2D::2472487435382227297::1701907770::1701907770::1::::<><>::
+OBJ_ChairE.png::CompressedTexture2D::5077538141718504282::1701907770::1701907770::1::::<><>::
+OBJ_ChairF.png::CompressedTexture2D::1093542467538242134::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Chest/::1701907770
+OBJ_ChestA_01.png::CompressedTexture2D::7691760545871991077::1701907770::1701907770::1::::<><>::
+OBJ_ChestA_02.png::CompressedTexture2D::643561505144680910::1701907770::1701907770::1::::<><>::
+OBJ_ChestA_03.png::CompressedTexture2D::1467659819924983080::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Clock/::1701907770
+OBJ_ClockA.png::CompressedTexture2D::7391224631575011814::1701907770::1701907770::1::::<><>::
+OBJ_ClockB.png::CompressedTexture2D::4500661456841792847::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Closet/::1701907770
+OBJ_ClosetA_01.png::CompressedTexture2D::7326223514353967975::1701907770::1701907770::1::::<><>::
+OBJ_ClosetA_02.png::CompressedTexture2D::2581124387931675796::1701907770::1701907770::1::::<><>::
+OBJ_ClosetA_03.png::CompressedTexture2D::4213772388171701868::1701907770::1701907770::1::::<><>::
+OBJ_ClosetB.png::CompressedTexture2D::2476712930306756137::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_CoatRack/::1701907770
+OBJ_CoatRack.png::CompressedTexture2D::5874860102898379060::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Crowbar/::1701907770
+OBJ_Crowbar_01.png::CompressedTexture2D::4014985678304696584::1701907770::1701907770::1::::<><>::
+OBJ_Crowbar_02.png::CompressedTexture2D::6407257180683649607::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Door/::1701907770
+OBJ_DoorA.png::CompressedTexture2D::2105771268084864782::1701907770::1701907770::1::::<><>::
+OBJ_DoorB.png::CompressedTexture2D::2619521345173576488::1701907770::1701907770::1::::<><>::
+OBJ_DoorC.png::CompressedTexture2D::5493914442021771411::1701907770::1701907770::1::::<><>::
+OBJ_DoorD.png::CompressedTexture2D::6108269659735056297::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Drawer/::1701907770
+OBJ_DrawerA.png::CompressedTexture2D::2647200453860918274::1701907770::1701907770::1::::<><>::
+OBJ_DrawerB.png::CompressedTexture2D::5137898595119749014::1701907770::1701907770::1::::<><>::
+OBJ_DrawerC.png::CompressedTexture2D::2120628245453138654::1701907770::1701907770::1::::<><>::
+OBJ_DrawerD.png::CompressedTexture2D::618794391064160499::1701907770::1701907770::1::::<><>::
+OBJ_DrawerE.png::CompressedTexture2D::839450780732003686::1701907770::1701907770::1::::<><>::
+OBJ_DrawerF.png::CompressedTexture2D::9065706271581846761::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Fridge/::1701907770
+OBJ_Fridge.png::CompressedTexture2D::3100224844969342185::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Fuelcell/::1701907770
+OBJ_Fuelcell_01.png::CompressedTexture2D::8634636022019981437::1701907770::1701907770::1::::<><>::
+OBJ_Fuelcell_02.png::CompressedTexture2D::6505836865766306146::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_GamingChair/::1701907770
+OBJ_GamingChair.png::CompressedTexture2D::5242096482408379182::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Heater/::1701907770
+OBJ_Heater.png::CompressedTexture2D::3711813607000739821::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Key/::1701907770
+OBJ_Key_01.png::CompressedTexture2D::3091528829695964983::1701907770::1701907770::1::::<><>::
+OBJ_Key_02.png::CompressedTexture2D::1682762987057402554::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Kitchen/::1701907770
+OBJ_KitchenCornerCounter.png::CompressedTexture2D::6978713555772792801::1701907770::1701907770::1::::<><>::
+OBJ_KitchenCounter.png::CompressedTexture2D::5022986768272905038::1701907770::1701907770::1::::<><>::
+OBJ_KitchenSideCounter.png::CompressedTexture2D::2028741468672227377::1701907770::1701907770::1::::<><>::
+OBJ_KitchenSink.png::CompressedTexture2D::8793244594929568046::1701907770::1701907770::1::::<><>::
+OBJ_KitchenStove.png::CompressedTexture2D::8374816294269917127::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Ladder/::1701907770
+OBJ_Ladder.png::CompressedTexture2D::8428074100238077425::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Laptop/::1701907770
+OBJ_Laptop_01.png::CompressedTexture2D::6445861115260701011::1701907770::1701907770::1::::<><>::
+OBJ_Laptop_02.png::CompressedTexture2D::3626347237133885806::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Lightstand/::1701907770
+OBJ_LightstandA.png::CompressedTexture2D::5088644104351484846::1701907770::1701907770::1::::<><>::
+OBJ_LightstandB.png::CompressedTexture2D::2575687922170468990::1701907770::1701907770::1::::<><>::
+OBJ_LightstandC.png::CompressedTexture2D::5392621812505283834::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Locker/::1701907770
+OBJ_Locker.png::CompressedTexture2D::7602448199925273753::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Mirror/::1701907770
+OBJ_MirrorA.png::CompressedTexture2D::4807722780094565709::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_PCSetup/::1701907770
+OBJ_PCSetup.png::CompressedTexture2D::568821096254128605::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Piano/::1701907770
+OBJ_Piano.png::CompressedTexture2D::5886127200100138480::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Picture/::1701907770
+OBJ_PictureA.png::CompressedTexture2D::3482282856590847228::1701907770::1701907770::1::::<><>::
+OBJ_PictureB.png::CompressedTexture2D::1756996002442943476::1701907770::1701907770::1::::<><>::
+OBJ_PictureC.png::CompressedTexture2D::7556087905400300210::1701907770::1701907770::1::::<><>::
+OBJ_PictureD.png::CompressedTexture2D::8159904961879974036::1701907770::1701907770::1::::<><>::
+OBJ_PictureE.png::CompressedTexture2D::5891731913542426582::1701907770::1701907770::1::::<><>::
+OBJ_PictureF.png::CompressedTexture2D::4711195732985265926::1701907770::1701907770::1::::<><>::
+OBJ_PictureG.png::CompressedTexture2D::8962913292335730951::1701907770::1701907770::1::::<><>::
+OBJ_PictureH.png::CompressedTexture2D::6865904016113418103::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Plant/::1701907770
+OBJ_PlantA.png::CompressedTexture2D::4324598763057908099::1701907770::1701907770::1::::<><>::
+OBJ_PlantB.png::CompressedTexture2D::8520213628562906544::1701907770::1701907770::1::::<><>::
+OBJ_PlantC.png::CompressedTexture2D::5233398597623249942::1701907770::1701907770::1::::<><>::
+OBJ_PlantD.png::CompressedTexture2D::995413449222574459::1701907770::1701907770::1::::<><>::
+OBJ_PlantE.png::CompressedTexture2D::9018732449103578023::1701907770::1701907770::1::::<><>::
+OBJ_PlantF.png::CompressedTexture2D::4056908780461813131::1701907770::1701907770::1::::<><>::
+OBJ_PlantG.png::CompressedTexture2D::8261449836864100979::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Receipt/::1701907770
+OBJ_Receipt_01.png::CompressedTexture2D::6517058981715278152::1701907770::1701907770::1::::<><>::
+OBJ_Receipt_02.png::CompressedTexture2D::7307065059477653396::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_RecycleBin/::1701907770
+OBJ_RecycleBin.png::CompressedTexture2D::5082571977646118389::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Safe/::1701907770
+OBJ_Safe_01.png::CompressedTexture2D::7746215214211739764::1701907770::1701907770::1::::<><>::
+OBJ_Safe_02.png::CompressedTexture2D::2275086705903470382::1701907770::1701907770::1::::<><>::
+OBJ_Safe_03.png::CompressedTexture2D::2737664167076704192::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_SmallItems/::1701907770
+OBJ_BookPileA.png::CompressedTexture2D::5265986445148556398::1701907770::1701907770::1::::<><>::
+OBJ_BookPileB.png::CompressedTexture2D::919968532042071330::1701907770::1701907770::1::::<><>::
+OBJ_Cup.png::CompressedTexture2D::1369652583696826311::1701907770::1701907770::1::::<><>::
+OBJ_FoosballTable.png::CompressedTexture2D::3622589674113385575::1701907770::1701907770::1::::<><>::
+OBJ_FruitBasket.png::CompressedTexture2D::1263708181508236033::1701907770::1701907770::1::::<><>::
+OBJ_Microwave.png::CompressedTexture2D::3327336457225508812::1701907770::1701907770::1::::<><>::
+OBJ_OpenBookA.png::CompressedTexture2D::1120350836961188874::1701907770::1701907770::1::::<><>::
+OBJ_PaperTowel.png::CompressedTexture2D::6496269361070081676::1701907770::1701907770::1::::<><>::
+OBJ_PillowA.png::CompressedTexture2D::7935212803546406187::1701907770::1701907770::1::::<><>::
+OBJ_PillowB.png::CompressedTexture2D::2374177734569739106::1701907770::1701907770::1::::<><>::
+OBJ_PillowC.png::CompressedTexture2D::7728511145307909953::1701907770::1701907770::1::::<><>::
+OBJ_PillowD.png::CompressedTexture2D::6322831544004543792::1701907770::1701907770::1::::<><>::
+OBJ_Plate.png::CompressedTexture2D::6073045856861890616::1701907770::1701907770::1::::<><>::
+OBJ_RecordPile.png::CompressedTexture2D::6168448952428404041::1701907770::1701907770::1::::<><>::
+OBJ_RecordPlayer.png::CompressedTexture2D::4006255882872364604::1701907770::1701907770::1::::<><>::
+OBJ_SoccerBall.png::CompressedTexture2D::4096637505140453503::1701907770::1701907770::1::::<><>::
+OBJ_SodaCanA.png::CompressedTexture2D::507662980927936630::1701907770::1701907770::1::::<><>::
+OBJ_SodaCanB.png::CompressedTexture2D::3371368148427132377::1701907770::1701907770::1::::<><>::
+OBJ_SodaCanC.png::CompressedTexture2D::2014865736203440879::1701907770::1701907770::1::::<><>::
+OBJ_SodaCanD.png::CompressedTexture2D::2182615256115479306::1701907770::1701907770::1::::<><>::
+OBJ_StorageContainerA.png::CompressedTexture2D::3280860388897409689::1701907770::1701907770::1::::<><>::
+OBJ_StorageContainerB.png::CompressedTexture2D::5853135818448806432::1701907770::1701907770::1::::<><>::
+OBJ_Teapot.png::CompressedTexture2D::6087483683965482127::1701907770::1701907770::1::::<><>::
+OBJ_Toaster.png::CompressedTexture2D::4546443612221588891::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Sofa/::1701907770
+OBJ_SofaA.png::CompressedTexture2D::1028725050763945182::1701907770::1701907770::1::::<><>::
+OBJ_SofaB.png::CompressedTexture2D::5102472206894504441::1701907770::1701907770::1::::<><>::
+OBJ_SofaC.png::CompressedTexture2D::4415959298629619910::1701907770::1701907770::1::::<><>::
+OBJ_SofaD.png::CompressedTexture2D::6686028729339927932::1701907770::1701907770::1::::<><>::
+OBJ_SofaE.png::CompressedTexture2D::520474338946646378::1701907770::1701907770::1::::<><>::
+OBJ_SofaF.png::CompressedTexture2D::9195957319362548918::1701907770::1701907770::1::::<><>::
+OBJ_SofaG.png::CompressedTexture2D::4756680900397330154::1701907770::1701907770::1::::<><>::
+OBJ_SofaH.png::CompressedTexture2D::5342662250038020107::1701907770::1701907770::1::::<><>::
+OBJ_SofaI.png::CompressedTexture2D::1279825224340514220::1701907770::1701907770::1::::<><>::
+OBJ_SofaJ.png::CompressedTexture2D::262939011082304930::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Speakers/::1701907770
+OBJ_SpeakersA.png::CompressedTexture2D::6906518401953627242::1701907770::1701907770::1::::<><>::
+OBJ_SpeakersB.png::CompressedTexture2D::6952717533914374403::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_StckyNote/::1701907770
+OBJ_StckyNote_01.png::CompressedTexture2D::8659840337198897426::1701907770::1701907770::1::::<><>::
+OBJ_StckyNote_02.png::CompressedTexture2D::2657556666781954220::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_StorageShelves/::1701907770
+OBJ_StorageShelves.png::CompressedTexture2D::5013365343886488286::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Table/::1701907770
+OBJ_TableA.png::CompressedTexture2D::3079017381807918007::1701907770::1701907770::1::::<><>::
+OBJ_TableB.png::CompressedTexture2D::672598472409322731::1701907770::1701907770::1::::<><>::
+OBJ_TableC.png::CompressedTexture2D::6264116103301207458::1701907770::1701907770::1::::<><>::
+OBJ_TableD.png::CompressedTexture2D::6848356810664237753::1701907770::1701907770::1::::<><>::
+OBJ_TableE.png::CompressedTexture2D::4330575872348147839::1701907770::1701907770::1::::<><>::
+OBJ_TableF.png::CompressedTexture2D::7992117555716800345::1701907770::1701907770::1::::<><>::
+OBJ_TableG.png::CompressedTexture2D::6564298101498389473::1701907770::1701907770::1::::<><>::
+OBJ_TableH.png::CompressedTexture2D::3596444180699075733::1701907770::1701907770::1::::<><>::
+OBJ_TableI.png::CompressedTexture2D::4751963732070654861::1701907770::1701907770::1::::<><>::
+OBJ_TableJ.png::CompressedTexture2D::982877061797154709::1701907770::1701907770::1::::<><>::
+OBJ_TableK.png::CompressedTexture2D::7007374641078287194::1701907770::1701907770::1::::<><>::
+OBJ_TableL.png::CompressedTexture2D::1777402813426483903::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Telephone/::1701907770
+OBJ_Telephone_01.png::CompressedTexture2D::5804085681645076647::1701907770::1701907770::1::::<><>::
+OBJ_Telephone_02.png::CompressedTexture2D::2803930614474455372::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_TeleporterBase/::1701907770
+OBJ_TeleporterBase.png::CompressedTexture2D::794159639848121342::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_TeleporterSlot/::1701907770
+OBJ_TeleporterSlot_01.png::CompressedTexture2D::797853760008620670::1701907770::1701907770::1::::<><>::
+OBJ_TeleporterSlot_02.png::CompressedTexture2D::5475292815275730432::1701907770::1701907770::1::::<><>::
+OBJ_TeleporterSlot_03.png::CompressedTexture2D::8443539646371619165::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Television/::1701907770
+OBJ_TelevisionA.png::CompressedTexture2D::5472051316292652936::1701907770::1701907770::1::::<><>::
+OBJ_TelevisionB.png::CompressedTexture2D::2596028972703151014::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Tire/::1701907770
+OBJ_Tire.png::CompressedTexture2D::3203665588901144125::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_ToolBox/::1701907770
+OBJ_ToolBoxA.png::CompressedTexture2D::835574524599761567::1701907770::1701907770::1::::<><>::
+OBJ_ToolBoxB.png::CompressedTexture2D::8691285708109823307::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_ToolCabinet/::1701907770
+OBJ_ToolCabinet.png::CompressedTexture2D::4241997289930210596::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_TrapFloor/::1701907770
+OBJ_TrapFloor_01.png::CompressedTexture2D::308452067777279986::1701907770::1701907770::1::::<><>::
+OBJ_TrapFloor_02.png::CompressedTexture2D::7961083864208746064::1701907770::1701907770::1::::<><>::
+OBJ_TrapFloor_03.png::CompressedTexture2D::6391598391516935892::1701907770::1701907770::1::::<><>::
+OBJ_TrapFloor_04.png::CompressedTexture2D::7130933986470168602::1701907770::1701907770::1::::<><>::
+OBJ_TrapFloor_05.png::CompressedTexture2D::6969379466489067359::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_TrashCan/::1701907770
+OBJ_TrashCan.png::CompressedTexture2D::1438284453428220246::1701907770::1701907770::1::::<><>::
+::res://Sprites/Furniture/OBJ_Window/::1701907770
+OBJ_WindowA.png::CompressedTexture2D::6605066406296790604::1701907770::1701907770::1::::<><>::
+OBJ_WindowB.png::CompressedTexture2D::5693690884353577017::1701907770::1701907770::1::::<><>::
+OBJ_WindowC.png::CompressedTexture2D::5805977966725024760::1701907770::1701907770::1::::<><>::
+OBJ_WindowD.png::CompressedTexture2D::568236541644091577::1701907770::1701907770::1::::<><>::
+OBJ_WindowE.png::CompressedTexture2D::154134485184122679::1701907770::1701907770::1::::<><>::
+OBJ_WindowF.png::CompressedTexture2D::7626940536430095353::1701907770::1701907770::1::::<><>::
+::res://Sprites/FX/::1701907770
+::res://Sprites/FX/FX_Portal/::1701907770
+FX_Portal_01.png::CompressedTexture2D::3873243102938260917::1701907770::1701907770::1::::<><>::
+FX_Portal_02.png::CompressedTexture2D::4746049295261178083::1701907770::1701907770::1::::<><>::
+FX_Portal_03.png::CompressedTexture2D::877806257068996327::1701907770::1701907770::1::::<><>::
+FX_Portal_04.png::CompressedTexture2D::848782562797171851::1701907770::1701907770::1::::<><>::
+FX_Portal_05.png::CompressedTexture2D::8703810715182660288::1701907770::1701907770::1::::<><>::
+FX_Portal_06.png::CompressedTexture2D::6154819105165839056::1701907770::1701907770::1::::<><>::
+::res://Sprites/Portraits/::1701907770
+Demi Annoyed.png::CompressedTexture2D::7587323489035248484::1701907770::1701907770::1::::<><>::
+Demi Blush.png::CompressedTexture2D::4843493223670271498::1701907770::1701907770::1::::<><>::
+Demi Default.png::CompressedTexture2D::9112714865250800969::1701907770::1701907770::1::::<><>::
+Demi Happy.png::CompressedTexture2D::7164925950316048094::1701907770::1701907770::1::::<><>::
+Demi Shocked.png::CompressedTexture2D::893814772704092931::1701907770::1701907770::1::::<><>::
+Demi Smirk.png::CompressedTexture2D::903035296186872673::1701907770::1701907770::1::::<><>::
+Gigi Blush.png::CompressedTexture2D::2343722317607448115::1701907770::1701907770::1::::<><>::
+Gigi Default.png::CompressedTexture2D::3468116739056773298::1701907770::1701907770::1::::<><>::
+Gigi Grin.png::CompressedTexture2D::9084432530615922169::1701907770::1701907770::1::::<><>::
+Gigi Sleeping.png::CompressedTexture2D::7788483023413483692::1701907770::1701907770::1::::<><>::
+Gigi Surprised.png::CompressedTexture2D::8505443164116906570::1701907770::1701907770::1::::<><>::
+Mimi Default.png::CompressedTexture2D::2199926129139896225::1701907770::1701907770::1::::<><>::
+Mimi Happy.png::CompressedTexture2D::7934673557714923646::1701907770::1701907770::1::::<><>::
+Mimi Smirk.png::CompressedTexture2D::1263415084898554893::1701907770::1701907770::1::::<><>::
+::res://Sprites/Tiles/::1701907770
+::res://Sprites/Tiles/Floor/::1701907770
+Carpet-Blue.png::CompressedTexture2D::7673981137727568938::1701907770::1701907770::1::::<><>::
+Carpet-Pink.png::CompressedTexture2D::478619776254744570::1701907770::1701907770::1::::<><>::
+Carpet-Purple.png::CompressedTexture2D::8846559722216876546::1701907770::1701907770::1::::<><>::
+Concrete.png::CompressedTexture2D::3476671855391348612::1701907770::1701907770::1::::<><>::
+Tile-Retro.png::CompressedTexture2D::7356185623537287603::1701907770::1701907770::1::::<><>::
+Tile-Terracotta.png::CompressedTexture2D::5230341725094813256::1701907770::1701907770::1::::<><>::
+Vinyl-Red.png::CompressedTexture2D::4121973702057692816::1701907770::1701907770::1::::<><>::
+Vinyl-Yellow.png::CompressedTexture2D::8477204083254499701::1701907770::1701907770::1::::<><>::
+Wood.png::CompressedTexture2D::7432785818559229144::1701907770::1701907770::1::::<><>::
+::res://Sprites/Tiles/Walls/::1701907770
+Basic Wall-Purple.png::CompressedTexture2D::4187454417170941874::1701907770::1701907770::1::::<><>::
+Basic Wall-White.png::CompressedTexture2D::1088644889664022713::1701907770::1701907770::1::::<><>::
+Basic Wall-Yellow.png::CompressedTexture2D::3103755684139024449::1701907770::1701907770::1::::<><>::
+Cinder Block Wall.png::CompressedTexture2D::9180012045037368016::1701907770::1701907770::1::::<><>::
+Wallpaper Wall-Blue.png::CompressedTexture2D::7534788658764222406::1701907770::1701907770::1::::<><>::
+Wallpaper Wall-Pink.png::CompressedTexture2D::3828900409183882410::1701907770::1701907770::1::::<><>::
+Wallpaper Wall-Yellow.png::CompressedTexture2D::2426555801865421799::1701907770::1701907770::1::::<><>::
+Wood Wall.png::CompressedTexture2D::2880423730658863984::1701907770::1701907770::1::::<><>::
+::res://Sprites/UI/::1701907770
+Continue Button.png::CompressedTexture2D::7098207818696250723::1701907770::1701907770::1::::<><>::
+Day HUD.png::CompressedTexture2D::4650920014777772401::1701907770::1701907770::1::::<><>::
+Dialogue Box.png::CompressedTexture2D::1205168259043392129::1701907770::1701907770::1::::<><>::
+Inventory Container.png::CompressedTexture2D::4009452643872525518::1701907770::1701907770::1::::<><>::
+Load Button.png::CompressedTexture2D::1119134290746940731::1701907770::1701907770::1::::<><>::
+Name Container.png::CompressedTexture2D::8275906041906343242::1701907770::1701907770::1::::<><>::
+Night HUD.png::CompressedTexture2D::5287185529227872287::1701907770::1701907770::1::::<><>::
+Options Button.png::CompressedTexture2D::6167662354798338733::1701907770::1701907770::1::::<><>::
+Pause Button.png::CompressedTexture2D::6105880609600826328::1701907770::1701907770::1::::<><>::
+Paused Button.png::CompressedTexture2D::5737217033407640528::1701907770::1701907770::1::::<><>::
+Paused Load Button.png::CompressedTexture2D::1060695087364229417::1701907770::1701907770::1::::<><>::
+Paused Options Button.png::CompressedTexture2D::2131594099013368507::1701907770::1701907770::1::::<><>::
+Paused Quit Button.png::CompressedTexture2D::1078390557593571184::1701907770::1701907770::1::::<><>::
+Play Button.png::CompressedTexture2D::8887099097559711810::1701907770::1701907770::1::::<><>::
+Portrait Container Left.png::CompressedTexture2D::6548195139067549267::1701907770::1701907770::1::::<><>::
+Portrait Container Right.png::CompressedTexture2D::110141458954180657::1701907770::1701907770::1::::<><>::
+Quit Button.png::CompressedTexture2D::5523689728042572655::1701907770::1701907770::1::::<><>::
+Save Button.png::CompressedTexture2D::3746323927658646371::1701907770::1701907770::1::::<><>::
+Start Button.png::CompressedTexture2D::8191833726360029887::1701907770::1701907770::1::::<><>::
+::res://UI/::1701907770
+Blank_Blue.png::CompressedTexture2D::1116131182768308214::1701907770::1701907770::1::::<><>::
+Blank_Gray.png::CompressedTexture2D::6997113631008242825::1701907770::1701907770::1::::<><>::
+Continue Button.png::CompressedTexture2D::7098207818696250723::1701907770::1701907770::1::::<><>::
+Day HUD.png::CompressedTexture2D::4650920014777772401::1701907770::1701907770::1::::<><>::
+Dialogue Box.png::CompressedTexture2D::1205168259043392129::1701907770::1701907770::1::::<><>::
+Inventory Container.png::CompressedTexture2D::4009452643872525518::1701907770::1701907770::1::::<><>::
+Load Button.png::CompressedTexture2D::1119134290746940731::1701907770::1701907770::1::::<><>::
+Name Container.png::CompressedTexture2D::8275906041906343242::1701907770::1701907770::1::::<><>::
+Night HUD.png::CompressedTexture2D::5287185529227872287::1701907770::1701907770::1::::<><>::
+Options Button.png::CompressedTexture2D::6167662354798338733::1701907770::1701907770::1::::<><>::
+Pause Button.png::CompressedTexture2D::6105880609600826328::1701907770::1701907770::1::::<><>::
+Paused Button.png::CompressedTexture2D::5737217033407640528::1701907770::1701907770::1::::<><>::
+Paused Load Button.png::CompressedTexture2D::1060695087364229417::1701907770::1701907770::1::::<><>::
+Paused Options Button.png::CompressedTexture2D::2131594099013368507::1701907770::1701907770::1::::<><>::
+Paused Quit Button.png::CompressedTexture2D::1078390557593571184::1701907770::1701907770::1::::<><>::
+Play Button.png::CompressedTexture2D::8887099097559711810::1701907770::1701907770::1::::<><>::
+Portrait Container Left.png::CompressedTexture2D::6548195139067549267::1701907770::1701907770::1::::<><>::
+Portrait Container Right.png::CompressedTexture2D::110141458954180657::1701907770::1701907770::1::::<><>::
+Quit Button.png::CompressedTexture2D::5523689728042572655::1701907770::1701907770::1::::<><>::
+Save Button.png::CompressedTexture2D::3746323927658646371::1701907770::1701907770::1::::<><>::
+Start Button.png::CompressedTexture2D::8191833726360029887::1701907770::1701907770::1::::<><>::

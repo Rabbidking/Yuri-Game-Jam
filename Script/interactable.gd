@@ -69,16 +69,19 @@ func _ready():
 			if State.Day != 3:
 				$CollisionShape2D.disabled = true
 				$Texture.visible = false
-			if State.read_receipt == true and State.ordered_return == false:
+			if State.Day == 3 and State.read_receipt == true and State.ordered_return == false:
 				$Texture.visible = false
 				$CollisionShape2D.disabled = true
-			elif State.ordered_return == true and State.read_receipt == true:
+			elif State.Day == 3 and State.ordered_return == true and State.read_receipt == true and State.have_gigi == false:
 				item = "box"
 				$Texture.set_texture(load("res://Sprites/Furniture/OBJ_CardboardBox/OBJ_CardboardBoxB.png"))
 				$CollisionShape2D.scale = Vector2(1.75, -1.05)
 				$CollisionShape2D.position = Vector2(0, 8)
 				$CollisionShape2D.disabled = false
 				$Texture.visible = true
+			elif State.Day == 3 and State.ordered_return == true and State.read_receipt == true and State.have_gigi == true:
+				$Texture.visible = false
+				$CollisionShape2D.disabled = true
 		"trapdoor":
 			$Texture.set_texture(load("res://Sprites/Furniture/OBJ_TrapFloor/OBJ_TrapFloor_04.png"))
 			$CollisionShape2D.scale = Vector2(1, 1)

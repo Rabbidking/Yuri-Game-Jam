@@ -106,6 +106,7 @@ door_name = &"entrance"
 door_type = &"back"
 
 [node name="Garage Door" parent="." instance=ExtResource("4_txjha")]
+z_index = 1
 position = Vector2(654, 284)
 door_name = &"garage"
 door_type = &"side_right"

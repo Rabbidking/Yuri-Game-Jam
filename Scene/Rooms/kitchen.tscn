@@ -178,6 +178,7 @@ y_sort_enabled = true
 position = Vector2(773, 335)
 
 [node name="Entrance Door" parent="." instance=ExtResource("5_ag6y0")]
+z_index = 1
 position = Vector2(847, 323)
 door_name = &"entrance_1"
 door_type = &"side_right"

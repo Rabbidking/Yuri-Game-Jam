@@ -265,19 +265,23 @@ position = Vector2(547, 331)
 texture = ExtResource("32_1mljx")
 
 [node name="ObjChairA" type="Sprite2D" parent="Prop"]
+z_index = -1
 position = Vector2(631, 320)
 texture = ExtResource("34_c586u")
 
 [node name="ObjChairA2" type="Sprite2D" parent="Prop"]
+z_index = -1
 position = Vector2(751, 319)
 texture = ExtResource("34_c586u")
 flip_h = true
 
 [node name="ObjChairB" type="Sprite2D" parent="Prop"]
+z_index = -1
 position = Vector2(691, 261)
 texture = ExtResource("35_4noju")
 
 [node name="ObjChairC" type="Sprite2D" parent="Prop"]
+z_index = -1
 position = Vector2(694, 386)
 texture = ExtResource("14_fh7f2")
 

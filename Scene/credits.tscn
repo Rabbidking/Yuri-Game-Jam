@@ -1,0 +1,100 @@
+[gd_scene load_steps=3 format=3 uid="uid://nxasyagw7c2k"]
+
+[ext_resource type="Script" path="res://Script/credits.gd" id="1_6xjtu"]
+[ext_resource type="FontFile" uid="uid://v4qs8ufergem" path="res://Kenney Mini Square.ttf" id="2_h4bif"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6xjtu")
+
+[node name="Thank You" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -376.0
+offset_top = 25.0
+offset_right = -190.0
+offset_bottom = 48.0
+grow_horizontal = 2
+scale = Vector2(4, 4)
+theme_override_fonts/font = ExtResource("2_h4bif")
+text = "Thank you for playing!"
+
+[node name="Press any button" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -291.0
+offset_top = 568.0
+offset_right = -105.001
+offset_bottom = 637.0
+grow_horizontal = 2
+scale = Vector2(3, 3)
+theme_override_fonts/font = ExtResource("2_h4bif")
+text = "Press E Button"
+
+[node name="Credits" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -176.0
+offset_top = 110.0
+offset_right = 9.99988
+offset_bottom = 133.0
+grow_horizontal = 2
+scale = Vector2(2, 2)
+theme_override_fonts/font = ExtResource("2_h4bif")
+text = "Credits
+"
+
+[node name="Artist" type="Label" parent="Credits"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -93.0
+offset_top = 25.0
+offset_right = 93.0
+offset_bottom = 48.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_h4bif")
+text = "Artist: 
+Fava Beans
+			Jonah"
+
+[node name="Programmers" type="Label" parent="Credits"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -92.0
+offset_top = 100.0
+offset_right = 94.0
+offset_bottom = 169.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_h4bif")
+text = "Programmer:
+Kuronami
+Rabbidking"
+
+[node name="Music" type="Label" parent="Credits"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -92.0
+offset_top = 170.0
+offset_right = 94.0
+offset_bottom = 239.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_h4bif")
+text = "Music:
+Clover"

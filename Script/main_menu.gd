@@ -10,12 +10,12 @@ signal exit_options_menu
 func _ready() -> void:
 	settings_tab_container.exit_options_menu.connect(_on_options_back_pressed)
 	reset_stuff()
+	$GridContainer/Start.grab_focus()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
 
 func _on_start_pressed() -> void:
 	State.Day = 1
@@ -24,6 +24,7 @@ func _on_start_pressed() -> void:
 
 func _on_level_select_pressed():
 	load_game()
+	$"VBoxContainer/Day 1".grab_focus()
 	$VBoxContainer.visible = true
 	$GridContainer.visible = false
 	if State.Day_2_unlock == true:
@@ -109,6 +110,7 @@ func _on_options_back_pressed() -> void:
 	SettingsSignalBus.emit_set_settings_dictionary(SettingsContainer.create_storage_dictionary())
 	$Options.visible = false
 	$GridContainer.visible = true
+	$GridContainer/Start.grab_focus()
 
 func reset_stuff():
 	var have_gigi = false

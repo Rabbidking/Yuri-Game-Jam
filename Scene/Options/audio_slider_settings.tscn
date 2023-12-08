@@ -21,6 +21,8 @@ theme_override_constants/separation = 42
 [node name="Audio_Name_Label" type="Label" parent="HBoxContainer"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
 theme_override_font_sizes/font_size = 32
 text = "Master Volume"
 

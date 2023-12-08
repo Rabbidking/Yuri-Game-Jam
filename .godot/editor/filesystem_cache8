@@ -1,5 +1,5 @@
 3acdcc5cb6df755358dde907981ccea8
-::res://::1702006769
+::res://::1702007734
 default_bus_layout.tres::AudioBusLayout::4063243458369164154::1702003179::0::1::::<><>::
 Fade_Transition.gd::GDScript::-1::1702003178::0::1::::<>Node2D<>::
 fade_transition.tscn::PackedScene::4163496360994995737::1702003179::0::1::::<><>::res://Fade_Transition.gd<>uid://v4qs8ufergem
@@ -108,14 +108,14 @@ Purple.png::CompressedTexture2D::1988796919978783947::1702003179::1702003179::1:
 Red.png::CompressedTexture2D::1735034909657885456::1702003179::1702003179::1::::<><>::
 Sky.png::CompressedTexture2D::7014540141669112660::1702003179::1702003179::1::::<><>::
 Yellow.png::CompressedTexture2D::1774731507011467911::1702003179::1702003179::1::::<><>::
-::res://Scene/::1702007118
+::res://Scene/::1702007379
 bed.tscn::PackedScene::2162847093175319028::1702003178::0::1::::<><>::res://Script/interactable.gd<>uid://bbdwjegcdo5o3
-credits.tscn::PackedScene::959969060791760328::1702007118::0::1::::<><>::res://Script/credits.gd<>uid://v4qs8ufergem::::res://Kenney Mini Square.ttf<>uid://b6xlbfuaavbd6::::res://UI/Credits_Container.png<>uid://dyu8huu56f2hq::::res://UI/Play Button.png<>uid://blc3yffyar3em::::res://UI/Play Button Highlighted.png<>uid://d4n3utt7h8u50::::res://Audio/SapphicMonsterGex.ogg
+credits.tscn::PackedScene::959969060791760328::1702007378::0::1::::<><>::res://Script/credits.gd<>uid://v4qs8ufergem::::res://Kenney Mini Square.ttf<>uid://b6xlbfuaavbd6::::res://UI/Credits_Container.png<>uid://dyu8huu56f2hq::::res://UI/Play Button.png<>uid://blc3yffyar3em::::res://UI/Play Button Highlighted.png<>uid://d4n3utt7h8u50::::res://Audio/SapphicMonsterGex.ogg
 door.tscn::PackedScene::4783925100584996710::1702003178::0::1::::<><>::res://Script/door.gd<>uid://cesubyhcfgfps
 gigi.tscn::PackedScene::7097100930112626617::1702003178::0::1::::<><>::res://Script/interactable.gd<>uid://bkg2agt6rhy0y
 hud.tscn::PackedScene::3523782732799265023::1702003178::0::1::::<><>::res://Script/HUD.gd<>uid://b7i68c7d71cbx
 interactable.tscn::PackedScene::5809216554521441826::1702007008::0::1::::<><>::res://Script/interactable.gd<>uid://dpyxstjtvgdna::::res://Audio/Wood 12.wav<>uid://dbowng50glnue::::res://Audio/Magic Positive 3.wav
-main_menu.tscn::PackedScene::4956119446260963006::1702007071::0::1::::<><>::res://Script/main_menu.gd<>uid://doygkmfhyvs20::::res://UI/Start Button.png<>uid://bnxwu4lxvxxaj::::res://UI/Yuri_Game_Jam_2023_Cover_Background.jpg<>uid://ct4wq6sswwkbt::::res://UI/Options Button.png<>uid://p7d8i4to7k16::::res://UI/Load Button.png<>uid://dvdqo1wr4n572::::res://UI/Start Button Highlighted.png<>uid://ckxymlnqj3mxb::::res://UI/Quit Button.png<>uid://kge8pm8pf2c3::::res://UI/Load Button Highlighted.png<>uid://p5wruijdkvlm::::res://UI/Blank_Blue.png<>uid://dqnim16nm17ul::::res://UI/Options Button Highlighted.png<>uid://v4qs8ufergem::::res://Kenney Mini Square.ttf<>uid://br6whsvghc2re::::res://Scene/settings_tab_container.tscn<>uid://8xl6rqmqq76q::::res://UI/Quit Button Highlighted.png<>uid://cbo516s1r7v3a::::res://Audio/YuriTitle.ogg
+main_menu.tscn::PackedScene::4956119446260963006::1702007379::0::1::::<><>::res://Script/main_menu.gd<>uid://doygkmfhyvs20::::res://UI/Start Button.png<>uid://bnxwu4lxvxxaj::::res://UI/Yuri_Game_Jam_2023_Cover_Background.jpg<>uid://ct4wq6sswwkbt::::res://UI/Options Button.png<>uid://p7d8i4to7k16::::res://UI/Load Button.png<>uid://dvdqo1wr4n572::::res://UI/Start Button Highlighted.png<>uid://cxt3sk6w8ikrh::::res://Sprites/UI/Logo.png<>uid://ckxymlnqj3mxb::::res://UI/Quit Button.png<>uid://kge8pm8pf2c3::::res://UI/Load Button Highlighted.png<>uid://p5wruijdkvlm::::res://UI/Blank_Blue.png<>uid://dqnim16nm17ul::::res://UI/Options Button Highlighted.png<>uid://v4qs8ufergem::::res://Kenney Mini Square.ttf<>uid://br6whsvghc2re::::res://Scene/settings_tab_container.tscn<>uid://8xl6rqmqq76q::::res://UI/Quit Button Highlighted.png<>uid://cbo516s1r7v3a::::res://Audio/YuriTitle.ogg
 object.tscn::PackedScene::2162847093175319028::1702003178::0::1::::<><>::uid://bkg2agt6rhy0y
 pause_menu.tscn::PackedScene::8403802425911104417::1702003178::0::1::::<><>::res://Script/pause_menu.gd<>uid://cn0feka8cno05
 player.tscn::PackedScene::2720143536652147985::1702003178::0::1::::<><>::res://Script/player.gd<>uid://cesubyhcfgfps
@@ -557,7 +557,7 @@ Wallpaper Wall-Blue.png::CompressedTexture2D::7534788658764222406::1702003179::1
 Wallpaper Wall-Pink.png::CompressedTexture2D::3828900409183882410::1702003179::1702003179::1::::<><>::
 Wallpaper Wall-Yellow.png::CompressedTexture2D::2426555801865421799::1702003179::1702003179::1::::<><>::
 Wood Wall.png::CompressedTexture2D::2880423730658863984::1702003179::1702003179::1::::<><>::
-::res://Sprites/UI/::1702007233
+::res://Sprites/UI/::1702007236
 Continue Button.png::CompressedTexture2D::7098207818696250723::1702003179::1702003179::1::::<><>::
 Day HUD.png::CompressedTexture2D::4650920014777772401::1702003179::1702003179::1::::<><>::
 Dialogue Box.png::CompressedTexture2D::1205168259043392129::1702003179::1702003179::1::::<><>::

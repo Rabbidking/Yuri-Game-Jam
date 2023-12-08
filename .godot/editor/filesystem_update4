@@ -1,11 +1,5 @@
 res://Scene/main_menu.tscn
 res://Resources/Settings/PlayerKeybindDefault.tres
-res://Scene/Options/settings_tab_container.tscn
-res://Scene/interactable.tscn
-res://Scene/Rooms/bedroom.tscn
-res://Scene/Options/hotkey_rebind_button.tscn
-res://dialog_balloon/balloon.tscn
-res://Scene/Rooms/living_room.tscn
-res://Scene/Rooms/study.tscn
-res://Scene/Options/audio_slider_settings.tscn
 res://Scene/credits.tscn
+res://Script/main_menu.gd
+res://Scene/settings_tab_container.tscn

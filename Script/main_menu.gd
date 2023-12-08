@@ -1,14 +1,14 @@
 extends Control
 
 @onready var options: TextureButton = $GridContainer/Options
-@onready var settings_tab_container: Control = $Options/Settings_Tab_Container as SettingsTabContainer
+#@onready var settings_tab_container: Control = $Options/Settings_Tab_Container as SettingsTabContainer
 
 signal exit_options_menu
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	settings_tab_container.exit_options_menu.connect(_on_options_back_pressed)
+	#settings_tab_container.exit_options_menu.connect(_on_options_back_pressed)
 	reset_stuff()
 	$GridContainer/Start.grab_focus()
 

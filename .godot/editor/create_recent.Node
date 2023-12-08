@@ -1,3 +1,4 @@
+Sprite2D
 AudioStreamPlayer
 HSlider
 VSeparator
@@ -24,6 +25,5 @@ TextureButton
 GridContainer
 ColorRect
 Control
-Sprite2D
 RichTextLabel
 Panel

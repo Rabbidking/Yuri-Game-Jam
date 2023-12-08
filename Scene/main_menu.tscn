@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ccu1tfbkedf7s"]
+[gd_scene load_steps=16 format=3 uid="uid://ccu1tfbkedf7s"]
 
 [ext_resource type="Script" path="res://Script/main_menu.gd" id="1_uagy8"]
 [ext_resource type="Texture2D" uid="uid://doygkmfhyvs20" path="res://UI/Start Button.png" id="2_b50sy"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ct4wq6sswwkbt" path="res://UI/Options Button.png" id="3_36fcf"]
 [ext_resource type="Texture2D" uid="uid://p7d8i4to7k16" path="res://UI/Load Button.png" id="3_eiryr"]
 [ext_resource type="Texture2D" uid="uid://dvdqo1wr4n572" path="res://UI/Start Button Highlighted.png" id="3_g5b4l"]
+[ext_resource type="Texture2D" uid="uid://cxt3sk6w8ikrh" path="res://Sprites/UI/Logo.png" id="3_h45ma"]
 [ext_resource type="Texture2D" uid="uid://ckxymlnqj3mxb" path="res://UI/Quit Button.png" id="4_4itt2"]
 [ext_resource type="Texture2D" uid="uid://kge8pm8pf2c3" path="res://UI/Load Button Highlighted.png" id="5_666f4"]
 [ext_resource type="Texture2D" uid="uid://p5wruijdkvlm" path="res://UI/Blank_Blue.png" id="6_h0cwn"]
@@ -44,6 +45,11 @@ offset_bottom = 101.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="GridContainer"]
+position = Vector2(54.5, -63)
+scale = Vector2(0.400391, 0.400391)
+texture = ExtResource("3_h45ma")
 
 [node name="Start" type="TextureButton" parent="GridContainer"]
 layout_mode = 2

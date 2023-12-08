@@ -1,5 +1,4 @@
 res://Scene/main_menu.tscn
 res://Resources/Settings/PlayerKeybindDefault.tres
 res://Scene/credits.tscn
-res://Script/main_menu.gd
-res://Scene/settings_tab_container.tscn
+res://Scene/Options/settings_tab_container.tscn

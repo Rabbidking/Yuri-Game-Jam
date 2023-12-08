@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_gjtyo"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_jhiki"]
 
 [resource]
-script = ExtResource("1_gjtyo")
+script = ExtResource("1_jhiki")
 using_states = PackedStringArray()
 titles = {
 "afternoon": "3",

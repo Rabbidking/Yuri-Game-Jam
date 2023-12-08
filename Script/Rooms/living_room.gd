@@ -2,6 +2,7 @@ extends Node2D
 
 #var gigi = preload("res://Scene/gigi.tscn")
 @onready var gigi_spawn = preload("res://Scene/Cutscene/gigi_cutscene.tscn")
+@onready var gigi_spawn_sit = preload("res://Scene/Cutscene/gigi_sit_cutscene.tscn")
 @onready var demi_spawn = preload("res://Scene/Cutscene/demi_sit_cutscene.tscn")
 @onready var mimi_spawn = preload("res://Scene/Cutscene/mimi_sit_cutscene.tscn")
 @onready var next_fade = preload("res://Scene/Cutscene/next_day.tscn")
@@ -31,7 +32,7 @@ func _ready():
 		var demi = demi_spawn.instantiate()
 		add_child(demi)
 		demi.position = Vector2(535, 142)
-		var gigi = gigi_spawn.instantiate()
+		var gigi = gigi_spawn_sit.instantiate()
 		add_child(gigi)
 		gigi.position = Vector2(583, 139)
 		State.day_4_intro = true
@@ -44,7 +45,7 @@ func _ready():
 		var demi = demi_spawn.instantiate()
 		add_child(demi)
 		demi.position = Vector2(535, 142)
-		var gigi = gigi_spawn.instantiate()
+		var gigi = gigi_spawn_sit.instantiate()
 		add_child(gigi)
 		gigi.position = Vector2(583, 139)
 		State.day_5_intro = true

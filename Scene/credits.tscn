@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://nxasyagw7c2k"]
+[gd_scene load_steps=7 format=3 uid="uid://nxasyagw7c2k"]
 
 [ext_resource type="Script" path="res://Script/credits.gd" id="1_6xjtu"]
 [ext_resource type="FontFile" uid="uid://v4qs8ufergem" path="res://Kenney Mini Square.ttf" id="2_h4bif"]
 [ext_resource type="Texture2D" uid="uid://b6xlbfuaavbd6" path="res://UI/Credits_Container.png" id="2_ux5fy"]
 [ext_resource type="Texture2D" uid="uid://dyu8huu56f2hq" path="res://UI/Play Button.png" id="4_mo4ki"]
 [ext_resource type="Texture2D" uid="uid://blc3yffyar3em" path="res://UI/Play Button Highlighted.png" id="5_f3m2g"]
+[ext_resource type="AudioStream" uid="uid://d4n3utt7h8u50" path="res://Audio/SapphicMonsterGex.ogg" id="6_vb78c"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -45,5 +46,10 @@ scale = Vector2(2, 2)
 texture_normal = ExtResource("4_mo4ki")
 texture_hover = ExtResource("5_f3m2g")
 texture_focused = ExtResource("5_f3m2g")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_vb78c")
+volume_db = -15.0
+autoplay = true
 
 [connection signal="pressed" from="Return To Menu" to="." method="_on_return_to_menu_pressed"]

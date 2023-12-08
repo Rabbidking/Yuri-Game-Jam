@@ -1,10 +1,10 @@
+AudioStreamPlayer
 HSlider
 VSeparator
 Label
 HBoxContainer
 VBoxContainer
 ScrollContainer
-AudioStreamPlayer
 AudioStreamPlayer2D
 OptionButton
 HSeparator

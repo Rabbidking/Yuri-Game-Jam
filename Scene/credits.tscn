@@ -51,5 +51,6 @@ texture_focused = ExtResource("5_f3m2g")
 stream = ExtResource("6_vb78c")
 volume_db = -15.0
 autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="Return To Menu" to="." method="_on_return_to_menu_pressed"]

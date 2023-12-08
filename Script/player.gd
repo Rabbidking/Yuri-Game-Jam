@@ -64,6 +64,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				
 		#Interact
 		if Input.is_action_just_pressed("interact") and interactable == true:
+			velocity = Vector2(0, 0)
 			print(interactable_item)
 			State.is_dialog_active = true
 			if interactable_item == "gigi":
@@ -74,8 +75,6 @@ func _unhandled_input(event: InputEvent) -> void:
 					DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_4.dialogue"), "basement_gigi")
 				State.have_gigi = true
 				emit_signal("pick_up_gigi")
-				velocity = Vector2(0, 0)
-			
 			elif interactable_item == "bed" and State.have_gigi == true:
 				if State.Day == 1:
 					DialogueManager.show_dialogue_balloon(load("res://Dialog/Day_1.dialogue"), "bedroom")

@@ -37,6 +37,7 @@ func _on_options_pressed() -> void:
 
 
 func _on_quit_pressed() -> void:
+	is_paused = false
 	get_tree().change_scene_to_file("res://Scene/main_menu.tscn")
 
 

@@ -195,7 +195,7 @@ shape = SubResource("RectangleShape2D_k2qwn")
 
 [node name="Ambient" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("18_a86it")
-volume_db = -10.0
+volume_db = -15.0
 autoplay = true
 bus = &"SFX"
 

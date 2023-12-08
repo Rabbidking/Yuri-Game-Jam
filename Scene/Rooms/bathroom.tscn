@@ -358,7 +358,7 @@ bus = &"SFX"
 
 [node name="DoorOpen" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("38_8cesd")
-volume_db = -10.0
+volume_db = -15.0
 
 [connection signal="bathroom_pos" from="." to="Player" method="_on_bathroom_bathroom_pos"]
 [connection signal="area_entered" from="Fuel Cell" to="Fuel Cell" method="_on_area_entered"]

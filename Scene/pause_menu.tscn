@@ -1,10 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://dry4nsiv75bef"]
+[gd_scene load_steps=12 format=3 uid="uid://dry4nsiv75bef"]
 
 [ext_resource type="Script" path="res://Script/pause_menu.gd" id="1_cis1t"]
-[ext_resource type="Texture2D" uid="uid://cn0feka8cno05" path="res://Sprites/UI/Paused Button.png" id="1_eo7of"]
-[ext_resource type="Texture2D" uid="uid://c8eopfikboiwx" path="res://Sprites/UI/Continue Button.png" id="1_s5cmd"]
-[ext_resource type="Texture2D" uid="uid://5mtbqfbscq4r" path="res://Sprites/UI/Paused Options Button.png" id="4_vbokc"]
-[ext_resource type="Texture2D" uid="uid://pmm611o6ox41" path="res://Sprites/UI/Paused Quit Button.png" id="5_cu1kp"]
+[ext_resource type="Texture2D" uid="uid://cn0feka8cno05" path="res://UI/Paused Button.png" id="1_eo7of"]
+[ext_resource type="Texture2D" uid="uid://c8eopfikboiwx" path="res://UI/Continue Button.png" id="1_s5cmd"]
+[ext_resource type="Texture2D" uid="uid://da0bh7ol73lra" path="res://UI/Continue Button Highlighted.png" id="3_eewp5"]
+[ext_resource type="Texture2D" uid="uid://5mtbqfbscq4r" path="res://UI/Paused Options Button.png" id="4_vbokc"]
+[ext_resource type="Texture2D" uid="uid://q0djdsu8uncd" path="res://UI/Paused Options Button Highlighted.png" id="5_a6asn"]
+[ext_resource type="Texture2D" uid="uid://pmm611o6ox41" path="res://UI/Paused Quit Button.png" id="5_cu1kp"]
+[ext_resource type="Texture2D" uid="uid://bre61ebvbvo2i" path="res://UI/Paused Quit Button Highlighted.png" id="7_8brb8"]
+[ext_resource type="FontFile" uid="uid://v4qs8ufergem" path="res://Kenney Mini Square.ttf" id="9_or1mg"]
+[ext_resource type="PackedScene" uid="uid://br6whsvghc2re" path="res://Scene/settings_tab_container.tscn" id="10_se3gf"]
+[ext_resource type="Texture2D" uid="uid://p5wruijdkvlm" path="res://UI/Blank_Blue.png" id="11_6mlwp"]
 
 [node name="PauseMenu" type="Control"]
 process_mode = 3
@@ -43,15 +49,21 @@ scale = Vector2(2, 2)
 [node name="Continue" type="TextureButton" parent="GridContainer"]
 layout_mode = 2
 texture_normal = ExtResource("1_s5cmd")
+texture_hover = ExtResource("3_eewp5")
+texture_focused = ExtResource("3_eewp5")
 
 [node name="Options" type="TextureButton" parent="GridContainer"]
 layout_mode = 2
 texture_normal = ExtResource("4_vbokc")
+texture_hover = ExtResource("5_a6asn")
+texture_focused = ExtResource("5_a6asn")
 stretch_mode = 0
 
 [node name="Quit" type="TextureButton" parent="GridContainer"]
 layout_mode = 2
 texture_normal = ExtResource("5_cu1kp")
+texture_hover = ExtResource("7_8brb8")
+texture_focused = ExtResource("7_8brb8")
 stretch_mode = 0
 
 [node name="PausedButton" type="Sprite2D" parent="."]
@@ -59,6 +71,56 @@ position = Vector2(572, 39)
 scale = Vector2(2, 2)
 texture = ExtResource("1_eo7of")
 
+[node name="Options" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Options"]
+layout_mode = 2
+theme_override_constants/separation = -48
+
+[node name="Label" type="Label" parent="Options/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("9_or1mg")
+theme_override_font_sizes/font_size = 32
+text = "Options"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings_Tab_Container" parent="Options" instance=ExtResource("10_se3gf")]
+layout_mode = 2
+
+[node name="OptionsBack" type="TextureButton" parent="Options/Settings_Tab_Container"]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 576.0
+offset_right = 600.0
+offset_bottom = 617.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture_normal = ExtResource("11_6mlwp")
+
+[node name="Back" type="Label" parent="Options/Settings_Tab_Container/OptionsBack"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 8.5
+offset_right = 74.0
+offset_bottom = 31.5
+theme_override_fonts/font = ExtResource("9_or1mg")
+text = "Back"
+
 [connection signal="pressed" from="GridContainer/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="GridContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="GridContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Options/Settings_Tab_Container/OptionsBack" to="." method="_on_options_back_pressed"]

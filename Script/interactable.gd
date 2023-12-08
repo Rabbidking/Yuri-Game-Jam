@@ -453,7 +453,7 @@ func load_next_scene_2():
 	elif State.Day == 6:
 		get_tree().change_scene_to_file("res://Scene/Rooms/kitchen.tscn")
 	elif State.Day == 7:
-		get_tree().change_scene_to_file("res://Scene/main_menu.tscn")
+		get_tree().change_scene_to_file("res://Scene/credits.tscn")
 
 func load_next_scene_3():
 	State.cutscene_playing = true

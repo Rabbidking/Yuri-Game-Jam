@@ -1,5 +1,11 @@
 extends Control
 
+signal exit_options_menu
+
+func _ready() -> void:
+	$GridContainer/Continue.grab_focus()
+
+
 var is_paused: bool = false:
 	set(value):
 		is_paused = value
@@ -26,8 +32,17 @@ func _on_load_pressed() -> void:
 
 
 func _on_options_pressed() -> void:
-	pass # Replace with function body.
+	$Options.visible = true
+	$GridContainer.visible = false
 
 
 func _on_quit_pressed() -> void:
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://Scene/main_menu.tscn")
+
+
+func _on_options_back_pressed() -> void:
+	exit_options_menu.emit()
+	SettingsSignalBus.emit_set_settings_dictionary(SettingsContainer.create_storage_dictionary())
+	$Options.visible = false
+	$GridContainer.visible = true
+	$GridContainer/Continue.grab_focus()

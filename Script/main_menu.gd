@@ -15,7 +15,41 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if $"VBoxContainer/Day 1".is_hovered() or $"VBoxContainer/Day 1".has_focus():
+		$"VBoxContainer/Day 1/Day 1 Label".add_theme_color_override("font_color", Color(0.57, 0.85, 0.97, 1.0))
+	else:
+		$"VBoxContainer/Day 1/Day 1 Label".add_theme_color_override("font_color", Color(1.0, 1.0, 1.0, 1.0))
+		
+	if $"VBoxContainer/Day 2".is_hovered() or $"VBoxContainer/Day 2".has_focus():
+		$"VBoxContainer/Day 2/Day 2 Label".add_theme_color_override("font_color", Color(0.57, 0.85, 0.97, 1.0))
+	else:
+		$"VBoxContainer/Day 2/Day 2 Label".add_theme_color_override("font_color", Color(1.0, 1.0, 1.0, 1.0))
+		
+	if $"VBoxContainer/Day 3".is_hovered() or $"VBoxContainer/Day 3".has_focus():
+		$"VBoxContainer/Day 3/Day 3 Label".add_theme_color_override("font_color", Color(0.57, 0.85, 0.97, 1.0))
+	else:
+		$"VBoxContainer/Day 3/Day 3 Label".add_theme_color_override("font_color", Color(1.0, 1.0, 1.0, 1.0))
+		
+	if $"VBoxContainer/Day 4".is_hovered() or $"VBoxContainer/Day 4".has_focus():
+		$"VBoxContainer/Day 4/Day 4 Label".add_theme_color_override("font_color", Color(0.57, 0.85, 0.97, 1.0))
+	else:
+		$"VBoxContainer/Day 4/Day 4 Label".add_theme_color_override("font_color", Color(1.0, 1.0, 1.0, 1.0))
+	
+	if $"VBoxContainer/Day 5".is_hovered() or $"VBoxContainer/Day 5".has_focus():
+		$"VBoxContainer/Day 5/Day 5 Label".add_theme_color_override("font_color", Color(0.57, 0.85, 0.97, 1.0))
+	else:
+		$"VBoxContainer/Day 5/Day 5 Label".add_theme_color_override("font_color", Color(1.0, 1.0, 1.0, 1.0))
+		
+	if $VBoxContainer/Back.is_hovered() or $VBoxContainer/Back.has_focus():
+		$VBoxContainer/Back/Back.add_theme_color_override("font_color", Color(0.57, 0.85, 0.97, 1.0))
+	else:
+		$VBoxContainer/Back/Back.add_theme_color_override("font_color", Color(1.0, 1.0, 1.0, 1.0))
+		
+#	if $Options/OptionsBack.is_hovered() or $Options/OptionsBack.has_focus():
+#		$Options/OptionsBack/Back.add_theme_color_override("font_color", Color(0.57, 0.85, 0.97, 1.0))
+#	else:
+#		$Options/OptionsBack/Back.add_theme_color_override("font_color", Color(1.0, 1.0, 1.0, 1.0))
+
 
 func _on_start_pressed() -> void:
 	State.Day = 1
@@ -100,6 +134,7 @@ func _on_day_5_pressed():
 		get_tree().change_scene_to_file("res://Scene/Rooms/living_room.tscn")
 
 func _on_back_pressed():
+	$GridContainer/Start.grab_focus()
 	$VBoxContainer.visible = false
 	$GridContainer.visible = true
 
